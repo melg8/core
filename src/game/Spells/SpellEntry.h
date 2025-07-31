@@ -27,6 +27,7 @@
 #include "SharedDefines.h"
 #include "SpellDefines.h"
 #include "SpellAuraDefines.h"
+#include "ItemPrototype.h"
 
 class Spell;
 class Unit;
