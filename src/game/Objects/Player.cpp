@@ -155,8 +155,6 @@ Player::Player(WorldSession* session) : Unit(),
 
     ClearResurrectRequestData();
 
-    memset(m_items, 0, sizeof(Item*)*PLAYER_SLOTS_COUNT);
-
     // group is initialized in the reference constructor
     SetGroupInvite(nullptr);
     m_groupUpdateMask = 0;
@@ -388,9 +386,6 @@ bool Player::Create(uint32 guidlow, std::string const& name, uint8 race, uint8 c
         SetGuidValue(PLAYER_FIELD_INV_SLOT_HEAD + (slot * 2), ObjectGuid());
         SetVisibleItemSlot(slot, nullptr);
     }
-
-    for (auto& item : m_items)
-        item = nullptr;
 
     SetLocationMapId(info->mapId);
     Relocate(info->positionX, info->positionY, info->positionZ, info->orientation);

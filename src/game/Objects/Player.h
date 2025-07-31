@@ -833,7 +833,7 @@ class Player final: public Unit
 
     private:
         ObjectGuid m_lootGuid;
-        Item* m_items[PLAYER_SLOTS_COUNT];
+        std::vector<Item*> m_items = std::vector<Item*>(PLAYER_SLOTS_COUNT, nullptr);
         uint32 m_currentBuybackSlot;
 
         std::vector<Item*> m_itemUpdateQueue;
