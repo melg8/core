@@ -31,28 +31,28 @@ class GridState
         virtual void Update(Map&, NGridType&, GridInfo&, uint32 const& x, uint32 const& y, uint32 const& t_diff) const = 0;
 };
 
-class InvalidState : public GridState
+class InvalidState final: public GridState
 {
     public:
         ~InvalidState() override {}
         void Update(Map&, NGridType&, GridInfo&, uint32 const& x, uint32 const& y, uint32 const& t_diff) const override;
 };
 
-class ActiveState : public GridState
+class ActiveState final: public GridState
 {
     public:
         ~ActiveState() override {}
         void Update(Map&, NGridType&, GridInfo&, uint32 const& x, uint32 const& y, uint32 const& t_diff) const override;
 };
 
-class IdleState : public GridState
+class IdleState final: public GridState
 {
     public:
         ~IdleState() override {}
         void Update(Map&, NGridType&, GridInfo&, uint32 const& x, uint32 const& y, uint32 const& t_diff) const override;
 };
 
-class RemovalState : public GridState
+class RemovalState final: public GridState
 {
     public:
         ~RemovalState() override {}
