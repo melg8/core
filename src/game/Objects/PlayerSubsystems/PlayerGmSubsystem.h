@@ -14,8 +14,25 @@
 
 struct PlayerGmSubsystem
 {
+    inline uint16 GetCheatOptions() const noexcept { return m_cheatOptions; }
+    inline bool HasCheatOption(PlayerCheatOptions o) const noexcept { return (m_cheatOptions & o); }
+
+    inline void EnableCheatOption(PlayerCheatOptions o) noexcept { m_cheatOptions |= o; }
+    inline void RemoveCheatOption(PlayerCheatOptions o) noexcept { m_cheatOptions &= (~o); }
+    inline void SetCheatOption(PlayerCheatOptions o, bool on) noexcept 
+    {
+        if (on)
+            EnableCheatOption(o);
+        else
+            RemoveCheatOption(o);
+    }
+
+
+public:
     uint32 m_gmInvisibilityLevel = 0;
     uint32 m_currentTicketCounter = 0;
+
+private:
     uint16 m_cheatOptions = 0;
 };
 

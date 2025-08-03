@@ -2963,30 +2963,27 @@ void Player::SetCheatDebugTargetInfo(bool on, bool notify)
 
 uint16 Player::GetCheatOptions() const
 {
-    return m_gmSubsystem->m_cheatOptions;
+    return m_gmSubsystem->GetCheatOptions();
 }
 
 bool Player::HasCheatOption(PlayerCheatOptions o) const
 {
-    return (m_gmSubsystem->m_cheatOptions & o);
+    return m_gmSubsystem->HasCheatOption(o);
 }
 
 void Player::EnableCheatOption(PlayerCheatOptions o)
 {
-    m_gmSubsystem->m_cheatOptions |= o;
+    m_gmSubsystem->EnableCheatOption(o);
 }
 
 void Player::RemoveCheatOption(PlayerCheatOptions o)
 {
-    m_gmSubsystem->m_cheatOptions &= (~o);
+    m_gmSubsystem->RemoveCheatOption(o);
 }
 
 void Player::SetCheatOption(PlayerCheatOptions o, bool on)
 {
-    if (on)
-        EnableCheatOption(o);
-    else
-        RemoveCheatOption(o);
+    m_gmSubsystem->SetCheatOption(o, on);
 }
 
 uint32 Player::GetGMInvisibilityLevel() const
