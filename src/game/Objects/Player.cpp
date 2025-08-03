@@ -1041,7 +1041,10 @@ SpellAuraHolder const* Player::GetMirrorTimerBuff(MirrorTimer::Type timer) const
     }
 }
 
-bool Player::IsCityProtector() const { return m_ExtraFlags & PLAYER_EXTRA_CITY_PROTECTOR; }
+bool Player::IsCityProtector() const
+{
+    return m_ExtraFlags & PLAYER_EXTRA_CITY_PROTECTOR;
+}
 
 void Player::SetCityTitle()
 {
@@ -2581,6 +2584,24 @@ bool Player::CanSeeSpecialInfoOf(Unit const* pTarget) const
            pTarget->HasAuraTypeByCaster(SPELL_AURA_EMPATHY, GetObjectGuid());
 }
 
+bool Player::IsAcceptTickets() const
+{
+    return GetSession()->GetSecurity() >= SEC_GAMEMASTER && (m_ExtraFlags & PLAYER_EXTRA_GM_ACCEPT_TICKETS);
+}
+
+void Player::SetAcceptTicket(bool on)
+{
+    if (on)
+        m_ExtraFlags |= PLAYER_EXTRA_GM_ACCEPT_TICKETS;
+    else
+        m_ExtraFlags &= ~PLAYER_EXTRA_GM_ACCEPT_TICKETS;
+}
+
+bool Player::IsGameMaster() const
+{
+    return m_ExtraFlags & PLAYER_EXTRA_GM_ON;
+}
+
 struct SetGameMasterOnHelper
 {
     explicit SetGameMasterOnHelper() {}
@@ -2601,28 +2622,6 @@ struct SetGameMasterOffHelper
     }
     uint32 faction;
 };
-
-void Player::SetGMChat(bool on, bool notify)
-{
-    if (on)
-    {
-        m_ExtraFlags |= PLAYER_EXTRA_GM_CHAT;
-        if (notify)
-        {
-            SendSysMessage(LANG_GM_CHAT_ON);
-            GetSession()->SendNotification(LANG_GM_CHAT_ON);
-        }
-    }
-    else
-    {
-        m_ExtraFlags &= ~PLAYER_EXTRA_GM_CHAT;
-        if (notify)
-        {
-            SendSysMessage(LANG_GM_CHAT_OFF);
-            GetSession()->SendNotification(LANG_GM_CHAT_OFF);
-        }
-    }
-}
 
 void Player::SetGameMaster(bool on, bool notify)
 {
@@ -2650,7 +2649,7 @@ void Player::SetGameMaster(bool on, bool notify)
     }
     else
     {
-        m_ExtraFlags &= ~ PLAYER_EXTRA_GM_ON;
+        m_ExtraFlags &= ~PLAYER_EXTRA_GM_ON;
         SetFactionForRace(GetRace());
         RemoveFlag(PLAYER_FLAGS, PLAYER_FLAGS_GM);
 
@@ -2686,6 +2685,59 @@ void Player::SetGameMaster(bool on, bool notify)
     m.SetCount(PLAYER_END);
     m.SetBit(UNIT_FIELD_FLAGS);
     RefreshBitsForVisibleUnits(&m, TYPEMASK_PLAYER);
+}
+
+bool Player::IsGMChat() const
+{
+    return GetSession()->GetSecurity() >= SEC_MODERATOR && (m_ExtraFlags & PLAYER_EXTRA_GM_CHAT);
+}
+
+void Player::SetGMChat(bool on, bool notify)
+{
+    if (on)
+    {
+        m_ExtraFlags |= PLAYER_EXTRA_GM_CHAT;
+        if (notify)
+        {
+            SendSysMessage(LANG_GM_CHAT_ON);
+            GetSession()->SendNotification(LANG_GM_CHAT_ON);
+        }
+    }
+    else
+    {
+        m_ExtraFlags &= ~PLAYER_EXTRA_GM_CHAT;
+        if (notify)
+        {
+            SendSysMessage(LANG_GM_CHAT_OFF);
+            GetSession()->SendNotification(LANG_GM_CHAT_OFF);
+        }
+    }
+}
+
+bool Player::IsTaxiCheater() const
+{
+    return m_ExtraFlags & PLAYER_EXTRA_TAXICHEAT;
+}
+
+void Player::SetTaxiCheater(bool on)
+{
+    if (on)
+        m_ExtraFlags |= PLAYER_EXTRA_TAXICHEAT;
+    else
+        m_ExtraFlags &= ~PLAYER_EXTRA_TAXICHEAT;
+}
+
+void Player::SetPvPDeath(bool on)
+{
+    if (on)
+        m_ExtraFlags |= PLAYER_EXTRA_PVP_DEATH;
+    else
+        m_ExtraFlags &= ~PLAYER_EXTRA_PVP_DEATH;
+}
+
+bool Player::IsGMVisible() const
+{
+    return !(m_ExtraFlags & PLAYER_EXTRA_GM_INVISIBLE);
 }
 
 void Player::SetGMVisible(bool on, bool notify)
@@ -2906,6 +2958,54 @@ void Player::SetCheatDebugTargetInfo(bool on, bool notify)
             }
         }
     }
+}
+
+uint16 Player::GetCheatOptions() const
+{
+    return m_cheatOptions;
+}
+
+bool Player::HasCheatOption(PlayerCheatOptions o) const
+{
+    return (m_cheatOptions & o);
+}
+
+void Player::EnableCheatOption(PlayerCheatOptions o)
+{
+    m_cheatOptions |= o;
+}
+
+void Player::RemoveCheatOption(PlayerCheatOptions o)
+{
+    m_cheatOptions &= (~o);
+}
+
+void Player::SetCheatOption(PlayerCheatOptions o, bool on)
+{
+    if (on)
+        EnableCheatOption(o);
+    else
+        RemoveCheatOption(o);
+}
+
+uint32 Player::GetGMInvisibilityLevel() const
+{
+    return m_gmInvisibilityLevel;
+}
+
+void Player::SetGMInvisibilityLevel(uint32 level)
+{
+    m_gmInvisibilityLevel = level;
+}
+
+uint32 Player::GetGMTicketCounter() const
+{
+    return m_currentTicketCounter;
+}
+
+void Player::SetGMTicketCounter(uint32 counter)
+{
+    m_currentTicketCounter = counter;
 }
 
 bool Player::IsAllowedWhisperFrom(ObjectGuid guid) const

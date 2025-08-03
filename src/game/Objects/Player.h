@@ -784,16 +784,16 @@ class Player final: public Unit
         uint32 m_currentTicketCounter;
         uint16 m_cheatOptions;
     public:
-        bool IsAcceptTickets() const { return GetSession()->GetSecurity() >= SEC_GAMEMASTER && (m_ExtraFlags & PLAYER_EXTRA_GM_ACCEPT_TICKETS); }
-        void SetAcceptTicket(bool on) { if (on) m_ExtraFlags |= PLAYER_EXTRA_GM_ACCEPT_TICKETS; else m_ExtraFlags &= ~PLAYER_EXTRA_GM_ACCEPT_TICKETS; }
-        bool IsGameMaster() const { return m_ExtraFlags & PLAYER_EXTRA_GM_ON; }
+        bool IsAcceptTickets() const;
+        void SetAcceptTicket(bool on);
+        bool IsGameMaster() const;
         void SetGameMaster(bool on, bool notify = false);
-        bool IsGMChat() const { return GetSession()->GetSecurity() >= SEC_MODERATOR && (m_ExtraFlags & PLAYER_EXTRA_GM_CHAT); }
+        bool IsGMChat() const;
         void SetGMChat(bool on, bool notify = false);
-        bool IsTaxiCheater() const { return m_ExtraFlags & PLAYER_EXTRA_TAXICHEAT; }
-        void SetTaxiCheater(bool on) { if (on) m_ExtraFlags |= PLAYER_EXTRA_TAXICHEAT; else m_ExtraFlags &= ~PLAYER_EXTRA_TAXICHEAT; }
-        void SetPvPDeath(bool on) { if (on) m_ExtraFlags |= PLAYER_EXTRA_PVP_DEATH; else m_ExtraFlags &= ~PLAYER_EXTRA_PVP_DEATH; }
-        bool IsGMVisible() const { return !(m_ExtraFlags & PLAYER_EXTRA_GM_INVISIBLE); }
+        bool IsTaxiCheater() const;
+        void SetTaxiCheater(bool on);
+        void SetPvPDeath(bool on);
+        bool IsGMVisible() const;
         void SetGMVisible(bool on, bool notify = false);
         
         void SetCheatFly(bool on, bool notify = false);
@@ -810,22 +810,15 @@ class Player final: public Unit
         void SetCheatTriggerPass(bool on, bool notify = false);
         void SetCheatIgnoreTriggers(bool on, bool notify = false);
         void SetCheatDebugTargetInfo(bool on, bool notify = false);
-        uint16 GetCheatOptions() const { return m_cheatOptions; }
-        bool HasCheatOption(PlayerCheatOptions o) const { return (m_cheatOptions & o); }
-        void EnableCheatOption(PlayerCheatOptions o)    { m_cheatOptions |= o; }
-        void RemoveCheatOption(PlayerCheatOptions o)    { m_cheatOptions &= (~o); }
-        void SetCheatOption(PlayerCheatOptions o, bool on)
-        {
-            if (on)
-                EnableCheatOption(o);
-            else
-                RemoveCheatOption(o);
-        }
-
-        uint32 GetGMInvisibilityLevel() const { return m_gmInvisibilityLevel; }
-        void SetGMInvisibilityLevel(uint32 level) { m_gmInvisibilityLevel = level; }
-        uint32 GetGMTicketCounter() const { return m_currentTicketCounter; }
-        void SetGMTicketCounter(uint32 counter) { m_currentTicketCounter = counter; }
+        uint16 GetCheatOptions() const;
+        bool HasCheatOption(PlayerCheatOptions o) const;
+        void EnableCheatOption(PlayerCheatOptions o);
+        void RemoveCheatOption(PlayerCheatOptions o);
+        void SetCheatOption(PlayerCheatOptions o, bool on);
+        uint32 GetGMInvisibilityLevel() const;
+        void SetGMInvisibilityLevel(uint32 level);
+        uint32 GetGMTicketCounter() const;
+        void SetGMTicketCounter(uint32 counter);
 
         /*********************************************************/
         /***                    STORAGE SYSTEM                 ***/
