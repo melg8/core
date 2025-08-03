@@ -50,6 +50,7 @@ struct Mail;
 struct ItemPrototype;
 struct AuraSaveStruct;
 struct SpellModifier;
+struct PlayerGmSubsystem;
 class Group;
 class Channel;
 class Creature;
@@ -779,6 +780,8 @@ class Player final: public Unit
         /***                 GAMEMASTER SYSTEM                 ***/
         /*********************************************************/
 
+    public:
+        std::unique_ptr<PlayerGmSubsystem> m_gmSubsystem;
     private:
         uint32 m_gmInvisibilityLevel;
         uint32 m_currentTicketCounter;
