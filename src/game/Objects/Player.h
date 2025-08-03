@@ -782,10 +782,6 @@ class Player final: public Unit
 
     public:
         std::unique_ptr<PlayerGmSubsystem> m_gmSubsystem;
-    private:
-        uint32 m_gmInvisibilityLevel;
-        uint32 m_currentTicketCounter;
-        uint16 m_cheatOptions;
     public:
         bool IsAcceptTickets() const;
         void SetAcceptTicket(bool on);

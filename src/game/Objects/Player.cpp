@@ -108,7 +108,8 @@ static uint32 copseReclaimDelay[MAX_DEATH_COUNT] = { 30, 60, 120 };
 
 Player::Player(WorldSession* session) : Unit(),
     m_mover(this), m_camera(this), m_reputationMgr(this), m_saveDisabled(false), m_enableInstanceSwitch(true),
-    m_currentTicketCounter(0), m_repopAtGraveyardPending(false), m_knownLanguagesMask(0),
+    m_gmSubsystem(std::make_unique<PlayerGmSubsystem>()), m_repopAtGraveyardPending(false),
+    m_knownLanguagesMask(0),
     m_honorMgr(this), m_personalXpRate(-1.0f), m_isStandUpScheduled(false), m_foodEmoteTimer(0)
 {
     m_objectType |= TYPEMASK_PLAYER;
@@ -125,7 +126,7 @@ Player::Player(WorldSession* session) : Unit(),
     m_ExtraFlags = 0;
     if (GetSession()->GetSecurity() > SEC_PLAYER)
     {
-        m_currentTicketCounter = sTicketMgr->GetLastTicketId();
+        m_gmSubsystem->m_currentTicketCounter = sTicketMgr->GetLastTicketId();
         SetAcceptTicket(true);
     }
 
@@ -251,7 +252,6 @@ Player::Player(WorldSession* session) : Unit(),
     // Phasing
     m_worldMask = WORLD_DEFAULT_CHAR;
     m_AI = nullptr;
-    m_cheatOptions = 0x0;
 
     m_lastFromClientCastedSpellID = 0;
 
@@ -269,7 +269,7 @@ Player::Player(WorldSession* session) : Unit(),
     m_detectInvisibilityTimer = 1 * IN_MILLISECONDS;
 
     // GM variables
-    m_gmInvisibilityLevel = session->GetSecurity();
+    m_gmSubsystem->m_gmInvisibilityLevel = session->GetSecurity();
 
     if (session->GetSecurity() > SEC_MODERATOR)
         m_smartInstanceRebind = true;
@@ -2963,22 +2963,22 @@ void Player::SetCheatDebugTargetInfo(bool on, bool notify)
 
 uint16 Player::GetCheatOptions() const
 {
-    return m_cheatOptions;
+    return m_gmSubsystem->m_cheatOptions;
 }
 
 bool Player::HasCheatOption(PlayerCheatOptions o) const
 {
-    return (m_cheatOptions & o);
+    return (m_gmSubsystem->m_cheatOptions & o);
 }
 
 void Player::EnableCheatOption(PlayerCheatOptions o)
 {
-    m_cheatOptions |= o;
+    m_gmSubsystem->m_cheatOptions |= o;
 }
 
 void Player::RemoveCheatOption(PlayerCheatOptions o)
 {
-    m_cheatOptions &= (~o);
+    m_gmSubsystem->m_cheatOptions &= (~o);
 }
 
 void Player::SetCheatOption(PlayerCheatOptions o, bool on)
@@ -2991,22 +2991,22 @@ void Player::SetCheatOption(PlayerCheatOptions o, bool on)
 
 uint32 Player::GetGMInvisibilityLevel() const
 {
-    return m_gmInvisibilityLevel;
+    return m_gmSubsystem->m_gmInvisibilityLevel;
 }
 
 void Player::SetGMInvisibilityLevel(uint32 level)
 {
-    m_gmInvisibilityLevel = level;
+    m_gmSubsystem->m_gmInvisibilityLevel = level;
 }
 
 uint32 Player::GetGMTicketCounter() const
 {
-    return m_currentTicketCounter;
+    return m_gmSubsystem->m_currentTicketCounter;
 }
 
 void Player::SetGMTicketCounter(uint32 counter)
 {
-    m_currentTicketCounter = counter;
+    m_gmSubsystem->m_currentTicketCounter = counter;
 }
 
 bool Player::IsAllowedWhisperFrom(ObjectGuid guid) const
@@ -18870,7 +18870,7 @@ bool Player::IsVisibleGloballyFor(Player const* viewer) const
     // GMs are visible for higher gms (or players are visible for gms)
     uint8 security = viewer->GetSession()->GetSecurity();
     if (security > SEC_PLAYER)
-        return m_gmInvisibilityLevel <= security;
+        return m_gmSubsystem->m_gmInvisibilityLevel <= security;
 
     // non faction visibility non-breakable for non-GMs
     if (GetVisibility() == VISIBILITY_OFF)

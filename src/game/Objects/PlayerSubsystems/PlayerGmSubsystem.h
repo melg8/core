@@ -1,4 +1,5 @@
 ﻿// SPDX-FileCopyrightText: © 2004 WoWD Team
+// SPDX-FileCopyrightText: © 2004 Team Python
 // SPDX-FileCopyrightText: © 2005-2011 MaNGOS <http://getmangos.com/>
 // SPDX-FileCopyrightText: © 2009-2011 MaNGOSZero <https://github.com/mangos/zero>
 // SPDX-FileCopyrightText: © 2011-2016 Nostalrius <https://nostalrius.org>
@@ -11,10 +12,11 @@
 #ifndef PLAYER_GM_SUBSYSTEM_H
 #define PLAYER_GM_SUBSYSTEM_H
 
-
 struct PlayerGmSubsystem
 {
+    uint32 m_gmInvisibilityLevel = 0;
+    uint32 m_currentTicketCounter = 0;
+    uint16 m_cheatOptions = 0;
 };
-
 
 #endif // PLAYER_GM_SUBSYSTEM_H
