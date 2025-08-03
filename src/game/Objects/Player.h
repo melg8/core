@@ -39,6 +39,7 @@
 #include "HonorMgr.h"
 #include "PlayerTaxi.h"
 #include "MirrorTimer.h"
+#include "PlayerSubsystems/PlayerCheatOptions.h"
 
 #include <string>
 #include <utility>
@@ -413,22 +414,6 @@ enum ActivateTaxiReplies
     ERR_TAXIPLAYERMOVING            = 10,
     ERR_TAXISAMENODE                = 11,
     ERR_TAXINOTSTANDING             = 12
-};
-
-enum PlayerCheatOptions : uint16
-{
-    PLAYER_CHEAT_FLY               = 0x001,
-    PLAYER_CHEAT_NO_COOLDOWN       = 0x002,
-    PLAYER_CHEAT_NO_CAST_TIME      = 0x004,
-    PLAYER_CHEAT_NO_POWER          = 0x008,
-    PLAYER_CHEAT_DEBUFF_IMMUNITY   = 0x010,
-    PLAYER_CHEAT_ALWAYS_CRIT       = 0x020,
-    PLAYER_CHEAT_NO_CHECK_CAST     = 0x040,
-    PLAYER_CHEAT_ALWAYS_PROC       = 0x080,
-    PLAYER_CHEAT_TRIGGER_PASS      = 0x100,
-    PLAYER_CHEAT_IGNORE_TRIGGERS   = 0x200,
-    PLAYER_CHEAT_DEBUG_TARGET_INFO = 0x400,
-    PLAYER_CHEAT_FIXED_Z           = 0x800,
 };
 
 typedef std::map<uint32, QuestStatusData> QuestStatusMap;

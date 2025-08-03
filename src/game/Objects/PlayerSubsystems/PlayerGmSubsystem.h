@@ -12,6 +12,10 @@
 #ifndef PLAYER_GM_SUBSYSTEM_H
 #define PLAYER_GM_SUBSYSTEM_H
 
+#include "Platform/Define.h"
+
+#include "PlayerCheatOptions.h"
+
 struct PlayerGmSubsystem
 {
     [[nodiscard]] inline uint16 GetCheatOptions() const noexcept { return m_cheatOptions; }
