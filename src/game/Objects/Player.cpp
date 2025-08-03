@@ -126,7 +126,7 @@ Player::Player(WorldSession* session) : Unit(),
     m_ExtraFlags = 0;
     if (GetSession()->GetSecurity() > SEC_PLAYER)
     {
-        m_gmSubsystem->m_currentTicketCounter = sTicketMgr->GetLastTicketId();
+        m_gmSubsystem->SetGMTicketCounter(sTicketMgr->GetLastTicketId());
         SetAcceptTicket(true);
     }
 
@@ -2998,12 +2998,12 @@ void Player::SetGMInvisibilityLevel(uint32 level)
 
 uint32 Player::GetGMTicketCounter() const
 {
-    return m_gmSubsystem->m_currentTicketCounter;
+    return m_gmSubsystem->GetGMTicketCounter();
 }
 
 void Player::SetGMTicketCounter(uint32 counter)
 {
-    m_gmSubsystem->m_currentTicketCounter = counter;
+    m_gmSubsystem->SetGMTicketCounter(counter);
 }
 
 bool Player::IsAllowedWhisperFrom(ObjectGuid guid) const
