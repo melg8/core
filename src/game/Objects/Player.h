@@ -768,18 +768,32 @@ class Player final: public Unit
     public:
         std::unique_ptr<PlayerGmSubsystem> m_gmSubsystem;
     public:
+        [[nodiscard]] uint16 GetCheatOptions() const;
+        [[nodiscard]] bool HasCheatOption(PlayerCheatOptions o) const;
+        [[nodiscard]] uint32 GetGMTicketCounter() const;
+        [[nodiscard]] uint32 GetGMInvisibilityLevel() const;
+
+        void EnableCheatOption(PlayerCheatOptions o);
+        void RemoveCheatOption(PlayerCheatOptions o);
+        void SetCheatOption(PlayerCheatOptions o, bool on);
+        void SetGMTicketCounter(uint32 counter);
+        void SetGMInvisibilityLevel(uint32 level);
+
+    public:
         bool IsAcceptTickets() const;
-        void SetAcceptTicket(bool on);
         bool IsGameMaster() const;
-        void SetGameMaster(bool on, bool notify = false);
         bool IsGMChat() const;
-        void SetGMChat(bool on, bool notify = false);
         bool IsTaxiCheater() const;
-        void SetTaxiCheater(bool on);
-        void SetPvPDeath(bool on);
         bool IsGMVisible() const;
+
+        void SetAcceptTicket(bool on);
+        void SetGameMaster(bool on, bool notify = false);
+        void SetGMChat(bool on, bool notify = false);
+        void SetTaxiCheater(bool on);
         void SetGMVisible(bool on, bool notify = false);
-        
+
+        void SetPvPDeath(bool on);
+
         void SetCheatFly(bool on, bool notify = false);
         void SetCheatFixedZ(bool on, bool notify = false);
         void SetCheatBeastmaster(bool on, bool notify = false);
@@ -794,15 +808,6 @@ class Player final: public Unit
         void SetCheatTriggerPass(bool on, bool notify = false);
         void SetCheatIgnoreTriggers(bool on, bool notify = false);
         void SetCheatDebugTargetInfo(bool on, bool notify = false);
-        uint16 GetCheatOptions() const;
-        bool HasCheatOption(PlayerCheatOptions o) const;
-        void EnableCheatOption(PlayerCheatOptions o);
-        void RemoveCheatOption(PlayerCheatOptions o);
-        void SetCheatOption(PlayerCheatOptions o, bool on);
-        uint32 GetGMInvisibilityLevel() const;
-        void SetGMInvisibilityLevel(uint32 level);
-        uint32 GetGMTicketCounter() const;
-        void SetGMTicketCounter(uint32 counter);
 
         /*********************************************************/
         /***                    STORAGE SYSTEM                 ***/
