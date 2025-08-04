@@ -560,7 +560,6 @@ void WorldSession::HandlePlayerLogin(LoginQueryHolder *holder)
 
     // Send MOTD (1.12.1 not have SMSG_MOTD, so do it in another way)
     {
-        uint32 linecount = 0;
         std::string str_motd = sWorld.GetMotd();
         std::string::size_type pos, nextpos;
         std::string motd;
@@ -571,7 +570,6 @@ void WorldSession::HandlePlayerLogin(LoginQueryHolder *holder)
             if (nextpos != pos)
             {
                 pCurrChar->PSendSysMessage(str_motd.substr(pos, nextpos - pos).c_str());
-                ++linecount;
             }
             pos = nextpos + 1;
         }
@@ -579,7 +577,6 @@ void WorldSession::HandlePlayerLogin(LoginQueryHolder *holder)
         if (pos < str_motd.length())
         {
             pCurrChar->PSendSysMessage(str_motd.substr(pos).c_str());
-            ++linecount;
         }
     }
 
