@@ -18,13 +18,37 @@
 
 struct PlayerGmSubsystem
 {
-    [[nodiscard]] inline uint16 GetCheatOptions() const noexcept { return m_cheatOptions; }
-    [[nodiscard]] inline bool HasCheatOption(PlayerCheatOptions o) const noexcept { return (m_cheatOptions & o); }
-    [[nodiscard]] inline uint32 GetGMTicketCounter() const noexcept { return m_currentTicketCounter; }
+    [[nodiscard]] inline uint16 GetCheatOptions() const noexcept
+    {
+        return m_cheatOptions;
+    }
 
-    inline void EnableCheatOption(PlayerCheatOptions o) noexcept { m_cheatOptions |= o; }
-    inline void RemoveCheatOption(PlayerCheatOptions o) noexcept { m_cheatOptions &= (~o); }
-    inline void SetCheatOption(PlayerCheatOptions o, bool on) noexcept 
+    [[nodiscard]] inline bool HasCheatOption(PlayerCheatOptions o) const noexcept
+    {
+        return m_cheatOptions & o;
+    }
+
+    [[nodiscard]] inline uint32 GetGMTicketCounter() const noexcept
+    {
+        return m_currentTicketCounter;
+    }
+
+    [[nodiscard]] inline uint32 GetGMInvisibilityLevel() const noexcept
+    {
+        return m_gmInvisibilityLevel;
+    }
+
+    inline void EnableCheatOption(PlayerCheatOptions o) noexcept
+    {
+        m_cheatOptions |= o;
+    }
+
+    inline void RemoveCheatOption(PlayerCheatOptions o) noexcept
+    {
+        m_cheatOptions &= (~o);
+    }
+
+    inline void SetCheatOption(PlayerCheatOptions o, bool on) noexcept
     {
         if (on)
             EnableCheatOption(o);
@@ -32,13 +56,18 @@ struct PlayerGmSubsystem
             RemoveCheatOption(o);
     }
 
-    inline void SetGMTicketCounter(uint32 counter) noexcept { m_currentTicketCounter = counter; }
+    inline void SetGMTicketCounter(uint32 counter) noexcept
+    {
+        m_currentTicketCounter = counter;
+    }
 
-
-public:
-    uint32 m_gmInvisibilityLevel = 0;
+    inline void SetGMInvisibilityLevel(uint32 level) noexcept
+    {
+        m_gmInvisibilityLevel = level;
+    }
 
 private:
+    uint32 m_gmInvisibilityLevel = 0;
     uint32 m_currentTicketCounter = 0;
     uint16 m_cheatOptions = 0;
 };

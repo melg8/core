@@ -269,7 +269,7 @@ Player::Player(WorldSession* session) : Unit(),
     m_detectInvisibilityTimer = 1 * IN_MILLISECONDS;
 
     // GM variables
-    m_gmSubsystem->m_gmInvisibilityLevel = session->GetSecurity();
+    m_gmSubsystem->SetGMInvisibilityLevel(session->GetSecurity());
 
     if (session->GetSecurity() > SEC_MODERATOR)
         m_smartInstanceRebind = true;
@@ -2988,12 +2988,12 @@ void Player::SetCheatOption(PlayerCheatOptions o, bool on)
 
 uint32 Player::GetGMInvisibilityLevel() const
 {
-    return m_gmSubsystem->m_gmInvisibilityLevel;
+    return m_gmSubsystem->GetGMInvisibilityLevel();
 }
 
 void Player::SetGMInvisibilityLevel(uint32 level)
 {
-    m_gmSubsystem->m_gmInvisibilityLevel = level;
+    m_gmSubsystem->SetGMInvisibilityLevel(level);
 }
 
 uint32 Player::GetGMTicketCounter() const
@@ -18867,7 +18867,7 @@ bool Player::IsVisibleGloballyFor(Player const* viewer) const
     // GMs are visible for higher gms (or players are visible for gms)
     uint8 security = viewer->GetSession()->GetSecurity();
     if (security > SEC_PLAYER)
-        return m_gmSubsystem->m_gmInvisibilityLevel <= security;
+        return m_gmSubsystem->GetGMInvisibilityLevel() <= security;
 
     // non faction visibility non-breakable for non-GMs
     if (GetVisibility() == VISIBILITY_OFF)
