@@ -1,19 +1,13 @@
-# Copyright (C) 2005-2011 MaNGOS <http://getmangos.com/>
-# Copyright (C) 2009-2011 MaNGOSZero <https://github.com/mangos/zero>
+# SPDX-FileCopyrightText: © 2004 WoWD Team
+# SPDX-FileCopyrightText: © 2004 Team Python
+# SPDX-FileCopyrightText: © 2005-2011 MaNGOS <http://getmangos.com/>
+# SPDX-FileCopyrightText: © 2009-2011 MaNGOSZero <https://github.com/mangos/zero>
+# SPDX-FileCopyrightText: © 2011-2016 Nostalrius <https://nostalrius.org>
+# SPDX-FileCopyrightText: © 2016-2017 Elysium Project <https://github.com/elysium-project>
+# SPDX-FileCopyrightText: © 2017-2025 Vanilla MaNGOS <https://github.com/vmangos/core>
+# SPDX-FileCopyrightText: © 2025 Melg Eight <public.melg8@gmail.com>
 #
-# This program is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 2 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program; if not, write to the Free Software
-# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+# SPDX-License-Identifier: GPL-2.0-or-later
 
 # Glob only and not recurse, there are other libs for that
 set (shared_SRCS
@@ -172,9 +166,13 @@ target_include_directories(shared PUBLIC
   ${CMAKE_SOURCE_DIR}/dep/include
   ${CMAKE_SOURCE_DIR}/src/framework
   ${CMAKE_BINARY_DIR}
-  ${ACE_INCLUDE_DIR}
-  ${MYSQL_INCLUDE_DIR}
-  ${OPENSSL_INCLUDE_DIR}
+)
+
+target_include_directories(
+    shared SYSTEM PUBLIC
+    ${ACE_INCLUDE_DIR}
+    ${MYSQL_INCLUDE_DIR}
+    ${OPENSSL_INCLUDE_DIR}
 )
 
 if(WIN32)
