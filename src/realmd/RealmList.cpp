@@ -25,7 +25,6 @@
 
 #include "Common.h"
 #include "RealmList.h"
-#include "AuthCodes.h"
 #include "Util.h"                                           // for Tokens typedef
 #include "Log.h"
 #include "Policies/SingletonImp.h"

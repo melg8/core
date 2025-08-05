@@ -16,7 +16,6 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "ByteBuffer.h"
 #include "TargetedMovementGenerator.h"
 #include "Creature.h"
 #include "CreatureAI.h"

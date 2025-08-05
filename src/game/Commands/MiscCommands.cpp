@@ -16,7 +16,6 @@
 
 #include "Common.h"
 #include "Database/DatabaseEnv.h"
-#include "Opcodes.h"
 #include "World.h"
 #include "Player.h"
 #include "Group.h"

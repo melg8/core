@@ -35,7 +35,6 @@
 #include "Group.h"
 #include "Database/DatabaseImpl.h"
 #include "SocialMgr.h"
-#include "Util.h"
 #include "Language.h"
 #include "Anticheat.h"
 #include "MasterPlayer.h"

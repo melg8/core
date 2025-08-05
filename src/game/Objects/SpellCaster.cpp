@@ -18,7 +18,6 @@
 #include "SpellCaster.h"
 #include "DynamicObject.h"
 #include "GameObject.h"
-#include "Totem.h"
 #include "CreatureAI.h"
 #include "Chat.h"
 #include "Spell.h"

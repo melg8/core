@@ -27,7 +27,6 @@
 #include "ObjectMgr.h"
 #include "BattleGroundMgr.h"
 #include "WorldPacket.h"
-#include "Language.h"
 #include "World.h"
 
 #if SUPPORTED_CLIENT_BUILD <= CLIENT_BUILD_1_6_1

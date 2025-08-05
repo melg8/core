@@ -24,6 +24,8 @@
 
 #include "Common.h"
 
+#include "SharedDefines.h"
+
 // magic event-numbers
 #define BG_EVENT_NONE 255
 

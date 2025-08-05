@@ -22,14 +22,16 @@
 #ifndef __BATTLEGROUND_H
 #define __BATTLEGROUND_H
 
-#include "Common.h"
-#include "SharedDefines.h"
-#include "Map.h"
-#include "ByteBuffer.h"
-#include "ObjectGuid.h"
-#include "WorldStates.h"
-#include "SpellDefines.h"
 #include "BattleGroundDefines.h"
+#include "ByteBuffer.h"
+#include "Common.h"
+#include "Map.h"
+#include "ObjectGuid.h"
+#include "SharedDefines.h"
+#include "SpellDefines.h"
+#include "SpellEntry.h"
+#include "WorldPacket.h"
+#include "WorldStates.h"
 
 class Creature;
 class GameObject;
@@ -38,7 +40,6 @@ class Player;
 class WorldPacket;
 class BattleGroundMap;
 class ChatHandler;
-class SpellInfo;
 
 struct WorldSafeLocsEntry;
 

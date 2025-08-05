@@ -23,7 +23,6 @@
 #include "MoveSplineInit.h"
 #include "MoveSpline.h"
 #include "PathFinder.h"
-#include "MoveMap.h"
 #include "Map.h"
 
 #define SEARCH_RANDOM_RADIUS 5.0f

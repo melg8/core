@@ -31,8 +31,6 @@
 #include "GridNotifiersImpl.h"
 #include "ObjectGuid.h"
 
-#include <cmath>
-
 typedef MaNGOS::ClassLevelLockable<ObjectAccessor, std::mutex> ObjectAccessorLock;
 INSTANTIATE_SINGLETON_2(ObjectAccessor, ObjectAccessorLock);
 INSTANTIATE_CLASS_MUTEX(ObjectAccessor, std::mutex);

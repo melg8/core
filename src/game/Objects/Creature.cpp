@@ -48,7 +48,6 @@
 #include "CreatureGroups.h"
 #include "ZoneScript.h"
 #include "MoveSplineInit.h"
-#include "MoveSpline.h"
 #include "Anticheat.h"
 #include "CreatureLinkingMgr.h"
 #include "TemporarySummon.h"

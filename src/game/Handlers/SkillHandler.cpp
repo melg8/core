@@ -19,14 +19,11 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "Common.h"
-#include "Database/DatabaseEnv.h"
 #include "Opcodes.h"
 #include "Log.h"
 #include "Player.h"
 #include "WorldPacket.h"
 #include "WorldSession.h"
-#include "UpdateMask.h"
 #include "Anticheat.h"
 
 void WorldSession::HandleLearnTalentOpcode(WorldPacket& recv_data)

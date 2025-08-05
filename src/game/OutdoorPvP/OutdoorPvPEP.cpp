@@ -21,7 +21,6 @@
 #include "GameObject.h"
 #include "ObjectMgr.h"
 #include "ZoneScriptMgr.h"
-#include "Language.h"
 #include "World.h"
 #include "WaypointManager.h"
 #include "CreatureGroups.h"

@@ -17,13 +17,11 @@
  */
 
 #include "ConfusedMovementGenerator.h"
-#include "MapManager.h"
 #include "Creature.h"
 #include "Player.h"
 #include "MoveSplineInit.h"
 #include "MoveSpline.h"
 #include "PathFinder.h"
-#include "Transport.h"
 
 template<class T>
 void ConfusedMovementGenerator<T>::Initialize(T &unit)

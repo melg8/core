@@ -31,7 +31,6 @@
 #include "ObjectGuid.h"
 #include "Player.h"
 #include "Group.h"
-#include "UpdateMask.h"
 #include "GridNotifiersImpl.h"
 #include "CellImpl.h"
 #include "AccountMgr.h"

@@ -28,7 +28,6 @@
 #include "ObjectAccessor.h"
 #include "ObjectMgr.h"
 #include "World.h"
-#include "Util.h"
 
 INSTANTIATE_SINGLETON_1(SocialMgr);
 

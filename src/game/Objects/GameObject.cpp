@@ -37,7 +37,6 @@
 #include "MapManager.h"
 #include "MapPersistentStateMgr.h"
 #include "BattleGround.h"
-#include "BattleGroundAV.h"
 #include "Util.h"
 #include "GameObjectAI.h"
 #include "ScriptMgr.h"

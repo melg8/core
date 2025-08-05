@@ -24,7 +24,6 @@
 #include "WardenModuleMgr.hpp"
 #include "WardenModule.hpp"
 
-#include "Platform/Define.h"
 #include "Policies/SingletonImp.h"
 #include "Util.h"
 #include "World.h"
@@ -34,7 +33,6 @@
 
 #include <vector>
 #include <string>
-#include <fstream>
 
 INSTANTIATE_SINGLETON_1(WardenModuleMgr);
 

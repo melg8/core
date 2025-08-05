@@ -22,7 +22,6 @@
 #include "DBCStores.h"
 #include "SpellMgr.h"
 #include "MotionMaster.h"
-#include "Spell.h"
 #include "Map.h"
 
 void PlayerAI::Remove()

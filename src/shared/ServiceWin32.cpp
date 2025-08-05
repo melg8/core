@@ -21,7 +21,6 @@
 
 #ifdef WIN32
 
-#include "Common.h"
 #include "Log.h"
 #include <cstring>
 #include <winsvc.h>

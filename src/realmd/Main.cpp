@@ -31,7 +31,6 @@
 #include "Log.h"
 #include "AuthSocket.h"
 #include "SystemConfig.h"
-#include "revision.h"
 #include "Util.h"
 #include "migrations_list.h"
 #include <openssl/opensslv.h>

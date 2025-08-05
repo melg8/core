@@ -24,11 +24,9 @@
 */
 
 #include "WorldSocketMgr.h"
-#include "Common.h"
 #include "World.h"
 #include "WorldRunnable.h"
 #include "Timer.h"
-#include "ObjectAccessor.h"
 #include "MapManager.h"
 #include "BattleGroundMgr.h"
 #include "Master.h"

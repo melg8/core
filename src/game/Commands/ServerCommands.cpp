@@ -28,7 +28,6 @@
 #include "GuildMgr.h"
 #include "SystemConfig.h"
 #include "Config/Config.h"
-#include "revision.h"
 #include "Util.h"
 #include "Weather.h"
 #include "Anticheat.h"
@@ -41,7 +40,6 @@
 #include "SpellModMgr.h"
 #include "MapManager.h"
 #include "CreatureGroups.h"
-#include "HardcodedEvents.h"
 
 bool ChatHandler::HandleAnnounceCommand(char* args)
 {

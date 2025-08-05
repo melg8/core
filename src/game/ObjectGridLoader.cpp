@@ -29,7 +29,6 @@
 #include "DynamicObject.h"
 #include "Corpse.h"
 #include "World.h"
-#include "CellImpl.h"
 #include "BattleGround.h"
 
 class ObjectGridRespawnMover

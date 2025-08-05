@@ -39,7 +39,6 @@
 #include "ScriptMgr.h"
 #include "Conditions.h"
  // VMAPS
-#include "VMapFactory.h"
 #include "ModelInstance.h"
 #include "GameObjectModel.h"
  // MMAPS

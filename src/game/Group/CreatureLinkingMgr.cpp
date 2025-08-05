@@ -33,7 +33,6 @@
 */
 
 #include "CreatureLinkingMgr.h"
-#include "Policies/Singleton.h"
 #include "ProgressBar.h"
 #include "Database/DatabaseEnv.h"
 #include "ObjectMgr.h"

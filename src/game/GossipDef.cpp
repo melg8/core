@@ -25,7 +25,6 @@
 #include "Opcodes.h"
 #include "WorldPacket.h"
 #include "WorldSession.h"
-#include "Formulas.h"
 
 GossipMenu::GossipMenu(WorldSession* session) : m_session(session)
 {

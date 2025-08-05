@@ -24,10 +24,7 @@
 #include "Database/DatabaseEnv.h"
 #include "Policies/SingletonImp.h"
 
-#include "DBCStores.h"
 #include "Log.h"
-
-#include <limits>
 
 INSTANTIATE_SINGLETON_1(SpellModMgr);
 

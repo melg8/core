@@ -1,6 +1,4 @@
 #include "Common.h"
-#include "Database/DatabaseEnv.h"
-#include "Config/Config.h"
 #include "Opcodes.h"
 #include "MovementAnticheat.h"
 #include "Chat.h"

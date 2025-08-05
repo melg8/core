@@ -7,7 +7,6 @@
 #include "MapManager.h"
 #include "WaypointManager.h"
 #include "Chat.h"
-#include "GridSearchers.h"
 #include "world/scourge_invasion.h"
 #include "world/world_event_wareffort.h"
 #include <chrono>

@@ -26,6 +26,8 @@
 #include <map>
 #include <set>
 
+#include "Common.h"
+
 enum DumpTableType
 {
     DTT_CHARACTER,      //    -> guid, name                 // characters

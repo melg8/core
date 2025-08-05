@@ -31,7 +31,6 @@
 #include <string>
 #include <vector>
 #include <fstream>
-#include <exception>
 
 
 WardenModule::WardenModule(std::string const& bin, std::string const& kf, std::string const& cr)

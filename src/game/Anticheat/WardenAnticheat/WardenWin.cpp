@@ -34,7 +34,6 @@
 #include "Crypto/Hash/HMACSHA1.h"
 #include "ByteBuffer.h"
 #include "Database/DatabaseEnv.h"
-#include "Progression.h"
 
 #include <string>
 #include <vector>

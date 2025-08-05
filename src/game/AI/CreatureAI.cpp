@@ -21,7 +21,6 @@
 
 #include "CreatureAI.h"
 #include "Creature.h"
-#include "DBCStores.h"
 #include "Totem.h"
 #include "ObjectMgr.h"
 #include "ScriptMgr.h"

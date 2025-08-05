@@ -22,7 +22,6 @@
 #include "ObjectMgr.h"
 #include "Database/DatabaseEnv.h"
 #include "Database/DatabaseImpl.h"
-#include "Database/SQLStorageImpl.h"
 #include "Policies/SingletonImp.h"
 #include "SQLStorages.h"
 #include "Log.h"
@@ -30,11 +29,9 @@
 #include "ObjectGuid.h"
 #include "ScriptMgr.h"
 #include "SpellMgr.h"
-#include "UpdateMask.h"
 #include "World.h"
 #include "Group.h"
 #include "Bag.h"
-#include "Transport.h"
 #include "ProgressBar.h"
 #include "Language.h"
 #include "PoolManager.h"
@@ -44,20 +41,15 @@
 #include "MapPersistentStateMgr.h"
 #include "SpellAuras.h"
 #include "Util.h"
-#include "WaypointManager.h"
 #include "GossipDef.h"
 #include "Mail.h"
-#include "Formulas.h"
 #include "InstanceData.h"
 #include "CharacterDatabaseCache.h"
-#include "HardcodedEvents.h"
 #include "Conditions.h"
 #include "RealmZone.h"
 #include <limits>
 
 INSTANTIATE_SINGLETON_1(ObjectMgr);
-
-#include "utf8cpp/utf8.h"
 
 bool normalizePlayerName(std::string& name, size_t max_len)
 {

@@ -2,9 +2,13 @@
  * This program is free software licensed under GPL version 2
  * Please see the included DOCS/LICENSE.TXT for more information */
 
-#include "WorldPacket.h"
 #include "ScriptedAI.h"
-#include "GridSearchers.h"
+#include "Creature.h"
+#include "Map.h"
+#include "Player.h"
+#include "GridNotifiers.h"
+#include "GridNotifiersImpl.h"
+#include "CellImpl.h"
 
 ScriptedAI::ScriptedAI(Creature* pCreature) : BasicAI(pCreature),
     me(pCreature),

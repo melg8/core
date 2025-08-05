@@ -20,7 +20,6 @@
 #include "Transport.h"
 #include "Geometry.h"
 #include "ObjectMgr.h"
-#include "Path.h"
 #include "WorldPacket.h"
 #include "World.h"
 #include "GameObjectAI.h"

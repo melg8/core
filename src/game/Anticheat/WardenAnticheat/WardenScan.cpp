@@ -31,7 +31,6 @@
 
 #include <string>
 #include <algorithm>
-#include <functional>
 
 ScanFlags operator|(ScanFlags lhs, ScanFlags rhs)
 {
