@@ -20,20 +20,18 @@
  */
 
 #include "Map.h"
+
 #include "MapManager.h"
 #include "Player.h"
 #include "GridNotifiers.h"
 #include "Log.h"
-#include "CellImpl.h"
 #include "InstanceData.h"
-#include "GridNotifiersImpl.h"
 #include "Transport.h"
 #include "ObjectAccessor.h"
 #include "ObjectMgr.h"
 #include "World.h"
 #include "Group.h"
 #include "MapRefManager.h"
-#include "DBCEnums.h"
 #include "MapPersistentStateMgr.h"
 #include "VMapFactory.h"
 #include "BattleGroundMgr.h"
@@ -49,12 +47,17 @@
 #include "Weather.h"
 #include "MovementBroadcaster.h"
 #include "PlayerBroadcaster.h"
-#include "GridSearchers.h"
 #include "ThreadPool.h"
 #include "AuraRemovalMgr.h"
-#include "world/world_event_wareffort.h"
 #include "CreatureGroups.h"
 #include "Geometry.h"
+#include "ScriptMgr.h"
+#include "SpellAuras.h"
+#include "Cell.h"
+#include "CellImpl.h"
+#include "GridNotifiers.h"
+#include "GridNotifiersImpl.h"
+
 
 Map::~Map()
 {
