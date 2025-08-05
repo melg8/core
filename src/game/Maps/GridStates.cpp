@@ -1,36 +1,28 @@
-/*
- * Copyright (C) 2005-2011 MaNGOS <http://getmangos.com/>
- * Copyright (C) 2009-2011 MaNGOSZero <https://github.com/mangos/zero>
- * Copyright (C) 2011-2016 Nostalrius <https://nostalrius.org>
- * Copyright (C) 2016-2017 Elysium Project <https://github.com/elysium-project>
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- */
+// SPDX-FileCopyrightText: © 2004 WoWD Team
+// SPDX-FileCopyrightText: © 2004 Team Python
+// SPDX-FileCopyrightText: © 2005-2011 MaNGOS <http://getmangos.com/>
+// SPDX-FileCopyrightText: © 2009-2011 MaNGOSZero <https://github.com/mangos/zero>
+// SPDX-FileCopyrightText: © 2011-2016 Nostalrius <https://nostalrius.org>
+// SPDX-FileCopyrightText: © 2016-2017 Elysium Project <https://github.com/elysium-project>
+// SPDX-FileCopyrightText: © 2017-2025 Vanilla MaNGOS <https://github.com/vmangos/core>
+// SPDX-FileCopyrightText: © 2025 Melg Eight <public.melg8@gmail.com>
+//
+// SPDX-License-Identifier: GPL-2.0-or-later
 
 #include "GridStates.h"
-#include "GridNotifiers.h"
-#include "GameSystem/Grid.h"
-#include "Log.h"
 
-void
-InvalidState::Update(Map&, NGridType&, GridInfo&, uint32 const& /*x*/, uint32 const& /*y*/, uint32 const&) const
+#include "Log.h"
+#include "ObjectGridLoader.h"
+
+void InvalidState::Update(Map&, NGridType&, GridInfo&,
+                          uint32 const& /*x*/, uint32 const& /*y*/,
+                          uint32 const&)
 {
 }
 
-void
-ActiveState::Update(Map& m, NGridType& grid, GridInfo& info, uint32 const& x, uint32 const& y, uint32 const& t_diff) const
+void ActiveState::Update(Map& m, NGridType& grid, GridInfo& info,
+                         uint32 const& x, uint32 const& y,
+                         uint32 const& t_diff)
 {
     // Only check grid activity every (grid_expiry/10) ms, because it's really useless to do it every cycle
     info.UpdateTimeTracker(t_diff);
@@ -47,16 +39,18 @@ ActiveState::Update(Map& m, NGridType& grid, GridInfo& info, uint32 const& x, ui
     }
 }
 
-void
-IdleState::Update(Map& m, NGridType& grid, GridInfo&, uint32 const& x, uint32 const& y, uint32 const&) const
+void IdleState::Update(Map& m, NGridType& grid, GridInfo&,
+                       uint32 const& x, uint32 const& y,
+                       uint32 const&)
 {
     m.ResetGridExpiry(grid);
     grid.SetGridState(GRID_STATE_REMOVAL);
     sLog.Out(LOG_BASIC, LOG_LVL_DEBUG, "Grid[%u,%u] on map %u moved to IDLE state", x, y, m.GetId());
 }
 
-void
-RemovalState::Update(Map& m, NGridType& grid, GridInfo& info, uint32 const& x, uint32 const& y, uint32 const& t_diff) const
+void RemovalState::Update(Map& m, NGridType& grid, GridInfo& info,
+                          uint32 const& x, uint32 const& y,
+                          uint32 const& t_diff)
 {
     if (!info.getUnloadLock())
     {

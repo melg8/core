@@ -1,31 +1,19 @@
-/*
- * Copyright (C) 2005-2011 MaNGOS <http://getmangos.com/>
- * Copyright (C) 2009-2011 MaNGOSZero <https://github.com/mangos/zero>
- * Copyright (C) 2011-2016 Nostalrius <https://nostalrius.org>
- * Copyright (C) 2016-2017 Elysium Project <https://github.com/elysium-project>
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
- */
+// SPDX-FileCopyrightText: © 2004 WoWD Team
+// SPDX-FileCopyrightText: © 2004 Team Python
+// SPDX-FileCopyrightText: © 2005-2011 MaNGOS <http://getmangos.com/>
+// SPDX-FileCopyrightText: © 2009-2011 MaNGOSZero <https://github.com/mangos/zero>
+// SPDX-FileCopyrightText: © 2011-2016 Nostalrius <https://nostalrius.org>
+// SPDX-FileCopyrightText: © 2016-2017 Elysium Project <https://github.com/elysium-project>
+// SPDX-FileCopyrightText: © 2017-2025 Vanilla MaNGOS <https://github.com/vmangos/core>
+// SPDX-FileCopyrightText: © 2025 Melg Eight <public.melg8@gmail.com>
+//
+// SPDX-License-Identifier: GPL-2.0-or-later
 
 #include "MapManager.h"
+
 #include "MapPersistentStateMgr.h"
-#include "Policies/SingletonImp.h"
-#include "Database/DatabaseEnv.h"
 #include "Log.h"
 #include "GridDefines.h"
-#include "CellImpl.h"
 #include "World.h"
 #include "Player.h"
 #include "Group.h"
@@ -33,6 +21,10 @@
 #include "Map.h"
 #include "BattleGround.h"
 #include "ThreadPool.h"
+#include "GridStates.h"
+
+#include "Policies/SingletonImp.h"
+#include "Database/DatabaseEnv.h"
 
 typedef MaNGOS::ClassLevelLockable<MapManager, std::recursive_mutex> MapManagerLock;
 INSTANTIATE_SINGLETON_2(MapManager, MapManagerLock);
@@ -54,14 +46,11 @@ MapManager::~MapManager()
 {
     for (const auto& itr : i_maps)
         delete itr.second;
-
-    DeleteStateMachine();
 }
 
 void
 MapManager::Initialize()
 {
-    InitStateMachine();
     InitMaxInstanceId();
     for (auto itr = sMapStorage.begin<MapEntry>(); itr < sMapStorage.end<MapEntry>(); ++itr)
     {
@@ -78,29 +67,27 @@ MapManager::Initialize()
     }
 }
 
-void MapManager::InitStateMachine()
-{
-    si_GridStates[GRID_STATE_INVALID] = new InvalidState;
-    si_GridStates[GRID_STATE_ACTIVE] = new ActiveState;
-    si_GridStates[GRID_STATE_IDLE] = new IdleState;
-    si_GridStates[GRID_STATE_REMOVAL] = new RemovalState;
-}
-
-void MapManager::DeleteStateMachine()
-{
-    delete si_GridStates[GRID_STATE_INVALID];
-    delete si_GridStates[GRID_STATE_ACTIVE];
-    delete si_GridStates[GRID_STATE_IDLE];
-    delete si_GridStates[GRID_STATE_REMOVAL];
-}
-
 void MapManager::UpdateGridState(grid_state_t state, Map& map, NGridType& ngrid, GridInfo& ginfo, uint32 const& x, uint32 const& y, uint32 const& t_diff)
 {
     // TODO: The grid state array itself is static and therefore 100% safe, however, the data
     // the state classes in it accesses is not, since grids are shared across maps (for example
     // in instances), so some sort of locking will be necessary later.
 
-    si_GridStates[state]->Update(map, ngrid, ginfo, x, y, t_diff);
+    switch (state) {
+        case GRID_STATE_ACTIVE:
+            ActiveState::Update(map, ngrid, ginfo, x, y, t_diff);
+            break;
+        case GRID_STATE_IDLE:
+            IdleState::Update(map, ngrid, ginfo, x, y, t_diff);
+            break;
+        case GRID_STATE_REMOVAL:
+            RemovalState::Update(map, ngrid, ginfo, x, y, t_diff);
+            break;
+        case GRID_STATE_INVALID:
+        default:
+            InvalidState::Update(map, ngrid, ginfo, x, y, t_diff);
+            break;
+    }
 }
 
 void MapManager::InitializeVisibilityDistanceInfo()
