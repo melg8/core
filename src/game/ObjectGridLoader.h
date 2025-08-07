@@ -28,7 +28,7 @@
 #include "GameSystem/GridLoader.h"
 #include "GridDefines.h"
 #include "Cell.h"
-#include "CellImpl.h"
+#include "Map.h"
 
 class ObjectWorldLoader;
 

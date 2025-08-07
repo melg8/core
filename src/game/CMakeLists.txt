@@ -331,7 +331,6 @@ set (game_SRCS
     Mail/Mail.h
     Mail/MassMailMgr.h
     Maps/Cell.h
-    Maps/CellImpl.h
     Maps/GridDefines.h
     Maps/GridMap.h
     Maps/GridMapDefines.h

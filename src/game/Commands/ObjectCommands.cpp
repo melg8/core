@@ -26,7 +26,6 @@
 #include "MapManager.h"
 #include "GridNotifiers.h"
 #include "GridNotifiersImpl.h"
-#include "CellImpl.h"
 #include <ctime>
 
 bool ChatHandler::HandleGameObjectTargetCommand(char* args)

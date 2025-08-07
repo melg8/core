@@ -22,7 +22,6 @@
 #include "World.h"
 #include "ObjectAccessor.h"
 #include "GridNotifiers.h"
-#include "CellImpl.h"
 #include "GridNotifiersImpl.h"
 #include "SpellMgr.h"
 

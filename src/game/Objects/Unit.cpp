@@ -42,7 +42,6 @@
 #include "Util.h"
 #include "BattleGround.h"
 #include "GridNotifiersImpl.h"
-#include "CellImpl.h"
 #include "DBCStores.h"
 #include "IVMapManager.h"
 #include "MovementGenerator.h"

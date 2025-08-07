@@ -27,7 +27,6 @@
 
 #include "GridNotifiers.h"
 #include "GridNotifiersImpl.h"
-#include "CellImpl.h"
 
 int TotemAI::Permissible(Creature const* creature)
 {

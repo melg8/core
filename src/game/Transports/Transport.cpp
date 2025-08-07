@@ -26,7 +26,6 @@
 #include "MapReference.h"
 #include "Player.h"
 #include "Cell.h"
-#include "CellImpl.h"
 #include "GameObjectModel.h"
 #include "ObjectAccessor.h"
 #include "MapManager.h"

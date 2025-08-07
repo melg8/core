@@ -25,7 +25,6 @@
 #include "TargetedMovementGenerator.h"
 #include "GridNotifiers.h"
 #include "GridNotifiersImpl.h"
-#include "CellImpl.h"
 
 bool ChatHandler::HandleGUIDCommand(char* /*args*/)
 {

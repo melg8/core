@@ -37,7 +37,6 @@
 #include "Transport.h"
 #include "MotionMaster.h"
 #include "IVMapManager.h"
-#include "CellImpl.h"
 #include "GridNotifiers.h"
 #include "GridNotifiersImpl.h"
 #include "Language.h"

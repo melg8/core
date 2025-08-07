@@ -44,7 +44,6 @@
 #include "GridNotifiers.h"
 #include "GridNotifiersImpl.h"
 #include "Geometry.h"
-#include "CellImpl.h"
 #include "ObjectMgr.h"
 #include "ObjectAccessor.h"
 #include "Formulas.h"

@@ -32,7 +32,6 @@
 #include "Player.h"
 #include "Group.h"
 #include "GridNotifiersImpl.h"
-#include "CellImpl.h"
 #include "AccountMgr.h"
 #include "SpellMgr.h"
 #include "PoolManager.h"

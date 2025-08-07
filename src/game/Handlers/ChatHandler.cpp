@@ -36,7 +36,6 @@
 #include "Language.h"
 #include "Util.h"
 #include "GridNotifiersImpl.h"
-#include "CellImpl.h"
 #include "Anticheat.h"
 #include "AccountMgr.h"
 
