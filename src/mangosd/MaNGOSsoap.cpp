@@ -21,6 +21,11 @@
 
 #include "MaNGOSsoap.h"
 
+#include "AccountMgr.h"
+#include "World.h"
+
+#include "soapStub.h"
+
 #define POOL_SIZE   5
 
 void MaNGOSsoapRunnable::run()

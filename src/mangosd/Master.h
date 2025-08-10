@@ -26,7 +26,6 @@
 #ifndef _MASTER_H
 #define _MASTER_H
 
-#include "Common.h"
 #include "Policies/Singleton.h"
 
 // Start the server
@@ -52,5 +51,6 @@ class Master
 };
 
 #define sMaster MaNGOS::Singleton<Master>::Instance()
+
 #endif
 // @}

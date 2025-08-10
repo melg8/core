@@ -22,13 +22,7 @@
 #ifndef _MANGOSSOAP_H
 #define _MANGOSSOAP_H
 
-#include "Common.h"
-#include "World.h"
-#include "AccountMgr.h"
-#include "Log.h"
-
-#include "soapH.h"
-#include "soapStub.h"
+#include "Platform/Define.h"
 
 #include <ace/Semaphore.h>
 #include <ace/Task.h>

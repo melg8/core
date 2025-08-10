@@ -25,6 +25,7 @@
 
 #include "PatchHandler.h"
 #include "AuthCodes.h"
+#include "Config/Config.h"
 #include "Log.h"
 
 #include <ace/OS_NS_sys_socket.h>

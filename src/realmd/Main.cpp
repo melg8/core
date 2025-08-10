@@ -33,8 +33,6 @@
 #include "SystemConfig.h"
 #include "Util.h"
 #include "migrations_list.h"
-#include <openssl/opensslv.h>
-#include <openssl/crypto.h>
 
 #include <ace/Get_Opt.h>
 #include <ace/Dev_Poll_Reactor.h>
@@ -42,6 +40,9 @@
 #include <ace/ACE.h>
 #include <ace/Acceptor.h>
 #include <ace/SOCK_Acceptor.h>
+
+#include <openssl/opensslv.h>
+#include <openssl/crypto.h>
 
 #ifdef ENABLE_MAILSENDER
 #include "MailerService.h"

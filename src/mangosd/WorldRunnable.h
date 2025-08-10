@@ -26,8 +26,6 @@
 #ifndef __WORLDRUNNABLE_H
 #define __WORLDRUNNABLE_H
 
-#include "Common.h"
-
 // Heartbeat thread for the World
 class WorldRunnable
 {

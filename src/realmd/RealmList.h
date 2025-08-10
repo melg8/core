@@ -28,6 +28,7 @@
 
 #include "Common.h"
 #include "RealmZone.h"
+
 #include <array>
 
 struct RealmBuildInfo

@@ -51,6 +51,8 @@ enum LockFlag
     GEO_CITY        = 0x20
 };
 
+struct Realm;
+
 // Handle login commands
 class AuthSocket: public BufferedSocket
 {

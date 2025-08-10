@@ -26,17 +26,16 @@
 #ifndef _PATCHHANDLER_H_
 #define _PATCHHANDLER_H_
 
-#include "Config/Config.h"
-
 #include <ace/Basic_Types.h>
 #include <ace/Synch_Traits.h>
 #include <ace/Svc_Handler.h>
 #include <ace/SOCK_Stream.h>
 #include <ace/Message_Block.h>
-#include <string>
-#include <map>
 
 #include "Crypto/Hash/MD5.h"
+
+#include <string>
+#include <map>
 
 /**
  * @brief Caches MD5 hash of client patches present on the server
