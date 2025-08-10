@@ -9,13 +9,10 @@
 #include <ace/Reactor.h>
 
 #include "MangosSocket.h"
-#include "Common.h"
 
 #include "Util.h"
 #include "WorldPacket.h"
 #include "SharedDefines.h"
-#include "ByteBuffer.h"
-#include "Database/DatabaseEnv.h"
 #include "WorldSession.h"
 #include "Log.h"
 #include "DBCStores.h"

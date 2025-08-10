@@ -27,7 +27,6 @@
  *
  */
 
-#include "Platform/Define.h"
 #include <mutex>
 
 namespace MaNGOS

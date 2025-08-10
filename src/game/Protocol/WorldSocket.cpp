@@ -19,18 +19,19 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "Auth/AuthCrypt.h"
-#include "World.h"
-#include "AccountMgr.h"
-#include "SharedDefines.h"
-#include "WorldSession.h"
 #include "WorldSocket.h"
-#include "WorldSocketMgr.h"
+#include "AccountMgr.h"
 #include "AddonHandler.h"
-#include "Opcodes.h"
-#include "MangosSocketImpl.h"
-#include "ace/OS_NS_netdb.h"
+#include "Auth/AuthCrypt.h"
 #include "Crypto/Hash/SHA1.h"
+#include "Database/DatabaseEnv.h"
+#include "MangosSocketImpl.h"
+#include "Opcodes.h"
+#include "SharedDefines.h"
+#include "World.h"
+#include "WorldSession.h"
+#include "WorldSocketMgr.h"
+#include "ace/OS_NS_netdb.h"
 
 template class MangosSocket<WorldSession, WorldSocket, AuthCrypt>;
 
@@ -38,7 +39,6 @@ int WorldSocket::ProcessIncoming(WorldPacket* newPct)
 {
     MANGOS_ASSERT(newPct);
 
-    // manage memory ;)
     std::unique_ptr<WorldPacket> aptr(newPct);
 
     const ACE_UINT16 opcode = newPct->GetOpcode();

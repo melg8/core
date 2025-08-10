@@ -19,8 +19,6 @@
 #include <atomic>
 
 #include "Log.h"
-#include "Common.h"
-#include "Config/Config.h"
 #include "Database/DatabaseEnv.h"
 
 template <typename SocketType>

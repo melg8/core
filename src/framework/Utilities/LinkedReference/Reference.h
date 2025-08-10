@@ -24,7 +24,7 @@
 
 #include "Utilities/LinkedList.h"
 
-//=====================================================
+#include <cassert>
 
 template<class TO, class FROM>
 class Reference : public LinkedListElement

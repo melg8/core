@@ -1,6 +1,9 @@
 #ifndef MANGOSSOCKET_H
 #define MANGOSSOCKET_H
 
+#include "Platform/Define.h"
+#include "WorldPacket.h"
+
 #include <ace/Basic_Types.h>
 #include <ace/Synch_Traits.h>
 #include <ace/Svc_Handler.h>
@@ -11,16 +14,15 @@
 #include <ace/Connector.h>
 #include <ace/Unbounded_Queue.h>
 #include <ace/Message_Block.h>
+
 #include <mutex>
 
 #if !defined (ACE_LACKS_PRAGMA_ONCE)
 #pragma once
 #endif /* ACE_LACKS_PRAGMA_ONCE */
 
-#include "Common.h"
 
 class ACE_Message_Block;
-class WorldPacket;
 class WorldSession;
 
 

@@ -18,7 +18,6 @@ set(framework_SRCS
   GameSystem/GridRefManager.h
   GameSystem/NGrid.h
   GameSystem/TypeContainer.h
-  GameSystem/TypeContainerFunctions.h
   GameSystem/TypeContainerFunctionsPtr.h
   GameSystem/TypeContainerVisitor.h
   Network/MangosSocket.h

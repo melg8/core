@@ -22,9 +22,8 @@
 #ifndef _LINKEDLIST
 #define _LINKEDLIST
 
-#include "Common.h"
+#include "Platform/Define.h"
 
-//============================================
 class LinkedListHead;
 
 class LinkedListElement

@@ -22,6 +22,7 @@
 #define __EVENTPROCESSOR_H
 
 #include "Platform/Define.h"
+
 #include <map>
 
 class EventProcessor;

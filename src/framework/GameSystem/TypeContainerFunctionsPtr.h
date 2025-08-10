@@ -29,8 +29,6 @@
  */
 
 #include "Platform/Define.h"
-#include "Utilities/TypeList.h"
-#include <map>
 
 namespace MaNGOS
 {

@@ -31,6 +31,7 @@
 #include "Group.h"
 #include "InstanceData.h"
 #include "ProgressBar.h"
+#include "Policies/SingletonImp.h"
 
 typedef MaNGOS::ClassLevelLockable<MapPersistentStateManager, std::mutex> MapPersistanceStateManagerLock;
 INSTANTIATE_SINGLETON_2(MapPersistentStateManager, MapPersistanceStateManagerLock);

@@ -33,9 +33,7 @@
   GridLoader manages the grid (both local and remote).
  */
 
-#include "Platform/Define.h"
 #include "Grid.h"
-#include "TypeContainerVisitor.h"
 
 template
 <
