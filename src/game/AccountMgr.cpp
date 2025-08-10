@@ -200,7 +200,7 @@ void AccountMgr::Load()
 {
     LoadAccountData();
     LoadAccountBanList();
-    LoadIPBanList(std::move(LoginDatabase.Query(LOAD_IP_BANS_QUERY)));
+    LoadIPBanList(LoginDatabase.Query(LOAD_IP_BANS_QUERY));
     LoadAccountWarnings();
 }
 

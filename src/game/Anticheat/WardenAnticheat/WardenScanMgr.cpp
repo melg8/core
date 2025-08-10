@@ -94,7 +94,7 @@ void WardenScanMgr::LoadFromDB()
 
     for (auto const& s : m_scans)
         if (!(s->flags & ScanFlags::FromDatabase))
-            new_scans.push_back(std::move(s));
+            new_scans.emplace_back(std::move(s));
 
     m_scans = std::move(new_scans);
 
@@ -345,5 +345,5 @@ std::vector<std::shared_ptr<Scan const>> WardenScanMgr::GetRandomScans(ScanFlags
         reply += scan->replySize;
     }
 
-    return std::move(matches);
+    return matches;
 }
