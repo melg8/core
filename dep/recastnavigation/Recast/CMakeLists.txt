@@ -15,6 +15,9 @@ include_directories (
 )
 
 set(Recast_STAT_SRCS
+    Include/Recast.h
+    Include/RecastAlloc.h
+    Include/RecastAssert.h
     Source/Recast.cpp 
     Source/RecastAlloc.cpp 
     Source/RecastAssert.cpp

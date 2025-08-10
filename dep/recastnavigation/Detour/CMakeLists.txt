@@ -15,6 +15,15 @@ include_directories (
 )
 
 set(Detour_STAT_SRCS
+    Include/DetourAlloc.h
+    Include/DetourAssert.h
+    Include/DetourCommon.h
+    Include/DetourMath.h
+    Include/DetourNavMesh.h
+    Include/DetourNavMeshBuilder.h
+    Include/DetourNavMeshQuery.h
+    Include/DetourNode.h
+    Include/DetourStatus.h
     Source/DetourAlloc.cpp 
     Source/DetourAssert.cpp 
     Source/DetourCommon.cpp 
