@@ -8,13 +8,10 @@
 # WITHOUT ANY WARRANTY, to the extent permitted by law; without even the
 # implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-cmake_minimum_required(VERSION 2.6...3.20)
-
 project(Detour)
 
 include_directories (
-	./Include
-	
+    ./Include
 )
 
 set(Detour_STAT_SRCS

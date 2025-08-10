@@ -18,7 +18,6 @@
 # CMake policies
 cmake_minimum_required(VERSION 3.1)
 
-
 project(MaNGOS)
 
 set(CMAKE_CXX_STANDARD 14)
