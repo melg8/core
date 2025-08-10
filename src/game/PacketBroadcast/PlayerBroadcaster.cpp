@@ -62,6 +62,7 @@ void PlayerBroadcaster::ProcessQueue(uint32& num_packets)
 
     std::unique_lock<std::mutex> q_g(m_queue_lock), v_g(m_listeners_lock);
     auto queue = std::move(m_queue);
+    m_queue.clear();
     q_g.unlock();
 
     lastUpdatePackets = queue.size() * m_listeners.size();
