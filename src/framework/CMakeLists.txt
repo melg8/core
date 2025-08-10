@@ -9,8 +9,6 @@
 #
 # SPDX-License-Identifier: GPL-2.0-or-later
 
-# include(${CMAKE_SOURCE_DIR}/dep/tbb/tbbinclude.cmake)
-
 set(framework_SRCS 
   Dynamic/FactoryHolder.h
   Dynamic/ObjectRegistry.h
@@ -45,7 +43,6 @@ set(framework_SRCS
   Policies/ObjectLifeTime.cpp
   Utilities/EventProcessor.cpp
   Utilities/EventMap.cpp
-
 )
 
 

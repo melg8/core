@@ -34,6 +34,8 @@ include(cmake/common.cmake)
 include(cmake/options.cmake)
 
 include(cmake/platform/detect_platform.cmake)
+include(cmake/sanitizers.cmake)
+
 
 # Force out-of-source build
 string(COMPARE EQUAL "${CMAKE_SOURCE_DIR}" "${CMAKE_BINARY_DIR}" BUILDING_IN_SOURCE)

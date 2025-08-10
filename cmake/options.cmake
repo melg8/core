@@ -8,6 +8,11 @@ option(USE_EXTRACTORS                 "Build extractors"                        
 option(USE_REALMMERGE                 "Build helper tool for merging character databases"                                             OFF)
 option(ENABLE_MAILSENDER              "Enables support for sending emails via sendgrid.com (requires libcurl)"                        OFF)
 
+if(ENABLE_ASAN)
+  # Prevent usage of tbb malloc which interfieres with sanitizer.
+  set(USE_STD_MALLOC ON CACHE BOOL "Forced ON because ENABLE_ASAN is ON and doesnt work with TBB allocators" FORCE)
+endif()
+
 # Other options
 set(SUPPORTED_CLIENT_BUILD "CLIENT_BUILD_1_12_1" CACHE STRING "Client version the core will support")
 
