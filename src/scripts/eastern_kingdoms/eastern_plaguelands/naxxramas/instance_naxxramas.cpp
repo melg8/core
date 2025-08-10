@@ -26,6 +26,8 @@ EndScriptData */
 #include "InstanceStatistics.h"
 #include "Geometry.h"
 
+#include "GridNotifiers.h"
+
 enum NaxxEvents
 {
     EVENT_BIGGLESWORTH_DIED_YELL = 1,

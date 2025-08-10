@@ -27,7 +27,6 @@
 #include "TemporarySummon.h"
 #include "Totem.h"
 #include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
 #include "WaypointManager.h"
 #include "WaypointMovementGenerator.h"
 #include "TargetedMovementGenerator.h"

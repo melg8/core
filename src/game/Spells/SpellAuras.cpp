@@ -41,7 +41,6 @@
 #include "ScriptMgr.h"
 #include "Util.h"
 #include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
 #include "Geometry.h"
 #include "MoveSpline.h"
 #include "MovementPacketSender.h"

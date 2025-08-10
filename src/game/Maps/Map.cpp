@@ -55,7 +55,7 @@
 #include "SpellAuras.h"
 #include "Cell.h"
 #include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
+#include "ObjectGridLoader.h"
 
 
 Map::~Map()

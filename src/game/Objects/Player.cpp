@@ -42,7 +42,6 @@
 #include "MapManager.h"
 #include "MapPersistentStateMgr.h"
 #include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
 #include "Geometry.h"
 #include "ObjectMgr.h"
 #include "ObjectAccessor.h"

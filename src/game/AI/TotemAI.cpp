@@ -24,9 +24,9 @@
 #include "Creature.h"
 #include "DBCStores.h"
 #include "SpellMgr.h"
+#include "Map.h"
 
 #include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
 
 int TotemAI::Permissible(Creature const* creature)
 {

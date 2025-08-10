@@ -57,7 +57,6 @@
 #include "GameEventMgr.h"
 #include "PoolManager.h"
 #include "Database/DatabaseImpl.h"
-#include "GridNotifiersImpl.h"
 #include "MapPersistentStateMgr.h"
 #include "WaypointManager.h"
 #include "GMTicketMgr.h"
@@ -83,6 +82,7 @@
 #include "GuardMgr.h"
 #include "TransportMgr.h"
 #include "RealmZone.h"
+#include "GridNotifiers.h"
 #include <chrono>
 
 INSTANTIATE_SINGLETON_1(World);

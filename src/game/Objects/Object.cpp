@@ -38,7 +38,6 @@
 #include "MotionMaster.h"
 #include "IVMapManager.h"
 #include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
 #include "Language.h"
 #include "Geometry.h"
 #include "ObjectPosSelector.h"

@@ -22,8 +22,8 @@
 #include "World.h"
 #include "ObjectAccessor.h"
 #include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
 #include "SpellMgr.h"
+#include "Map.h"
 
 DynamicObject::DynamicObject() : WorldObject(), m_spellId(0), m_effIndex(EFFECT_INDEX_0), m_aliveDuration(0), m_radius(0), m_positive(false), m_channeled(false)
 {

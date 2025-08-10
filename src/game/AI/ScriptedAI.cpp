@@ -7,7 +7,6 @@
 #include "Map.h"
 #include "Player.h"
 #include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
 
 ScriptedAI::ScriptedAI(Creature* pCreature) : BasicAI(pCreature),
     me(pCreature),

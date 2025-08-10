@@ -32,7 +32,6 @@
 #include "Database/DatabaseEnv.h"
 #include "LootMgr.h"
 #include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
 #include "MapManager.h"
 #include "MapPersistentStateMgr.h"
 #include "BattleGround.h"

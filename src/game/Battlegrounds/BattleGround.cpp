@@ -34,8 +34,8 @@
 #include "WorldPacket.h"
 #include "Util.h"
 #include "Formulas.h"
-#include "GridNotifiersImpl.h"
 #include "Chat.h"
+#include "GridNotifiers.h"
 
 namespace MaNGOS
 {

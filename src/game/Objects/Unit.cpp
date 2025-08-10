@@ -41,7 +41,6 @@
 #include "TemporarySummon.h"
 #include "Util.h"
 #include "BattleGround.h"
-#include "GridNotifiersImpl.h"
 #include "DBCStores.h"
 #include "IVMapManager.h"
 #include "MovementGenerator.h"
@@ -55,6 +54,7 @@
 #include "Anticheat.h"
 #include "InstanceStatistics.h"
 #include "MovementPacketSender.h"
+#include "GridNotifiers.h"
 
 //#define DEBUG_DEBUFF_LIMIT
 

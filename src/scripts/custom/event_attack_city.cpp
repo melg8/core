@@ -1,6 +1,8 @@
 
 #include "scriptPCH.h"
 
+#include "GridNotifiers.h"
+
 #define ME m_creature
 
 #define DEBUG_ON

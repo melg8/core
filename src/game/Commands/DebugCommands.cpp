@@ -45,7 +45,6 @@
 #include "MoveMap.h"                                        // for mmap manager
 #include "PathFinder.h"                                     // for mmap commands
 #include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
 #include "MoveSplineInit.h"
 #include "MoveSpline.h"
 

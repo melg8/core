@@ -28,6 +28,8 @@ EndContentData */
 #include "scriptPCH.h"
 #include "CreatureGroups.h"
 
+#include "GridNotifiers.h"
+
 // Eris Havenfire event
 
 enum ErisHavenfireData

@@ -43,7 +43,6 @@
 #include "BattleGroundMgr.h"
 #include "Util.h"
 #include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
 #include "CreatureGroups.h"
 #include "ZoneScript.h"
 #include "MoveSplineInit.h"

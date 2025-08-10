@@ -24,7 +24,6 @@
 #include "SpellAuras.h"
 #include "TargetedMovementGenerator.h"
 #include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
 
 bool ChatHandler::HandleGUIDCommand(char* /*args*/)
 {

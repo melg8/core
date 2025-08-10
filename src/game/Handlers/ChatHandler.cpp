@@ -35,9 +35,9 @@
 #include "SpellAuras.h"
 #include "Language.h"
 #include "Util.h"
-#include "GridNotifiersImpl.h"
 #include "Anticheat.h"
 #include "AccountMgr.h"
+#include "GridNotifiers.h"
 
 bool WorldSession::CheckChatMessageValidity(char* msg, uint32 lang, uint32 msgType)
 {

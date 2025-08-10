@@ -27,7 +27,6 @@
 #include "GridNotifiers.h"
 #include "MapManager.h"
 #include "Map.h"
-#include "GridNotifiersImpl.h"
 #include "ObjectGuid.h"
 
 typedef MaNGOS::ClassLevelLockable<ObjectAccessor, std::mutex> ObjectAccessorLock;

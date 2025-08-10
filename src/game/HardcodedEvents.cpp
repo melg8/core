@@ -9,6 +9,7 @@
 #include "Chat.h"
 #include "world/scourge_invasion.h"
 #include "world/world_event_wareffort.h"
+
 #include <chrono>
 #include <random>
 #include <limits>

@@ -8,10 +8,6 @@
 #include "Unit.h"
 #include "GameObject.h"
 
-#include "Cell.h"
-#include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
-
 struct ObjectDistanceOrder
 {
     Unit const* m_pSource;
