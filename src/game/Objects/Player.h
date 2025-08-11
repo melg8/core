@@ -24,13 +24,11 @@
 
 #include "Common.h"
 #include "Unit.h"
-#include "Database/DatabaseEnv.h"
 #include "GroupReference.h"
 #include "MapReference.h"
 #include "WorldSession.h"
 #include "Pet.h"
 #include "Item.h"
-#include "Util.h"                                           // for Tokens typedef
 #include "ReputationMgr.h"
 #include "BattleGroundDefines.h"
 #include "SharedDefines.h"

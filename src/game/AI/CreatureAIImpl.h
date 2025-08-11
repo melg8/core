@@ -23,7 +23,6 @@
 #define CREATUREAIIMPL_H
 
 #include "CreatureAI.h"
-#include "Common.h"
 #include "Util.h"
 
 template<class REAL_AI>

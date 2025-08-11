@@ -31,11 +31,10 @@
 #include "SharedDefines.h"
 #include "ObjectDefines.h"
 #include "MovementInfo.h"
-#include "DBCEnums.h"
-#include "Util.h"
 #include "Timer.h"
 #include "Camera.h"
 #include "Cell.h"
+
 #include <string>
 
 class WorldPacket;

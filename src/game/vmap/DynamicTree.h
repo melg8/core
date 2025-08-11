@@ -18,7 +18,9 @@
 
 #ifndef DYNAMICMAP_TREE_H
 #define DYNAMICMAP_TREE_H
+
 #include "Platform/Define.h"
+
 namespace G3D
 {
     class Vector3;
@@ -26,6 +28,7 @@ namespace G3D
     class AABox;
     class Ray;
 }
+
 class GameObjectModel;
 
 class DynamicMapTree

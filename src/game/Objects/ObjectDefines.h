@@ -17,8 +17,7 @@
 #ifndef __OBJECT_DEFINES_H
 #define __OBJECT_DEFINES_H
 
-#include "Common.h"
-
+#include "Platform/Define.h"
 
 #define CONTACT_DISTANCE            0.5f
 #define INTERACTION_DISTANCE        5.0f

@@ -22,12 +22,13 @@
 #ifndef __SPELL_H
 #define __SPELL_H
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "DBCEnums.h"
 #include "ObjectGuid.h"
 #include "LootMgr.h"
 #include "Player.h"
+
+#include "Platform/Define.h"
 
 #ifdef USE_STANDARD_MALLOC
 #include <vector>
@@ -35,7 +36,6 @@
 #include "tbb/concurrent_vector.h"
 #endif
 
-#include <memory>
 
 
 struct SpellScript;

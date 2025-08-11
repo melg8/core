@@ -22,7 +22,6 @@
 #ifndef __UNIT_H
 #define __UNIT_H
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "ItemPrototype.h"
 #include "SpellCaster.h"
@@ -34,6 +33,7 @@
 #include "FollowerReference.h"
 #include "FollowerRefManager.h"
 #include "MotionMaster.h"
+
 #include <list>
 
 struct FactionTemplateEntry;

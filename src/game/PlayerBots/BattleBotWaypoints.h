@@ -18,6 +18,7 @@
 #define MANGOS_BattleBotWaypoints_H
 
 #include "SharedDefines.h"
+
 #include <vector>
 
 struct RecordedMovementPacket

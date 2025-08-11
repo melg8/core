@@ -22,7 +22,6 @@
 #ifndef MANGOS_OBJECTACCESSOR_H
 #define MANGOS_OBJECTACCESSOR_H
 
-#include "Common.h"
 #include "Platform/Define.h"
 #include "Policies/Singleton.h"
 #include "Policies/ThreadingModel.h"
@@ -34,8 +33,9 @@
 #include "Chat/MasterPlayer.h"
 #include "Chat/AbstractPlayer.h"
 
-#include <set>
-#include <list>
+#include <unordered_map>
+#include <shared_mutex>
+#include <mutex>
 
 class Unit;
 class WorldObject;

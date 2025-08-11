@@ -22,7 +22,6 @@
 #ifndef __BATTLEGROUNDAB_H
 #define __BATTLEGROUNDAB_H
 
-#include "Common.h"
 #include "BattleGround.h"
 #include "World.h"
 

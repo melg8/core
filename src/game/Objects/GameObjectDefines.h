@@ -17,7 +17,6 @@
 #ifndef __GAMEOBJECT_DEFINES_H
 #define __GAMEOBJECT_DEFINES_H
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "ObjectDefines.h"
 #include "Util.h"

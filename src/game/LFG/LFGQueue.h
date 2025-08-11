@@ -19,7 +19,6 @@
 #ifndef _LFG_QUEUE_H
 #define _LFG_QUEUE_H
 
-#include "Common.h"
 #include "LFGDefines.h"
 #include "ObjectGuid.h"
 #include "SharedDefines.h"

@@ -17,7 +17,6 @@
 #ifndef _MIRROR_TIMER_H
 #define _MIRROR_TIMER_H
 
-#include "Common.h"
 #include "Timer.h"
 
 class MirrorTimer

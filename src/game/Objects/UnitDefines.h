@@ -17,7 +17,7 @@
 #ifndef __UNIT_DEFINES_H
 #define __UNIT_DEFINES_H
 
-#include "Common.h"
+#include "Platform/Define.h"
 
 enum UnitMoveType
 {

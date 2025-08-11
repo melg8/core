@@ -22,8 +22,8 @@
 #ifndef _ACCDATA_H
 #define _ACCDATA_H
 
-#include "Common.h"
-#include "Policies/Singleton.h"
+#include "Platform/Define.h"
+
 #include <string>
 
 namespace OldAccountData // 1.8 and earlier
@@ -38,7 +38,7 @@ namespace OldAccountData // 1.8 and earlier
         NUM_ACCOUNT_DATA_TYPES          = 5
     };
 
-    constexpr uint32 GLOBAL_CACHE_MASK = 0xD;
+    constexpr uint32_t GLOBAL_CACHE_MASK = 0xD;
     constexpr uint32 PER_CHARACTER_CACHE_MASK = 0x30;
 }
 

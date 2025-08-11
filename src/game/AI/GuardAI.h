@@ -37,4 +37,5 @@ class GuardAI : public CreatureAI
     private:
         bool IsAttackingPlayerOrFriendly(Unit const*) const;
 };
+
 #endif

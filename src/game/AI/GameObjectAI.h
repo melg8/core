@@ -1,7 +1,7 @@
 #ifndef _HEADER_GAMEOBJECT_AI
 #define _HEADER_GAMEOBJECT_AI
 
-#include "Common.h"
+#include "Platform/Define.h"
 
 class Unit;
 class Creature;

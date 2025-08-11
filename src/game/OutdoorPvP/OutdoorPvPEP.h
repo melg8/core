@@ -19,7 +19,6 @@
 #define OUTDOOR_PVP_EP_
 
 #include "ZoneScript.h"
-#include "WorldStates.h"
 
 #if SUPPORTED_CLIENT_BUILD > CLIENT_BUILD_1_11_2
 

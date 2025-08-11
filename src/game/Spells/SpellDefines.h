@@ -17,8 +17,7 @@
 #ifndef __SPELL_DEFINES_H
 #define __SPELL_DEFINES_H
 
-#include "Common.h"
-
+#include "Platform/Define.h"
 
 enum SpellTarget
 {

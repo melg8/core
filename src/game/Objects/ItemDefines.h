@@ -22,7 +22,7 @@
 #ifndef MANGOSSERVER_ITEM_DEFINES_H
 #define MANGOSSERVER_ITEM_DEFINES_H
 
-#include "Common.h"
+#include "Platform/Define.h"
 
 class SpellEntry;
 

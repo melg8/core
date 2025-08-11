@@ -20,8 +20,9 @@
 #ifndef MANGOS_PLAYERAI_H
 #define MANGOS_PLAYERAI_H
 
-#include "Common.h"
 #include "ObjectGuid.h"
+
+#include "Platform/Define.h"
 
 class WorldObject;
 class Unit;

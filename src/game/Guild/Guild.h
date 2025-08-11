@@ -22,7 +22,6 @@
 #ifndef MANGOSSERVER_GUILD_H
 #define MANGOSSERVER_GUILD_H
 
-#include "Common.h"
 #include "ObjectAccessor.h"
 
 class Petition;

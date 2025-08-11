@@ -17,9 +17,10 @@
 #ifndef _PLAYER_TAXI_H
 #define _PLAYER_TAXI_H
 
-#include "Common.h"
 #include "DBCStructure.h"
 #include "SharedDefines.h"
+
+#include "Platform/Define.h"
 
 #include <deque>
 #include <sstream>

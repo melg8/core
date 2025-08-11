@@ -18,6 +18,7 @@
 #define _GEOMETRY
 
 #include "Common.h"
+#include "GridDefines.h"
 
 namespace Geometry
 {

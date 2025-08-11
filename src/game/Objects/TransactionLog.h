@@ -17,7 +17,7 @@
 #ifndef _TRANSACTION_LOG_H
 #define _TRANSACTION_LOG_H
 
-#include "Common.h"
+#include "Platform/Define.h"
 
 struct TransactionPart
 {

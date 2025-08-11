@@ -17,8 +17,9 @@
 #ifndef _TRADE_DATA_H
 #define _TRADE_DATA_H
 
-#include "Common.h"
 #include "ObjectGuid.h"
+
+#include "Platform/Define.h"
 
 class Player;
 class Item;

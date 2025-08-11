@@ -38,4 +38,5 @@ class NullCreatureAI : public CreatureAI
         void UpdateAI(uint32 const) override;
         static int Permissible(Creature const*) { return PERMIT_BASE_IDLE;  }
 };
+
 #endif

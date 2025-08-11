@@ -22,7 +22,6 @@
 #ifndef MANGOS_CREATURE_EAI_H
 #define MANGOS_CREATURE_EAI_H
 
-#include "Common.h"
 #include "BasicAI.h"
 #include "ScriptMgr.h"
 

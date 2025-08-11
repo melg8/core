@@ -1,7 +1,6 @@
 #ifndef _CHARACTER_DATABASE_CACHE_H
 #define _CHARACTER_DATABASE_CACHE_H
 
-#include "Common.h"
 #include "ObjectGuid.h"
 #include "DBCEnums.h"
 

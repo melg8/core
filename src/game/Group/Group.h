@@ -22,7 +22,6 @@
 #ifndef MANGOSSERVER_GROUP_H
 #define MANGOSSERVER_GROUP_H
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "ObjectGuid.h"
 #include "GroupReference.h"
@@ -30,9 +29,7 @@
 #include "BattleGroundDefines.h"
 #include "LootMgr.h"
 #include "LFGMgr.h"
-#include "DBCEnums.h"
 
-#include <map>
 #include <vector>
 
 class WorldSession;
@@ -41,6 +38,7 @@ class BattleGround;
 class DungeonPersistentState;
 class Field;
 class Unit;
+class Creature;
 struct LFGGroupQueueInfo;
 
 #define MAX_GROUP_SIZE 5

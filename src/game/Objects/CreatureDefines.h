@@ -17,7 +17,6 @@
 #ifndef __CREATURE_DEFINES_H
 #define __CREATURE_DEFINES_H
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "UnitDefines.h"
 #include "ObjectGuid.h"

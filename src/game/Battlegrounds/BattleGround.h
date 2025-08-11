@@ -24,7 +24,6 @@
 
 #include "BattleGroundDefines.h"
 #include "ByteBuffer.h"
-#include "Common.h"
 #include "Map.h"
 #include "ObjectGuid.h"
 #include "SharedDefines.h"

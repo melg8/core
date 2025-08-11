@@ -22,7 +22,6 @@
 #ifndef MANGOS_BAG_H
 #define MANGOS_BAG_H
 
-#include "Common.h"
 #include "ItemPrototype.h"
 #include "Item.h"
 

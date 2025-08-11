@@ -22,12 +22,11 @@
 #ifndef MANGOSSERVER_GAMEOBJECT_H
 #define MANGOSSERVER_GAMEOBJECT_H
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "GameObjectDefines.h"
 #include "SpellCaster.h"
 #include "LootMgr.h"
-#include "Util.h"
+
 #include <shared_mutex>
 
 class Unit;

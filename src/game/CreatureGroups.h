@@ -19,7 +19,6 @@
 #ifndef _CREATURE_GROUPS_H
 #define _CREATURE_GROUPS_H
 
-#include "Common.h"
 #include "ObjectGuid.h"
 
 #include <map>

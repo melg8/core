@@ -17,10 +17,14 @@
 #ifndef _SPELL_CASTER_OBJECT_H
 #define _SPELL_CASTER_OBJECT_H
 
+#include "DBCEnums.h"
 #include "Object.h"
 #include "SpellDefines.h"
+
 #include "Utilities/EventProcessor.h"
+
 #include "nonstd/optional.hpp"
+
 #include <array>
 #include <memory>
 

@@ -22,10 +22,7 @@
 #ifndef MANGOS_CREATUREAI_H
 #define MANGOS_CREATUREAI_H
 
-#include "Common.h"
-#include "Dynamic/ObjectRegistry.h"
 #include "Dynamic/FactoryHolder.h"
-#include "ObjectGuid.h"
 #include "CreatureDefines.h"
 #include "SpellDefines.h"
 

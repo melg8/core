@@ -24,6 +24,7 @@
 #include "World.h"
 #include "WaypointManager.h"
 #include "CreatureGroups.h"
+#include "WorldStates.h"
 
 #if SUPPORTED_CLIENT_BUILD > CLIENT_BUILD_1_11_2
 

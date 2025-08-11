@@ -17,9 +17,10 @@
 #ifndef _SPELLMODIFIER_H
 #define _SPELLMODIFIER_H
 
-#include "Common.h"
 #include "SpellDefines.h"
 #include "DBCEnums.h"
+
+#include "Platform/Define.h"
 
 class Aura;
 class SpellEntry;

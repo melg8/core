@@ -22,12 +22,10 @@
 #ifndef MANGOSSERVER_CREATURE_H
 #define MANGOSSERVER_CREATURE_H
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "CreatureDefines.h"
 #include "Unit.h"
 #include "LootMgr.h"
-#include "Util.h"
 
 #include <vector>
 #include <list>

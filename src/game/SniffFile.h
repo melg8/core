@@ -17,7 +17,6 @@
 #ifndef _SNIFF_FILE_H
 #define _SNIFF_FILE_H
 
-#include "Common.h"
 #include "WorldPacket.h"
 #include "Timer.h"
 

@@ -22,12 +22,13 @@
 #ifndef _SPELLENTRY_H
 #define _SPELLENTRY_H
 
-#include <array>
 #include "DBCStructure.h"
 #include "SharedDefines.h"
 #include "SpellDefines.h"
 #include "SpellAuraDefines.h"
 #include "ItemPrototype.h"
+
+#include <array>
 
 class Spell;
 class Unit;
