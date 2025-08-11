@@ -30,9 +30,6 @@
 #include "CreatureGroups.h"
 #include "Player.h"
 
-#include <vector>
-#include <set>
-
 #define FLIGHT_TRAVEL_UPDATE  100
 #define STOP_TIME_FOR_PLAYER  (30 * IN_MILLISECONDS)
 

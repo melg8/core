@@ -20,7 +20,6 @@
 #define MANGOS_CONFUSEDMOVEMENTGENERATOR_H
 
 #include "MovementGenerator.h"
-#include "Timer.h"
 
 template<class T>
 class ConfusedMovementGenerator : public MovementGeneratorMedium< T, ConfusedMovementGenerator<T> >

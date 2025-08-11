@@ -30,7 +30,6 @@
 
 #include <functional>
 #include <vector>
-#include <memory>
 #include <string>
 
 #include "nonstd/optional.hpp"

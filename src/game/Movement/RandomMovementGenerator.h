@@ -19,7 +19,9 @@
 #ifndef MANGOS_RANDOMMOTIONGENERATOR_H
 #define MANGOS_RANDOMMOTIONGENERATOR_H
 
+#include "Creature.h"
 #include "MovementGenerator.h"
+
 #include "G3D/Vector3.h"
 
 class RandomMovementGenerator

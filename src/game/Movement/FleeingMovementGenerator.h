@@ -19,6 +19,7 @@
 #ifndef MANGOS_FLEEINGMOVEMENTGENERATOR_H
 #define MANGOS_FLEEINGMOVEMENTGENERATOR_H
 
+#include "Creature.h"
 #include "MovementGenerator.h"
 #include "ObjectGuid.h"
 

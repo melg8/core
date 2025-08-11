@@ -17,7 +17,6 @@
 #ifndef __MOVEMENT_INFO_H
 #define __MOVEMENT_INFO_H
 
-#include "Common.h"
 #include "ByteBuffer.h"
 #include "ObjectGuid.h"
 #include "Timer.h"

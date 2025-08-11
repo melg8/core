@@ -19,8 +19,6 @@
 #ifndef _MOVE_MAP_H
 #define _MOVE_MAP_H
 
-
-#include "Platform/CompilerDefs.h"
 #include "Platform/Define.h"
 #include <unordered_map>
 #include <set>

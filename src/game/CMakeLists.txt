@@ -377,7 +377,6 @@ set (game_SRCS
     Movement/spline/MoveSplineInitArgs.h
     Movement/spline/packet_builder.h
     Movement/spline/spline.h
-    Movement/spline/spline.impl.h
     Movement/spline/typedefs.h
     Objects/Bag.h
     Objects/Corpse.h
