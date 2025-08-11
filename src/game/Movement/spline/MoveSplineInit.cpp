@@ -27,6 +27,7 @@
 #include "ObjectAccessor.h"
 #include "Anticheat.h"
 #include "MovementPacketSender.h"
+#include "MovementAnticheat/MovementAnticheat.h"
 
 namespace Movement
 {

@@ -24,12 +24,11 @@
 #ifndef __WARDEN_HPP_
 #define __WARDEN_HPP_
 
-#include "../Anticheat.h"
 #include "WardenScan.hpp"
 
-#include "Common.h"
 #include "ByteBuffer.h"
 #include "ClientDefines.h"
+#include "WardenActions.h"
 #include "Crypto/Encryption/RC4.h"
 
 #include <vector>

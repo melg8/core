@@ -17,17 +17,10 @@
 #ifndef ANTICHEAT_H
 #define ANTICHEAT_H
 
-#include "Common.h"
 #include "AbstractPlayer.h"
-#include "UnitDefines.h"
 
-enum WardenActions
-{
-    WARDEN_ACTION_LOG,
-    WARDEN_ACTION_KICK,
-    WARDEN_ACTION_BAN,
-    WARDEN_ACTION_MAX
-};
+#include <mutex>
+#include <thread>
 
 enum CheatAction
 {
@@ -72,11 +65,6 @@ public:
     virtual void unmute(uint32 accountId) {}
     virtual void showMuted(WorldSession* session) {}
 };
-
-#include "WardenAnticheat/Warden.hpp"
-#include "MovementAnticheat/MovementAnticheat.h"
-#include <mutex>
-#include <thread>
 
 class AnticheatManager
 {

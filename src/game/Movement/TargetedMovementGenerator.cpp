@@ -29,6 +29,7 @@
 #include "TemporarySummon.h"
 #include "GameObjectAI.h"
 #include "Geometry.h"
+#include "MovementAnticheat/MovementAnticheat.h"
 
 //-----------------------------------------------//
 template<class T, typename D>

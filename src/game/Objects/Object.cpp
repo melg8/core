@@ -49,6 +49,7 @@
 #include "Chat.h"
 #include "MonsterChatBuilder.h"
 #include "Anticheat.h"
+#include "MovementAnticheat/MovementAnticheat.h"
 
 #include "packet_builder.h"
 #include "MovementBroadcaster.h"

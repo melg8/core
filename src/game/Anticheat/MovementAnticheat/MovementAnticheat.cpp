@@ -11,6 +11,7 @@
 #include "Geometry.h"
 #include "AccountMgr.h"
 #include "BattleGround.h"
+#include "Anticheat.h"
 
 using namespace Geometry;
 

@@ -1,9 +1,7 @@
 #ifndef _HEADER_CHEATS
 #define _HEADER_CHEATS
 
-#include "Common.h"
 #include "UnitDefines.h"
-#include "Anticheat.h"
 #include "SniffFile.h"
 
 #include <array>
@@ -58,11 +56,13 @@ enum CheatType
 #define CHEATS_UPDATE_INTERVAL      4000
 char const* GetMovementCheatName(CheatType type);
 
+class Unit;
 class Player;
 class MovementInfo;
 class ChatHandler;
 class WorldSession;
 class WorldPacket;
+struct AreaEntry;
 
 class MovementAnticheat
 {

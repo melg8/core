@@ -29,6 +29,7 @@
 #include "Database/DatabaseEnv.h"
 #include "Database/Database.h"
 #include "Database/SqlOperations.h"
+#include "Chat.h"
 
 enum
 {

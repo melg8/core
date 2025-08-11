@@ -28,6 +28,7 @@
 #include "Util.h"
 #include "AsyncCommandHandlers.h"
 #include "Anticheat.h"
+#include "MovementAnticheat/MovementAnticheat.h"
 
 bool ChatHandler::HandleAccountCommand(char* args)
 {

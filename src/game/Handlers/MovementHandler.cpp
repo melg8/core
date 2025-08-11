@@ -35,6 +35,7 @@
 #include "packet_builder.h"
 #include "MovementPacketSender.h"
 #include "MoveSpline.h"
+#include "MovementAnticheat/MovementAnticheat.h"
 
 void WorldSession::HandleMoveWorldportAckOpcode(WorldPacket& /*recvData*/)
 {

@@ -83,6 +83,8 @@
 #include "TransportMgr.h"
 #include "RealmZone.h"
 #include "GridNotifiers.h"
+#include "WardenAnticheat/WardenActions.h"
+
 #include <chrono>
 
 INSTANTIATE_SINGLETON_1(World);

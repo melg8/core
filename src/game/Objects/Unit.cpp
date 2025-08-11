@@ -55,6 +55,7 @@
 #include "InstanceStatistics.h"
 #include "MovementPacketSender.h"
 #include "GridNotifiers.h"
+#include "MovementAnticheat/MovementAnticheat.h"
 
 //#define DEBUG_DEBUFF_LIMIT
 

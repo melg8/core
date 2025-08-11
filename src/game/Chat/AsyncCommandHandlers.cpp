@@ -20,20 +20,21 @@
 * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#include "Database/DatabaseEnv.h"
+#include "AsyncCommandHandlers.h"
+#include "AccountMgr.h"
+#include "Anticheat.h"
+#include "Chat.h"
+#include "DBCStores.h"
 #include "Database/Database.h"
+#include "Database/DatabaseEnv.h"
 #include "Database/DatabaseImpl.h"
 #include "Database/SqlOperations.h"
-#include "Language.h"
-#include "Chat.h"
-#include "AccountMgr.h"
-#include "DBCStores.h"
-#include "Util.h"
 #include "Guild.h"
 #include "GuildMgr.h"
+#include "Language.h"
 #include "ObjectGuid.h"
-#include "AsyncCommandHandlers.h"
-#include "Anticheat.h"
+#include "Util.h"
+#include "WardenAnticheat/Warden.hpp"
 
 void PInfoHandler::HandlePInfoCommand(WorldSession* session, Player* target, ObjectGuid& target_guid, std::string& name)
 {

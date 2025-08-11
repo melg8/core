@@ -44,6 +44,7 @@
 #include "Conditions.h"
 #include "Anticheat.h"
 #include "MasterPlayer.h"
+#include "WardenAnticheat/Warden.hpp"
 
 void WorldSession::HandleRepopRequestOpcode(WorldPacket& /*recv_data*/)
 {
