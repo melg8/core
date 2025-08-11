@@ -284,6 +284,7 @@ set (game_SRCS
     Anticheat/WardenAnticheat/Warden.hpp
     Anticheat/WardenAnticheat/WardenActions.cpp
     Anticheat/WardenAnticheat/WardenActions.h
+    Anticheat/WardenAnticheat/WardenKeyGenerator.cpp
     Anticheat/WardenAnticheat/WardenKeyGenerator.h
     Anticheat/WardenAnticheat/WardenMac.cpp
     Anticheat/WardenAnticheat/WardenMac.hpp
