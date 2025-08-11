@@ -23,8 +23,7 @@
   \ingroup realmd
   */
 
-#ifndef _PATCHHANDLER_H_
-#define _PATCHHANDLER_H_
+#pragma once
 
 #include <ace/Basic_Types.h>
 #include <ace/Synch_Traits.h>
@@ -92,5 +91,3 @@ class PatchHandler: public ACE_Svc_Handler<ACE_SOCK_STREAM, ACE_NULL_SYNCH>
         ACE_HANDLE patch_fd_;
 
 };
-
-#endif /* _BK_PATCHHANDLER_H__ */

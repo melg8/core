@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_GRID_H
-#define MANGOS_GRID_H
+#pragma once
 
 /*
   @class Grid
@@ -128,5 +127,3 @@ class Grid
         typedef std::set<void*> ActiveGridObjects;
         ActiveGridObjects m_activeGridObjects;
 };
-
-#endif

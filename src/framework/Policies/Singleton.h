@@ -19,12 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_SINGLETON_H
-#define MANGOS_SINGLETON_H
-
-/**
- * @brief class Singleton
- */
+#pragma once
 
 #include "CreationPolicy.h"
 #include "ThreadingModel.h"
@@ -66,5 +61,3 @@ namespace MaNGOS
             static bool si_destroyed;
     };
 }
-
-#endif

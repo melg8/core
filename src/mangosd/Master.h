@@ -23,8 +23,7 @@
 // @{
 // \file
 
-#ifndef _MASTER_H
-#define _MASTER_H
+#pragma once
 
 #include "Policies/Singleton.h"
 
@@ -53,6 +52,3 @@ class Master
 using MasterSingleton = MaNGOS::Singleton<Master>;
 
 #define sMaster MasterSingleton::Instance()
-
-#endif
-// @}

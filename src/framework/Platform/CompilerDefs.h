@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_COMPILERDEFS_H
-#define MANGOS_COMPILERDEFS_H
+#pragma once
 
 #define PLATFORM_WINDOWS 0
 #define PLATFORM_UNIX    1
@@ -60,5 +59,4 @@
 #if COMPILER == COMPILER_MICROSOFT
 #  pragma warning( disable : 4267 )                         // conversion from 'size_t' to 'int', possible loss of data
 #  pragma warning( disable : 4786 )                         // identifier was truncated to '255' characters in the debug information
-#endif
 #endif

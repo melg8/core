@@ -1,3 +1,6 @@
+
+#pragma once
+
 #include "MangosSocketMgr.h"
 
 #include "Database/DatabaseEnv.h"

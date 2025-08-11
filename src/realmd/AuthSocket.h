@@ -23,8 +23,7 @@
 // @{
 // \file
 
-#ifndef _AUTHSOCKET_H
-#define _AUTHSOCKET_H
+#pragma once
 
 #include "Common.h"
 #include "Crypto/BigNumber.h"
@@ -140,5 +139,3 @@ class AuthSocket: public BufferedSocket
 
         void InitPatch();
 };
-#endif
-// @}

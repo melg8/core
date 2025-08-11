@@ -19,12 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-// \addtogroup realmd
-// @{
-// \file
-
-#ifndef _REALMLIST_H
-#define _REALMLIST_H
+#pragma once
 
 #include "Common.h"
 #include "RealmZone.h"
@@ -95,6 +90,3 @@ class RealmList
 };
 
 #define sRealmList RealmList::Instance()
-
-#endif
-// @}

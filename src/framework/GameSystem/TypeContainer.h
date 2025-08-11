@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_TYPECONTAINER_H
-#define MANGOS_TYPECONTAINER_H
+#pragma once
 
 /*
  * Here, you'll find a series of containers that allow you to hold multiple
@@ -330,5 +329,3 @@ class TypeMapContainer
 
         ContainerMapList<OBJECT_TYPES> i_elements;
 };
-
-#endif

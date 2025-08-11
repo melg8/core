@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_FACTORY_HOLDER
-#define MANGOS_FACTORY_HOLDER
+#pragma once
 
 #include "ObjectRegistry.h"
 
@@ -59,4 +58,3 @@ class Permissible
         virtual ~Permissible() {}
         virtual int Permit(const T *) const = 0;
 };
-#endif

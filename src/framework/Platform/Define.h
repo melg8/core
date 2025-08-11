@@ -19,17 +19,16 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_DEFINE_H
-#define MANGOS_DEFINE_H
+#pragma once
 
-#include <sys/types.h>
+#include "Platform/CompilerDefs.h"
 
 #include <ace/Basic_Types.h>
 #include <ace/Default_Constants.h>
 #include <ace/OS_NS_dlfcn.h>
 #include <ace/ACE_export.h>
 
-#include "Platform/CompilerDefs.h"
+#include <sys/types.h>
 
 #define MANGOS_LITTLEENDIAN 0
 #define MANGOS_BIGENDIAN    1
@@ -75,5 +74,3 @@ typedef uint32      DWORD;
 #endif //COMPILER
 
 typedef uint64 OBJECT_HANDLE;
-
-#endif //MANGOS_DEFINE_H

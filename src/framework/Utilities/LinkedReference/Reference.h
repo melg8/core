@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _REFERENCE_H
-#define _REFERENCE_H
+#pragma once
 
 #include "Utilities/LinkedList.h"
 
@@ -98,7 +97,3 @@ class Reference : public LinkedListElement
 
         FROM* getSource() const { return iRefFrom; }
 };
-
-//=====================================================
-
-#endif

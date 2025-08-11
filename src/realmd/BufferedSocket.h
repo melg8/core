@@ -23,8 +23,7 @@
   \ingroup realmd
   */
 
-#ifndef _BUFFEREDSOCKET_H_
-#define _BUFFEREDSOCKET_H_
+#pragma once
 
 #include <ace/Basic_Types.h>
 #include <ace/Synch_Traits.h>
@@ -79,5 +78,3 @@ class BufferedSocket: public ACE_Svc_Handler<ACE_SOCK_STREAM, ACE_NULL_SYNCH>
         std::string remote_address_;
 
 };
-
-#endif /* _BUFFEREDSOCKET_H_ */

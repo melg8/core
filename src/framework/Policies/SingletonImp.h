@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_SINGLETONIMPL_H
-#define MANGOS_SINGLETONIMPL_H
+#pragma once
 
 #include "Singleton.h"
 
@@ -82,6 +81,3 @@ void MaNGOS::Singleton<T, ThreadingModel, CreatePolicy, LifeTimePolicy>::Destroy
     INSTANTIATE_SINGLETON_3(TYPE, THREADINGMODEL, MaNGOS::OperatorNew<TYPE>)
 #define INSTANTIATE_SINGLETON_1(TYPE) \
     INSTANTIATE_SINGLETON_2(TYPE, MaNGOS::SingleThreaded<TYPE>)
-
-
-#endif

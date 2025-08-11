@@ -19,10 +19,8 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_TYPELIST_H
-#define MANGOS_TYPELIST_H
-
-/*
+#pragma once
+/**
   @struct TypeList
   TypeList is the most simple but yet the most powerfull class of all.  It holds
   at compile time the different type of objects in a linked list.
@@ -43,5 +41,3 @@ struct TypeList
 #define TYPELIST_3(T1, T2, T3)         TypeList<T1, TYPELIST_2(T2, T3) >
 #define TYPELIST_4(T1, T2, T3, T4)     TypeList<T1, TYPELIST_3(T2, T3, T4) >
 #define TYPELIST_5(T1, T2, T3, T4, T5) TypeList<T1, TYPELIST_4(T2, T3, T4, T5) >
-
-#endif

@@ -23,8 +23,7 @@
 // @{
 // \file
 
-#ifndef _RASOCKET_H
-#define _RASOCKET_H
+#pragma once
 
 #include "Common.h"
 #include <ace/Synch_Traits.h>
@@ -94,5 +93,3 @@ class RASocket: protected RAHandler
         static void zprint(void* callbackArg, const char * szText );
         static void commandFinished(void* callbackArg, bool success);
 };
-#endif
-// @}

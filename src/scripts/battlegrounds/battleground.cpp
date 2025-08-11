@@ -38,8 +38,10 @@ EndScriptData */
 #include "Creature.h"
 #include "Map.h"
 #include "Player.h"
+#include "ScriptMgr.h"
 #include "ScriptedAI.h"
 
+#include "AI/NullCreatureAI.h"
 #include "Platform/Define.h"
 
 enum

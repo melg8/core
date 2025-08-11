@@ -1,5 +1,5 @@
-#ifndef MANGOSSOCKET_H
-#define MANGOSSOCKET_H
+
+#pragma once
 
 #include "Platform/Define.h"
 #include "WorldPacket.h"
@@ -235,5 +235,3 @@ class MangosSocket : public WorldHandler
         // Connecting to other server is also possible (potential clustering).
         bool m_isServerSocket;
 };
-
-#endif // MANGOSSOCKET_H

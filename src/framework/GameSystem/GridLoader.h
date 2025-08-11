@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_GRIDLOADER_H
-#define MANGOS_GRIDLOADER_H
+#pragma once
 
 /**
   @class GridLoader
@@ -69,5 +68,3 @@ class GridLoader
             unloader.Unload(grid);
         }
 };
-
-#endif

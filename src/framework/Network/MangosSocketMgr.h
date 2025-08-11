@@ -1,5 +1,5 @@
-#ifndef MANGOSSOCKETMGR_H
-#define MANGOSSOCKETMGR_H
+
+#pragma once
 
 #include <ace/Basic_Types.h>
 
@@ -54,5 +54,3 @@ class MangosSocketMgr
 
         MangosSocketAcceptor<SocketType>* m_acceptor;
 };
-
-#endif // MANGOSSOCKETMGR_H

@@ -23,8 +23,7 @@
     \ingroup realmd
 */
 
-#ifndef _AUTHCODES_H
-#define _AUTHCODES_H
+#pragma once
 
 enum eAuthCmd
 {
@@ -91,5 +90,3 @@ enum AuthResult
     WOW_FAIL_CONVERSION_REQUIRED    = 0x20,                 // This account needs to be converted to a Battle.net account. Please [Click Here] or go to: <site> to begin conversion.
     WOW_FAIL_DISCONNECTED           = 0xFF                  // Disconnected
 };
-
-#endif
