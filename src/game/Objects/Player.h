@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _PLAYER_H
-#define _PLAYER_H
+#pragma once
 
 #include "Common.h"
 #include "Unit.h"
@@ -2470,5 +2469,3 @@ inline Player const* ToPlayer(Object const* object)
 
 void AddItemsSetItem(Player*player,Item* item);
 void RemoveItemsSetItem(Player*player,ItemPrototype const* proto);
-
-#endif

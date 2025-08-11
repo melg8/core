@@ -1,5 +1,5 @@
-#ifndef _HEADER_GAMEOBJECT_AI
-#define _HEADER_GAMEOBJECT_AI
+
+#pragma once
 
 #include "Platform/Define.h"
 
@@ -36,5 +36,3 @@ class GameObjectAI
     protected:
         GameObject* me;
 };
-
-#endif

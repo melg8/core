@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _SPELLENTRY_H
-#define _SPELLENTRY_H
+#pragma once
 
 #include "DBCStructure.h"
 #include "ItemPrototype.h"
@@ -1223,5 +1222,3 @@ class SpellEntry
             static T const value = 0;
         };
 };
-
-#endif

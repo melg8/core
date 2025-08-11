@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_VALENTINE_H
-#define MANGOS_VALENTINE_H
+#pragma once
 
 #include "SharedDefines.h"
 #include "Log.h"
@@ -243,5 +242,3 @@ inline uint32 GetLoveIsInTheAirGossipForCreature(uint32 creatureId, uint32 gende
     sLog.Out(LOG_BASIC, LOG_LVL_ERROR, "Unexpected creature id %u tried to get Love is in the Air gossip menu.", creatureId);
     return 0;
 }
-
-#endif

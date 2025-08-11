@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_MOVESPLINEINIT_H
-#define MANGOSSERVER_MOVESPLINEINIT_H
+#pragma once
 
 #include "MoveSplineInitArgs.h"
 #include "PathFinder.h"
@@ -148,4 +147,3 @@ namespace Movement
         args.flags.EnableFacingPoint();
     }
 }
-#endif // MANGOSSERVER_MOVESPLINEINIT_H

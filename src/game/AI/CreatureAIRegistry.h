@@ -19,12 +19,9 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_CREATUREAIREGISTRY_H
-#define MANGOS_CREATUREAIREGISTRY_H
+#pragma once
 
 namespace AIRegistry
 {
     void Initialize(void);
 }
-
-#endif

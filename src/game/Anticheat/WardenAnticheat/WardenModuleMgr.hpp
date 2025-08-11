@@ -21,8 +21,7 @@
   *
   */
 
-#ifndef __WARDENMODULEMGR_HPP_
-#define __WARDENMODULEMGR_HPP_
+#pragma once
 
 #include "WardenModule.hpp"
 
@@ -46,5 +45,3 @@ public:
 using WardenModuleMgrSingleton = MaNGOS::Singleton<WardenModuleMgr>;
 
 #define sWardenModuleMgr WardenModuleMgrSingleton::Instance()
-
-#endif /* !__WARDENMODULEMGR_HPP_ */

@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_TARGETEDMOVEMENTGENERATOR_H
-#define MANGOS_TARGETEDMOVEMENTGENERATOR_H
+#pragma once
 
 #include "MovementGenerator.h"
 #include "FollowerReference.h"
@@ -170,5 +169,3 @@ class FollowMovementGenerator : public TargetedMovementGeneratorMedium<T, Follow
         using TargetedMovementGeneratorMedium<T, FollowMovementGenerator<T> >::m_bTargetReached;
         using TargetedMovementGeneratorMedium<T, FollowMovementGenerator<T> >::m_bReachable;
 };
-
-#endif

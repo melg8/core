@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __BATTLEGROUNDAV_H
-#define __BATTLEGROUNDAV_H
+#pragma once
 
 #include "BattleGround.h"
 
@@ -589,5 +588,3 @@ class BattleGroundAV : public BattleGround
         uint32 m_repSurviveTower;
         ObjectGuid m_shredderOwners[BG_TEAMS_COUNT];
 };
-
-#endif

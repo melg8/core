@@ -14,8 +14,7 @@
 * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef MANGOS_BattleBotWaypoints_H
-#define MANGOS_BattleBotWaypoints_H
+#pragma once
 
 #include "SharedDefines.h"
 
@@ -63,5 +62,3 @@ typedef std::vector<BattleBotWaypoint> BattleBotPath;
 extern std::vector<BattleBotPath*> const vPaths_WS;
 extern std::vector<BattleBotPath*> const vPaths_AB;
 extern std::vector<BattleBotPath*> const vPaths_AV;
-
-#endif

@@ -14,8 +14,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __SPELL_DEFINES_H
-#define __SPELL_DEFINES_H
+#pragma once
 
 #include "Platform/Define.h"
 
@@ -1221,5 +1220,3 @@ enum SpellSpecific
     SPELL_NEGATIVE_HASTE    = 23,
     SPELL_SNARE             = 24,
 };
-
-#endif

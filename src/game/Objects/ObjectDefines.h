@@ -14,8 +14,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __OBJECT_DEFINES_H
-#define __OBJECT_DEFINES_H
+#pragma once
 
 #include "Platform/Define.h"
 
@@ -145,6 +144,3 @@ enum WorldMasks
     WORLD_DEFAULT_CHAR     = (WORLD_DEFAULT_MASK),
     WORLD_SEE_ALL          = 0xF,
 };
-
-
-#endif

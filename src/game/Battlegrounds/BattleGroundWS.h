@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __BATTLEGROUNDWS_H
-#define __BATTLEGROUNDWS_H
+#pragma once
 
 #include "BattleGround.h"
 
@@ -180,4 +179,3 @@ class BattleGroundWS : public BattleGround
         uint32 m_honorWinKills;
         uint32 m_honorEndKills;
 };
-#endif

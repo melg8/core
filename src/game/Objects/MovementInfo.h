@@ -14,8 +14,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __MOVEMENT_INFO_H
-#define __MOVEMENT_INFO_H
+#pragma once
 
 #include "ByteBuffer.h"
 #include "ObjectGuid.h"
@@ -257,5 +256,3 @@ inline ByteBuffer& operator>> (ByteBuffer& buf, MovementInfo& mi)
     mi.Read(buf);
     return buf;
 }
-
-#endif

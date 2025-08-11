@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_POINTMOVEMENTGENERATOR_H
-#define MANGOS_POINTMOVEMENTGENERATOR_H
+#pragma once
 
 #include "MovementGenerator.h"
 #include "FollowerReference.h"
@@ -128,5 +127,3 @@ class ChargeMovementGenerator
         float m_speed;
         float m_meleeReach;
 };
-
-#endif

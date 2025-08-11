@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_WAYPOINTMOVEMENTGENERATOR_H
-#define MANGOS_WAYPOINTMOVEMENTGENERATOR_H
+#pragma once
 
 /** @page PathMovementGenerator is used to generate movements
  * of waypoints and flight paths.  Each serves the purpose
@@ -170,5 +169,3 @@ class PatrolMovementGenerator
         ObjectGuid m_leaderGuid;
         CreatureGroupMember m_groupMember;
 };
-
-#endif

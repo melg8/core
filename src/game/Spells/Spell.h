@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __SPELL_H
-#define __SPELL_H
+#pragma once
 
 #include "SharedDefines.h"
 #include "DBCEnums.h"
@@ -820,4 +819,3 @@ class ChannelResetEvent : public BasicEvent
     protected:
         Unit* m_caster;
 };
-#endif

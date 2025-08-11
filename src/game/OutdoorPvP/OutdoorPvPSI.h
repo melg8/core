@@ -15,8 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OUTDOOR_PVP_SI_
-#define OUTDOOR_PVP_SI_
+#pragma once
 
 #include "ZoneScript.h"
 
@@ -82,7 +81,5 @@ class OutdoorPvPSI : public OutdoorPvP
         uint32 m_MaxRessources;
         uint32 m_LastController;
 };
-
-#endif
 
 #endif

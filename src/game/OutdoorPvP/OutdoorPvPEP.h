@@ -15,8 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OUTDOOR_PVP_EP_
-#define OUTDOOR_PVP_EP_
+#pragma once
 
 #include "ZoneScript.h"
 
@@ -465,7 +464,5 @@ class OutdoorPvPEP : public OutdoorPvP
         uint32 m_AllianceTowersControlled;
         uint32 m_HordeTowersControlled;
 };
-
-#endif
 
 #endif

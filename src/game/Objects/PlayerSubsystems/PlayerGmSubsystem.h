@@ -9,8 +9,7 @@
 //
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-#ifndef PLAYER_GM_SUBSYSTEM_H
-#define PLAYER_GM_SUBSYSTEM_H
+#pragma once
 
 #include "Platform/Define.h"
 
@@ -71,5 +70,3 @@ private:
     uint32 m_currentTicketCounter = 0;
     uint16 m_cheatOptions = 0;
 };
-
-#endif // PLAYER_GM_SUBSYSTEM_H

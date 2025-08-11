@@ -14,8 +14,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _MIRROR_TIMER_H
-#define _MIRROR_TIMER_H
+#pragma once
 
 #include "Timer.h"
 
@@ -83,5 +82,3 @@ private:
     bool m_active;
     bool m_frozen;
 };
-
-#endif

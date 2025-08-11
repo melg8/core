@@ -15,8 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef MOVEMENT_SENDER_H
-#define MOVEMENT_SENDER_H
+#pragma once
 
 #include "Object.h"
 #include "UnitDefines.h"
@@ -114,5 +113,3 @@ namespace MovementPacketSender
         MovementChangeType GetChangeTypeByMoveType(UnitMoveType moveType);
         UnitMoveType GetMoveTypeByChangeType(MovementChangeType moveType);
 };
-
-#endif

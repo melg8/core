@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_TOTEMAI_H
-#define MANGOS_TOTEMAI_H
+#pragma once
 
 #include "CreatureAI.h"
 #include "ObjectGuid.h"
@@ -46,4 +45,3 @@ class TotemAI : public CreatureAI
         TotemType m_totemType;
         uint32 m_spellId;
 };
-#endif

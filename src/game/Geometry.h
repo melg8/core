@@ -14,8 +14,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _GEOMETRY
-#define _GEOMETRY
+#pragma once
 
 #include "Common.h"
 #include "GridDefines.h"
@@ -113,7 +112,4 @@ namespace Geometry
     {
         return (lineEnd.x - lineStart.x) * (point.y - lineStart.y) - (lineEnd.y - lineStart.y) * (point.x - lineStart.x) > 0;
     }
-
 }
-
-#endif

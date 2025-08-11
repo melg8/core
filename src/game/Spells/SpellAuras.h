@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_SPELLAURAS_H
-#define MANGOS_SPELLAURAS_H
+#pragma once
 
 #include "SpellAuraDefines.h"
 #include "DBCEnums.h"
@@ -634,4 +633,3 @@ class SingleEnemyTargetAura : public Aura
 
 Aura* CreateAura(SpellEntry const* spellproto, SpellEffectIndex eff, int32* currentBasePoints, SpellAuraHolder* holder, Unit* target, Unit* caster = nullptr, Item* castItem = nullptr);
 SpellAuraHolder* CreateSpellAuraHolder(SpellEntry const* spellproto, Unit* target, Unit* caster, WorldObject* realCaster, Item* castItem = nullptr);
-#endif

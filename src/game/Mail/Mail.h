@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef MANGOS_MAIL_H
-#define MANGOS_MAIL_H
+#pragma once
 
 #include "Common.h"
 #include "ObjectGuid.h"
@@ -383,6 +382,3 @@ struct Mail
      */
     void prepareTemplateItems(Player* receiver);            // called from _LoadMails for generate mailTemplateBase items not generated for offline player
 };
-
-#endif
-/*! @} */

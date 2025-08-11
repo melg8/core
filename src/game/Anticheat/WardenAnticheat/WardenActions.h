@@ -2,8 +2,7 @@
 //
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-#ifndef WARDEN_ACTIONS_H
-#define WARDEN_ACTIONS_H
+#pragma once
 
 enum WardenActions
 {
@@ -12,5 +11,3 @@ enum WardenActions
     WARDEN_ACTION_BAN,
     WARDEN_ACTION_MAX
 };
-
-#endif  // WARDEN_ACTIONS_H

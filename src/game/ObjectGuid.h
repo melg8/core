@@ -19,16 +19,16 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_OBJECT_GUID_H
-#define MANGOS_OBJECT_GUID_H
+#pragma once
+
+#include "Common.h"
+#include "ByteBuffer.h"
+
+#include "Policies/ThreadingModel.h"
 
 #include <functional>
 #include <queue>
 #include <unordered_set>
-
-#include "Common.h"
-#include "ByteBuffer.h"
-#include "Policies/ThreadingModel.h"
 
 enum TypeID
 {
@@ -327,5 +327,3 @@ ByteBuffer& operator<< (ByteBuffer& buf, PackedGuid const& guid);
 ByteBuffer& operator>> (ByteBuffer& buf, PackedGuidReader const& guid);
 
 inline PackedGuid ObjectGuid::WriteAsPacked() const { return PackedGuid(*this); }
-
-#endif

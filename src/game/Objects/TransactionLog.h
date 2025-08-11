@@ -14,8 +14,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _TRANSACTION_LOG_H
-#define _TRANSACTION_LOG_H
+#pragma once
 
 #include "Platform/Define.h"
 
@@ -39,5 +38,3 @@ struct PlayerTransactionData
     char const* type;
     TransactionPart parts[2];
 };
-
-#endif

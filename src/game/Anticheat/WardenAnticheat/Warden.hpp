@@ -21,8 +21,7 @@
   *
   */
 
-#ifndef __WARDEN_HPP_
-#define __WARDEN_HPP_
+#pragma once
 
 #include "WardenScan.hpp"
 
@@ -188,5 +187,3 @@ class Warden
         // used by maiev string hash check
         mutable std::string m_hashString;
 };
-
-#endif /*!__WARDEN_HPP_*/

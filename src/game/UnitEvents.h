@@ -19,17 +19,13 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _UNITEVENTS
-#define _UNITEVENTS
+#pragma once
 
 #include "Platform/Define.h"
 
 class ThreatContainer;
 class ThreatManager;
 class HostileReference;
-
-//==============================================================
-//==============================================================
 
 enum UnitThreatEventType
 {
@@ -59,11 +55,6 @@ enum UnitThreatEventType
 #define UEV_THREAT_MANAGER_EVENT_MASK (UEV_THREAT_SORT_LIST | UEV_THREAT_SET_NEXT_TARGET | UEV_THREAT_VICTIM_CHANGED)
 #define UEV_ALL_EVENT_MASK (0xffffffff)
 
-// Future use
-//#define UEV_UNIT_EVENT_MASK (UEV_UNIT_KILLED | UEV_UNIT_HEALTH_CHANGE)
-
-//==============================================================
-
 class UnitBaseEvent
 {
     private:
@@ -76,8 +67,6 @@ class UnitBaseEvent
         void setType(uint32 pType) { iType = pType; }
 
 };
-
-//==============================================================
 
 class ThreatRefStatusChangeEvent : public UnitBaseEvent
 {
@@ -114,8 +103,6 @@ class ThreatRefStatusChangeEvent : public UnitBaseEvent
         ThreatManager* GetThreatManager() const { return iThreatManager; }
 };
 
-//==============================================================
-
 class ThreatManagerEvent : public ThreatRefStatusChangeEvent
 {
     private:
@@ -128,6 +115,3 @@ class ThreatManagerEvent : public ThreatRefStatusChangeEvent
 
         ThreatContainer* getThreatContainer() const { return iThreatContainer; }
 };
-
-//==============================================================
-#endif

@@ -18,8 +18,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_CONDITIONS_H
-#define MANGOS_CONDITIONS_H
+#pragma once
 
 #include "SharedDefines.h"
 
@@ -343,5 +342,3 @@ class ConditionEntry
 
 // Check if a player meets condition conditionId
 bool IsConditionSatisfied(uint32 conditionId, WorldObject const* target, Map const* map, WorldObject const* source, ConditionSource conditionSourceType);
-
-#endif

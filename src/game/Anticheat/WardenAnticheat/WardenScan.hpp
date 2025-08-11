@@ -21,8 +21,7 @@
   *
   */
 
-#ifndef __WARDENSCAN_HPP_
-#define __WARDENSCAN_HPP_
+#pragma once
 
 #include "ByteBuffer.h"
 #include "World.h"
@@ -256,4 +255,3 @@ class WindowsTimeScan : public WindowsScan
     public:
         WindowsTimeScan(CheckT checker, std::string const& comment, ScanFlags flags, uint32 minBuild, uint32 maxBuild);
 };
-#endif /*!__WARDENSCAN_HPP_*/

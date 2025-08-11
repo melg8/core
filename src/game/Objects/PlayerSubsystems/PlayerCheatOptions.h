@@ -9,8 +9,7 @@
 //
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-#ifndef PLAYERCHEATOPTIONS_H
-#define PLAYERCHEATOPTIONS_H
+#pragma once
 
 #include "Platform/Define.h"
 
@@ -29,6 +28,3 @@ enum PlayerCheatOptions : uint16
     PLAYER_CHEAT_DEBUG_TARGET_INFO = 0x400,
     PLAYER_CHEAT_FIXED_Z = 0x800,
 };
-
-
-#endif // PLAYERCHEATOPTIONS_H

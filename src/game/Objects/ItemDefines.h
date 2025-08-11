@@ -19,12 +19,12 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_ITEM_DEFINES_H
-#define MANGOSSERVER_ITEM_DEFINES_H
+#pragma once
 
 #include "Platform/Define.h"
 
 class SpellEntry;
+class Unit;
 
 struct ItemSetEffect
 {
@@ -232,5 +232,3 @@ struct ItemRequiredTarget
     // helpers
     bool IsFitToRequirements(Unit* pUnitTarget) const;
 };
-
-#endif

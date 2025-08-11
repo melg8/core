@@ -1,5 +1,5 @@
-#ifndef _HEADER_CHEATS
-#define _HEADER_CHEATS
+
+#pragma once
 
 #include "UnitDefines.h"
 #include "SniffFile.h"
@@ -153,5 +153,3 @@ class MovementAnticheat
         std::deque<LoggedPacket> m_packetLog;
         std::mutex m_packetLogMutex;
 };
-
-#endif

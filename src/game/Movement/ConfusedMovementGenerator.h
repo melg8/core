@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_CONFUSEDMOVEMENTGENERATOR_H
-#define MANGOS_CONFUSEDMOVEMENTGENERATOR_H
+#pragma once
 
 #include "MovementGenerator.h"
 
@@ -43,4 +42,3 @@ class ConfusedMovementGenerator : public MovementGeneratorMedium< T, ConfusedMov
     private:
         float i_x, i_y, i_z;
 };
-#endif

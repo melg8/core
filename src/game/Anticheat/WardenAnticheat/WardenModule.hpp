@@ -21,8 +21,7 @@
   *
   */
 
-#ifndef __WARDENMODULE_HPP_
-#define __WARDENMODULE_HPP_
+#pragma once
 
 #include "Platform/Define.h"
 
@@ -32,6 +31,7 @@
 #include "Crypto/Hash/MD5.h"
 
 #pragma pack(push, 1)
+
 struct ChallengeResponseEntry
 {
     uint8 seed[16];
@@ -81,5 +81,3 @@ public:
     // pregenerated challenge, responses, and encryption keys for this module
     std::vector<ChallengeResponseEntry> crk;
 };
-
-#endif /*!__WARDENMODULE_HPP_*/

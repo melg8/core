@@ -16,8 +16,7 @@
 * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef MANGOS_FLEEINGMOVEMENTGENERATOR_H
-#define MANGOS_FLEEINGMOVEMENTGENERATOR_H
+#pragma once
 
 #include "Creature.h"
 #include "MovementGenerator.h"
@@ -65,5 +64,3 @@ class TimedFleeingMovementGenerator : public FleeingMovementGenerator<Creature>
     private:
         TimeTracker i_totalFleeTime;
 };
-
-#endif

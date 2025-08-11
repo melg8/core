@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_ITEM_H
-#define MANGOSSERVER_ITEM_H
+#pragma once
 
 #include "Common.h"
 #include "Object.h"
@@ -167,5 +166,3 @@ class Item : public Object
         bool mb_in_trade;                                   // true if item is currently in trade-window
         ItemLootUpdateState m_lootState;
 };
-
-#endif

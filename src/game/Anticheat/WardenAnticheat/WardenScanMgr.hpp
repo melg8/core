@@ -21,8 +21,7 @@
   *
   */
 
-#ifndef __WARDENSCANMGR_HPP_
-#define __WARDENSCANMGR_HPP_
+#pragma once
 
 #include "WardenScan.hpp"
 #include "Policies/Singleton.h"
@@ -56,5 +55,3 @@ class WardenScanMgr
 using WardenScanMgrSingleton = MaNGOS::Singleton<WardenScanMgr>;
 
 #define sWardenScanMgr WardenScanMgrSingleton::Instance()
-
-#endif /*!__WARDENSCANMGR_HPP_*/

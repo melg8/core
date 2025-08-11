@@ -14,8 +14,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _SPELLMODIFIER_H
-#define _SPELLMODIFIER_H
+#pragma once
 
 #include "SpellDefines.h"
 #include "DBCEnums.h"
@@ -48,5 +47,3 @@ struct SpellModifier
     uint32 spellId;
     Aura* ownerAura;
 };
-
-#endif

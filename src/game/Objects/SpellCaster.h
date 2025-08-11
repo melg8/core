@@ -14,8 +14,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _SPELL_CASTER_OBJECT_H
-#define _SPELL_CASTER_OBJECT_H
+#pragma once
 
 #include "DBCEnums.h"
 #include "Object.h"
@@ -484,5 +483,3 @@ inline SpellCaster const* ToSpellCaster(Object const* object)
 {
     return object && object->IsSpellCaster() ? static_cast<SpellCaster const*>(object) : nullptr;
 }
-
-#endif

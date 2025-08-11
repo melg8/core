@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _LFG_QUEUE_H
-#define _LFG_QUEUE_H
+#pragma once
 
 #include "LFGDefines.h"
 #include "ObjectGuid.h"
@@ -85,5 +84,3 @@ class LFGQueue
 
         uint32 m_groupSize = 5;
 };
-
-#endif

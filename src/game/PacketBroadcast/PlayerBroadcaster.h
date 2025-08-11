@@ -1,5 +1,5 @@
-#ifndef MANGOS_PLAYER_BROADCASTER_H
-#define MANGOS_PLAYER_BROADCASTER_H
+
+#pragma once
 
 #include "ObjectGuid.h"
 #include "WorldPacket.h"
@@ -67,5 +67,3 @@ public:
 
     friend class MovementBroadcaster;
 };
-
-#endif

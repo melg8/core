@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_CYCLICMOVEMENTGENERATOR_H
-#define MANGOS_CYCLICMOVEMENTGENERATOR_H
+#pragma once
 
 #include "MovementGenerator.h"
 #include "WaypointManager.h"
@@ -50,4 +49,3 @@ class CyclicMovementGenerator<Creature>
         WaypointPath const* i_path;
         WaypointPathOrigin m_PathOrigin;
 };
-#endif

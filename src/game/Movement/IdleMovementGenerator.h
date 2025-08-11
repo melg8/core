@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_IDLEMOVEMENTGENERATOR_H
-#define MANGOS_IDLEMOVEMENTGENERATOR_H
+#pragma once
 
 #include "MovementGenerator.h"
 
@@ -63,5 +62,3 @@ class AssistanceDistractMovementGenerator : public DistractMovementGenerator
         MovementGeneratorType GetMovementGeneratorType() const { return ASSISTANCE_DISTRACT_MOTION_TYPE; }
         void Finalize(Unit& unit);
 };
-
-#endif

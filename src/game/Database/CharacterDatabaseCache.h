@@ -1,5 +1,5 @@
-#ifndef _CHARACTER_DATABASE_CACHE_H
-#define _CHARACTER_DATABASE_CACHE_H
+
+#pragma once
 
 #include "ObjectGuid.h"
 #include "DBCEnums.h"
@@ -112,6 +112,3 @@ class CharacterDatabaseCache
 };
 
 #define sCharacterDatabaseCache (*(CharacterDatabaseCache::instance()))
-
-
-#endif

@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_MOVESPLINEFLAG_H
-#define MANGOSSERVER_MOVESPLINEFLAG_H
+#pragma once
 
 #include "Platform/Define.h"
 
@@ -143,5 +142,3 @@ namespace Movement
 #pragma pack(pop)
 #endif
 }
-
-#endif // MANGOSSERVER_MOVESPLINEFLAG_H

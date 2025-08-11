@@ -1,5 +1,4 @@
-#ifndef MANGOS_MOVEMENT_BROADCASTER_H
-#define MANGOS_MOVEMENT_BROADCASTER_H
+#pragma once
 
 #include "Platform/Define.h"
 
@@ -57,5 +56,3 @@ public:
 protected:
     std::vector<ThreadUpdateStats> m_thread_update_stats;
 };
-
-#endif

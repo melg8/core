@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_MOVEPLINE_H
-#define MANGOSSERVER_MOVEPLINE_H
+#pragma once
 
 #include "spline.h"
 #include "MoveSplineInitArgs.h"
@@ -131,4 +130,3 @@ namespace Movement
             void SetMovementOrigin(char const* m) { mvtOrigin = m; }
     };
 }
-#endif // MANGOSSERVER_MOVEPLINE_H

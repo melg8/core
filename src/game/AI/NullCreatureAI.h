@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_NULLCREATUREAI_H
-#define MANGOS_NULLCREATUREAI_H
+#pragma once
 
 #include "CreatureAI.h"
 #include "Creature.h"
@@ -38,5 +37,3 @@ class NullCreatureAI : public CreatureAI
         void UpdateAI(uint32 const) override;
         static int Permissible(Creature const*) { return PERMIT_BASE_IDLE;  }
 };
-
-#endif

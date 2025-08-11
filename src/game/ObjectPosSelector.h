@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _OBJECT_POS_SELECTOR_H
-#define _OBJECT_POS_SELECTOR_H
+#pragma once
 
 #include <Common.h>
 
@@ -155,4 +154,3 @@ struct ObjectPosSelector
     bool  m_smallStepOk[2];
     UsedPosList::value_type const* m_smallStepNextUsedPos[2];
 };
-#endif

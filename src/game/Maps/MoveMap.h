@@ -16,17 +16,15 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _MOVE_MAP_H
-#define _MOVE_MAP_H
+#pragma once
 
 #include "Platform/Define.h"
-#include <unordered_map>
-#include <set>
-
 #include "Detour/Include/DetourAlloc.h"
 #include "Detour/Include/DetourNavMesh.h"
 #include "Detour/Include/DetourNavMeshQuery.h"
 
+#include <unordered_map>
+#include <set>
 #include <thread>
 #include <shared_mutex>
 
@@ -117,5 +115,3 @@ namespace MMAP
             static void clear();
     };
 }
-
-#endif  // _MOVE_MAP_H

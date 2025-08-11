@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_OBJECTACCESSOR_H
-#define MANGOS_OBJECTACCESSOR_H
+#pragma once
 
 #include "Platform/Define.h"
 #include "Policies/Singleton.h"
@@ -167,5 +166,3 @@ class ObjectAccessor : public MaNGOS::Singleton<ObjectAccessor, MaNGOS::ClassLev
 };
 
 #define sObjectAccessor ObjectAccessor::Instance()
-
-#endif

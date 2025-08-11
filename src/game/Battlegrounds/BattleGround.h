@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __BATTLEGROUND_H
-#define __BATTLEGROUND_H
+#pragma once
 
 #include "BattleGroundDefines.h"
 #include "ByteBuffer.h"
@@ -444,5 +443,3 @@ inline void FillInitialWorldState(ByteBuffer& data, uint32& count, WorldStatePai
         ++count;
     }
 }
-
-#endif

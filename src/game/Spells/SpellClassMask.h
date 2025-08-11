@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _SPELL_CLASS_MASK_H
-#define _SPELL_CLASS_MASK_H
+#pragma once
 
 enum ClassFlag
 {
@@ -348,5 +347,3 @@ enum ClassFlag
     CF_SHAMAN_FLAMETONGUE_TOTEM             = 34,   // CM1 00000004
     CF_SHAMAN_CURES                         = 35,   // CM1 00000008 Cure Poison & Cure Disease
 };
-
-#endif // _SPELL_CLASS_MASK_H

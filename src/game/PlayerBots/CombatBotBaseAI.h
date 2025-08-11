@@ -1,5 +1,5 @@
-#ifndef MANGOS_COMBAT_BOT_BASE_H
-#define MANGOS_COMBAT_BOT_BASE_H
+
+#pragma once
 
 #include "PlayerBotAI.h"
 #include "SpellEntry.h"
@@ -558,5 +558,3 @@ public:
     uint8 m_visualHonorRank = 0;
     CombatBotRoles m_role = ROLE_INVALID;
 };
-
-#endif

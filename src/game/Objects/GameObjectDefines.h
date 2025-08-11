@@ -14,8 +14,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __GAMEOBJECT_DEFINES_H
-#define __GAMEOBJECT_DEFINES_H
+#pragma once
 
 #include "SharedDefines.h"
 #include "ObjectDefines.h"
@@ -830,5 +829,3 @@ struct QuaternionData
     void toEulerAnglesZYX(float& Z, float& Y, float& X) const;
     static QuaternionData fromEulerAnglesZYX(float Z, float Y, float X);
 };
-
-#endif

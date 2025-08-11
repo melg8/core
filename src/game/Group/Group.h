@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_GROUP_H
-#define MANGOSSERVER_GROUP_H
+#pragma once
 
 #include "SharedDefines.h"
 #include "ObjectGuid.h"
@@ -457,4 +456,3 @@ class Group
         Team                m_groupTeam; // ALLIANCE / HORDE / TEAM_NONE / TEAM_CROSSFACTION
         uint32              m_LFGAreaId;
 };
-#endif

@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __UNIT_H
-#define __UNIT_H
+#pragma once
 
 #include "SharedDefines.h"
 #include "ItemPrototype.h"
@@ -1537,5 +1536,3 @@ bool Unit::CheckAllControlledUnits(Func const& func, uint32 controlledMask) cons
 
     return false;
 }
-
-#endif
