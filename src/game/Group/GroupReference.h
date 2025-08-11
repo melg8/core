@@ -41,4 +41,5 @@ class GroupReference : public Reference<Group, Player>
         uint8 getSubGroup() const { return iSubGroup; }
         void setSubGroup(uint8 pSubGroup) { iSubGroup = pSubGroup; }
 };
+
 #endif

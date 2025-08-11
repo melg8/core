@@ -22,7 +22,7 @@
 #ifndef _HOSTILEREFMANAGER
 #define _HOSTILEREFMANAGER
 
-#include "Common.h"
+#include "Platform/Define.h"
 #include "Utilities/LinkedReference/RefManager.h"
 
 class Unit;

@@ -23,6 +23,7 @@
 #define _MAPREFMANAGER
 
 #include "Utilities/LinkedReference/RefManager.h"
+
 #include "MapReference.h"
 
 class MapRefManager : public RefManager<Map, Player>
@@ -43,4 +44,5 @@ class MapRefManager : public RefManager<Map, Player>
         const_iterator begin() const { return const_iterator(getFirst()); }
         const_iterator end() const  { return const_iterator(nullptr); }
 };
+
 #endif

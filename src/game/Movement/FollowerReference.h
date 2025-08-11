@@ -34,4 +34,5 @@ class FollowerReference : public Reference<Unit, TargetedMovementGeneratorBase>
         void targetObjectDestroyLink() override;
         void sourceObjectDestroyLink() override;
 };
+
 #endif

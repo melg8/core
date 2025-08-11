@@ -40,4 +40,5 @@ class MapReference : public Reference<Map, Player>
         MapReference *next() { return (MapReference*)Reference<Map, Player>::next(); }
         MapReference const* next() const { return (MapReference const*)Reference<Map, Player>::next(); }
 };
+
 #endif
