@@ -35,6 +35,8 @@ class SpellModMgr
         void LoadSpellMods();
 };
 
-#define sSpellModMgr MaNGOS::Singleton<SpellModMgr>::Instance()
+using SpellModMgrSingleton = MaNGOS::Singleton<SpellModMgr>;
+
+#define sSpellModMgr SpellModMgrSingleton::Instance()
 
 #endif

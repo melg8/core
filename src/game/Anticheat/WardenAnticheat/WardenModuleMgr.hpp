@@ -27,7 +27,6 @@
 #include "WardenModule.hpp"
 
 #include "Policies/Singleton.h"
-#include "Platform/Define.h"
 
 #include <vector>
 
@@ -44,6 +43,8 @@ public:
     WardenModule const* GetMacModule() const;
 };
 
-#define sWardenModuleMgr MaNGOS::Singleton<WardenModuleMgr>::Instance()
+using WardenModuleMgrSingleton = MaNGOS::Singleton<WardenModuleMgr>;
+
+#define sWardenModuleMgr WardenModuleMgrSingleton::Instance()
 
 #endif /* !__WARDENMODULEMGR_HPP_ */

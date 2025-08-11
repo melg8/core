@@ -196,7 +196,9 @@ private:
     BossGuidMap m_masterGuid;
 };
 
-#define sCreatureLinkingMgr MaNGOS::Singleton<CreatureLinkingMgr>::Instance()
+using CreatureLinkingMgrSingleton = MaNGOS::Singleton<CreatureLinkingMgr>;
+
+#define sCreatureLinkingMgr CreatureLinkingMgrSingleton::Instance()
 
 #endif
 /*! @} */

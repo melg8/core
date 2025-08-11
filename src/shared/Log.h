@@ -231,7 +231,9 @@ class Log : public MaNGOS::Singleton<Log, MaNGOS::ClassLevelLockable<Log, std::m
 
 };
 
-#define sLog MaNGOS::Singleton<Log>::Instance()
+using LogSingleton = MaNGOS::Singleton<Log>;
+
+#define sLog LogSingleton::Instance()
 
 #define DETAIL_FILTER_LOG(F,...)                        \
     do {                                                \

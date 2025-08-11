@@ -222,6 +222,8 @@ class HonorMgr
         Player* m_owner;
 };
 
-#define sHonorMaintenancer MaNGOS::Singleton<HonorMaintenancer>::Instance()
+using HonorMaintenancerSingleton = MaNGOS::Singleton<HonorMaintenancer>;
+
+#define sHonorMaintenancer HonorMaintenancerSingleton::Instance()
 
 #endif

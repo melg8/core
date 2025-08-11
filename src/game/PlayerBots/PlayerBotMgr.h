@@ -130,5 +130,8 @@ class PlayerBotMgr
         bool m_confBattleBotAutoJoin;
 };
 
-#define sPlayerBotMgr MaNGOS::Singleton<PlayerBotMgr>::Instance()
+using PlayerBotMgrSingleton = MaNGOS::Singleton<PlayerBotMgr>;
+
+#define sPlayerBotMgr PlayerBotMgrSingleton::Instance()
+
 #endif

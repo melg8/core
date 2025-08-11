@@ -45,5 +45,8 @@ class AuctionHouseBotMgr
         bool m_loaded = false;
 };
 
-#define sAuctionHouseBotMgr MaNGOS::Singleton< AuctionHouseBotMgr >::Instance()
+using AuctionHouseBotMgrSingleton = MaNGOS::Singleton<AuctionHouseBotMgr>;
+
+#define sAuctionHouseBotMgr AuctionHouseBotMgrSingleton::Instance()
+
 #endif

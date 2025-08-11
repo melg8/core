@@ -54,6 +54,8 @@ private:
     std::map<uint32, std::vector<AuraRemovalEntry>> m_data;
 };
 
-#define sAuraRemovalMgr MaNGOS::Singleton<AuraRemovalManager>::Instance()
+using AuraRemovalManagerSingleton = MaNGOS::Singleton<AuraRemovalManager>;
+
+#define sAuraRemovalMgr AuraRemovalManagerSingleton::Instance()
 
 #endif

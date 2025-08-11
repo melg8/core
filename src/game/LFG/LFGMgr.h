@@ -55,6 +55,8 @@ class LFGMgr
         static uint32 GetMaximumDPSSlots() { return 3u; }
 };
 
-#define sLFGMgr MaNGOS::Singleton<LFGMgr>::Instance()
+using LFGMgrSingleton = MaNGOS::Singleton<LFGMgr>;
+
+#define sLFGMgr LFGMgrSingleton::Instance()
 
 #endif

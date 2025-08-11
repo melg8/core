@@ -161,5 +161,8 @@ class SocialMgr
         std::shared_timed_mutex _socialMapLock;
 };
 
-#define sSocialMgr MaNGOS::Singleton<SocialMgr>::Instance()
+using SocialMgrSingleton = MaNGOS::Singleton<SocialMgr>;
+
+#define sSocialMgr SocialMgrSingleton::Instance()
+
 #endif

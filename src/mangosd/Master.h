@@ -50,7 +50,9 @@ class Master
         void clearOnlineAccounts();
 };
 
-#define sMaster MaNGOS::Singleton<Master>::Instance()
+using MasterSingleton = MaNGOS::Singleton<Master>;
+
+#define sMaster MasterSingleton::Instance()
 
 #endif
 // @}

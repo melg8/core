@@ -69,8 +69,8 @@ private:
     std::mutex m_customCountersMutex;
 };
 
+using InstanceStatisticsMgrSingleton = MaNGOS::Singleton<InstanceStatisticsMgr>;
 
-
-#define sInstanceStatistics MaNGOS::Singleton<InstanceStatisticsMgr>::Instance()
+#define sInstanceStatistics InstanceStatisticsMgrSingleton::Instance()
 
 #endif

@@ -53,6 +53,8 @@ class WardenScanMgr
         std::vector<std::shared_ptr<Scan const>> GetRandomScans(ScanFlags flags, uint32 build) const;
 };
 
-#define sWardenScanMgr MaNGOS::Singleton<WardenScanMgr>::Instance()
+using WardenScanMgrSingleton = MaNGOS::Singleton<WardenScanMgr>;
+
+#define sWardenScanMgr WardenScanMgrSingleton::Instance()
 
 #endif /*!__WARDENSCANMGR_HPP_*/

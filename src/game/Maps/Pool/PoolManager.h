@@ -231,7 +231,9 @@ class PoolManager
         SearchMap m_poolSearchMap;
 };
 
-#define sPoolMgr MaNGOS::Singleton<PoolManager>::Instance()
+using PoolManagerSingleton = MaNGOS::Singleton<PoolManager>;
+
+#define sPoolMgr PoolManagerSingleton::Instance()
 
 // Method that tell if the creature is part of a pool and return the pool id if yes
 template<>

@@ -167,6 +167,8 @@ class GameEventMgr
         bool m_IsGameEventsInit;
 };
 
-#define sGameEventMgr MaNGOS::Singleton<GameEventMgr>::Instance()
+using GameEventMgrSingleton = MaNGOS::Singleton<GameEventMgr>;
+
+#define sGameEventMgr GameEventMgrSingleton::Instance()
 
 #endif

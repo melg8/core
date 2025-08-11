@@ -146,6 +146,8 @@ class AccountMgr
         std::shared_timed_mutex m_accountPersistentDataMutex;
 };
 
-#define sAccountMgr MaNGOS::Singleton<AccountMgr>::Instance()
+using AccountMgrSingleton = MaNGOS::Singleton<AccountMgr>;
+
+#define sAccountMgr AccountMgrSingleton::Instance()
 
 #endif

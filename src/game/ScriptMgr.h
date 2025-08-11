@@ -387,7 +387,9 @@ class ScriptMgr
         std::atomic<int> m_scheduledScripts;
 };
 
-#define sScriptMgr MaNGOS::Singleton<ScriptMgr>::Instance()
+using ScriptMgrSingleton = MaNGOS::Singleton<ScriptMgr>;
+
+#define sScriptMgr ScriptMgrSingleton::Instance()
 
 uint32 GetEventIdScriptId(uint32 eventId);
 uint32 GetScriptId(char const* name);

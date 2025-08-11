@@ -1621,6 +1621,8 @@ class ObjectMgr
         PlayerPremadeSpecMap m_playerPremadeSpecMap;
 };
 
-#define sObjectMgr MaNGOS::Singleton<ObjectMgr>::Instance()
+using ObjectMgrSingleton = MaNGOS::Singleton<ObjectMgr>;
+
+#define sObjectMgr ObjectMgrSingleton::Instance()
 
 #endif

@@ -143,6 +143,8 @@ private:
     ElevatorTransportMap m_elevatorTransportsByMap;
 };
 
-#define sTransportMgr MaNGOS::Singleton<TransportMgr>::Instance()
+using TransportMgrSingleton = MaNGOS::Singleton<TransportMgr>;
+
+#define sTransportMgr TransportMgrSingleton::Instance()
 
 #endif // TRANSPORTMGR_H

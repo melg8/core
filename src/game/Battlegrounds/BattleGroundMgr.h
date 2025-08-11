@@ -318,5 +318,8 @@ class BattleGroundMgr
         std::set<uint32> m_usedRefloot;
 };
 
-#define sBattleGroundMgr MaNGOS::Singleton<BattleGroundMgr>::Instance()
+using BattleGroundMgrSingleton = MaNGOS::Singleton<BattleGroundMgr>;
+
+#define sBattleGroundMgr BattleGroundMgrSingleton::Instance()
+
 #endif
