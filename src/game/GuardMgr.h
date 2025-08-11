@@ -18,6 +18,7 @@
 #define MANGOS_GUARD_MGR_H
 
 #include "SharedDefines.h"
+
 #include "Platform/Define.h"
 #include "Policies/Singleton.h"
 

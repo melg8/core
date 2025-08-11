@@ -20,10 +20,11 @@
  */
 
 #include "ChannelMgr.h"
-#include "Policies/SingletonImp.h"
 #include "World.h"
 #include "Util.h"
 #include "DBCStores.h"
+
+#include "Policies/SingletonImp.h"
 
 INSTANTIATE_SINGLETON_1(AllianceChannelMgr);
 INSTANTIATE_SINGLETON_1(HordeChannelMgr);

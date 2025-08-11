@@ -1,7 +1,7 @@
 #pragma once
 
 
-#include "SharedDefines.h" // For "Team"
+#include "SharedDefines.h"
 #include "ObjectGuid.h"
 
 #include <memory>

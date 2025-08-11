@@ -15,8 +15,10 @@
  */
 
 #include "scriptPCH.h"
+
 #include "custom.h"
 #include "ScriptedAI.h"
+
 #include <ctime>
 
 // TELEPORT NPC

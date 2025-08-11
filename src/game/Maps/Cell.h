@@ -22,9 +22,10 @@
 #ifndef MANGOS_CELL_H
 #define MANGOS_CELL_H
 
-#include "GameSystem/TypeContainerVisitor.h"
 #include "GridDefines.h"
 #include "Objects/ObjectDefines.h"
+
+#include "GameSystem/TypeContainerVisitor.h"
 
 #include <cmath>
 

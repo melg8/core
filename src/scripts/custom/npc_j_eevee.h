@@ -1,5 +1,6 @@
 #ifndef DEF_NPC_J_EEVEE_AI
 #define DEF_NPC_J_EEVEE_AI
+
 #include "scriptPCH.h"
 
 struct npc_j_eevee_dreadsteedAI : public ScriptedAI

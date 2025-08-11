@@ -19,13 +19,14 @@
 #ifndef MANGOS_GRIDMAP_H
 #define MANGOS_GRIDMAP_H
 
-#include "Platform/Define.h"
-#include "Policies/Singleton.h"
 #include "DBCStructure.h"
 #include "GridDefines.h"
-#include "Maps/GridMapDefines.h"
 #include "Object.h"
 #include "SharedDefines.h"
+
+#include "Platform/Define.h"
+#include "Policies/Singleton.h"
+#include "Maps/GridMapDefines.h"
 
 #include <memory>
 #include <atomic>

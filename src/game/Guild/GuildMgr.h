@@ -19,8 +19,9 @@
 #ifndef _GUILDMGR_H
 #define _GUILDMGR_H
 
-#include "Policies/Singleton.h"
 #include "World.h"
+
+#include "Policies/Singleton.h"
 
 #include <shared_mutex>
 

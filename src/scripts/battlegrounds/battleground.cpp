@@ -21,7 +21,7 @@ SDComment: Spirit guides in battlegrounds will revive all players every 30 sec
 SDCategory: Battlegrounds
 EndScriptData */
 
-#include "scriptPCH.h"
+
 
 // **** Script Info ****
 // Spiritguides in battlegrounds resurrecting many players at once
@@ -35,13 +35,20 @@ EndScriptData */
 // battleground spiritguides - this script handles gossipHello
 // and JustDied also it let autocast the channel-spell
 
+#include "Creature.h"
+#include "Map.h"
+#include "Player.h"
+#include "ScriptedAI.h"
+
+#include "Platform/Define.h"
+
 enum
 {
-    SPELL_SPIRIT_HEAL_CHANNEL       = 22011,                // Spirit Heal Channel
+    SPELL_SPIRIT_HEAL_CHANNEL = 22011, // Spirit Heal Channel
 
-    SPELL_SPIRIT_HEAL               = 22012,                // Spirit Heal
+    SPELL_SPIRIT_HEAL = 22012, // Spirit Heal
 
-    SPELL_WAITING_TO_RESURRECT      = 2584                  // players who cancel this aura don't want a resurrection
+    SPELL_WAITING_TO_RESURRECT = 2584 // players who cancel this aura don't want a resurrection
 };
 
 struct npc_spirit_guideAI : ScriptedAI

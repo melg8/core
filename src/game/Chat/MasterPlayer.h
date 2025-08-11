@@ -3,6 +3,7 @@
 
 #include "SharedDefines.h"
 #include "ObjectGuid.h"
+
 #include "Chat/AbstractPlayer.h"
 
 class PlayerSocial;
