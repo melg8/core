@@ -29,6 +29,10 @@
 #pragma pack(push,1)
 #endif
 
+#include "Platform/Define.h"
+
+#include <vector>
+
 struct PageText
 {
     uint32 entry;

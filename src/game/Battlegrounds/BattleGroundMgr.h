@@ -22,12 +22,12 @@
 #ifndef __BATTLEGROUNDMGR_H
 #define __BATTLEGROUNDMGR_H
 
-#include <vector>
-
-#include "Common.h"
 #include "Policies/Singleton.h"
 #include "Utilities/EventProcessor.h"
 #include "BattleGround.h"
+
+#include <vector>
+
 
 typedef std::map<uint32, BattleGround*> BattleGroundSet;
 

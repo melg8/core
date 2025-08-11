@@ -22,7 +22,6 @@
 #ifndef MANGOS_INSTANCE_DATA_H
 #define MANGOS_INSTANCE_DATA_H
 
-#include "Common.h"
 #include "ZoneScript.h"
 #include "ObjectGuid.h"
 

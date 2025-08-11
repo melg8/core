@@ -19,9 +19,11 @@
 #ifndef _MAPTREE_H
 #define _MAPTREE_H
 
-#include "Platform/Define.h"
-#include <unordered_map>
 #include "BIH.h"
+
+#include "Platform/Define.h"
+
+#include <unordered_map>
 
 namespace VMAP
 {

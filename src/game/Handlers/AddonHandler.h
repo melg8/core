@@ -22,7 +22,6 @@
 #ifndef __ADDONHANDLER_H
 #define __ADDONHANDLER_H
 
-#include "Common.h"
 #include "Policies/Singleton.h"
 
 class WorldPacket;

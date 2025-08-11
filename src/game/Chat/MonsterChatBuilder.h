@@ -17,11 +17,12 @@
 #ifndef MONSTER_CHAT_BUILDER_H
 #define MONSTER_CHAT_BUILDER_H
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "ObjectGuid.h"
 #include "Chat.h"
 #include "ObjectMgr.h"
+
+#include "Platform/Define.h"
 
 namespace MaNGOS
 {

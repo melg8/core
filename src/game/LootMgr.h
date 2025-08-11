@@ -22,11 +22,11 @@
 #ifndef MANGOS_LOOTMGR_H
 #define MANGOS_LOOTMGR_H
 
-#include "ItemEnchantmentMgr.h"
 #include "ByteBuffer.h"
 #include "ObjectGuid.h"
-#include "Utilities/LinkedReference/RefManager.h"
 #include "SharedDefines.h"
+
+#include "Utilities/LinkedReference/RefManager.h"
 
 #include <map>
 #include <vector>

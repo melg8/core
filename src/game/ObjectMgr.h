@@ -23,21 +23,21 @@
 #include "Common.h"
 #include "Object.h"
 #include "CreatureDefines.h"
-#include "GameObject.h"
 #include "Corpse.h"
 #include "QuestDef.h"
 #include "ItemPrototype.h"
 #include "NPCHandler.h"
-#include "Database/DatabaseEnv.h"
 #include "MapPersistentStateMgr.h"
 #include "ObjectAccessor.h"
 #include "ObjectGuid.h"
-#include "Policies/Singleton.h"
 #include "SQLStorages.h"
+
+#include "Database/DatabaseEnv.h"
+#include "Policies/Singleton.h"
+#include "Platform/Define.h"
 
 #include <string>
 #include <map>
-#include <limits>
 
 class Group;
 class Item;

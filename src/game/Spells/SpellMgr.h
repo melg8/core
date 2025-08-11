@@ -24,13 +24,12 @@
 
 // For static or at-server-startup loaded spell data
 
-#include "Common.h"
 #include "SharedDefines.h"
-#include "SpellAuraDefines.h"
 #include "DBCStructure.h"
 #include "DBCStores.h"
-#include "SQLStorages.h"
 #include "SpellEntry.h"
+
+#include "Platform/Define.h"
 
 #include <map>
 #include <memory>
@@ -38,6 +37,7 @@
 class Player;
 class Spell;
 class Unit;
+class Field;
 
 struct SpellProcEventEntry
 {

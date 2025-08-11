@@ -24,9 +24,9 @@
 
 #include "Common.h"
 #include "GameSystem/NGrid.h"
+
 #include <cmath>
 
-// Forward class definitions
 class Corpse;
 class Creature;
 class DynamicObject;

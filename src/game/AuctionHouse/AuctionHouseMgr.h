@@ -22,13 +22,12 @@
 #ifndef _AUCTION_HOUSE_MGR_H
 #define _AUCTION_HOUSE_MGR_H
 
+#include "DBCStructure.h"
+
+#include "Policies/Singleton.h"
+
 #include <vector>
 #include <memory>
-
-#include "Common.h"
-#include "SharedDefines.h"
-#include "Policies/Singleton.h"
-#include "DBCStructure.h"
 
 class Item;
 class Player;

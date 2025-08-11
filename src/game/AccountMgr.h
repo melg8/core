@@ -24,6 +24,7 @@
 
 #include "Common.h"
 #include "Policies/Singleton.h"
+
 #include <string>
 #include <shared_mutex>
 

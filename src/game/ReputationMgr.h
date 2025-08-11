@@ -22,9 +22,11 @@
 #ifndef __MANGOS_REPUTATION_MGR_H
 #define __MANGOS_REPUTATION_MGR_H
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "DBCStructure.h"
+
+#include "Platform/Define.h"
+
 #include <map>
 #include <memory>
 

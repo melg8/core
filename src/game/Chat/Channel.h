@@ -22,13 +22,12 @@
 #ifndef _CHANNEL_H
 #define _CHANNEL_H
 
-#include "Common.h"
 #include "ObjectGuid.h"
 #include "WorldPacket.h"
 #include "Opcodes.h"
+
 #include "Chat/AbstractPlayer.h"
 
-#include <list>
 #include <map>
 #include <string>
 

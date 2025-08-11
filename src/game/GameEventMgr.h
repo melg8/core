@@ -22,10 +22,14 @@
 #ifndef MANGOS_GAMEEVENT_MGR_H
 #define MANGOS_GAMEEVENT_MGR_H
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "Platform/Define.h"
 #include "Policies/Singleton.h"
+
+#include <set>
+#include <vector>
+#include <map>
+#include <utility>
 
 #define max_ge_check_delay 86400                            // 1 day in seconds
 #define default_year_length 525600                          // 365 days in minutes

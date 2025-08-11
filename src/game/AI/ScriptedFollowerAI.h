@@ -27,8 +27,6 @@ class FollowerAI : public ScriptedAI
         explicit FollowerAI(Creature* pCreature);
         ~FollowerAI() override {}
 
-        //virtual void WaypointReached(uint32 uiPointId) = 0;
-
         void MovementInform(uint32 uiMotionType, uint32 uiPointId) override;
 
         void MoveInLineOfSight(Unit*) override;

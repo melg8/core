@@ -22,11 +22,14 @@
 #ifndef DATABASE_H
 #define DATABASE_H
 
-#include <unordered_map>
-#include "Database/SqlDelayThread.h"
-#include "Policies/ThreadingModel.h"
-#include <ace/TSS_T.h>
 #include "SqlPreparedStatement.h"
+
+#include "Database/QueryResult.h"
+#include "Database/SqlDelayThread.h"
+
+#include <ace/TSS_T.h>
+
+#include <unordered_map>
 #include <memory>
 #include <thread>
 #include <atomic>

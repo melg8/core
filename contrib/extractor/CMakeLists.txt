@@ -18,10 +18,16 @@ cmake_minimum_required(VERSION 2.6...3.20)
 project (MANGOS_MAP_EXTRACTOR)
 set(EXECUTABLE_NAME MapExtractor)
 
-include_directories (${CMAKE_SOURCE_DIR}/dep/libmpq)
+include_directories (
+    SYSTEM
+    ${CMAKE_SOURCE_DIR}/dep/libmpq
+    ${ACE_INCLUDE_DIR}
+)
+
 include_directories (loadlib)
 include_directories (
-     ../../src/game/Maps
+    ${CMAKE_SOURCE_DIR}/src/framework
+    ${CMAKE_SOURCE_DIR}/src/game/Maps
 )
 
 add_executable (${EXECUTABLE_NAME}

@@ -17,10 +17,10 @@
 #ifndef MANGOS_GUARD_MGR_H
 #define MANGOS_GUARD_MGR_H
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "Platform/Define.h"
 #include "Policies/Singleton.h"
+
 #include <unordered_map>
 
 #define GUARD_POST_MAX_CHARGES 10
@@ -44,6 +44,9 @@ struct AreaGuardInfo
                 return creatureIdHorde;
             case ALLIANCE:
                 return creatureIdAlliance;
+            case TEAM_NONE:
+            case TEAM_CROSSFACTION:
+                break;
         }
         return 0;
     }

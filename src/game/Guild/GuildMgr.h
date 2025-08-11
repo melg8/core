@@ -19,9 +19,9 @@
 #ifndef _GUILDMGR_H
 #define _GUILDMGR_H
 
-#include "Common.h"
 #include "Policies/Singleton.h"
 #include "World.h"
+
 #include <shared_mutex>
 
 class Guild;
@@ -32,6 +32,7 @@ class PetitionSignature;
 typedef std::unordered_map<uint32, Petition*> PetitionMap;
 typedef std::list<PetitionSignature*> PetitionSignatureList;
 typedef std::unordered_map<uint32, Guild*> GuildMap;
+
 class GuildMgr
 {
     public:

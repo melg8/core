@@ -1,7 +1,6 @@
 #ifndef MASTERPLAYER_H
 #define MASTERPLAYER_H
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "ObjectGuid.h"
 #include "Chat/AbstractPlayer.h"

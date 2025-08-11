@@ -19,8 +19,10 @@
 #ifndef AURA_REMOVAL_MGR
 #define AURA_REMOVAL_MGR
 
-#include "Common.h"
 #include "Policies/Singleton.h"
+
+#include <map>
+#include <vector>
 
 enum AuraRemovalFlags
 {

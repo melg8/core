@@ -17,8 +17,9 @@
 #ifndef __SCRIPT_COMMANDS_H
 #define __SCRIPT_COMMANDS_H
 
-#include "Common.h"
 #include "ObjectGuid.h"
+
+#include "Platform/Define.h"
 
 // Legend:
 // source - the type of object which executes the command

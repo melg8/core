@@ -1,13 +1,12 @@
 #ifndef _PLAYERBOTMGR_H
 #define _PLAYERBOTMGR_H
 
-#include "Common.h"
-#include "Policies/Singleton.h"
-#include "Database/DatabaseEnv.h"
 #include "PlayerBotAI.h"
 #include "BattleGroundDefines.h"
 
-#include <vector>
+#include "Platform/Define.h"
+#include "Policies/Singleton.h"
+
 #include <memory>
 
 class PlayerBotAI;

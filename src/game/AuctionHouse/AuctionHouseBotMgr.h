@@ -1,8 +1,9 @@
 #ifndef _AUCTION_HOUSE_BOT_MGR_H
 #define _AUCTION_HOUSE_BOT_MGR_H
 
+#include "AuctionHouseMgr.h"
+
 #include "Policies/Singleton.h"
-#include "SharedDefines.h"
 
 #include <vector>
 #include <memory>

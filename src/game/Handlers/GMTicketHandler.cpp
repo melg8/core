@@ -19,14 +19,17 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "Language.h"
-#include "WorldPacket.h"
-#include "Log.h"
-#include "GMTicketMgr.h"
-#include "Player.h"
 #include "Chat.h"
-#include "World.h"
+#include "GMTicketMgr.h"
+#include "Language.h"
+#include "Log.h"
 #include "Opcodes.h"
+#include "Player.h"
+#include "World.h"
+#include "WorldPacket.h"
+
+#include "Database/DatabaseEnv.h"
+#include "Database/SqlPreparedStatement.h"
 
 void WorldSession::HandleGMTicketGetTicketOpcode(WorldPacket& /*recv_data*/)
 {

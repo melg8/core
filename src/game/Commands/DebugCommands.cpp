@@ -19,26 +19,27 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "Common.h"
-#include "Database/DatabaseEnv.h"
-#include "DBCStores.h"
-#include "WorldPacket.h"
-#include "Player.h"
-#include "Bag.h"
-#include "Opcodes.h"
-#include "Chat.h"
-#include "Log.h"
-#include "Language.h"
-#include "BattleGroundMgr.h"
 #include <fstream>
-#include "ObjectMgr.h"
+#include "Bag.h"
+#include "BattleGroundMgr.h"
+#include "Chat.h"
+#include "Common.h"
+#include "Conditions.h"
+#include "DBCStores.h"
+#include "Database/DatabaseEnv.h"
+#include "ItemEnchantmentMgr.h"
+#include "Language.h"
+#include "Log.h"
 #include "ObjectGuid.h"
+#include "ObjectMgr.h"
+#include "Opcodes.h"
+#include "Player.h"
+#include "ScriptMgr.h"
 #include "SpellMgr.h"
 #include "SpellModMgr.h"
 #include "World.h"
-#include "ScriptMgr.h"
-#include "Conditions.h"
- // VMAPS
+#include "WorldPacket.h"
+// VMAPS
 #include "ModelInstance.h"
 #include "GameObjectModel.h"
  // MMAPS

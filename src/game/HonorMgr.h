@@ -5,6 +5,8 @@
 #ifndef HONORMGR_H
 #define HONORMGR_H
 
+#include "Platform/Define.h"
+
 #include <unordered_map>
 
 struct HonorScores

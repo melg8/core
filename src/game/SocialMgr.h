@@ -22,9 +22,11 @@
 #ifndef __MANGOS_SOCIALMGR_H
 #define __MANGOS_SOCIALMGR_H
 
-#include "Policies/Singleton.h"
-#include "Database/DatabaseEnv.h"
 #include "ObjectGuid.h"
+
+#include "Database/QueryResult.h"
+#include "Policies/Singleton.h"
+
 #include <shared_mutex>
 
 class SocialMgr;

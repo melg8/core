@@ -25,7 +25,6 @@
 #ifndef MANGOS_H_WEATHER
 #define MANGOS_H_WEATHER
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "Timer.h"
 

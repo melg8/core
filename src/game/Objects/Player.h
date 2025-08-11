@@ -65,6 +65,7 @@ class ZoneScript;
 class PlayerAI;
 class PlayerBroadcaster;
 class BattleGround;
+class SqlQueryHolder;
 
 #define PLAYER_MAX_SKILLS           127
 #define PLAYER_EXPLORED_ZONES_SIZE  64

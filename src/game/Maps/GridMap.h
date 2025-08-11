@@ -26,9 +26,8 @@
 #include "Maps/GridMapDefines.h"
 #include "Object.h"
 #include "SharedDefines.h"
+
 #include <memory>
-#include <bitset>
-#include <list>
 #include <atomic>
 
 

@@ -6,7 +6,7 @@
 #ifndef SCRIPTED_PETAI_H
 #define SCRIPTED_PETAI_H
 
-#include "ScriptedAI.h"
+#include "CreatureAI.h"
 
 // Using CreatureAI for now. Might change later and use PetAI (need to export for dll first)
 class ScriptedPetAI : public CreatureAI

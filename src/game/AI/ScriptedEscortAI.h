@@ -6,7 +6,8 @@
 #define SC_ESCORTAI_H
 
 #include "ScriptedAI.h"
-#include <memory>
+
+#include "Platform/Define.h"
 
 class Quest;
 

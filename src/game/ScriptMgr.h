@@ -20,14 +20,15 @@
 #ifndef _SCRIPTMGR_H
 #define _SCRIPTMGR_H
 
-#include "Common.h"
-#include "Policies/Singleton.h"
 #include "DBCEnums.h"
 #include "ScriptCommands.h"
 #include "UnitDefines.h"
 #include "SpellDefines.h"
 #include "SharedDefines.h"
+
+#include "Policies/Singleton.h"
 #include "nonstd/optional.hpp"
+
 #include <atomic>
 
 using nonstd::optional;

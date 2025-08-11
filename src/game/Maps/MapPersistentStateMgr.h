@@ -22,20 +22,18 @@
 #ifndef __InstanceSaveMgr_H
 #define __InstanceSaveMgr_H
 
-#include "Common.h"
+#include "PoolManager.h"
+#include "SQLStorages.h"
+#include "Map.h"
+
 #include "Platform/Define.h"
 #include "Policies/Singleton.h"
+#include "Database/DatabaseEnv.h"
+
 #include <list>
 #include <map>
 #include <unordered_map>
 #include <shared_mutex>
-#include "Database/DatabaseEnv.h"
-#include "DBCEnums.h"
-#include "DBCStores.h"
-#include "ObjectGuid.h"
-#include "PoolManager.h"
-#include "SQLStorages.h"
-#include "Map.h"
 
 struct MapEntry;
 struct GameObjectData;

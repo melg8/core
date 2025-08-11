@@ -22,6 +22,7 @@
 #include "ObjectMgr.h"
 #include "Database/DatabaseEnv.h"
 #include "Database/DatabaseImpl.h"
+#include "ItemEnchantmentMgr.h"
 #include "Policies/SingletonImp.h"
 #include "SQLStorages.h"
 #include "Log.h"

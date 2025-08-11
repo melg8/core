@@ -22,8 +22,9 @@
 #ifndef _ITEM_ENCHANTMENT_MGR_H
 #define _ITEM_ENCHANTMENT_MGR_H
 
-#include "Common.h"
+#include "Platform/Define.h"
 
 void LoadRandomEnchantmentsTable();
 uint32 GetItemEnchantMod(uint32 entry);
+
 #endif

@@ -22,7 +22,7 @@
 #ifndef _UPDATEFIELDS_AUTO_H
 #define _UPDATEFIELDS_AUTO_H
 
-#include "Common.h"
+#include "Platform/Define.h"
 
 #if SUPPORTED_CLIENT_BUILD >= CLIENT_BUILD_1_12_1
 #include "UpdateFields_1_12_1.h"

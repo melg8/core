@@ -19,9 +19,11 @@
 #ifndef TRANSPORTMGR_H
 #define TRANSPORTMGR_H
 
-#include <G3D/Quat.h>
+#include "DBCStructure.h"
 #include "spline.h"
-#include "DBCStores.h"
+
+#include <G3D/Quat.h>
+
 #include <map>
 
 class Map;
@@ -29,19 +31,16 @@ class ShipTransport;
 struct GameObjectInfo;
 
 typedef std::map<uint32, TransportAnimationEntry const*> TransportPathContainer;
-// typedef std::map<uint32, TransportRotationEntry const*> TransportPathRotationContainer;
 
 struct TransportAnimation
 {
     TransportAnimation() : TotalTime(0) { }
 
     TransportPathContainer Path;
-    // TransportPathRotationContainer Rotations;
     uint32 TotalTime;
 
     TransportAnimationEntry const* GetPrevAnimNode(uint32 time) const;
     TransportAnimationEntry const* GetNextAnimNode(uint32 time) const;
-    // TransportRotationEntry const* GetAnimRotation(uint32 time) const; - wotlk onwards
 };
 
 typedef std::map<uint32, TransportAnimation> TransportAnimationContainer;

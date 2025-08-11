@@ -22,9 +22,7 @@
 #ifndef MANGOSSERVER_CHANNELMGR_H
 #define MANGOSSERVER_CHANNELMGR_H
 
-#include "Common.h"
 #include "Channel.h"
-#include "Policies/Singleton.h"
 #include "ObjectGuid.h"
 #include "AbstractPlayer.h"
 

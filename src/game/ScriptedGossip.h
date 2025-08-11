@@ -6,7 +6,6 @@
 #define SC_GOSSIP_H
 
 #include "Player.h"
-#include "GossipDef.h"
 #include "QuestDef.h"
 
 // broadcast texts

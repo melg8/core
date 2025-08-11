@@ -1,9 +1,10 @@
 #pragma once
 
-#include <memory>
-#include "Common.h"
+
 #include "SharedDefines.h" // For "Team"
 #include "ObjectGuid.h"
+
+#include <memory>
 
 enum PlayerExtraGmFlags
 {

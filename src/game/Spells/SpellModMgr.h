@@ -22,9 +22,7 @@
 #ifndef _SPELL_MOD_MGR_H
 #define _SPELL_MOD_MGR_H
 
-#include "Common.h"
 #include "Policies/Singleton.h"
-
 
 class SpellModMgr
 {

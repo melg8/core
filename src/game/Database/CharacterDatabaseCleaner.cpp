@@ -19,12 +19,13 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "Platform/Define.h"
 #include "CharacterDatabaseCleaner.h"
-#include "World.h"
-#include "Database/DatabaseEnv.h"
 #include "DBCStores.h"
+#include "Database/DatabaseEnv.h"
+#include "Platform/Define.h"
+#include "ProgressBar.h"
 #include "SpellMgr.h"
+#include "World.h"
 
 void CharacterDatabaseCleaner::CleanDatabase()
 {

@@ -24,12 +24,11 @@
 #define _ASYNC_COMMAND_INCLUDED
 
 #include "Common.h"
-#include "SharedDefines.h"
 #include "ObjectGuid.h"
-#include "Database/DatabaseEnv.h"
+#include "Chat.h"
+
 #include "Database/Database.h"
 #include "Database/SqlOperations.h"
-#include "Chat.h"
 
 enum
 {

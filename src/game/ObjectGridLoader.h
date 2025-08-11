@@ -22,13 +22,12 @@
 #ifndef MANGOS_OBJECTGRIDLOADER_H
 #define MANGOS_OBJECTGRIDLOADER_H
 
-#include "Common.h"
-#include "Utilities/TypeList.h"
-#include "Platform/Define.h"
-#include "GameSystem/GridLoader.h"
 #include "GridDefines.h"
 #include "Cell.h"
 #include "Map.h"
+
+#include "Platform/Define.h"
+#include "GameSystem/GridLoader.h"
 
 class ObjectWorldLoader;
 

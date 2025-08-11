@@ -19,10 +19,11 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "SpellMgr.h"
 #include "SpellModMgr.h"
 #include "Database/DatabaseEnv.h"
 #include "Policies/SingletonImp.h"
+#include "ProgressBar.h"
+#include "SpellMgr.h"
 
 #include "Log.h"
 

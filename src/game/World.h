@@ -28,18 +28,18 @@
 
 #include "Common.h"
 #include "Timer.h"
-#include "Policies/Singleton.h"
 #include "SharedDefines.h"
 #include "ObjectGuid.h"
-#include "Chat/AbstractPlayer.h"
 #include "WorldPacket.h"
-#include "Multithreading/Messager.h"
 #include "LFGQueue.h"
+
+#include "Policies/Singleton.h"
+#include "Chat/AbstractPlayer.h"
+#include "Multithreading/Messager.h"
 
 #include <map>
 #include <set>
 #include <list>
-#include <chrono>
 #include <memory>
 #include <unordered_map>
 #include <thread>
