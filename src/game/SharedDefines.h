@@ -24,6 +24,7 @@
 
 #include "Platform/Define.h"
 #include "Progression.h"
+
 #include <cassert>
 
 #define MAX_SPELL_EFFECTS 3

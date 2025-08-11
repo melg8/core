@@ -23,10 +23,11 @@
 #define _SPELLENTRY_H
 
 #include "DBCStructure.h"
-#include "SharedDefines.h"
-#include "SpellDefines.h"
-#include "SpellAuraDefines.h"
 #include "ItemPrototype.h"
+#include "SharedDefines.h"
+#include "SpellAuraDefines.h"
+#include "SpellClassMask.h"
+#include "SpellDefines.h"
 
 #include <array>
 

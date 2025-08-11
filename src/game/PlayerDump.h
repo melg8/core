@@ -22,11 +22,10 @@
 #ifndef _PLAYER_DUMP_H
 #define _PLAYER_DUMP_H
 
-#include <string>
-#include <map>
-#include <set>
+#include "Platform/Define.h"
 
-#include "Common.h"
+#include <string>
+#include <set>
 
 enum DumpTableType
 {

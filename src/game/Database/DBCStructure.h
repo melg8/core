@@ -25,10 +25,8 @@
 #include "Common.h"
 #include "DBCEnums.h"
 #include "Path.h"
-#include "SpellClassMask.h"
 
 #include <map>
-#include <set>
 #include <vector>
 #include <array>
 

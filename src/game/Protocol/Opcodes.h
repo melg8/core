@@ -26,7 +26,7 @@
 #ifndef _OPCODES_H
 #define _OPCODES_H
 
-#include "Common.h"
+#include "Platform/Define.h"
 
 // Note: this include need for be sure have full definition of class WorldSession
 //       if this class definition not complite then VS for x64 release use different size for

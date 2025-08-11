@@ -24,6 +24,8 @@
 
 #include "DBCFileLoader.h"
 
+#include <list>
+
 template<class T>
 class DBCStorage
 {

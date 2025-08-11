@@ -33,6 +33,7 @@
 
 template <typename T>
 class ReactorRunnable;
+
 template <typename T>
 class MangosSocketMgr;
 
