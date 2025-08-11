@@ -24,6 +24,7 @@
 #include "AddonHandler.h"
 #include "Auth/AuthCrypt.h"
 #include "Crypto/Hash/SHA1.h"
+#include "DBCStores.h"
 #include "Database/DatabaseEnv.h"
 #include "MangosSocketImpl.h"
 #include "Opcodes.h"

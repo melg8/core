@@ -1,5 +1,6 @@
 #include "MangosSocketMgr.h"
 
+#include "Database/DatabaseEnv.h"
 
 #include <ace/ACE.h>
 #include <ace/Log_Msg.h>
@@ -19,7 +20,6 @@
 #include <atomic>
 
 #include "Log.h"
-#include "Database/DatabaseEnv.h"
 
 template <typename SocketType>
 class MangosSocketAcceptor : public ACE_Acceptor<SocketType, ACE_SOCK_Acceptor>

@@ -18,7 +18,6 @@ set(framework_SRCS
   GameSystem/GridRefManager.h
   GameSystem/NGrid.h
   GameSystem/TypeContainer.h
-  GameSystem/TypeContainerFunctionsPtr.h
   GameSystem/TypeContainerVisitor.h
   Network/MangosSocket.h
   Network/MangosSocketImpl.h
@@ -38,8 +37,32 @@ set(framework_SRCS
   Utilities/TypeList.h
   Utilities/LinkedReference/Reference.h
   Utilities/LinkedReference/RefManager.h
+  Dynamic/FactoryHolder.cpp
+  Dynamic/ObjectRegistry.cpp
+  GameSystem/Grid.cpp
+  GameSystem/GridLoader.cpp
+  GameSystem/GridReference.cpp
+  GameSystem/GridRefManager.cpp
+  GameSystem/NGrid.cpp
+  GameSystem/TypeContainer.cpp
+  GameSystem/TypeContainerVisitor.cpp
+  Platform/Define.cpp
+  Platform/CompilerDefs.cpp
+  Network/MangosSocketMgr.cpp
+  Network/MangosSocketMgrImpl.cpp
+  Network/MangosSocket.cpp
+  Network/MangosSocketImpl.cpp
+  Policies/CreationPolicy.cpp
   Policies/MemoryManagement.cpp
+  Policies/Singleton.cpp
+  Policies/SingletonImp.cpp
+  Policies/ThreadingModel.cpp
   Policies/ObjectLifeTime.cpp
+  Utilities/ByteConverter.cpp
+  Utilities/LinkedList.cpp
+  Utilities/TypeList.cpp
+  Utilities/LinkedReference/Reference.cpp
+  Utilities/LinkedReference/RefManager.cpp
   Utilities/EventProcessor.cpp
   Utilities/EventMap.cpp
 )
@@ -47,6 +70,10 @@ set(framework_SRCS
 
 source_group("Other"
   REGULAR_EXPRESSION .*
+)
+
+source_group("Network"
+  REGULAR_EXPRESSION Network
 )
 
 source_group("GameSystem"
@@ -92,4 +119,5 @@ SET_TARGET_PROPERTIES (framework PROPERTIES FOLDER "Game Libs")
 
 target_link_libraries(framework
   ${TBB_LIBRARIES}
+  shared
 )

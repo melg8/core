@@ -12,10 +12,7 @@
 
 #include "Util.h"
 #include "WorldPacket.h"
-#include "SharedDefines.h"
-#include "WorldSession.h"
 #include "Log.h"
-#include "DBCStores.h"
 
 
 template <typename SessionType, typename SocketName, typename Crypt>
