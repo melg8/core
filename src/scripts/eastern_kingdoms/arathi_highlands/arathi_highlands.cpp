@@ -25,27 +25,33 @@ EndScriptData */
 npc_professor_phizzlethorpe
 EndContentData */
 
-#include "scriptPCH.h"
-
 /*######
 ## npc_professor_phizzlethorpe
 ######*/
 
+#include "ScriptedEscortAI.h"
+
+#include "Creature.h"
+#include "GridSearchers.h"
+#include "Player.h"
+#include "QuestDef.h"
+#include "ScriptMgr.h"
+
 enum
 {
-    SAY_PROGRESS_1          = 845,
-    SAY_PROGRESS_2          = 846,
-    SAY_PROGRESS_3          = 847,
-    EMOTE_PROGRESS_4        = 848,
-    SAY_AGGRO               = 859,
-    SAY_PROGRESS_5          = 849,
-    SAY_PROGRESS_6          = 850,
-    SAY_PROGRESS_7          = 851,
-    EMOTE_PROGRESS_8        = 889,
-    SAY_PROGRESS_9          = 890,
+    SAY_PROGRESS_1 = 845,
+    SAY_PROGRESS_2 = 846,
+    SAY_PROGRESS_3 = 847,
+    EMOTE_PROGRESS_4 = 848,
+    SAY_AGGRO = 859,
+    SAY_PROGRESS_5 = 849,
+    SAY_PROGRESS_6 = 850,
+    SAY_PROGRESS_7 = 851,
+    EMOTE_PROGRESS_8 = 889,
+    SAY_PROGRESS_9 = 890,
 
-    QUEST_SUNKEN_TREASURE   = 665,
-    ENTRY_VENGEFUL_SURGE    = 2776
+    QUEST_SUNKEN_TREASURE = 665,
+    ENTRY_VENGEFUL_SURGE = 2776
 };
 
 struct npc_professor_phizzlethorpeAI : public npc_escortAI

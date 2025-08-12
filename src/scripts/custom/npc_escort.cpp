@@ -1,4 +1,8 @@
-#include "scriptPCH.h"
+#include "ScriptedEscortAI.h"
+
+#include "Player.h"
+#include "QuestDef.h"
+#include "ScriptMgr.h"
 
 enum
 {
