@@ -14,8 +14,14 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "ScriptedInstance.h"
+#include "SpellEntry.h"
 #include "blackwing_lair.h"
+
+#include "Platform/Define.h"
 
 enum Ebonroc : uint32
 {

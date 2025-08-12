@@ -2,8 +2,7 @@
  * This program is free software licensed under GPL version 2
  * Please see the included DOCS/LICENSE.TXT for more information */
 
-#ifndef DEF_BLACKWING_LAIR
-#define DEF_BLACKWING_LAIR
+#pragma once
 
 enum
 {
@@ -97,5 +96,3 @@ enum
 
     RAZORGORE_MAX_HEALTH_DURING_POSESSION = 450000
 };
-
-#endif

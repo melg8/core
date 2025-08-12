@@ -14,7 +14,15 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "GameObject.h"
+#include "GameObjectAI.h"
+#include "ObjectMgr.h"
+#include "Player.h"
+#include "ScriptedInstance.h"
+#include "SharedDefines.h"
 #include "blackwing_lair.h"
 
 static const Position EggSpawnCoords[] =

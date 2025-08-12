@@ -14,8 +14,17 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "GridSearchers.h"
+#include "Player.h"
+#include "ScriptedInstance.h"
+#include "SpellEntry.h"
+#include "World.h"
 #include "blackwing_lair.h"
+
+#include "Platform/Define.h"
 
 // Razorgore Phase 2 Script
 enum Razorgore : uint32
