@@ -2,8 +2,6 @@
 # - gcc under Ubuntu
 # - clang under Ubuntu
 # - visual studio under Windows
-#
-# Builds are set to use 2 threads per type
 name: vmangos CI build
 
 on:
@@ -39,12 +37,19 @@ jobs:
   build:
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: true
       #matrix declaration
       matrix:
-        os: [ubuntu-latest]
-        compiler: [gcc, clang]
-        include:
+        os: [ubuntu-latest, windows-2022]
+        client_build: [5875, 5464, 5302, 5086, 4878, 4695, 4544]
+        compiler: [gcc, clang, msvc]
+        exclude:
+          - os: ubuntu-latest
+            compiler: msvc
           - os: windows-2022
+            compiler: gcc
+          - os: windows-2022
+            compiler: clang
 
     steps:
 
@@ -92,9 +97,12 @@ jobs:
         mkdir build
         mkdir _install
         cd build
-        cmake ../ -DCMAKE_INSTALL_PREFIX=../_install -DWITH_WARNINGS=0 -DUSE_EXTRACTORS=1 -DENABLE_MAILSENDER=1
-        make -j2
+        cmake ../ -DCMAKE_INSTALL_PREFIX=../_install -DWITH_WARNINGS=0 -DUSE_EXTRACTORS=1 -DENABLE_MAILSENDER=1 -DSUPPORTED_CLIENT_BUILD=${{ matrix.client_build }}
+        make -j$(nproc)
         make install
+      env:
+        CC: ${{ matrix.compiler }}
+        CXX: ${{ matrix.compiler == 'gcc' && 'g++' || 'clang++' }}
     #windows
     - name: windows build & install
       if: matrix.os == 'windows-2022'
@@ -102,7 +110,7 @@ jobs:
         # Build ACE
         export ACE_ROOT=$GITHUB_WORKSPACE/ACE_wrappers
         cd $GITHUB_WORKSPACE/ACE_wrappers
-        /c/Program\ Files/Microsoft\ Visual\ Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe "ACE_wrappers_vs2019.sln" //p:Configuration=Release //p:Platform=x64 //t:ACE //m:2
+        /c/Program\ Files/Microsoft\ Visual\ Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe "ACE_wrappers_vs2019.sln" //p:Configuration=Release //p:Platform=x64 //t:ACE //m:$(nproc)
         # Build CURL
         cd $GITHUB_WORKSPACE/dep/windows/optional_dependencies/
         ./curl_download_and_build.bat
@@ -110,7 +118,7 @@ jobs:
         cd $GITHUB_WORKSPACE
         mkdir build
         cd build
-        cmake -D TBB_ROOT_DIR=$GITHUB_WORKSPACE/tbb -DWITH_WARNINGS=0 -DUSE_EXTRACTORS=1 -DENABLE_MAILSENDER=1 -G "Visual Studio 17 2022" -A x64 ..
-        /c/Program\ Files/Microsoft\ Visual\ Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe "MaNGOS.sln" //p:Platform=x64 //p:Configuration=Release //m:2
+        cmake -D TBB_ROOT_DIR=$GITHUB_WORKSPACE/tbb -DWITH_WARNINGS=0 -DUSE_EXTRACTORS=1 -DENABLE_MAILSENDER=1 -DSUPPORTED_CLIENT_BUILD=${{ matrix.client_build }} -G "Visual Studio 17 2022" -A x64 ..
+        /c/Program\ Files/Microsoft\ Visual\ Studio/2022/Enterprise/MSBuild/Current/Bin/MSBuild.exe "MaNGOS.sln" //p:Platform=x64 //p:Configuration=Release //m:$(nproc)
       #git bash shell
       shell: bash
