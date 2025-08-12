@@ -1,5 +1,12 @@
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "GridSearchers.h"
+#include "ScriptedInstance.h"
+#include "SpellEntry.h"
 #include "molten_core.h"
+
+#include "Platform/Define.h"
 #include "Utilities/EventMap.h"
 
 enum Garr : uint32

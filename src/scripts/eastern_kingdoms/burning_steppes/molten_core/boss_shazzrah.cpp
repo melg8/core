@@ -21,7 +21,10 @@ SDComment: Teleport NYI
 SDCategory: Molten Core
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "ScriptedInstance.h"
 #include "molten_core.h"
 
 enum

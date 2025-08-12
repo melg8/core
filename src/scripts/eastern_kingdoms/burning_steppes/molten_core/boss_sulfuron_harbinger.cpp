@@ -25,7 +25,10 @@ EndScriptData */
     Sulfuron should walk to a random point ~10 yds behind him before casting Flamespear
 */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "ScriptedInstance.h"
 #include "molten_core.h"
 
 #define SPELL_DARKSTRIKE            19777

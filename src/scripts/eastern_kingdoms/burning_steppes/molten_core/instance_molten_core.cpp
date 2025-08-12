@@ -14,7 +14,13 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "scriptPCH.h"
+#include "ScriptedInstance.h"
+
+#include "Creature.h"
+#include "GameObject.h"
+#include "GridSearchers.h"
+#include "Player.h"
+
 #include "molten_core.h"
 
 struct instance_molten_core : ScriptedInstance

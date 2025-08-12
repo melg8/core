@@ -26,7 +26,16 @@ EndScriptData */
     so just created a dummy visual creature to spawn in his place
 */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "CreatureAI.h"
+#include "GameObject.h"
+#include "GridSearchers.h"
+#include "Player.h"
+#include "ScriptedInstance.h"
+#include "SharedDefines.h"
+#include "SpellEntry.h"
 #include "molten_core.h"
 
 enum

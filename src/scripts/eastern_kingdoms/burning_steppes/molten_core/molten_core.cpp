@@ -25,8 +25,13 @@ EndScriptData */
 mob_ancient_core_hound
 EndContentData */
 
-#include "scriptPCH.h"
 #include "molten_core.h"
+
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "GridSearchers.h"
+#include "ScriptedInstance.h"
 
 /*######
 ## mob_firewalker
