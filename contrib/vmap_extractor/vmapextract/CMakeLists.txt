@@ -22,6 +22,7 @@ add_executable(${EXECUTABLE_NAME} adtfile.cpp dbcfile.cpp gameobject_extract.cpp
 SET_TARGET_PROPERTIES (${EXECUTABLE_NAME} PROPERTIES FOLDER Extractors)
 
 include_directories(
+  SYSTEM
   ${CMAKE_SOURCE_DIR}/dep/include/g3dlite
 )
 
