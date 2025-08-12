@@ -36,9 +36,18 @@ npc_golem_lord_argelmach
 npc_GorShak
 */
 
-#include "scriptPCH.h"
 #include "blackrock_depths.h"
+
+#include "Creature.h"
 #include "CreatureGroups.h"
+#include "GameObject.h"
+#include "GameObjectAI.h"
+#include "GridSearchers.h"
+#include "Player.h"
+#include "ScriptedEscortAI.h"
+#include "ScriptedGossip.h"
+#include "ScriptedInstance.h"
+#include "SpellAuras.h"
 
 /*######
 ## go_shadowforge_brazier

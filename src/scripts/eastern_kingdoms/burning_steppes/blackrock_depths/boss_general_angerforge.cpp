@@ -21,20 +21,24 @@ SDComment:
 SDCategory: Blackrock Depths
 EndScriptData */
 
-#include "scriptPCH.h"
+
+#include "Creature.h"
+#include "Platform/Define.h"
+#include "ScriptMgr.h"
+#include "ScriptedAI.h"
 
 enum
 {
-    EMOTE_ALARM             = 5286,
+    EMOTE_ALARM = 5286,
 
     // SPELL_FLURRY          = 15088,       // creature_template_addon
     // SPELL_ENRAGE          = 15097,       // creature_template_addon
-    SPELL_SUNDER_ARMOR      = 15572,
+    SPELL_SUNDER_ARMOR = 15572,
 
-    NPC_ANVILRAGE_MEDIC     = 8894,
+    NPC_ANVILRAGE_MEDIC = 8894,
     NPC_ANVILRAGE_RESERVIST = 8901,
 
-    NPC_ADD_COUNT           = 10,
+    NPC_ADD_COUNT = 10,
 };
 
 struct sSpawnLocation
@@ -112,6 +116,7 @@ struct boss_general_angerforgeAI : public ScriptedAI
         DoMeleeAttackIfReady();
     }
 };
+
 CreatureAI* GetAI_boss_general_angerforge(Creature* pCreature)
 {
     return new boss_general_angerforgeAI(pCreature);
