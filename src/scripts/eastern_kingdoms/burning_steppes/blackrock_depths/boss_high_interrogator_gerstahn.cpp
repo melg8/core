@@ -21,14 +21,17 @@ SDComment:
 SDCategory: Blackrock Depths
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "ScriptMgr.h"
 
 enum
 {
-    SPELL_SHADOWWORDPAIN        = 14032,
-    SPELL_MANABURN              = 14033,
-    SPELL_PSYCHICSCREAM         = 13704,
-    SPELL_SHADOWSHIELD          = 12040
+    SPELL_SHADOWWORDPAIN = 14032,
+    SPELL_MANABURN = 14033,
+    SPELL_PSYCHICSCREAM = 13704,
+    SPELL_SHADOWSHIELD = 12040
 };
 
 struct boss_high_interrogator_gerstahnAI : public ScriptedAI

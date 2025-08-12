@@ -21,7 +21,11 @@ SDComment: Missing pre-event to open doors
 SDCategory: Blackrock Depths
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "ScriptMgr.h"
+#include "ScriptedInstance.h"
 #include "blackrock_depths.h"
 
 enum

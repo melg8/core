@@ -21,9 +21,13 @@ SDComment:
 SDCategory: Blackrock Depths
 EndScriptData */
 
-#include "scriptPCH.h"
 
-#define SPELL_WHIRLWIND             15589
+#include "ScriptMgr.h"
+
+#include "ScriptedAI.h"
+#include "Creature.h"
+
+#define SPELL_WHIRLWIND 15589
 #define SPELL_MORTALSTRIKE          15708
 #define SPELL_BLOODLUST             21049
 

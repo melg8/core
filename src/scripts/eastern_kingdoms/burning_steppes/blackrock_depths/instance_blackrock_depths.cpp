@@ -21,7 +21,14 @@ SDComment: events: ring of law
 SDCategory: Blackrock Depths
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "ScriptedInstance.h"
+
+#include "Creature.h"
+#include "CreatureAI.h"
+#include "GameObject.h"
+#include "GridSearchers.h"
+#include "Player.h"
+#include "ScriptMgr.h"
 #include "blackrock_depths.h"
 
 struct instance_blackrock_depths : ScriptedInstance
