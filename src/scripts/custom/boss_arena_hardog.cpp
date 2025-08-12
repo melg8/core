@@ -157,7 +157,13 @@ INSERT INTO `gameobject` VALUES (3996187, 99540, 1, 2144.36, -4744.92, 51.5089, 
 //}
 // FIN DES AJOUTS SQL !
 
-#include "scriptPCH.h"
+
+#include "Creature.h"
+#include "Map.h"
+#include "Player.h"
+#include "ScriptMgr.h"
+#include "ScriptedAI.h"
+#include "ScriptedGossip.h"
 
 #define SHOW_GOSSIP(a) player->SEND_GOSSIP_MENU(a, pCreature->GetObjectGuid())
 

@@ -1,7 +1,9 @@
 
-#include "scriptPCH.h"
-
 #include "GridNotifiers.h"
+#include "GridSearchers.h"
+#include "Map.h"
+#include "ScriptMgr.h"
+#include "ScriptedAI.h"
 
 #define ME m_creature
 

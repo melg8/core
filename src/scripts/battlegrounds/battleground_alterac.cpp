@@ -5,9 +5,23 @@ SDComment:
 SDCategory: BG
 EndScriptData */
 
-#include "scriptPCH.h"
-#include "CreatureGroups.h"
+#include "BattleGroundAV.h"
 #include "Chat.h"
+#include "Creature.h"
+#include "CreatureAI.h"
+#include "CreatureGroups.h"
+#include "GameObjectAI.h"
+#include "GridSearchers.h"
+#include "Map.h"
+#include "ObjectMgr.h"
+#include "Player.h"
+#include "QuestDef.h"
+#include "ScriptMgr.h"
+#include "ScriptedAI.h"
+#include "ScriptedEscortAI.h"
+#include "ScriptedGossip.h"
+#include "Spell.h"
+#include "SpellAuras.h"
 
 /*
 Vanndar: Thunderclap (about 200-300 nature damage per player in range not been upgraded since vanilla, Time between attacks increased by 33%, movement speed reduced by 40%.) Storm Bolt (about 450 nature damage, stuns for 8 seconds, dispellable, used on non tanks) Avatar (50% increased damage and armor, up for 15 seconds, comes back up about 15-20 seconds later) Drek'thar: Whirlwind (2 second cast time, weapon damage to all in range) Frenzy (167% damage increase and attack speed increase by 50%, lasts 2 minutes, goes up after about 15-20 seconds from the start of fight) Knockdown (Infli

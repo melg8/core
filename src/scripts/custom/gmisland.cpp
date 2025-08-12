@@ -1,7 +1,10 @@
-#include "scriptPCH.h"
-
 // TODO
 // 12898 : Joli visuel. Aura bleue autour du caster.
+
+#include "Creature.h"
+#include "Player.h"
+#include "ScriptMgr.h"
+#include "ScriptedAI.h"
 
 struct boss_gmislandAI : public ScriptedAI
 {

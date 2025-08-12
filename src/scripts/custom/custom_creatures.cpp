@@ -14,10 +14,14 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "scriptPCH.h"
-
-#include "custom.h"
+#include "ObjectMgr.h"
+#include "Player.h"
+#include "ScriptMgr.h"
 #include "ScriptedAI.h"
+#include "ScriptedGossip.h"
+#include "TemporarySummon.h"
+#include "World.h"
+#include "custom.h"
 
 #include <ctime>
 
