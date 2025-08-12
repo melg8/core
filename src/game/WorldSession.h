@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __WORLDSESSION_H
-#define __WORLDSESSION_H
+#pragma once
 
 #include "Common.h"
 #include "SharedDefines.h"
@@ -857,4 +856,3 @@ class WorldSession
         MasterPlayer*   m_masterPlayer;
         // End of clustering system
 };
-#endif

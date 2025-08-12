@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_SHAREDDEFINES_H
-#define MANGOS_SHAREDDEFINES_H
+#pragma once
 
 #include "Platform/Define.h"
 #include "Progression.h"
@@ -1825,5 +1824,3 @@ struct WorldLocation
         return !mapId && !x && !y && !z && !o;
     }
 };
-
-#endif

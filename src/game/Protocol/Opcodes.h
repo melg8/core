@@ -19,12 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-// \addtogroup u2w
-// @{
-// \file
-
-#ifndef _OPCODES_H
-#define _OPCODES_H
+#pragma once
 
 #include "Platform/Define.h"
 
@@ -209,6 +204,3 @@ inline char const* LookupOpcodeName(uint16 id)
         return op->name;
     return "Received unknown opcode, it's more than max!";
 }
-
-#endif
-// @}

@@ -25,8 +25,7 @@
  * \author Derex <derex101@gmail.com>
  */
 
-#ifndef _WORLDSOCKET_H
-#define _WORLDSOCKET_H
+#pragma once
 
 #include "MangosSocket.h"
 #include "Auth/AuthCrypt.h"
@@ -55,7 +54,3 @@ class WorldSocket: public MangosSocket<WorldSession, WorldSocket, AuthCrypt>
         // Called by ProcessIncoming() on CMSG_PING.
         int HandlePing (WorldPacket& recvPacket);
 };
-
-#endif  /* _WORLDSOCKET_H */
-
-// @}

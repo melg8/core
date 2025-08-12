@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_DBCSTRUCTURE_H
-#define MANGOS_DBCSTRUCTURE_H
+#pragma once
 
 #include "Common.h"
 #include "DBCEnums.h"
@@ -838,4 +837,3 @@ typedef std::vector<TaxiPathNodeList> TaxiPathNodesByPath;
 
 #define TaxiMaskSize 8
 typedef uint32 TaxiMask[TaxiMaskSize];
-#endif

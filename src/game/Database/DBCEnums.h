@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef DBCENUMS_H
-#define DBCENUMS_H
+#pragma once
 
 #include "Platform/Define.h"
 
@@ -233,5 +232,3 @@ enum SpellFamily
     // 16 - unused
     SPELLFAMILY_UNK3        = 17
 };
-
-#endif

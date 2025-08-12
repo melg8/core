@@ -25,8 +25,7 @@
  *  \author Derex <derex101@gmail.com>
  */
 
-#ifndef __WORLDSOCKETMGR_H
-#define __WORLDSOCKETMGR_H
+#pragma once
 
 #include "MangosSocketMgr.h"
 
@@ -46,6 +45,3 @@ class WorldSocketMgr: public MangosSocketMgr<WorldSocket>
 };
 
 #define sWorldSocketMgr WorldSocketMgr::Instance()
-
-#endif
-// @}
