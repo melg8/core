@@ -21,7 +21,10 @@ SDComment:
 SDCategory: Blackrock Spire
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "ScriptMgr.h"
 
 enum
 {

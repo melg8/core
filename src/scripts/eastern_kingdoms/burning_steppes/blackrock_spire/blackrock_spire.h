@@ -2,8 +2,14 @@
  * This program is free software licensed under GPL version 2
  * Please see the included DOCS/LICENSE.TXT for more information */
 
-#ifndef DEF_BLACKROCK_SPIRE_H
-#define DEF_BLACKROCK_SPIRE_H
+#pragma once
+
+#include "ScriptedInstance.h"
+
+#include "Platform/Define.h"
+
+#include <list>
+#include <string>
 
 enum
 {
@@ -156,5 +162,3 @@ class instance_blackrock_spire : public ScriptedInstance, private DialogueHelper
 
         bool m_bBannokSpawned;
 };
-
-#endif

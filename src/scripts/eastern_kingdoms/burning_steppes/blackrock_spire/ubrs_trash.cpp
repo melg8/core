@@ -1,4 +1,8 @@
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "ScriptMgr.h"
+
 #include "blackrock_spire.h"
 
 enum

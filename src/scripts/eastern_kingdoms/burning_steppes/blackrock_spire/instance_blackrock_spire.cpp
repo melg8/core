@@ -21,12 +21,17 @@ SDComment: To really get this instance working, many encounters will need more l
 SDCategory: Blackrock Spire
 EndScriptData */
 
-#include "scriptPCH.h"
 #include "blackrock_spire.h"
-#include "WaypointManager.h"
-#include "CreatureGroups.h"
 
-//#define DEBUG_ON
+#include "Creature.h"
+#include "CreatureAI.h"
+#include "CreatureGroups.h"
+#include "GameObject.h"
+#include "GameObjectAI.h"
+#include "ObjectMgr.h"
+#include "Player.h"
+#include "Spell.h"
+#include "WaypointManager.h"
 
 enum
 {

@@ -21,7 +21,10 @@ SDComment:
 SDCategory: Blackrock Spire
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "ScriptMgr.h"
+#include "Creature.h"
 
 #define SPELL_CROWDPUMMEL       10887
 #define SPELL_MIGHTYBLOW        14099
