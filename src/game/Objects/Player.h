@@ -21,50 +21,52 @@
 
 #pragma once
 
-#include "Common.h"
-#include "Unit.h"
-#include "GroupReference.h"
-#include "MapReference.h"
-#include "WorldSession.h"
-#include "Pet.h"
-#include "Item.h"
-#include "ReputationMgr.h"
 #include "BattleGroundDefines.h"
-#include "SharedDefines.h"
+#include "Common.h"
 #include "GameObjectDefines.h"
-#include "SpellMgr.h"
+#include "GroupReference.h"
 #include "HonorMgr.h"
-#include "PlayerTaxi.h"
+#include "Item.h"
+#include "MapReference.h"
 #include "MirrorTimer.h"
+#include "Pet.h"
+#include "PlayerTaxi.h"
+#include "ReputationMgr.h"
+#include "SharedDefines.h"
+#include "SpellMgr.h"
+#include "Unit.h"
+#include "WorldSession.h"
+
 #include "PlayerSubsystems/PlayerCheatOptions.h"
 
+#include <functional>
+#include <shared_mutex>
 #include <string>
 #include <utility>
 #include <vector>
-#include <functional>
-#include <shared_mutex>
 
-struct Mail;
-struct ItemPrototype;
-struct AuraSaveStruct;
-struct SpellModifier;
-struct PlayerGmSubsystem;
-class Group;
+class BattleGround;
 class Channel;
 class Creature;
-class PlayerMenu;
-class UpdateMask;
-class SpellCastTargets;
-class PlayerSocial;
-class TradeData;
 class DungeonPersistentState;
-class Spell;
+class Group;
 class Item;
-class ZoneScript;
 class PlayerAI;
 class PlayerBroadcaster;
-class BattleGround;
+class PlayerMenu;
+class PlayerSocial;
+class Spell;
+class SpellCastTargets;
 class SqlQueryHolder;
+class TradeData;
+class UpdateMask;
+class ZoneScript;
+
+struct AuraSaveStruct;
+struct ItemPrototype;
+struct Mail;
+struct PlayerGmSubsystem;
+struct SpellModifier;
 
 #define PLAYER_MAX_SKILLS           127
 #define PLAYER_EXPLORED_ZONES_SIZE  64

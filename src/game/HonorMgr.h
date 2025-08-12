@@ -4,6 +4,7 @@
 
 #pragma once
 
+#include "Database/QueryResult.h"
 #include "Platform/Define.h"
 #include "SharedDefines.h"
 
@@ -152,6 +153,8 @@ typedef std::list<HonorCP> HonorCPMap;
 #else
 #define RACIAL_LEADER_HONOR 500.0f // guess
 #endif
+
+class Unit;
 
 class HonorMgr
 {
