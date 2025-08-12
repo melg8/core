@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _GROUPREFERENCE_H
-#define _GROUPREFERENCE_H
+#pragma once
 
 #include "Utilities/LinkedReference/Reference.h"
 
@@ -41,5 +40,3 @@ class GroupReference : public Reference<Group, Player>
         uint8 getSubGroup() const { return iSubGroup; }
         void setSubGroup(uint8 pSubGroup) { iSubGroup = pSubGroup; }
 };
-
-#endif

@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _THREATMANAGER
-#define _THREATMANAGER
+#pragma once
 
 #include "Utilities/LinkedReference/Reference.h"
 
@@ -30,14 +29,11 @@
 
 #include <list>
 
-//==============================================================
-
 class Unit;
 class Creature;
 class ThreatManager;
 class SpellEntry;
 
-//==============================================================
 // Class to calculate the real threat based
 
 class ThreatCalcHelper
@@ -46,13 +42,11 @@ class ThreatCalcHelper
         static float CalcThreat(Unit* pHatedUnit, float threat, bool crit, SpellSchoolMask schoolMask, SpellEntry const* threatSpell);
 };
 
-//==============================================================
 class HostileReference : public Reference<Unit, ThreatManager>
 {
     public:
         HostileReference(Unit* pUnit, ThreatManager *pThreatManager, float threat);
 
-        //=================================================
         void addThreat(float pMod);
 
         void setThreat(float pThreat) { addThreat(pThreat - getThreat()); }
@@ -86,18 +80,14 @@ class HostileReference : public Reference<Unit, ThreatManager>
 
         float getTempThreatModifyer() const { return iTempThreatModifyer; }
 
-        //=================================================
         // check, if source can reach target and set the status
         void updateOnlineStatus();
 
         void setOnlineOfflineState(bool pIsOnline);
 
         void setAccessibleState(bool pIsAccessible);
-        //=================================================
 
         bool operator ==(HostileReference const& pHostileReference) const { return pHostileReference.getUnitGuid() == getUnitGuid(); }
-
-        //=================================================
 
         // enemy target on the threat list
         ObjectGuid const& getUnitGuid() const { return iUnitGuid; }
@@ -105,16 +95,11 @@ class HostileReference : public Reference<Unit, ThreatManager>
         // the creature that owns the threat list
         Unit* getSourceUnit();
 
-        //=================================================
         // reference is not needed anymore. realy delete it !
 
         void removeReference();
 
-        //=================================================
-
         HostileReference* next() { return ((HostileReference*) Reference<Unit, ThreatManager>::next()); }
-
-        //=================================================
 
         // Tell our refTo (target) object that we have a link
         void targetObjectBuildLink() override;
@@ -135,7 +120,6 @@ class HostileReference : public Reference<Unit, ThreatManager>
         bool iAccessible;
 };
 
-//==============================================================
 class ThreatManager;
 
 typedef std::list<HostileReference*> ThreatList;
@@ -174,8 +158,6 @@ public:
 
     ThreatList const& getThreatList() const { return iThreatList; }
 };
-
-//=================================================
 
 class ThreatManager
 {
@@ -224,6 +206,3 @@ private:
     ThreatContainer iThreatContainer;
     ThreatContainer iThreatOfflineContainer;
 };
-
-//=================================================
-#endif

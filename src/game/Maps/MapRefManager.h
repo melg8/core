@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _MAPREFMANAGER
-#define _MAPREFMANAGER
+#pragma once
 
 #include "Utilities/LinkedReference/RefManager.h"
 
@@ -44,5 +43,3 @@ class MapRefManager : public RefManager<Map, Player>
         const_iterator begin() const { return const_iterator(getFirst()); }
         const_iterator end() const  { return const_iterator(nullptr); }
 };
-
-#endif

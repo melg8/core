@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _MAPREFERENCE_H
-#define _MAPREFERENCE_H
+#pragma once
 
 #include "Utilities/LinkedReference/Reference.h"
 
@@ -40,5 +39,3 @@ class MapReference : public Reference<Map, Player>
         MapReference *next() { return (MapReference*)Reference<Map, Player>::next(); }
         MapReference const* next() const { return (MapReference const*)Reference<Map, Player>::next(); }
 };
-
-#endif

@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _FOLLOWERREFERENCE_H
-#define _FOLLOWERREFERENCE_H
+#pragma once
 
 #include "Utilities/LinkedReference/Reference.h"
 
@@ -34,5 +33,3 @@ class FollowerReference : public Reference<Unit, TargetedMovementGeneratorBase>
         void targetObjectDestroyLink() override;
         void sourceObjectDestroyLink() override;
 };
-
-#endif
