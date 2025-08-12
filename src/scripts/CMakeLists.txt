@@ -269,16 +269,6 @@ set (SCRIPTS_SRCS
 
 )
 
-if((${CMAKE_VERSION} VERSION_LESS "3.16") OR USE_PCH_OLD)
-  list(APPEND SCRIPTS_SRCS
-        PrecompiledHeaders/scriptPCH.cpp
-    )
-  # Enable precompiled headers when using the GCC compiler.
-  if(USE_PCH)
-    include_directories(${CMAKE_CURRENT_BINARY_DIR})
-  endif()
-endif()
-
 if(WIN32)
   if(MINGW)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fpermissive")
@@ -351,21 +341,7 @@ target_link_libraries(scripts
   game
 )
 
-#add_dependencies(${LIBRARY_NAME} revision.h)
-
-if((${CMAKE_VERSION} VERSION_LESS "3.16") OR USE_PCH_OLD)
-  if(USE_PCH)
-    if(MSVC OR XCODE)
-      if(MSVC)
-        set(scripts_pch "${CMAKE_CURRENT_SOURCE_DIR}/PrecompiledHeaders/scriptPCH.cpp")
-      endif()
-      add_native_precompiled_header(scripts ${CMAKE_CURRENT_SOURCE_DIR}/PrecompiledHeaders/scriptPCH.h)
-    elseif(CMAKE_COMPILER_IS_GNUCXX)
-      add_precompiled_header(scripts ${CMAKE_CURRENT_SOURCE_DIR}/PrecompiledHeaders/scriptPCH.h)
-    endif()
-  endif()
-else()
-  set(PCHS
+set(PCHS
       ../game/Mail/Mail.h
       ../game/ScriptMgr.h
       ../game/Objects/Object.h
@@ -395,15 +371,15 @@ else()
       PrecompiledHeaders/scriptPCH.h
       )
 
-  if(WIN32)
-      list(APPEND PCHS <windows.h>)
-  endif()
-
-  # Generate precompiled header
-  if(USE_PCH)
-      target_precompile_headers(${LIBRARY_NAME} PRIVATE
-          ${PCHS}
-          )
-  endif()
+if(WIN32)
+    list(APPEND PCHS <windows.h>)
 endif()
+
+# Generate precompiled header
+if(USE_PCH)
+    target_precompile_headers(${LIBRARY_NAME} PRIVATE
+        ${PCHS}
+    )
+endif()
+
 

@@ -450,14 +450,6 @@ set (game_SRCS
 
 )
 
-if((${CMAKE_VERSION} VERSION_LESS "3.16") OR USE_PCH_OLD)
-  list(APPEND game_SRCS
-      pchdef.cpp
-      pchdef.h
-  )
-  include_directories(${CMAKE_CURRENT_BINARY_DIR})
-endif()
-
 if(WIN32)
   #allow exceptions in destructors
   if(MSVC)
@@ -586,19 +578,7 @@ target_link_libraries(game
 #add_dependencies(game revision.h)
 
 # Generate precompiled header
-if((${CMAKE_VERSION} VERSION_LESS "3.16") OR USE_PCH_OLD)
-  if(USE_PCH)
-    if(MSVC OR XCODE)
-      if(MSVC)
-        set(game_pch "${CMAKE_CURRENT_SOURCE_DIR}/pchdef.cpp")
-      endif()
-      add_native_precompiled_header(game ${CMAKE_CURRENT_SOURCE_DIR}/pchdef.h)
-    elseif(CMAKE_COMPILER_IS_GNUCXX)
-      add_precompiled_header(game ${CMAKE_CURRENT_SOURCE_DIR}/pchdef.h)
-    endif()
-  endif()
-else()
-  if(USE_PCH)
+if(USE_PCH)
       target_precompile_headers(game PRIVATE
       Protocol/WorldSocket.h
       ../shared/Common.h
@@ -614,5 +594,5 @@ else()
       ObjectMgr.h
       ScriptMgr.h
       )
-  endif()
 endif()
+
