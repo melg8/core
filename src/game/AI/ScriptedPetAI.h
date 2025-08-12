@@ -3,8 +3,7 @@
 * Copyright (C) 2005-2012 MaNGOS <http://getmangos.com/>
 */
 
-#ifndef SCRIPTED_PETAI_H
-#define SCRIPTED_PETAI_H
+#pragma once
 
 #include "CreatureAI.h"
 
@@ -40,5 +39,3 @@ public:
 protected:
     void ResetPetCombat();
 };
-
-#endif

@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef AURA_REMOVAL_MGR
-#define AURA_REMOVAL_MGR
+#pragma once
 
 #include "Policies/Singleton.h"
 
@@ -59,5 +58,3 @@ private:
 using AuraRemovalManagerSingleton = MaNGOS::Singleton<AuraRemovalManager>;
 
 #define sAuraRemovalMgr AuraRemovalManagerSingleton::Instance()
-
-#endif

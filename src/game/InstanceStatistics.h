@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef INSTANCE_STATISTICS_H
-#define INSTANCE_STATISTICS_H
+#pragma once
 
 #include "Platform/Define.h"
 #include "Policies/Singleton.h"
@@ -76,5 +75,3 @@ private:
 using InstanceStatisticsMgrSingleton = MaNGOS::Singleton<InstanceStatisticsMgr>;
 
 #define sInstanceStatistics InstanceStatisticsMgrSingleton::Instance()
-
-#endif

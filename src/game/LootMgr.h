@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_LOOTMGR_H
-#define MANGOS_LOOTMGR_H
+#pragma once
 
 #include "ByteBuffer.h"
 #include "ObjectGuid.h"
@@ -441,5 +440,3 @@ inline void LoadLootTables(LootIdSet& ids_set)
 }
 
 bool ExistsRefLootTemplate(uint32 refLootId);
-
-#endif

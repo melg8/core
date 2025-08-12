@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_MAP_H
-#define MANGOS_MAP_H
+#pragma once
 
 #include "Common.h"
 #include "SharedDefines.h"
@@ -1049,4 +1048,3 @@ void Map::Visit(Cell const& cell, TypeContainerVisitor<T, CONTAINER>& visitor)
     if (grid && grid->isGridObjectDataLoaded())
         grid->Visit(cell_x, cell_y, visitor);
 }
-#endif

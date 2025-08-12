@@ -16,13 +16,14 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _REGULAR_GRID_H
-#define _REGULAR_GRID_H
+#pragma once
 
-#include <G3D/Ray.h>
 #include <G3D/AABox.h>
-#include <G3D/Table.h>
 #include <G3D/PositionTrait.h>
+#include <G3D/Ray.h>
+#include <G3D/Table.h>
+
+#include <unordered_map>
 
 using G3D::Vector2;
 using G3D::Vector3;
@@ -256,5 +257,3 @@ class RegularGrid2D
 
 #undef CELL_SIZE
 #undef HGRID_MAP_SIZE
-
-#endif

@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _MAPTREE_H
-#define _MAPTREE_H
+#pragma once
 
 #include "BIH.h"
 
@@ -109,5 +108,3 @@ namespace VMAP
         int32 groupId;
     };
 }                                                           // VMAP
-
-#endif // _MAPTREE_H

@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __UPDATEMASK_H
-#define __UPDATEMASK_H
+#pragma once
 
 #include "Platform/Define.h"
 
@@ -125,4 +124,3 @@ class UpdateMask
         uint32 mBlocks;
         uint32 *mUpdateMask;
 };
-#endif

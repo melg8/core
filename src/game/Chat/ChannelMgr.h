@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_CHANNELMGR_H
-#define MANGOSSERVER_CHANNELMGR_H
+#pragma once
 
 #include "Channel.h"
 #include "ObjectGuid.h"
@@ -52,5 +51,3 @@ class AllianceChannelMgr : public ChannelMgr {};
 class HordeChannelMgr    : public ChannelMgr {};
 
 ChannelMgr* channelMgr(Team team);
-
-#endif

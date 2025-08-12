@@ -1,5 +1,4 @@
-#ifndef MASTERPLAYER_H
-#define MASTERPLAYER_H
+#pragma once
 
 #include "SharedDefines.h"
 #include "ObjectGuid.h"
@@ -155,5 +154,3 @@ protected:
     PlayerMails m_mail;
     ItemMap mMitems;
 };
-
-#endif // MASTERPLAYER_H

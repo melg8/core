@@ -17,8 +17,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _SCRIPTMGR_H
-#define _SCRIPTMGR_H
+#pragma once
 
 #include "DBCEnums.h"
 #include "ScriptCommands.h"
@@ -396,5 +395,3 @@ uint32 GetEventIdScriptId(uint32 eventId);
 uint32 GetScriptId(char const* name);
 char const* GetScriptName(uint32 id);
 uint32 GetScriptIdsCount();
-
-#endif

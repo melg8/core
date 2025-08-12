@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _AUCTION_HOUSE_MGR_H
-#define _AUCTION_HOUSE_MGR_H
+#pragma once
 
 #include "DBCStructure.h"
 
@@ -201,5 +200,3 @@ class AuctionHouseMgr
 using AuctionHouseMgrSingleton = MaNGOS::Singleton<AuctionHouseMgr>;
 
 #define sAuctionMgr AuctionHouseMgrSingleton::Instance()
-
-#endif

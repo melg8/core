@@ -34,8 +34,7 @@
  *
  */
 
-#ifndef MANGOS_MASS_MAIL_MGR_H
-#define MANGOS_MASS_MAIL_MGR_H
+#pragma once
 
 #include "Mail.h"
 
@@ -126,6 +125,3 @@ class MassMailMgr
 using MassMailMgrSingleton = MaNGOS::Singleton<MassMailMgr>;
 
 #define sMassMailMgr MassMailMgrSingleton::Instance()
-
-#endif
-/*! @} */

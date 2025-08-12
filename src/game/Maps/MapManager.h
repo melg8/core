@@ -9,8 +9,7 @@
 //
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-#ifndef MANGOS_MAPMANAGER_H
-#define MANGOS_MAPMANAGER_H
+#pragma once
 
 #include "Map.h"
 
@@ -221,5 +220,3 @@ void MapManager::DoForAllMapsWithMapId(uint32 mapId, Do& _do)
 }
 
 #define sMapMgr MapManager::Instance()
-
-#endif  // MANGOS_MAPMANAGER_H

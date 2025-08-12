@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_GRIDMAP_H
-#define MANGOS_GRIDMAP_H
+#pragma once
 
 #include "DBCStructure.h"
 #include "GridDefines.h"
@@ -260,5 +259,3 @@ class TerrainManager : public MaNGOS::Singleton<TerrainManager, MaNGOS::ClassLev
 };
 
 #define sTerrainMgr TerrainManager::Instance()
-
-#endif

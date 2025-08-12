@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_GRIDNOTIFIERS_H
-#define MANGOS_GRIDNOTIFIERS_H
+#pragma once
 
 #include "Spell.h"
 #include "UpdateData.h"
@@ -2192,7 +2191,3 @@ namespace MaNGOS
     template<> inline void DynamicObjectUpdater::Visit<Player>(PlayerMapType&);
     #endif
 }  // namespace MaNGOS
-
-
-
-#endif  // MANGOS_GRIDNOTIFIERS_H

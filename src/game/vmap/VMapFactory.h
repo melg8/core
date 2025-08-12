@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _VMAPFACTORY_H
-#define _VMAPFACTORY_H
+#pragma once
 
 #include "IVMapManager.h"
 
@@ -27,8 +26,6 @@ This is the access point to the VMapManager.
 
 namespace VMAP
 {
-    //===========================================================
-
     class VMapFactory
     {
         public:
@@ -36,4 +33,3 @@ namespace VMAP
             static void clear();
     };
 }
-#endif

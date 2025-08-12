@@ -1,5 +1,4 @@
-#ifndef _AUCTION_HOUSE_BOT_MGR_H
-#define _AUCTION_HOUSE_BOT_MGR_H
+#pragma once
 
 #include "AuctionHouseMgr.h"
 
@@ -49,5 +48,3 @@ class AuctionHouseBotMgr
 using AuctionHouseBotMgrSingleton = MaNGOS::Singleton<AuctionHouseBotMgr>;
 
 #define sAuctionHouseBotMgr AuctionHouseBotMgrSingleton::Instance()
-
-#endif

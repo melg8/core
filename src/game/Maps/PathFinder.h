@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_PATH_FINDER_H
-#define MANGOS_PATH_FINDER_H
+#pragma once
 
 #include "MoveMapSharedDefines.h"
 #include "MoveSplineInitArgs.h"
@@ -149,5 +148,3 @@ class PathInfo
 };
 
 typedef PathInfo PathFinder;
-
-#endif

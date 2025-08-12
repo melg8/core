@@ -9,8 +9,7 @@
 //
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-#ifndef MANGOS_GRIDSTATES_H
-#define MANGOS_GRIDSTATES_H
+#pragma once
 
 #include "Map.h"
 
@@ -41,5 +40,3 @@ struct RemovalState
                        uint32 const& x, uint32 const& y,
                        uint32 const& t_diff);
 };
-
-#endif  // MANGOS_GRIDSTATES_H

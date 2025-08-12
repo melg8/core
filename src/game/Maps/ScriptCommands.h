@@ -14,8 +14,7 @@
 * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef __SCRIPT_COMMANDS_H
-#define __SCRIPT_COMMANDS_H
+#pragma once
 
 #include "ObjectGuid.h"
 
@@ -1208,5 +1207,3 @@ enum ScriptTarget
                                                             //Param2 = search_radius
     TARGET_T_END
 };
-
-#endif

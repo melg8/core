@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _GUILDMGR_H
-#define _GUILDMGR_H
+#pragma once
 
 #include "World.h"
 
@@ -160,5 +159,3 @@ private:
 using GuildMgrSingleton = MaNGOS::Singleton<GuildMgr>;
 
 #define sGuildMgr GuildMgrSingleton::Instance()
-
-#endif // _GUILDMGR_H

@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_GRIDDEFINES_H
-#define MANGOS_GRIDDEFINES_H
+#pragma once
 
 #include "Common.h"
 
@@ -204,4 +203,3 @@ namespace MaNGOS
         return IsValidMapCoord(x,y,z) && std::isfinite(o) && fabs(o) <= 4 * M_PI;
     }
 }
-#endif

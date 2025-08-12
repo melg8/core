@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_WORLDSTATES_H
-#define MANGOS_WORLDSTATES_H
+#pragma once
 
 #include "Progression.h"
 #include "ByteBuffer.h"
@@ -175,5 +174,3 @@ inline void WriteUpdateWorldStatePair(ByteBuffer& data, uint16 state, int16 valu
     data << state;
     data << value;
 }
-
-#endif

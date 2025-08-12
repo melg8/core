@@ -2,10 +2,10 @@
  * Copyright (C) 2016 Elysium Project <https://elysium-project.org>
  */
 
-#ifndef HONORMGR_H
-#define HONORMGR_H
+#pragma once
 
 #include "Platform/Define.h"
+#include "SharedDefines.h"
 
 #include <unordered_map>
 
@@ -227,5 +227,3 @@ class HonorMgr
 using HonorMaintenancerSingleton = MaNGOS::Singleton<HonorMaintenancer>;
 
 #define sHonorMaintenancer HonorMaintenancerSingleton::Instance()
-
-#endif

@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_INSTANCE_DATA_H
-#define MANGOS_INSTANCE_DATA_H
+#pragma once
 
 #include "ZoneScript.h"
 #include "ObjectGuid.h"
@@ -79,4 +78,3 @@ class InstanceData : public ZoneScript
         // This is used for such things are heroic loot
         virtual bool CheckConditionCriteriaMeet(Player const* player, uint32 map_id, WorldObject const* source, uint32 instance_condition_id) const;
 };
-#endif

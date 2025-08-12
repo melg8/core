@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _VMAPDEFINITIONS_H
-#define _VMAPDEFINITIONS_H
+#pragma once
 
 #include "Platform/Define.h"
 
@@ -52,5 +51,3 @@ namespace VMAP
 #define LOG_FILTER_MAP_LOADING true
 #define DEBUG_FILTER_LOG(F,...) do{ if (F) sLog.Out(LOG_BASIC, LOG_LVL_DEBUG, __VA_ARGS__); } while(0)
 #endif
-
-#endif // _VMAPDEFINITIONS_H

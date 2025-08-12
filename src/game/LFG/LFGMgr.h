@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_LFGMGR_H
-#define MANGOSSERVER_LFGMGR_H
+#pragma once
 
 #include "SharedDefines.h"
 #include "LFGDefines.h"
@@ -57,5 +56,3 @@ class LFGMgr
 using LFGMgrSingleton = MaNGOS::Singleton<LFGMgr>;
 
 #define sLFGMgr LFGMgrSingleton::Instance()
-
-#endif

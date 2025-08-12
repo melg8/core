@@ -15,8 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef _TICKETMGR_H
-#define _TICKETMGR_H
+#pragma once
 
 #include "SharedDefines.h"
 #include "ObjectGuid.h"
@@ -278,5 +277,3 @@ protected:
 };
 
 #define sTicketMgr TicketMgr::instance()
-
-#endif // _TICKETMGR_H

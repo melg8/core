@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __BATTLEGROUNDMGR_H
-#define __BATTLEGROUNDMGR_H
+#pragma once
 
 #include "Policies/Singleton.h"
 #include "Utilities/EventProcessor.h"
@@ -321,5 +320,3 @@ class BattleGroundMgr
 using BattleGroundMgrSingleton = MaNGOS::Singleton<BattleGroundMgr>;
 
 #define sBattleGroundMgr BattleGroundMgrSingleton::Instance()
-
-#endif

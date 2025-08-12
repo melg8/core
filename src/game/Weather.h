@@ -22,8 +22,7 @@
  * and lore are copyrighted by Blizzard Entertainment, Inc.
  */
 
-#ifndef MANGOS_H_WEATHER
-#define MANGOS_H_WEATHER
+#pragma once
 
 #include "SharedDefines.h"
 #include "Timer.h"
@@ -163,5 +162,3 @@ class WeatherMgr
 using WeatherMgrSingleton = MaNGOS::Singleton<WeatherMgr>;
 
 #define sWeatherMgr WeatherMgrSingleton::Instance()
-
-#endif

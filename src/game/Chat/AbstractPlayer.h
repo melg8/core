@@ -1,6 +1,5 @@
 #pragma once
 
-
 #include "SharedDefines.h"
 #include "ObjectGuid.h"
 

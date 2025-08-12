@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_OBJECTGRIDLOADER_H
-#define MANGOS_OBJECTGRIDLOADER_H
+#pragma once
 
 #include "GridDefines.h"
 #include "Cell.h"
@@ -110,4 +109,3 @@ class ObjectGridStoper
 };
 
 typedef GridLoader<Player, AllWorldObjectTypes, AllGridObjectTypes> GridLoaderType;
-#endif

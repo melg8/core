@@ -17,8 +17,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _OBJECTMGR_H
-#define _OBJECTMGR_H
+#pragma once
 
 #include "Common.h"
 #include "Object.h"
@@ -1624,5 +1623,3 @@ class ObjectMgr
 using ObjectMgrSingleton = MaNGOS::Singleton<ObjectMgr>;
 
 #define sObjectMgr ObjectMgrSingleton::Instance()
-
-#endif

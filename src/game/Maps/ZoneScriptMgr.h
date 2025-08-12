@@ -15,8 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef ZONE_SCRIPT_MGR_H_
-#define ZONE_SCRIPT_MGR_H_
+#pragma once
 
 #define OUTDOORPVP_OBJECTIVE_UPDATE_INTERVAL 1000
 
@@ -107,5 +106,3 @@ class ZoneScriptMgr
 using ZoneScriptMgrSingleton = MaNGOS::Singleton<ZoneScriptMgr>;
 
 #define sZoneScriptMgr ZoneScriptMgrSingleton::Instance()
-
-#endif /*OUTDOOR_PVP_MGR_H_*/

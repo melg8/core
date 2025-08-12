@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _MODELINSTANCE_H_
-#define _MODELINSTANCE_H_
+#pragma once
 
 #include "Platform/Define.h"
 
@@ -87,5 +86,3 @@ namespace VMAP
             G3D::Matrix3 const& getRot() const { return iInvRot; }
     };
 } // namespace VMAP
-
-#endif // _MODELINSTANCE

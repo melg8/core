@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __InstanceSaveMgr_H
-#define __InstanceSaveMgr_H
+#pragma once
 
 #include "PoolManager.h"
 #include "SQLStorages.h"
@@ -407,4 +406,3 @@ void MapPersistentStateManager::DoForAllStatesWithMapId(uint32 mapId, uint32 ins
 }
 
 #define sMapPersistentStateMgr MapPersistentStateManager::Instance()
-#endif

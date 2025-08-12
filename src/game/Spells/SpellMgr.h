@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _SPELLMGR_H
-#define _SPELLMGR_H
+#pragma once
 
 // For static or at-server-startup loaded spell data
 
@@ -750,4 +749,3 @@ class SpellMgr
 };
 
 #define sSpellMgr SpellMgr::Instance()
-#endif

@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_POOLHANDLER_H
-#define MANGOS_POOLHANDLER_H
+#pragma once
 
 #include "Creature.h"
 #include "GameObject.h"
@@ -267,5 +266,3 @@ inline uint16 PoolManager::IsPartOfAPool<Pool>(uint32 pool_id) const
 
     return 0;
 }
-
-#endif

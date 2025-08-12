@@ -32,8 +32,7 @@
 *
 */
 
-#ifndef CREATURE_LINKING_MGR_H
-#define CREATURE_LINKING_MGR_H
+#pragma once
 
 #include "ObjectGuid.h"
 
@@ -198,6 +197,3 @@ private:
 using CreatureLinkingMgrSingleton = MaNGOS::Singleton<CreatureLinkingMgr>;
 
 #define sCreatureLinkingMgr CreatureLinkingMgrSingleton::Instance()
-
-#endif
-/*! @} */

@@ -20,8 +20,7 @@
 * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef _ASYNC_COMMAND_INCLUDED
-#define _ASYNC_COMMAND_INCLUDED
+#pragma once
 
 #include "Common.h"
 #include "ObjectGuid.h"
@@ -181,5 +180,3 @@ private:
     uint32 accountId;
     uint32 limit;
 };
-
-#endif

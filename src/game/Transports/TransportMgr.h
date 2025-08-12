@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef TRANSPORTMGR_H
-#define TRANSPORTMGR_H
+#pragma once
 
 #include "DBCStructure.h"
 #include "spline.h"
@@ -145,5 +144,3 @@ private:
 using TransportMgrSingleton = MaNGOS::Singleton<TransportMgr>;
 
 #define sTransportMgr TransportMgrSingleton::Instance()
-
-#endif // TRANSPORTMGR_H

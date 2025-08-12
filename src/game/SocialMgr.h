@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __MANGOS_SOCIALMGR_H
-#define __MANGOS_SOCIALMGR_H
+#pragma once
 
 #include "ObjectGuid.h"
 
@@ -166,5 +165,3 @@ class SocialMgr
 using SocialMgrSingleton = MaNGOS::Singleton<SocialMgr>;
 
 #define sSocialMgr SocialMgrSingleton::Instance()
-
-#endif

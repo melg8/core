@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __MANGOS_LANGUAGE_H
-#define __MANGOS_LANGUAGE_H
+#pragma once
 
 enum MangosStrings
 {
@@ -1151,4 +1150,3 @@ enum MangosStrings
     LANG_OPVP_SI_CAPTURE_H              = 10049,
     LANG_OPVP_SI_CAPTURE_A              = 10050,
 };
-#endif

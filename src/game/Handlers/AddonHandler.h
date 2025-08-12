@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __ADDONHANDLER_H
-#define __ADDONHANDLER_H
+#pragma once
 
 #include "Policies/Singleton.h"
 
@@ -39,5 +38,3 @@ class AddonHandler
 using AddonHandlerSingleton = MaNGOS::Singleton<AddonHandler>;
 
 #define sAddOnHandler AddonHandlerSingleton::Instance()
-
-#endif

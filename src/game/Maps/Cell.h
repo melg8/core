@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_CELL_H
-#define MANGOS_CELL_H
+#pragma once
 
 #include "GridDefines.h"
 #include "Objects/ObjectDefines.h"
@@ -335,5 +334,3 @@ inline void Cell::VisitAllObjects(float x, float y, Map* map, T &visitor, float 
     cell.Visit(p, gnotifier, *map, x, y, radius);
     cell.Visit(p, wnotifier, *map, x, y, radius);
 }
-
-#endif

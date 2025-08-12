@@ -2,8 +2,7 @@
  * This program is free software licensed under GPL version 2
  * Please see the included DOCS/LICENSE.TXT for more information */
 
-#ifndef SC_FOLLOWERAI_H
-#define SC_FOLLOWERAI_H
+#pragma once
 
 #include "ScriptedAI.h"
 #include "Pet.h"
@@ -67,5 +66,3 @@ class FollowerAI : public ScriptedAI
 
         float m_uiFollowDistance;
 };
-
-#endif

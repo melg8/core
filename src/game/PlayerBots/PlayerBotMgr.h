@@ -1,5 +1,4 @@
-#ifndef _PLAYERBOTMGR_H
-#define _PLAYERBOTMGR_H
+#pragma once
 
 #include "PlayerBotAI.h"
 #include "BattleGroundDefines.h"
@@ -132,5 +131,3 @@ class PlayerBotMgr
 using PlayerBotMgrSingleton = MaNGOS::Singleton<PlayerBotMgr>;
 
 #define sPlayerBotMgr PlayerBotMgrSingleton::Instance()
-
-#endif

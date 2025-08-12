@@ -2,8 +2,7 @@
  * This program is free software licensed under GPL version 2
  * Please see the included DOCS/LICENSE.TXT for more information */
 
-#ifndef SC_GRIDSEARCH_H
-#define SC_GRIDSEARCH_H
+#pragma once
 
 #include "Unit.h"
 #include "GameObject.h"
@@ -95,5 +94,3 @@ class AllCreaturesOfEntryInRangeCheck
         float m_fRange;
 };
 */
-
-#endif

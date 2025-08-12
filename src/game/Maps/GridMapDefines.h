@@ -1,6 +1,5 @@
 
-#ifndef EXTRACTOR_DEFINES_H
-#define EXTRACTOR_DEFINES_H
+#pragma once
 
 #include <Platform/Define.h>
 
@@ -96,5 +95,3 @@ enum NavMeshAreas
     AREA_MAGMA,
     AREA_SLIME,
 };
-
-#endif

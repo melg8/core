@@ -2,8 +2,7 @@
  * This program is free software licensed under GPL version 2
  * Please see the included DOCS/LICENSE.TXT for more information */
 
-#ifndef SC_CREATURE_H
-#define SC_CREATURE_H
+#pragma once
 
 #include "BasicAI.h"
 
@@ -127,5 +126,3 @@ struct Scripted_NoMovementAI : ScriptedAI
     // Called at each attack of m_creature by any victim
     void AttackStart(Unit*) override;
 };
-
-#endif

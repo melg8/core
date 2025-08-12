@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _ACCMGR_H
-#define _ACCMGR_H
+#pragma once
 
 #include "Common.h"
 #include "Policies/Singleton.h"
@@ -150,5 +149,3 @@ class AccountMgr
 using AccountMgrSingleton = MaNGOS::Singleton<AccountMgr>;
 
 #define sAccountMgr AccountMgrSingleton::Instance()
-
-#endif

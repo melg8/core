@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __UPDATEDATA_H
-#define __UPDATEDATA_H
+#pragma once
 
 #include "ByteBuffer.h"
 #include "ObjectGuid.h"
@@ -106,6 +105,4 @@ class MovementData
     protected:
         ByteBuffer m_buffer;
 };
-#endif
-
 #endif

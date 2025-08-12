@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _IVMAPMANAGER_H
-#define _IVMAPMANAGER_H
+#pragma once
 
 #include <Platform/Define.h>
 
@@ -41,7 +40,6 @@ namespace VMAP
 #define VMAP_INVALID_HEIGHT       (-100000.0f)            // for check
 #define VMAP_INVALID_HEIGHT_VALUE (-200000.0f)            // real assigned value in unknown height case
 
-    //===========================================================
     class IVMapManager
     {
         private:
@@ -104,10 +102,4 @@ namespace VMAP
             bool getUseManagedPtrs() const { return m_useManagedPtrs; }
             void setUseManagedPtrs(bool managedPtrs) { m_useManagedPtrs = managedPtrs; }
     };
-
-
-
-
-
 }
-#endif

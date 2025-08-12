@@ -15,8 +15,7 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef OUTDOOR_PVP_H_
-#define OUTDOOR_PVP_H_
+#pragma once
 
 #include "SharedDefines.h"
 #include "ObjectGuid.h"
@@ -345,5 +344,3 @@ class OutdoorPvP : public ZoneScript
 };
 
 #endif
-
-#endif /*OUTDOOR_PVP_H_*/
