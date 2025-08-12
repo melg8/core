@@ -21,7 +21,12 @@ SDComment: Timer need improvement, especially for bomb-spawning
 SDCategory: Gnomeregan
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "Creature.h"
+#include "GridSearchers.h"
+#include "Player.h"
+#include "ScriptMgr.h"
+#include "ScriptedAI.h"
+#include "ScriptedInstance.h"
 #include "gnomeregan.h"
 
 enum
