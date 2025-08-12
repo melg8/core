@@ -19,15 +19,16 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "Item.h"
 #include "Bag.h"
-#include "ObjectMgr.h"
+#include "GuildMgr.h"
+#include "Item.h"
+#include "ItemEnchantmentMgr.h"
 #include "ObjectGuid.h"
+#include "ObjectMgr.h"
 #include "Opcodes.h"
 #include "WorldPacket.h"
+
 #include "Database/DatabaseEnv.h"
-#include "ItemEnchantmentMgr.h"
-#include "GuildMgr.h"
 
 void AddItemsSetItem(Player* player, Item* item)
 {

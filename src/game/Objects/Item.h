@@ -22,14 +22,14 @@
 #pragma once
 
 #include "Common.h"
-#include "Object.h"
-#include "LootMgr.h"
-#include "ItemPrototype.h"
 #include "ItemDefines.h"
+#include "ItemPrototype.h"
+#include "LootMgr.h"
+#include "Object.h"
 
-class SpellEntry;
 class Bag;
 class Field;
+class SpellEntry;
 class Unit;
 struct ItemRandomPropertiesEntry;
 
