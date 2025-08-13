@@ -23,7 +23,12 @@ EndScriptData
 
 */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "Player.h"
+#include "Spell.h"
+#include "SpellAuras.h"
 #include "naxxramas.h"
 
 /*Poison Cloud 26590

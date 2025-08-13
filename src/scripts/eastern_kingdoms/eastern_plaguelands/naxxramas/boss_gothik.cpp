@@ -21,7 +21,11 @@ SDComment: Only base implemented. Todo: control adds at summon. Handle case of r
 SDCategory: Naxxramas
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "GridSearchers.h"
+#include "Player.h"
 #include "naxxramas.h"
 
 enum GothikData

@@ -28,7 +28,11 @@ the default, static, callForHelp radius.
 
 */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "GameObject.h"
+#include "Player.h"
 #include "naxxramas.h"
 
 enum HeiganData

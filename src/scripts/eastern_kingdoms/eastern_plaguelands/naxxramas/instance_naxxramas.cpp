@@ -21,10 +21,15 @@ SDComment:
 SDCategory: Naxxramas
 EndScriptData */
 
-#include "scriptPCH.h"
-#include "naxxramas.h"
-#include "InstanceStatistics.h"
+#include "ScriptedAI.h"
+
 #include "Geometry.h"
+#include "GridSearchers.h"
+#include "InstanceStatistics.h"
+#include "ObjectMgr.h"
+#include "ScriptedGossip.h"
+#include "TemporarySummon.h"
+#include "naxxramas.h"
 
 #include "GridNotifiers.h"
 

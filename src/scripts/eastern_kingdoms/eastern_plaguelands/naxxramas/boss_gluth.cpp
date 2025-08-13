@@ -21,7 +21,13 @@ SDComment:
 SDCategory: Naxxramas
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "GridSearchers.h"
+#include "Player.h"
+#include "Spell.h"
+#include "SpellEntry.h"
 #include "naxxramas.h"
 
 static float const aZombieSummonLoc[3][3] =

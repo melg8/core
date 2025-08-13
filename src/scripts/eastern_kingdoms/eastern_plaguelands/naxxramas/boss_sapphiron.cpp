@@ -16,9 +16,15 @@
 
 // todo: Make sure he's immune to frost damage.
 
-#include "scriptPCH.h"
-#include "naxxramas.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "GameObject.h"
+#include "GridSearchers.h"
 #include "MovementGenerator.h"
+#include "Player.h"
+#include "TemporarySummon.h"
+#include "naxxramas.h"
 
 enum SapphironData
 {

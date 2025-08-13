@@ -21,7 +21,11 @@ SDComment: TODO: confirm how hateful strike work
 SDCategory: Naxxramas
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "Player.h"
+#include "SpellMgr.h"
 #include "naxxramas.h"
 
 enum PatchwerkData
@@ -40,8 +44,6 @@ enum PatchwerkData
     SPELL_BERSERK         = 27680, // 7min hard enrage
     SPELL_SLIMEBOLT       = 32309  // Added in patch 1.12
 };
-
-constexpr float MELEE_DISTANCE = 5.0; 
 
 enum ePatchwerkEvents
 {

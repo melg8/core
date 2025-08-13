@@ -24,8 +24,14 @@ SDComment: Check timers for corpse explosion of Crypt Guards. Currently not corr
 SDCategory: Naxxramas
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "GameObjectAI.h"
+#include "GridSearchers.h"
+#include "TemporarySummon.h"
 #include "naxxramas.h"
+
 #include <vector>
 
 // todo:

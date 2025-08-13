@@ -16,9 +16,12 @@
 
 // Rewritten completely by Gemt
 
-#include "scriptPCH.h"
-#include "naxxramas.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
 #include "Duration.h"
+#include "GridSearchers.h"
+#include "naxxramas.h"
 
 #include <algorithm>
 
