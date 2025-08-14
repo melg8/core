@@ -25,22 +25,28 @@ EndScriptData */
 npc_miran
 EndContentData */
 
-#include "scriptPCH.h"
 
 /*######
 ## npc_miran
 ######*/
 
+#include "ScriptedEscortAI.h"
+
+#include "GridSearchers.h"
+#include "Player.h"
+#include "ScriptMgr.h"
+#include "SharedDefines.h"
+
 enum MiranData
 {
     QUEST_PROTECTING_THE_SHIPMENT = 309,
 
-    SAY_MIRAN_1           = 510,
-    SAY_DARK_IRON_DWARF   = 1936,
-    SAY_MIRAN_2           = 511,
-    SAY_MIRAN_3           = 498,
+    SAY_MIRAN_1 = 510,
+    SAY_DARK_IRON_DWARF = 1936,
+    SAY_MIRAN_2 = 511,
+    SAY_MIRAN_3 = 498,
 
-    NPC_DARK_IRON_RAIDER  = 2149
+    NPC_DARK_IRON_RAIDER = 2149
 };
 
 static Position const m_afAmbushSpawn[] =

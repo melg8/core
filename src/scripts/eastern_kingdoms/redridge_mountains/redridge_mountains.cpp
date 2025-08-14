@@ -24,27 +24,31 @@ EndScriptData */
 /* ContentData
 npc_corporal_keeshan */
 
-#include "scriptPCH.h"
-
 /*######
-## npc_corporal_leehsan
+## npc_corporal_keehsan
 ######*/
 
-enum CorporalLeehsanData
+#include "ScriptedEscortAI.h"
+
+#include "Creature.h"
+#include "Player.h"
+#include "ScriptMgr.h"
+
+enum CorporalKeehsanData
 {
-    FACTION_ESCORTEE        = 10, // only during escort
-    FACTION_STORMWIND       = 12, // default ooc faction
+    FACTION_ESCORTEE = 10, // only during escort
+    FACTION_STORMWIND = 12, // default ooc faction
 
     QUEST_MISSING_IN_ACTION = 219,
 
-    SPELL_MOCKING_BLOW      = 21008,
-    SPELL_SHIELD_BASH       = 11972,
+    SPELL_MOCKING_BLOW = 21008,
+    SPELL_SHIELD_BASH = 11972,
 
-    SAY_CORPORAL_KEESHAN_1  = 25,
-    SAY_CORPORAL_KEESHAN_2  = 26,
-    SAY_CORPORAL_KEESHAN_3  = 27,
-    SAY_CORPORAL_KEESHAN_4  = 29,
-    SAY_CORPORAL_KEESHAN_5  = 30
+    SAY_CORPORAL_KEESHAN_1 = 25,
+    SAY_CORPORAL_KEESHAN_2 = 26,
+    SAY_CORPORAL_KEESHAN_3 = 27,
+    SAY_CORPORAL_KEESHAN_4 = 29,
+    SAY_CORPORAL_KEESHAN_5 = 30
 };
 
 struct npc_corporal_keeshan_escortAI : npc_escortAI

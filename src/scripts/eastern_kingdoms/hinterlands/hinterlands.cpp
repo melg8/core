@@ -26,27 +26,33 @@ npc_rinji
 go_lards_picnic_basket
 EndContentData */
 
-#include "scriptPCH.h"
 
 /*######
 ## npc_rinji
 ######*/
+#include "ScriptedEscortAI.h"
+
+#include "Creature.h"
+#include "GameObjectAI.h"
+#include "GridSearchers.h"
+#include "Player.h"
+#include "ScriptMgr.h"
 
 enum RinjiData
 {
-    SAY_RIN_FREE            = 3787,
-    SAY_RIN_BY_OUTRUNNER    = 3827,
-    SAY_RIN_HELP_1          = 3862,
-    SAY_RIN_HELP_2          = 3861,
-    SAY_RIN_COMPLETE        = 3790,
-    SAY_RIN_PROGRESS_1      = 3817,
-    SAY_RIN_PROGRESS_2      = 3818,
+    SAY_RIN_FREE = 3787,
+    SAY_RIN_BY_OUTRUNNER = 3827,
+    SAY_RIN_HELP_1 = 3862,
+    SAY_RIN_HELP_2 = 3861,
+    SAY_RIN_COMPLETE = 3790,
+    SAY_RIN_PROGRESS_1 = 3817,
+    SAY_RIN_PROGRESS_2 = 3818,
 
-    QUEST_RINJI_TRAPPED     = 2742,
-    NPC_RANGER              = 2694,
-    NPC_OUTRUNNER           = 2691,
-    GO_RINJI_CAGE           = 142036,
-    FACTION_ESCORTEE        = 33,
+    QUEST_RINJI_TRAPPED = 2742,
+    NPC_RANGER = 2694,
+    NPC_OUTRUNNER = 2691,
+    GO_RINJI_CAGE = 142036,
+    FACTION_ESCORTEE = 33,
 };
 
 struct Location

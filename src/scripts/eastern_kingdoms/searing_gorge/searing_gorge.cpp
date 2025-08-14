@@ -25,8 +25,15 @@ EndScriptData */
 npc_zamael_lunthistle
 EndContentData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "GridSearchers.h"
 #include "Group.h"
+#include "Map.h"
+#include "Player.h"
+#include "ScriptMgr.h"
+#include "ScriptedGossip.h"
 
 /*######
 ## Quest 3566

@@ -8,9 +8,14 @@
 /* ContentData
 EndContentData */
 
-#include "scriptPCH.h"
+#include "GameObjectAI.h"
 
-struct go_helcular_s_graveAI: public GameObjectAI
+#include "Creature.h"
+#include "GameObject.h"
+#include "Map.h"
+#include "ScriptMgr.h"
+
+struct go_helcular_s_graveAI : public GameObjectAI
 {
     go_helcular_s_graveAI(GameObject* pGo) : GameObjectAI(pGo)
     {
