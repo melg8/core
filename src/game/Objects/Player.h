@@ -21,52 +21,88 @@
 
 #pragma once
 
+#include "AbstractPlayer.h"
 #include "BattleGroundDefines.h"
+#include "Camera.h"
 #include "Common.h"
+#include "DBCEnums.h"
 #include "GameObjectDefines.h"
 #include "GroupReference.h"
 #include "HonorMgr.h"
 #include "Item.h"
+#include "ItemDefines.h"
+#include "ItemPrototype.h"
+#include "Log.h"
+#include "LootMgr.h"
 #include "MapReference.h"
 #include "MirrorTimer.h"
+#include "MovementInfo.h"
+#include "Object.h"
+#include "ObjectGuid.h"
 #include "Pet.h"
 #include "PlayerTaxi.h"
+#include "Progression.h"
+#include "QuestDef.h"
 #include "ReputationMgr.h"
 #include "SharedDefines.h"
+#include "SpellAuraDefines.h"
+#include "SpellCaster.h"
+#include "SpellDefines.h"
 #include "SpellMgr.h"
 #include "Unit.h"
+#include "UnitDefines.h"
 #include "WorldSession.h"
 
-#include "PlayerSubsystems/PlayerCheatOptions.h"
+#include "GameSystem/GridReference.h"
+#include "Platform/Define.h"
 
+#include <ctime>
 #include <functional>
+#include <list>
+#include <map>
+#include <memory>
+#include <mutex>
+#include <set>
 #include <shared_mutex>
-#include <string>
+#include <unordered_map>
 #include <utility>
 #include <vector>
 
+class Aura;
 class BattleGround;
 class Channel;
+class Corpse;
 class Creature;
 class DungeonPersistentState;
+class GameObject;
 class Group;
-class Item;
+class MovementAnticheat;
+class Player;
 class PlayerAI;
 class PlayerBroadcaster;
 class PlayerMenu;
 class PlayerSocial;
+class QueryResult;
 class Spell;
+class SpellAuraHolder;
 class SpellCastTargets;
+class SpellEntry;
 class SqlQueryHolder;
 class TradeData;
+class UpdateData;
 class UpdateMask;
-class ZoneScript;
+class WorldPacket;
+
+enum PlayerCheatOptions : uint16;
 
 struct AuraSaveStruct;
-struct ItemPrototype;
-struct Mail;
+struct CreatureInfo;
+struct FactionEntry;
+struct LiquidTypeEntry;
 struct PlayerGmSubsystem;
 struct SpellModifier;
+struct TrainerSpell;
+
 
 #define PLAYER_MAX_SKILLS           127
 #define PLAYER_EXPLORED_ZONES_SIZE  64
@@ -700,8 +736,6 @@ struct RacialSpells
     uint8 raceId = 0;
     uint32 spells[MAX_RACIAL_SPELLS] = { 0 };
 };
-
-class MovementAnticheat;
 
 struct ScheduledTeleportData
 {

@@ -19,32 +19,36 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "Common.h"
-#include "Language.h"
-#include "Database/DatabaseEnv.h"
-#include "Database/DatabaseImpl.h"
-#include "WorldPacket.h"
-#include "Opcodes.h"
-#include "Log.h"
-#include "Player.h"
-#include "Group.h"
-#include "World.h"
-#include "GuildMgr.h"
-#include "ObjectMgr.h"
 #include "WorldSession.h"
-#include "ScriptMgr.h"
-#include <zlib.h>
-#include "ObjectAccessor.h"
-#include "Object.h"
+
+#include "Anticheat.h"
 #include "BattleGround.h"
 #include "BattleGroundMgr.h"
+#include "Common.h"
+#include "Conditions.h"
+#include "Group.h"
+#include "GuildMgr.h"
+#include "Language.h"
+#include "Log.h"
+#include "MasterPlayer.h"
+#include "Object.h"
+#include "ObjectAccessor.h"
+#include "ObjectMgr.h"
+#include "Opcodes.h"
+#include "Player.h"
+#include "ScriptMgr.h"
 #include "SocialMgr.h"
 #include "Spell.h"
+#include "World.h"
+#include "WorldPacket.h"
 #include "ZoneScript.h"
-#include "Conditions.h"
-#include "Anticheat.h"
-#include "MasterPlayer.h"
+
+#include "Database/DatabaseEnv.h"
+#include "Database/DatabaseImpl.h"
+#include "PlayerSubsystems/PlayerCheatOptions.h"
 #include "WardenAnticheat/Warden.hpp"
+
+#include <zlib.h>
 
 void WorldSession::HandleRepopRequestOpcode(WorldPacket& /*recv_data*/)
 {

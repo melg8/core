@@ -11,20 +11,21 @@
 
 #include "MapManager.h"
 
-#include "MapPersistentStateMgr.h"
-#include "Log.h"
-#include "GridDefines.h"
-#include "World.h"
-#include "Player.h"
-#include "Group.h"
-#include "ZoneScriptMgr.h"
-#include "Map.h"
 #include "BattleGround.h"
-#include "ThreadPool.h"
+#include "GridDefines.h"
 #include "GridStates.h"
+#include "Group.h"
+#include "Log.h"
+#include "Map.h"
+#include "MapPersistentStateMgr.h"
+#include "Player.h"
+#include "ThreadPool.h"
+#include "World.h"
+#include "ZoneScriptMgr.h"
 
-#include "Policies/SingletonImp.h"
 #include "Database/DatabaseEnv.h"
+#include "PlayerSubsystems/PlayerCheatOptions.h"
+#include "Policies/SingletonImp.h"
 
 typedef MaNGOS::ClassLevelLockable<MapManager, std::recursive_mutex> MapManagerLock;
 INSTANTIATE_SINGLETON_2(MapManager, MapManagerLock);

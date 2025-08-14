@@ -21,16 +21,17 @@
 
 #pragma once
 
-#include "Spell.h"
-#include "UpdateData.h"
+#include "Conditions.h"
 #include "Corpse.h"
-#include "Object.h"
+#include "CreatureAI.h"
 #include "DynamicObject.h"
 #include "GameObject.h"
+#include "Object.h"
 #include "Player.h"
-#include "CreatureAI.h"
-#include "Conditions.h"
+#include "Spell.h"
 #include "SpellAuras.h"
+#include "SpellMgr.h"
+#include "UpdateData.h"
 
 #include <memory>
 

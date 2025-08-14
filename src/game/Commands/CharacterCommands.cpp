@@ -14,26 +14,29 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
+#include "Chat.h"
+
+#include "AccountMgr.h"
+#include "AsyncCommandHandlers.h"
+#include "Bag.h"
+#include "CharacterDatabaseCache.h"
 #include "Common.h"
-#include "Database/DatabaseEnv.h"
-#include "Database/DatabaseImpl.h"
-#include "World.h"
+#include "Group.h"
+#include "Language.h"
+#include "ObjectAccessor.h"
+#include "ObjectMgr.h"
+#include "Opcodes.h"
 #include "Player.h"
 #include "PlayerAI.h"
-#include "Group.h"
-#include "Bag.h"
-#include "Opcodes.h"
-#include "Chat.h"
-#include "ObjectAccessor.h"
-#include "Language.h"
-#include "AccountMgr.h"
-#include "ObjectMgr.h"
-#include "Util.h"
-#include "AsyncCommandHandlers.h"
-#include "WaypointMovementGenerator.h"
 #include "PlayerDump.h"
-#include "CharacterDatabaseCache.h"
+#include "Util.h"
+#include "WaypointMovementGenerator.h"
+#include "World.h"
+
 #include "Config/Config.h"
+#include "Database/DatabaseEnv.h"
+#include "Database/DatabaseImpl.h"
+#include "PlayerSubsystems/PlayerCheatOptions.h"
 
 #include <regex>
 

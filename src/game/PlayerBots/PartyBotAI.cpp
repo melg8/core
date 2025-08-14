@@ -15,17 +15,20 @@
 */
 
 #include "PartyBotAI.h"
-#include "Player.h"
+
+#include "Chat.h"
 #include "CreatureAI.h"
 #include "MotionMaster.h"
 #include "ObjectMgr.h"
-#include "PlayerBotMgr.h"
 #include "Opcodes.h"
-#include "World.h"
-#include "WorldPacket.h"
+#include "Player.h"
+#include "PlayerBotMgr.h"
 #include "Spell.h"
 #include "SpellAuras.h"
-#include "Chat.h"
+#include "World.h"
+#include "WorldPacket.h"
+
+#include "PlayerSubsystems/PlayerCheatOptions.h"
 
 enum PartyBotSpells
 {

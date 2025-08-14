@@ -1,17 +1,20 @@
-#include "Common.h"
-#include "Opcodes.h"
 #include "MovementAnticheat.h"
-#include "Chat.h"
-#include "Player.h"
-#include "GameObject.h"
-#include "WorldSession.h"
-#include "MoveSpline.h"
-#include "World.h"
-#include "MovementPacketSender.h"
-#include "Geometry.h"
+
 #include "AccountMgr.h"
-#include "BattleGround.h"
 #include "Anticheat.h"
+#include "BattleGround.h"
+#include "Chat.h"
+#include "Common.h"
+#include "GameObject.h"
+#include "Geometry.h"
+#include "MoveSpline.h"
+#include "MovementPacketSender.h"
+#include "Opcodes.h"
+#include "Player.h"
+#include "World.h"
+#include "WorldSession.h"
+
+#include "PlayerSubsystems/PlayerCheatOptions.h"
 
 using namespace Geometry;
 

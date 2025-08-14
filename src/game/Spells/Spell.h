@@ -45,6 +45,7 @@ class Item;
 class GameObject;
 class Group;
 class Aura;
+class SpellEntry;
 
 enum SpellCastFlags
 {
