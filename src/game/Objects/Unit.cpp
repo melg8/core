@@ -20,18 +20,31 @@
 
 #include "Unit.h"
 
-#include "Anticheat.h"
 #include "BattleGround.h"
+#include "Camera.h"
+#include "Cell.h"
+#include "Common.h"
 #include "Creature.h"
 #include "CreatureAI.h"
+#include "CreatureDefines.h"
 #include "CreatureGroups.h"
+#include "CreatureLinkingMgr.h"
 #include "DBCStores.h"
+#include "DBCStructure.h"
+#include "GameObject.h"
 #include "GameObjectAI.h"
+#include "GameObjectDefines.h"
+#include "GridDefines.h"
+#include "GridMap.h"
 #include "GridNotifiers.h"
 #include "Group.h"
 #include "IVMapManager.h"
 #include "InstanceStatistics.h"
+#include "Item.h"
 #include "Log.h"
+#include "LootMgr.h"
+#include "Map.h"
+#include "MoveMapSharedDefines.h"
 #include "MoveSpline.h"
 #include "MoveSplineInit.h"
 #include "MovementGenerator.h"
@@ -45,11 +58,15 @@
 #include "ScriptMgr.h"
 #include "Spell.h"
 #include "SpellAuras.h"
+#include "SpellClassMask.h"
+#include "SpellEntry.h"
 #include "SpellMgr.h"
 #include "SpellModifier.h"
 #include "TemporarySummon.h"
+#include "Timer.h"
 #include "Totem.h"
 #include "Transport.h"
+#include "UpdateData.h"
 #include "Util.h"
 #include "World.h"
 #include "WorldPacket.h"
@@ -57,10 +74,21 @@
 #include "ZoneScript.h"
 #include "packet_builder.h"
 
+#include "Database/DBCStore.h"
+#include "GameSystem/TypeContainerVisitor.h"
 #include "MovementAnticheat/MovementAnticheat.h"
 #include "PlayerSubsystems/PlayerCheatOptions.h"
+#include "Utilities/EventProcessor.h"
 
-//#define DEBUG_DEBUFF_LIMIT
+#include "nonstd/optional.hpp"
+
+#include <G3D/Vector3.h>
+#include <ace/Stack_Trace.h>
+
+#include <array>
+#include <cmath>
+#include <cmath>
+#include <cstdlib>
 
 float baseMoveSpeed[MAX_MOVE_TYPE] =
 {
