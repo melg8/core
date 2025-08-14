@@ -26,8 +26,23 @@ npc_deathstalker_erland
 npc_deathstalker_faerleia
 EndContentData */
 
-#include "scriptPCH.h"
-#include "Group.h"
+#include "Creature.h"
+#include "CreatureAI.h"
+#include "CreatureDefines.h"
+#include "Map.h"
+#include "ObjectGuid.h"
+#include "Player.h"
+#include "QuestDef.h"
+#include "ScriptMgr.h"
+#include "ScriptedEscortAI.h"
+#include "Unit.h"
+#include "Util.h"
+
+#include "Platform/Define.h"
+
+#include <ctime>
+#include <utility>
+
 
 namespace SilverpineUtils
 {
