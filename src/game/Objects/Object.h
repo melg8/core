@@ -21,36 +21,47 @@
 
 #pragma once
 
-#include "Common.h"
-#include "Log.h"
-#include "ByteBuffer.h"
-#include "UpdateFields.h"
-#include "UpdateData.h"
-#include "ObjectGuid.h"
-#include "SharedDefines.h"
-#include "ObjectDefines.h"
-#include "MovementInfo.h"
-#include "Timer.h"
 #include "Camera.h"
 #include "Cell.h"
+#include "Common.h"
+#include "GridDefines.h"
+#include "Log.h"
+#include "MovementInfo.h"
+#include "ObjectDefines.h"
+#include "ObjectGuid.h"
+#include "Platform/Define.h"
+#include "SharedDefines.h"
+#include "Timer.h"
+#include "UpdateFields.h"
 
+#include <initializer_list>
+#include <list>
 #include <string>
+#include <unordered_map>
+#include <utility>
 
-class WorldPacket;
-class UpdateData;
+enum UpdateFieldFlags : uint16;
+
+template <class OBJECT> class GridRefManager;
+
+class ByteBuffer;
 class Corpse;
 class Creature;
+class GameObject;
+class GenericTransport;
+class InstanceData;
+class Map;
 class Pet;
 class Player;
-class Unit;
-class GameObject;
 class SpellCaster;
-class Map;
-class UpdateMask;
-class InstanceData;
 class TerrainInfo;
+class Unit;
+class UpdateData;
+class UpdateMask;
+class WorldObject;
+class WorldPacket;
 class ZoneScript;
-class GenericTransport;
+
 struct FactionEntry;
 struct FactionTemplateEntry;
 
@@ -441,8 +452,6 @@ class Object
         Object(Object const&) = delete;                     // prevent generation copy constructor
         Object& operator=(Object const&) = delete;          // prevent generation assigment operator
 };
-
-struct WorldObjectChangeAccumulator;
 
 class WorldObject : public Object
 {

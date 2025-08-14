@@ -18,6 +18,7 @@
 
 #include "ByteBuffer.h"
 #include "ObjectGuid.h"
+#include "SharedDefines.h"
 #include "Timer.h"
 
 // [-ZERO] Need check and update

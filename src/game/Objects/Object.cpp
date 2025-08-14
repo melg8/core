@@ -21,17 +21,31 @@
 
 #include "Object.h"
 
-#include "Anticheat.h"
+#include "ByteBuffer.h"
 #include "Chat.h"
+#include "Corpse.h"
 #include "Creature.h"
+#include "CreatureAI.h"
+#include "CreatureDefines.h"
+#include "CreatureLinkingMgr.h"
+#include "DBCEnums.h"
+#include "DBCStructure.h"
+#include "DynamicObject.h"
+#include "GameObject.h"
 #include "GameObjectAI.h"
+#include "GameObjectDefines.h"
 #include "Geometry.h"
-#include "Geometry.h"
+#include "GridMap.h"
+#include "GridMapDefines.h"
 #include "GridNotifiers.h"
 #include "IVMapManager.h"
 #include "InstanceData.h"
+#include "Item.h"
 #include "Language.h"
 #include "Log.h"
+#include "LootMgr.h"
+#include "Map.h"
+#include "MapReference.h"
 #include "MonsterChatBuilder.h"
 #include "MotionMaster.h"
 #include "MoveMapSharedDefines.h"
@@ -39,26 +53,46 @@
 #include "ObjectGuid.h"
 #include "ObjectMgr.h"
 #include "ObjectPosSelector.h"
-#include "Opcodes.h"
 #include "PathFinder.h"
+#include "Pet.h"
 #include "Player.h"
 #include "PlayerBroadcaster.h"
+#include "Progression.h"
+#include "ReputationMgr.h"
 #include "SharedDefines.h"
+#include "SpellAuraDefines.h"
 #include "TemporarySummon.h"
 #include "Transport.h"
+#include "Unit.h"
+#include "UnitDefines.h"
 #include "UpdateData.h"
+#include "UpdateFields.h"
 #include "UpdateMask.h"
 #include "Util.h"
 #include "World.h"
 #include "WorldPacket.h"
+#include "WorldSession.h"
 #include "ZoneScriptMgr.h"
 #include "packet_builder.h"
 
+#include "GameSystem/GridReference.h"
+#include "GameSystem/TypeContainerVisitor.h"
 #include "MovementAnticheat/MovementAnticheat.h"
 #include "PlayerSubsystems/PlayerCheatOptions.h"
 
+#include <G3D/Vector3.h>
 
-// Methods of class MovementInfo
+#include <cmath>
+#include <cstdlib>
+#include <map>
+#include <memory>
+#include <mutex>
+#include <sstream>
+#include <cstdarg>
+#include <utility>
+#include <cstring>
+
+class Quest;
 
 void MovementInfo::Read(ByteBuffer &data)
 {
