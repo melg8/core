@@ -21,13 +21,21 @@ SDComment:
 SDCategory: Stratholme
 EndScriptData */
 
-#include "scriptPCH.h"
 
 //front, left
 //previously
 //3536.851807f -17
 //-2958.885986f +13
-#define ADD_1X  3537.2725f
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "GameObject.h"
+#include "GameObjectDefines.h"
+#include "GridSearchers.h"
+#include "Player.h"
+#include "ScriptedInstance.h"
+
+#define ADD_1X 3537.2725f
 #define ADD_1Y  -2958.18f
 #define ADD_1Z 125.001015f
 #define ADD_1O 0.592007f

@@ -1,5 +1,7 @@
-#include "scriptPCH.h"
-#include "stratholme.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "ScriptedInstance.h"
 
 #define SPELL_DRAININGBLOW      16793
 #define SPELL_CROWDPUMMEL       10887

@@ -5,8 +5,18 @@ mob_restless_soul
 mobs_spectral_ghostly_citizen
 EndContentData */
 
-#include "scriptPCH.h"
 #include "stratholme.h"
+
+#include "GameObject.h"
+#include "GameObjectAI.h"
+#include "GridSearchers.h"
+#include "Player.h"
+#include "ScriptedAI.h"
+#include "ScriptedInstance.h"
+#include "Spell.h"
+#include "SpellAuras.h"
+
+#include "Platform/Define.h"
 
 enum : uint32
 {

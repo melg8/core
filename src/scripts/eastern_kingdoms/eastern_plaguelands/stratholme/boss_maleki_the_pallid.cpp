@@ -21,7 +21,11 @@ SDComment:
 SDCategory: Stratholme
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "Player.h"
+#include "ScriptedInstance.h"
 #include "stratholme.h"
 
 #define SPELL_FROSTBOLT     17503

@@ -1,5 +1,15 @@
-#include "scriptPCH.h"
+#include "ScriptedInstance.h"
+
+#include "Creature.h"
+#include "GameObject.h"
+#include "Player.h"
+#include "SharedDefines.h"
 #include "stratholme.h"
+
+#include "Platform/Define.h"
+
+#include <list>
+#include <set>
 
 enum
 {
