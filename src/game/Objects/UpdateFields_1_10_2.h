@@ -2,6 +2,8 @@
 // Patch: 1.10.2
 // Build: 5302
 
+#pragma once
+
 enum EObjectFields
 {
     OBJECT_FIELD_GUID                                = 0x0,                // 0x000 - Size: 2 - Type: GUID - Flags: PUBLIC
