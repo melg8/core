@@ -14,17 +14,18 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "ObjectMgr.h"
 #include "SpellCaster.h"
+
+#include "Chat.h"
+#include "CreatureAI.h"
 #include "DynamicObject.h"
 #include "GameObject.h"
-#include "CreatureAI.h"
-#include "Chat.h"
+#include "ObjectMgr.h"
+#include "Opcodes.h"
 #include "Spell.h"
 #include "SpellAuras.h"
 #include "World.h"
 #include "WorldPacket.h"
-#include "Opcodes.h"
 
 Unit* SpellCaster::SelectMagnetTarget(Unit* victim, Spell* spell, SpellEffectIndex eff)
 {

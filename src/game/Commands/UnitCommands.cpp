@@ -14,16 +14,17 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "Common.h"
-#include "World.h"
-#include "Player.h"
 #include "Chat.h"
+
+#include "Common.h"
+#include "GridNotifiers.h"
 #include "Language.h"
 #include "ObjectMgr.h"
-#include "Util.h"
+#include "Player.h"
 #include "SpellAuras.h"
 #include "TargetedMovementGenerator.h"
-#include "GridNotifiers.h"
+#include "Util.h"
+#include "World.h"
 
 bool ChatHandler::HandleGUIDCommand(char* /*args*/)
 {

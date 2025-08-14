@@ -16,14 +16,25 @@
 
 #pragma once
 
-#include "DBCEnums.h"
 #include "Object.h"
+
+#include "Common.h"
+#include "DBCEnums.h"
+#include "ObjectGuid.h"
+#include "SharedDefines.h"
 #include "SpellDefines.h"
 
+#include "Platform/Define.h"
 #include "Utilities/EventProcessor.h"
 
 #include "nonstd/optional.hpp"
 
+#include <ctime>
+#include <list>
+#include <map>
+#include <utility>
+#include <utility>
+#include <vector>
 #include <array>
 #include <memory>
 
@@ -36,6 +47,7 @@ class Item;
 class Spell;
 class SpellCaster;
 class SpellEntry;
+class Unit;
 struct ItemPrototype;
 
 // At least some values expected fixed and used in auras field, other custom
