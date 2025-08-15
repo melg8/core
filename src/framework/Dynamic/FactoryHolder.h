@@ -25,6 +25,8 @@
 
 #include "Policies/Singleton.h"
 
+#include <string>
+
 /** FactoryHolder holds a factory object of a specific type
  */
 template<class T, class Key = std::string>
