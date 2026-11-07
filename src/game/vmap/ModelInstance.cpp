@@ -19,6 +19,7 @@
 #include "ModelInstance.h"
 #include "WorldModel.h"
 #include "MapTree.h"
+#include <cstdio>
 
 using G3D::Vector3;
 using G3D::Ray;

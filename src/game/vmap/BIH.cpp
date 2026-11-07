@@ -19,6 +19,7 @@
 #include "BIH.h"
 
 #include <cmath>
+#include <cstdio>
 
 void BIH::buildHierarchy(std::vector<uint32>& tempTree, buildData& dat, BuildStats& stats)
 {

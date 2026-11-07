@@ -26,6 +26,7 @@
 #include "Duration.h"
 
 #include <cctype>
+#include <cstdarg>
 #include <string>
 #include <vector>
 

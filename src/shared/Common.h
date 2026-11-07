@@ -74,6 +74,7 @@
 #include <sstream>
 #include <algorithm>
 #include <chrono>
+#include <cstdarg>
 
 typedef std::chrono::system_clock Clock;
 typedef std::chrono::time_point<std::chrono::system_clock, std::chrono::milliseconds> TimePoint;

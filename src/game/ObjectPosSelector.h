@@ -24,6 +24,7 @@
 #include <Common.h>
 
 #include <map>
+#include <cmath>
 
 enum UsedPosType { USED_POS_PLUS, USED_POS_MINUS };
 

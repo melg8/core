@@ -22,6 +22,7 @@
 #include "ObjectMgr.h"
 
 #include "Platform/Define.h"
+#include <cstdarg>
 
 namespace MaNGOS
 {

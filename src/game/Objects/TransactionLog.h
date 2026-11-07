@@ -17,6 +17,7 @@
 #pragma once
 
 #include "Platform/Define.h"
+#include <cstring>
 
 struct TransactionPart
 {

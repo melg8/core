@@ -24,6 +24,7 @@
 #include "Platform/Define.h"
 
 #include <deque>
+#include <cmath>
 
 struct PathNode
 {

@@ -22,6 +22,7 @@
 #pragma once
 
 #include "Platform/Define.h"
+#include <cstring>
 
 class UpdateMask
 {

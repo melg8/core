@@ -21,6 +21,7 @@
 
 #include "ObjectPosSelector.h"
 #include "ObjectDefines.h"
+#include <cmath>
 
 ObjectPosSelector::ObjectPosSelector(float x, float y, float size, float dist)
     : m_center_x(x), m_center_y(y), m_size(size), m_dist(dist)

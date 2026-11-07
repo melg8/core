@@ -1,5 +1,6 @@
 #include "ArgparserForServer.h"
 #include "SystemConfig.h"
+#include <cstdio>
 
 // Print out the usage string for this program on the console.
 void printUsage(char const* thisExecutableName)

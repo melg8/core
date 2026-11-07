@@ -25,6 +25,8 @@
 #include <G3D/Table.h>
 
 #include <unordered_map>
+#include <cmath>
+#include <cstring>
 
 using G3D::Vector2;
 using G3D::Vector3;

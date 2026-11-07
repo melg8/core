@@ -25,6 +25,7 @@
 
 #include <string>
 #include <vector>
+#include <cmath>
 
 class Field;
 class Player;
