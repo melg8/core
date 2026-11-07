@@ -19,12 +19,13 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __MANGOS_REPUTATION_MGR_H
-#define __MANGOS_REPUTATION_MGR_H
+#pragma once
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "DBCStructure.h"
+
+#include "Platform/Define.h"
+
 #include <map>
 #include <memory>
 
@@ -136,5 +137,3 @@ class ReputationMgr
         FactionStateList m_factions;
         ForcedReactions m_forcedReactions;
 };
-
-#endif

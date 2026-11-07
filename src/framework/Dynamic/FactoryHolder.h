@@ -19,13 +19,13 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_FACTORY_HOLDER
-#define MANGOS_FACTORY_HOLDER
+#pragma once
 
-#include "Platform/Define.h"
-#include "Utilities/TypeList.h"
 #include "ObjectRegistry.h"
-#include "Policies/SingletonImp.h"
+
+#include "Policies/Singleton.h"
+
+#include <string>
 
 /** FactoryHolder holds a factory object of a specific type
  */
@@ -60,4 +60,3 @@ class Permissible
         virtual ~Permissible() {}
         virtual int Permit(const T *) const = 0;
 };
-#endif

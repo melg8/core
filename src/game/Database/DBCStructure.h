@@ -19,13 +19,11 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_DBCSTRUCTURE_H
-#define MANGOS_DBCSTRUCTURE_H
+#pragma once
 
 #include "Common.h"
 #include "DBCEnums.h"
 #include "Path.h"
-#include "SpellClassMask.h"
 
 #include <map>
 #include <unordered_set>
@@ -842,4 +840,3 @@ typedef std::vector<TaxiPathNodeList> TaxiPathNodesByPath;
 #define TaxiMaskSize 8
 // TODO: Use custom struct which has std::bitset inside it
 typedef uint32 TaxiMask[TaxiMaskSize];
-#endif

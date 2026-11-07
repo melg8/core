@@ -19,39 +19,52 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __UNIT_H
-#define __UNIT_H
+#pragma once
 
-#include "Common.h"
-#include "SharedDefines.h"
-#include "ItemPrototype.h"
 #include "SpellCaster.h"
-#include "UnitDefines.h"
-#include "SpellAuraDefines.h"
-#include "UpdateFields.h"
-#include "ThreatManager.h"
-#include "HostileRefManager.h"
-#include "FollowerReference.h"
+
+#include "DBCEnums.h"
 #include "FollowerRefManager.h"
+#include "FollowerReference.h"
+#include "HostileRefManager.h"
+#include "ItemPrototype.h"
 #include "MotionMaster.h"
+#include "MovementInfo.h"
+#include "Object.h"
+#include "ObjectDefines.h"
+#include "ObjectGuid.h"
+#include "Platform/Define.h"
+#include "Progression.h"
+#include "SharedDefines.h"
+#include "SpellAuraDefines.h"
+#include "SpellDefines.h"
+#include "ThreatManager.h"
+#include "UnitDefines.h"
+
+#include <deque>
 #include <list>
+#include <map>
+#include <mutex>
+#include <set>
+#include <string>
+#include <utility>
+#include <utility>
+#include <vector>
 
-struct FactionTemplateEntry;
-struct Modifier;
-struct SpellModifier;
-
-class WorldPacket;
-class SpellEntry;
 class Aura;
-class SpellAuraHolder;
 class Creature;
-class Spell;
+class CreatureAI;
 class GameObject;
 class Item;
 class Pet;
 class PetAura;
+class Spell;
+class SpellAuraHolder;
+class SpellEntry;
 class Totem;
-class CreatureAI;
+class WorldPacket;
+
+struct FactionTemplateEntry;
 
 namespace Movement
 {
@@ -1514,5 +1527,3 @@ bool Unit::CheckAllControlledUnits(Func const& func, uint32 controlledMask) cons
 
     return false;
 }
-
-#endif

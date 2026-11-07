@@ -25,8 +25,16 @@ EndScriptData */
 npc_blastmaster_emi_shortfuse
 EndContentData */
 
-#include "scriptPCH.h"
+
+#include "Creature.h"
+#include "Utilities/Random.h"
 #include "CreatureGroups.h"
+#include "GameObject.h"
+#include "Player.h"
+#include "ScriptedEscortAI.h"
+#include "ScriptedFollowerAI.h"
+#include "ScriptedGossip.h"
+#include "ScriptedInstance.h"
 #include "gnomeregan.h"
 
 /*######

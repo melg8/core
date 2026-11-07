@@ -1,5 +1,4 @@
-#ifndef _AUTOBROADCAST_MGR_H
-#define _AUTOBROADCAST_MGR_H
+#pragma once
 
 #include "Policies/Singleton.h"
 #include "Platform/Define.h"
@@ -26,5 +25,6 @@ class AutoBroadCastMgr
         time_t _current;
 };
 
-#define sAutoBroadCastMgr MaNGOS::Singleton<AutoBroadCastMgr>::Instance()
-#endif
+using AutoBroadCastMgrSingleton = MaNGOS::Singleton<AutoBroadCastMgr>;
+
+#define sAutoBroadCastMgr AutoBroadCastMgrSingleton::Instance()

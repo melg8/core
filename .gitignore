@@ -102,6 +102,7 @@ cmake_install.cmake
 
 # VSCode
 .vscode
+.vs
 
 # Nostalrius
 newsletter

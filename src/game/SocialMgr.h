@@ -19,12 +19,13 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __MANGOS_SOCIALMGR_H
-#define __MANGOS_SOCIALMGR_H
+#pragma once
 
-#include "Policies/Singleton.h"
-#include "Database/DatabaseEnv.h"
 #include "ObjectGuid.h"
+
+#include "Database/QueryResult.h"
+#include "Policies/Singleton.h"
+
 #include <shared_mutex>
 
 class SocialMgr;
@@ -160,5 +161,6 @@ class SocialMgr
         std::shared_timed_mutex _socialMapLock;
 };
 
-#define sSocialMgr MaNGOS::Singleton<SocialMgr>::Instance()
-#endif
+using SocialMgrSingleton = MaNGOS::Singleton<SocialMgr>;
+
+#define sSocialMgr SocialMgrSingleton::Instance()

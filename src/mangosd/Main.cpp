@@ -23,7 +23,6 @@
 // @{
 // \file
 
-#include "Common.h"
 #include "Database/DatabaseEnv.h"
 #include "Config/Config.h"
 #include "ProgressBar.h"
@@ -34,6 +33,9 @@
 #include "ArgparserForServer.h"
 
 #include "Crypto/InitializeCrypto.h"
+
+#include <openssl/opensslv.h>
+#include <openssl/crypto.h>
 
 #ifdef WIN32
 #include "ServiceWin32.h"

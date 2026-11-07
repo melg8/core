@@ -23,10 +23,8 @@
 // @{
 // \file
 
-#ifndef _MASTER_H
-#define _MASTER_H
+#pragma once
 
-#include "Common.h"
 #include "Policies/Singleton.h"
 
 // Start the server
@@ -51,6 +49,6 @@ class Master
         void clearOnlineAccounts();
 };
 
-#define sMaster MaNGOS::Singleton<Master>::Instance()
-#endif
-// @}
+using MasterSingleton = MaNGOS::Singleton<Master>;
+
+#define sMaster MasterSingleton::Instance()

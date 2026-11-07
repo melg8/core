@@ -14,8 +14,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_BASICAI_H
-#define MANGOS_BASICAI_H
+#pragma once
 
 #include "CreatureAI.h"
 
@@ -39,5 +38,3 @@ class BasicAI : public CreatureAI
     protected:
         bool m_bCanSummonGuards;
 };
-
-#endif

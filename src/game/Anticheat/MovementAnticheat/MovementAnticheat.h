@@ -1,9 +1,6 @@
-#ifndef MANGOS_MOVEMENT_ANTICHEAT_H
-#define MANGOS_MOVEMENT_ANTICHEAT_H
+#pragma once
 
-#include "Common.h"
 #include "UnitDefines.h"
-#include "Anticheat.h"
 #include "SniffFile.h"
 
 #include <array>
@@ -57,11 +54,13 @@ enum CheatType
 #define CHEATS_UPDATE_INTERVAL      4000
 char const* GetMovementCheatName(CheatType type);
 
+class Unit;
 class Player;
 class MovementInfo;
 class ChatHandler;
 class WorldSession;
 class WorldPacket;
+struct AreaEntry;
 class ServerPacket;
 
 class MovementAnticheat
@@ -161,5 +160,3 @@ class MovementAnticheat
         std::deque<LoggedPacket> m_packetLog;
         std::mutex m_packetLogMutex;
 };
-
-#endif // MANGOS_MOVEMENT_ANTICHEAT_H

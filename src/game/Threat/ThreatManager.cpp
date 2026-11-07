@@ -26,7 +26,6 @@
 #include "Player.h"
 #include "ObjectAccessor.h"
 #include "UnitEvents.h"
-#include "TargetedMovementGenerator.h"
 
 //==============================================================
 //================= ThreatCalcHelper ===========================

@@ -2,11 +2,15 @@
  * Dun Morogh
  */
 
-#include "scriptPCH.h"
-
 /*######
 ## npc_narm_faulk
 ######*/
+
+#include "Creature.h"
+#include "ScriptMgr.h"
+#include "ScriptedAI.h"
+#include "SpellEntry.h"
+#include "UpdateFields.h"
 
 #define SAY_HEAL 2281
 

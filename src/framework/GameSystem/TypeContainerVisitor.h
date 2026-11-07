@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_TYPECONTAINERVISITOR_H
-#define MANGOS_TYPECONTAINERVISITOR_H
+#pragma once
 
 /*
  * @class TypeContainerVisitor is implemented as a visitor pattern.  It is
@@ -28,7 +27,6 @@
  * to overload its types as a visit method is called.
  */
 
-#include "Platform/Define.h"
 #include "TypeContainer.h"
 
 // forward declaration
@@ -92,5 +90,3 @@ class TypeContainerVisitor
 
         VISITOR &i_visitor;
 };
-
-#endif

@@ -21,8 +21,7 @@
   *
   */
 
-#ifndef __WARDENSCANMGR_HPP_
-#define __WARDENSCANMGR_HPP_
+#pragma once
 
 #include "WardenScan.hpp"
 #include "Policies/Singleton.h"
@@ -53,6 +52,6 @@ class WardenScanMgr
         std::vector<std::shared_ptr<Scan const>> GetRandomScans(ScanFlags flags, uint32 build) const;
 };
 
-#define sWardenScanMgr MaNGOS::Singleton<WardenScanMgr>::Instance()
+using WardenScanMgrSingleton = MaNGOS::Singleton<WardenScanMgr>;
 
-#endif /*!__WARDENSCANMGR_HPP_*/
+#define sWardenScanMgr WardenScanMgrSingleton::Instance()

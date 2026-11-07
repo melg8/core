@@ -19,11 +19,11 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_SHAREDDEFINES_H
-#define MANGOS_SHAREDDEFINES_H
+#pragma once
 
 #include "Platform/Define.h"
 #include "Progression.h"
+
 #include <cassert>
 
 #define MAX_SPELL_EFFECTS 3
@@ -1821,10 +1821,7 @@ struct WorldLocation : public Position
         return !mapId && Position::IsEmpty();
     }
 };
-
 inline WorldLocation Position::WithMapId(uint32 mapId) const
 {
     return WorldLocation(mapId, x, y, z, o);
 }
-
-#endif

@@ -23,10 +23,7 @@
 // @{
 // \file
 
-#ifndef __CLIRUNNABLE_H
-#define __CLIRUNNABLE_H
-
-#include "Common.h"
+#pragma once
 
 // Command Line Interface handling thread
 class CliRunnable
@@ -34,5 +31,3 @@ class CliRunnable
 public:
     void operator()();
 };
-#endif
-// @}

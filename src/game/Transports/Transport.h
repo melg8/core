@@ -16,13 +16,11 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef TRANSPORTS_H
-#define TRANSPORTS_H
+#pragma once
 
 #include "GameObject.h"
 #include "TransportMgr.h"
 
-#include <map>
 #include <set>
 #include <mutex>
 
@@ -133,5 +131,3 @@ inline GenericTransport const* GameObject::ToTransport() const
 {
     return IsTransport() ? static_cast<GenericTransport const*>(this) : nullptr;
 }
-
-#endif

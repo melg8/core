@@ -20,47 +20,56 @@ SD%Complete: 100
 SDCategory: Burning Steppes
 EndScriptData */
 
-#include "scriptPCH.h"
-
 //IMPORT SD2
 /*######
 ## npc_grark_lorkrub
 ######*/
 
+#include "Creature.h"
+#include "Map.h"
+#include "Player.h"
+#include "ScriptMgr.h"
+#include "ScriptedEscortAI.h"
+#include "ScriptedGossip.h"
+#include "UpdateFields.h"
+#include "World.h"
+
+#include "Platform/Define.h"
+
 enum
 {
-    SAY_START                   = 4903,
-    SAY_PAY                     = 4904,
-    SAY_FIRST_AMBUSH_START      = 4905,
-    SAY_FIRST_AMBUSH_END        = 4906,
-    SAY_SEC_AMBUSH_START        = 4907,
-    SAY_SEC_AMBUSH_END          = 4908,
-    SAY_THIRD_AMBUSH_START      = 4909,
-    SAY_THIRD_AMBUSH_END        = 4911,
-    EMOTE_LAUGH                 = 4912,
-    SAY_LAST_STAND              = 4913,
-    SAY_LEXLORT_1               = 4928,
-    SAY_LEXLORT_2               = 4929,
-    EMOTE_RAISE_AXE             = 4930,
-    EMOTE_LOWER_HAND            = 4932,
-    SAY_LEXLORT_3               = 4931,
-    SAY_LEXLORT_4               = 4933,
+    SAY_START = 4903,
+    SAY_PAY = 4904,
+    SAY_FIRST_AMBUSH_START = 4905,
+    SAY_FIRST_AMBUSH_END = 4906,
+    SAY_SEC_AMBUSH_START = 4907,
+    SAY_SEC_AMBUSH_END = 4908,
+    SAY_THIRD_AMBUSH_START = 4909,
+    SAY_THIRD_AMBUSH_END = 4911,
+    EMOTE_LAUGH = 4912,
+    SAY_LAST_STAND = 4913,
+    SAY_LEXLORT_1 = 4928,
+    SAY_LEXLORT_2 = 4929,
+    EMOTE_RAISE_AXE = 4930,
+    EMOTE_LOWER_HAND = 4932,
+    SAY_LEXLORT_3 = 4931,
+    SAY_LEXLORT_4 = 4933,
 
-    EMOTE_SUBMIT                = 4918,
-    SAY_AGGRO                   = 4927,
+    EMOTE_SUBMIT = 4918,
+    SAY_AGGRO = 4927,
 
-    SPELL_CAPTURE_GRARK             = 14250,
+    SPELL_CAPTURE_GRARK = 14250,
 
-    NPC_BLACKROCK_AMBUSHER          = 9522,
-    NPC_BLACKROCK_RAIDER            = 9605,
-    NPC_FLAMESCALE_DRAGONSPAWN      = 7042,
-    NPC_SEARSCALE_DRAKE             = 7046,
+    NPC_BLACKROCK_AMBUSHER = 9522,
+    NPC_BLACKROCK_RAIDER = 9605,
+    NPC_FLAMESCALE_DRAGONSPAWN = 7042,
+    NPC_SEARSCALE_DRAKE = 7046,
 
-    NPC_GRARK_LORKRUB               = 9520,
-    NPC_HIGH_EXECUTIONER_NUZARK     = 9538,
-    NPC_SHADOW_OF_LEXLORT           = 9539,
+    NPC_GRARK_LORKRUB = 9520,
+    NPC_HIGH_EXECUTIONER_NUZARK = 9538,
+    NPC_SHADOW_OF_LEXLORT = 9539,
 
-    FACTION_FRIENDLY                = 35,
+    FACTION_FRIENDLY = 35,
 
     QUEST_ID_PRECARIOUS_PREDICAMENT = 4121
 };

@@ -19,10 +19,8 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __BATTLEGROUNDAB_H
-#define __BATTLEGROUNDAB_H
+#pragma once
 
-#include "Common.h"
 #include "BattleGround.h"
 #include "World.h"
 
@@ -247,5 +245,4 @@ class BattleGroundAB : public BattleGround
         uint32              m_honorTics;
         uint32              m_reputationTics;
 };
-#endif
 #endif

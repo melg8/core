@@ -19,20 +19,22 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _ITEMPROTOTYPE_H
-#define _ITEMPROTOTYPE_H
+#pragma once
 
-#include "Common.h"
+#include "Platform/Define.h"
+
+#include <string>
+#include <vector>
 
 enum ItemModType
 {
-    ITEM_MOD_MANA                     = 0,
-    ITEM_MOD_HEALTH                   = 1,
-    ITEM_MOD_AGILITY                  = 3,
-    ITEM_MOD_STRENGTH                 = 4,
-    ITEM_MOD_INTELLECT                = 5,
-    ITEM_MOD_SPIRIT                   = 6,
-    ITEM_MOD_STAMINA                  = 7,
+    ITEM_MOD_MANA = 0,
+    ITEM_MOD_HEALTH = 1,
+    ITEM_MOD_AGILITY = 3,
+    ITEM_MOD_STRENGTH = 4,
+    ITEM_MOD_INTELLECT = 5,
+    ITEM_MOD_SPIRIT = 6,
+    ITEM_MOD_STAMINA = 7,
 };
 
 #define MAX_ITEM_MOD                    8
@@ -552,5 +554,3 @@ struct ItemLocale
     std::vector<std::string> Name;
     std::vector<std::string> Description;
 };
-
-#endif

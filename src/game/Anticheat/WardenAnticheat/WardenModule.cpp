@@ -31,7 +31,6 @@
 #include <string>
 #include <vector>
 #include <fstream>
-#include <exception>
 
 #if SUPPORTED_CLIENT_BUILD > CLIENT_BUILD_1_5_1
 

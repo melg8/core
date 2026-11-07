@@ -19,6 +19,8 @@
 #include "CreatureGroups.h"
 #include "Utilities/EventMap.h"
 
+#include "GridNotifiers.h"
+
 inline uint32 GetCampType(Creature* pUnit) { return pUnit->HasAura(SPELL_CAMP_TYPE_GHOST_SKELETON) || pUnit->HasAura(SPELL_CAMP_TYPE_GHOST_GHOUL) || pUnit->HasAura(SPELL_CAMP_TYPE_GHOUL_SKELETON); };
 
 inline bool IsGuardOrBoss(Unit* pUnit) {

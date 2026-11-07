@@ -2,9 +2,6 @@
 * This program is free software licensed under GPL version 2
 * Please see the included DOCS/LICENSE.TXT for more information */
 
-#ifndef SC_SCRIPTLOADER_H
-#define SC_SCRIPTLOADER_H
+#pragma once
 
 void AddScripts();
-
-#endif

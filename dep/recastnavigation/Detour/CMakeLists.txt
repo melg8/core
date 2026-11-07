@@ -8,16 +8,22 @@
 # WITHOUT ANY WARRANTY, to the extent permitted by law; without even the
 # implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-cmake_minimum_required(VERSION 2.6...3.20)
-
 project(Detour)
 
 include_directories (
-	./Include
-	
+    ./Include
 )
 
 set(Detour_STAT_SRCS
+    Include/DetourAlloc.h
+    Include/DetourAssert.h
+    Include/DetourCommon.h
+    Include/DetourMath.h
+    Include/DetourNavMesh.h
+    Include/DetourNavMeshBuilder.h
+    Include/DetourNavMeshQuery.h
+    Include/DetourNode.h
+    Include/DetourStatus.h
     Source/DetourAlloc.cpp 
     Source/DetourAssert.cpp 
     Source/DetourCommon.cpp 

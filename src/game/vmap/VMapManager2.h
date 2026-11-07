@@ -16,14 +16,15 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _VMAPMANAGER2_H
-#define _VMAPMANAGER2_H
+#pragma once
 
 #include "IVMapManager.h"
-#include <unordered_map>
+
 #include "Platform/Define.h"
+
 #include <G3D/Vector3.h>
-#include <atomic>
+
+#include <unordered_map>
 #include <memory>
 #include <shared_mutex>
 
@@ -114,4 +115,3 @@ namespace VMAP
 #endif
     };
 }
-#endif

@@ -4,8 +4,7 @@
  * Copyright (C) 2016-2017 Elysium Project <https://www.elysium-project.org>
  */
 
-#ifndef _WARDEN_KEY_GENERATOR_H
-#define _WARDEN_KEY_GENERATOR_H
+#pragma once
 
 #include "Crypto/Hash/SHA1.h"
 
@@ -52,5 +51,3 @@ private:
     Crypto::Hash::SHA1::Digest o1;
     Crypto::Hash::SHA1::Digest o2;
 };
-
-#endif

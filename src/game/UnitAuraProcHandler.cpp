@@ -19,20 +19,24 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "Common.h"
-#include "Log.h"
+#include "Util.h"
+
 #include "Creature.h"
+#include "GridMap.h"
+#include "Log.h"
 #include "Player.h"
+#include "ScriptMgr.h"
 #include "Spell.h"
 #include "SpellAuras.h"
-#include "SpellModifier.h"
 #include "SpellMgr.h"
 #include "ScriptMgr.h"
 #include "World.h"
 #include "Map.h"
 #include "GridMap.h"
 #include "Utilities/Random.h"
-#include "ScriptMgr.h"
+#include "SpellModifier.h"
+
+#include "PlayerSubsystems/PlayerCheatOptions.h"
 
 pAuraProcHandler AuraProcHandler[TOTAL_AURAS] =
 {

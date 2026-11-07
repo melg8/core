@@ -58,6 +58,12 @@
 #endif
 
 #include "GridMapDefines.h"
+
+
+#ifdef main
+    #undef main // Remove ace main define poluting our scope.
+#endif
+
 extern ArchiveSet gOpenArchives;
 
 typedef struct

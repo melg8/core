@@ -16,12 +16,12 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _GUILDMGR_H
-#define _GUILDMGR_H
+#pragma once
 
-#include "Common.h"
-#include "Policies/Singleton.h"
 #include "World.h"
+
+#include "Policies/Singleton.h"
+
 #include <shared_mutex>
 
 class Guild;
@@ -32,6 +32,7 @@ class PetitionSignature;
 typedef std::unordered_map<uint32, Petition*> PetitionMap;
 typedef std::list<PetitionSignature*> PetitionSignatureList;
 typedef std::unordered_map<uint32, Guild*> GuildMap;
+
 class GuildMgr
 {
     public:
@@ -155,6 +156,6 @@ private:
     uint32 m_playerAccount;
 };
 
-#define sGuildMgr MaNGOS::Singleton<GuildMgr>::Instance()
+using GuildMgrSingleton = MaNGOS::Singleton<GuildMgr>;
 
-#endif // _GUILDMGR_H
+#define sGuildMgr GuildMgrSingleton::Instance()

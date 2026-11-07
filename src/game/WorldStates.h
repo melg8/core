@@ -19,15 +19,15 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_WORLDSTATES_H
-#define MANGOS_WORLDSTATES_H
+#pragma once
 
-#include "Platform/Define.h"
 #include "Progression.h"
 #include "ByteBuffer.h"
 
 #include <utility>
 #include <vector>
+
+#include "Platform/Define.h"
 
 enum WorldStates
 {
@@ -173,5 +173,3 @@ inline void FillInitialWorldState(std::vector<std::pair<uint32, int32>>& states,
 {
     states.push_back({ state, value ? 1 : 0 });
 }
-
-#endif

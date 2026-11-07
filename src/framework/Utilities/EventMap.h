@@ -15,11 +15,10 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef _EVENT_MAP_H_
-#define _EVENT_MAP_H_
+#pragma once
 
-#include "Common.h"
-#include "../shared/Duration.h"
+#include "Duration.h"
+
 #include "Util.h"
 
 class EventMap
@@ -364,5 +363,3 @@ private:
     */
     uint32 _lastEvent;
 };
-
-#endif // _EVENT_MAP_H_

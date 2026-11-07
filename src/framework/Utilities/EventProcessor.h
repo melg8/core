@@ -18,10 +18,10 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __EVENTPROCESSOR_H
-#define __EVENTPROCESSOR_H
+#pragma once
 
 #include "Platform/Define.h"
+
 #include <map>
 
 class EventProcessor;
@@ -115,5 +115,3 @@ class EventProcessor
         uint64 m_time;
         EventList m_events;
 };
-
-#endif

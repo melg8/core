@@ -17,27 +17,26 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _OBJECTMGR_H
-#define _OBJECTMGR_H
+#pragma once
 
 #include "Common.h"
 #include "Object.h"
 #include "CreatureDefines.h"
-#include "GameObject.h"
 #include "Corpse.h"
 #include "QuestDef.h"
 #include "ItemPrototype.h"
 #include "NPCHandler.h"
-#include "Database/DatabaseEnv.h"
 #include "MapPersistentStateMgr.h"
 #include "ObjectAccessor.h"
 #include "ObjectGuid.h"
-#include "Policies/Singleton.h"
 #include "SQLStorages.h"
+
+#include "Database/DatabaseEnv.h"
+#include "Policies/Singleton.h"
+#include "Platform/Define.h"
 
 #include <string>
 #include <map>
-#include <limits>
 
 class Group;
 class Item;
@@ -1641,6 +1640,6 @@ class ObjectMgr
         PlayerPremadeSpecMap m_playerPremadeSpecMap;
 };
 
-#define sObjectMgr MaNGOS::Singleton<ObjectMgr>::Instance()
+using ObjectMgrSingleton = MaNGOS::Singleton<ObjectMgr>;
 
-#endif
+#define sObjectMgr ObjectMgrSingleton::Instance()

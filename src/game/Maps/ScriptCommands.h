@@ -14,11 +14,11 @@
 * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef __SCRIPT_COMMANDS_H
-#define __SCRIPT_COMMANDS_H
+#pragma once
 
-#include "Common.h"
 #include "ObjectGuid.h"
+
+#include "Platform/Define.h"
 
 // Legend:
 // source - the type of object which executes the command
@@ -1215,5 +1215,3 @@ enum ScriptTarget
                                                             //Param2 = search_radius
     TARGET_T_END
 };
-
-#endif

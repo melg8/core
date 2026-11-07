@@ -1,6 +1,8 @@
-#ifndef DEF_NPC_J_EEVEE_AI
-#define DEF_NPC_J_EEVEE_AI
-#include "scriptPCH.h"
+#pragma once
+
+#include "ScriptedAI.h"
+
+#include "Platform/Define.h"
 
 struct npc_j_eevee_dreadsteedAI : public ScriptedAI
 {
@@ -33,5 +35,3 @@ struct npc_j_eevee_scholomanceAI : public ScriptedAI
     void MovementInform(uint32 uiType, uint32 uiPointId) override;
     void UpdateAI(uint32 const uiDiff) override;
 };
-
-#endif

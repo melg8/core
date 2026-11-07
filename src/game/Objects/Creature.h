@@ -19,15 +19,12 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_CREATURE_H
-#define MANGOSSERVER_CREATURE_H
+#pragma once
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "CreatureDefines.h"
 #include "Unit.h"
 #include "LootMgr.h"
-#include "Util.h"
 
 #include <vector>
 #include <list>
@@ -755,5 +752,3 @@ private:
     Creature& m_owner;
     float m_orientation;
 };
-
-#endif

@@ -16,7 +16,7 @@
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 # CMake policies
-cmake_minimum_required(VERSION 3.1...3.20)
+cmake_minimum_required(VERSION 3.1)
 
 project(MaNGOS)
 
@@ -32,6 +32,8 @@ endif()
 include(cmake/common.cmake)
 include(cmake/options.cmake)
 include(cmake/platform/detect_platform.cmake)
+include(cmake/sanitizers.cmake)
+
 
 # Force out-of-source build
 string(COMPARE EQUAL "${CMAKE_SOURCE_DIR}" "${CMAKE_BINARY_DIR}" BUILDING_IN_SOURCE)

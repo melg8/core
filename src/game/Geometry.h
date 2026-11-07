@@ -14,10 +14,10 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _GEOMETRY
-#define _GEOMETRY
+#pragma once
 
 #include "Common.h"
+#include "GridDefines.h"
 
 namespace Geometry
 {
@@ -113,28 +113,4 @@ namespace Geometry
         return (lineEnd.x - lineStart.x) * (point.y - lineStart.y) - (lineEnd.y - lineStart.y) * (point.x - lineStart.x) > 0;
     }
 
-    // Moves the second set of 2D coordinates closer to the first, or further if distance is negative.
-    inline void Move2dPointTowards(float x1, float y1, float& x2, float& y2, float dist)
-    {
-        float dx = x1 - x2;
-        float dy = y1 - y2;
-
-        float len = sqrtf(dx * dx + dy * dy);
-        if (len == 0.0f)
-            return;
-
-        float nx = dx / len;
-        float ny = dy / len;
-
-        x2 += nx * dist;
-        y2 += ny * dist;
-    }
-
-    template<class A, class B>
-    inline void Move2dPointTowards(A const& a, B& b, float dist)
-    {
-        Move2dPointTowards(a.x, a.y, b.x, b.y, dist);
-    }
 }
-
-#endif

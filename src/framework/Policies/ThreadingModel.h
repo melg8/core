@@ -19,15 +19,8 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_THREADINGMODEL_H
-#define MANGOS_THREADINGMODEL_H
+#pragma once
 
-/**
- * @class ThreadingModel<T>
- *
- */
-
-#include "Platform/Define.h"
 #include <mutex>
 
 namespace MaNGOS
@@ -105,5 +98,3 @@ template<class T, class MUTEX> MUTEX MaNGOS::ClassLevelLockable<T, MUTEX>::si_mt
 
 #define INSTANTIATE_CLASS_MUTEX(CTYPE, MUTEX) \
     template class MaNGOS::ClassLevelLockable<CTYPE, MUTEX>
-
-#endif

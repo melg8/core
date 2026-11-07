@@ -19,10 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _REFMANAGER_H
-#define _REFMANAGER_H
-
-//=====================================================
+#pragma once
 
 #include "Utilities/LinkedList.h"
 #include "Utilities/LinkedReference/Reference.h"
@@ -56,7 +53,3 @@ class RefManager : public LinkedListHead
             }
         }
 };
-
-//=====================================================
-
-#endif

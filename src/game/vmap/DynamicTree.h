@@ -16,9 +16,10 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef DYNAMICMAP_TREE_H
-#define DYNAMICMAP_TREE_H
+#pragma once
+
 #include "Platform/Define.h"
+
 namespace G3D
 {
     class Vector3;
@@ -26,6 +27,7 @@ namespace G3D
     class AABox;
     class Ray;
 }
+
 class GameObjectModel;
 
 class DynamicMapTree
@@ -51,5 +53,3 @@ class DynamicMapTree
     private:
         struct DynTreeImpl& impl;
 };
-
-#endif

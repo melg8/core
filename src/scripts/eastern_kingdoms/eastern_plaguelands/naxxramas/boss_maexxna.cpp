@@ -21,8 +21,15 @@ SDComment:
 SDCategory: Naxxramas
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+#include "Utilities/Random.h"
+
+#include "GridSearchers.h"
+#include "Player.h"
+#include "Spell.h"
+#include "Unit.h"
 #include "naxxramas.h"
+
 #include <random>
 #include <algorithm>
 #include <array>

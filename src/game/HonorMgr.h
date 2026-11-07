@@ -2,8 +2,13 @@
  * Copyright (C) 2016 Elysium Project <https://elysium-project.org>
  */
 
-#ifndef HONORMGR_H
-#define HONORMGR_H
+#pragma once
+
+#include "Database/QueryResult.h"
+#include "Platform/Define.h"
+#include "SharedDefines.h"
+
+#include "Policies/Singleton.h"
 
 #include <unordered_map>
 
@@ -151,6 +156,8 @@ typedef std::list<HonorCP> HonorCPMap;
 #define RACIAL_LEADER_HONOR 500.0f // guess
 #endif
 
+class Unit;
+
 class HonorMgr
 {
     public:
@@ -222,6 +229,6 @@ class HonorMgr
         Player* m_owner;
 };
 
-#define sHonorMaintenancer MaNGOS::Singleton<HonorMaintenancer>::Instance()
+using HonorMaintenancerSingleton = MaNGOS::Singleton<HonorMaintenancer>;
 
-#endif
+#define sHonorMaintenancer HonorMaintenancerSingleton::Instance()

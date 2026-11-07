@@ -19,15 +19,13 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_GAMEOBJECT_H
-#define MANGOSSERVER_GAMEOBJECT_H
+#pragma once
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "GameObjectDefines.h"
 #include "SpellCaster.h"
 #include "LootMgr.h"
-#include "Util.h"
+
 #include <shared_mutex>
 
 class Unit;
@@ -314,5 +312,3 @@ inline GameObject const* ToGameObject(Object const* object)
 {
     return object && object->IsGameObject() ? static_cast<GameObject const*>(object) : nullptr;
 }
-
-#endif

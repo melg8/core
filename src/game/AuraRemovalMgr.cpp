@@ -17,7 +17,6 @@
 */
 
 #include "AuraRemovalMgr.h"
-#include "Policies/Singleton.h"
 #include "Database/DatabaseEnv.h"
 #include "Policies/SingletonImp.h"
 #include "Player.h"

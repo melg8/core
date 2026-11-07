@@ -19,44 +19,57 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _OBJECT_H
-#define _OBJECT_H
+#pragma once
 
-#include "Common.h"
-#include "Log.h"
-#include "Errors.h"
-#include "ByteBuffer.h"
-#include "UpdateFields.h"
-#include "UpdateData.h"
-#include "ObjectGuid.h"
-#include "SharedDefines.h"
-#include "ObjectDefines.h"
-#include "MovementInfo.h"
-#include "DBCEnums.h"
-#include "Util.h"
-#include "Timer.h"
 #include "Camera.h"
 #include "Cell.h"
+#include "Common.h"
+#include "GridDefines.h"
+#include "Log.h"
+#include "MovementInfo.h"
+#include "ObjectDefines.h"
+#include "ObjectGuid.h"
+#include "Platform/Define.h"
+#include "SharedDefines.h"
+#include "Timer.h"
+#include "UpdateFields.h"
+#include "ByteBuffer.h"
+#include "DBCEnums.h"
+#include "Errors.h"
+#include "UpdateData.h"
+#include "Util.h"
 
+#include <initializer_list>
+#include <list>
 #include <memory>
 #include <string>
+#include <unordered_map>
+#include <utility>
+
+enum UpdateFieldFlags : uint16;
+
+template <class OBJECT> class GridRefManager;
 
 class ServerPacket;
 class WorldPacket;
 class UpdateData;
 class Corpse;
 class Creature;
+class GameObject;
+class GenericTransport;
+class InstanceData;
+class Map;
 class Pet;
 class Player;
-class Unit;
-class GameObject;
 class SpellCaster;
-class Map;
-class UpdateMask;
-class InstanceData;
 class TerrainInfo;
+class Unit;
+class UpdateData;
+class UpdateMask;
+class WorldObject;
+class WorldPacket;
 class ZoneScript;
-class GenericTransport;
+
 struct FactionEntry;
 struct FactionTemplateEntry;
 
@@ -451,8 +464,6 @@ class Object
         Object(Object const&) = delete;                     // prevent generation copy constructor
         Object& operator=(Object const&) = delete;          // prevent generation assigment operator
 };
-
-struct WorldObjectChangeAccumulator;
 
 class WorldObject : public Object
 {
@@ -850,5 +861,3 @@ inline WorldObject const* ToWorldObject(Object const* object)
 {
     return object && object->IsWorldObject() ? static_cast<WorldObject const*>(object) : nullptr;
 }
-
-#endif

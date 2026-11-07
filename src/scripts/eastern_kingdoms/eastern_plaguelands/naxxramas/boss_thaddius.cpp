@@ -28,8 +28,17 @@ boss_stalagg
 boss_feugen
 EndContentData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+#include "Utilities/Random.h"
+#include "SpellAuras.h"
+
+#include "Creature.h"
+#include "GameObject.h"
+#include "Player.h"
+#include "Spell.h"
+#include "TemporarySummon.h"
 #include "naxxramas.h"
+
 #include <random>
 #include <algorithm>
 

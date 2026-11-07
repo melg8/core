@@ -19,14 +19,13 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_POOLHANDLER_H
-#define MANGOS_POOLHANDLER_H
+#pragma once
 
-#include "Common.h"
-#include "Platform/Define.h"
-#include "Policies/Singleton.h"
 #include "Creature.h"
 #include "GameObject.h"
+
+#include "Platform/Define.h"
+#include "Policies/Singleton.h"
 
 class MapPersistentState;
 struct MapEntry;
@@ -231,7 +230,9 @@ class PoolManager
         SearchMap m_poolSearchMap;
 };
 
-#define sPoolMgr MaNGOS::Singleton<PoolManager>::Instance()
+using PoolManagerSingleton = MaNGOS::Singleton<PoolManager>;
+
+#define sPoolMgr PoolManagerSingleton::Instance()
 
 // Method that tell if the creature is part of a pool and return the pool id if yes
 template<>
@@ -265,5 +266,3 @@ inline uint16 PoolManager::IsPartOfAPool<Pool>(uint32 pool_id) const
 
     return 0;
 }
-
-#endif

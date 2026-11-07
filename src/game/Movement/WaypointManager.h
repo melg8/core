@@ -19,13 +19,13 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_WAYPOINTMANAGER_H
-#define MANGOS_WAYPOINTMANAGER_H
+#pragma once
 
-#include "Common.h"
-#include <vector>
-#include <string>
 #include "Policies/Singleton.h"
+
+#include <map>
+#include <string>
+#include <unordered_map>
 
 enum WaypointPathOrigin
 {
@@ -175,6 +175,6 @@ class WaypointManager
         WaypointPathMap m_pathSpecialMap;
 };
 
-#define sWaypointMgr MaNGOS::Singleton<WaypointManager>::Instance()
+using WaypointManagerSingleton = MaNGOS::Singleton<WaypointManager>;
 
-#endif
+#define sWaypointMgr WaypointManagerSingleton::Instance()

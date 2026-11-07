@@ -24,9 +24,11 @@ EndScriptData */
 go_stone_of_binding
 EndContentData */
 
-#include "scriptPCH.h"
+#include "Creature.h"
+#include "GameObject.h"
+#include "ScriptMgr.h"
 
-bool GOHello_go_stone_of_binding(Player* pPlayer, GameObject* pGo)
+bool GOHello_go_stone_of_binding(Player*, GameObject* pGo)
 {
     // 141812 <= 7668 Servant of Razelikh
     // 141857 <= 7669 Servant of Grol

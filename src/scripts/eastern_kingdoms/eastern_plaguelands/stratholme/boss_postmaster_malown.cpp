@@ -21,21 +21,27 @@ SDComment:
 SDCategory: Stratholme
 EndScriptData */
 
-#include "scriptPCH.h"
 
 //Spell ID to summon this guy is 24627 "Summon Postmaster Malown"
 //He should be spawned along with three other elites once the third postbox has been opened
 
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "ScriptMgr.h"
+
+#include "Platform/Define.h"
+
 enum : uint32
 {
-    SAY_AGGRO  = 6504,
+    SAY_AGGRO = 6504,
     SAY_KILLED = 6530,
 
-    SPELL_WAILINGDEAD     = 7713,
-    SPELL_BACKHAND        = 6253,
+    SPELL_WAILINGDEAD = 7713,
+    SPELL_BACKHAND = 6253,
     SPELL_CURSEOFWEAKNESS = 8552,
-    SPELL_CURSEOFTONGUES  = 12889,
-    SPELL_CALLOFTHEGRAVE  = 17831
+    SPELL_CURSEOFTONGUES = 12889,
+    SPELL_CALLOFTHEGRAVE = 17831
 };
 
 struct boss_postmaster_malownAI : public ScriptedAI

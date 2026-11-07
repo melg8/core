@@ -29,8 +29,6 @@
 #include "Database/DatabaseEnv.h"
 
 #include <memory>
-#include <vector>
-#include <string>
 
 #if SUPPORTED_CLIENT_BUILD > CLIENT_BUILD_1_5_1
 

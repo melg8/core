@@ -33,13 +33,14 @@
 */
 
 #include "CreatureLinkingMgr.h"
-#include "Policies/Singleton.h"
 #include "ProgressBar.h"
 #include "Database/DatabaseEnv.h"
 #include "ObjectMgr.h"
 #include "SharedDefines.h"
 #include "Creature.h"
 #include "CreatureAI.h"
+
+#include "Policies/SingletonImp.h"
 
 INSTANTIATE_SINGLETON_1(CreatureLinkingMgr);
 

@@ -14,8 +14,7 @@
 * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef MANGOS_BattleBotAI_H
-#define MANGOS_BattleBotAI_H
+#pragma once
 
 #include "CombatBotBaseAI.h"
 #include "BattleBotWaypoints.h"
@@ -120,5 +119,3 @@ public:
     BattleBotPath* m_currentPath = nullptr;
     uint8 m_waitingSpot = BB_WSG_WAIT_SPOT_SPAWN;
 };
-
-#endif

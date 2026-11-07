@@ -1,21 +1,15 @@
-# Copyright (C) 2005-2011 MaNGOS <http://getmangos.com/>
-# Copyright (C) 2009-2011 MaNGOSZero <https://github.com/mangos/zero>
+# SPDX-FileCopyrightText: © 2004 WoWD Team
+# SPDX-FileCopyrightText: © 2004 Team Python
+# SPDX-FileCopyrightText: © 2005-2011 MaNGOS <http://getmangos.com/>
+# SPDX-FileCopyrightText: © 2009-2011 MaNGOSZero <https://github.com/mangos/zero>
+# SPDX-FileCopyrightText: © 2011-2016 Nostalrius <https://nostalrius.org>
+# SPDX-FileCopyrightText: © 2016-2017 Elysium Project <https://github.com/elysium-project>
+# SPDX-FileCopyrightText: © 2017-2025 Vanilla MaNGOS <https://github.com/vmangos/core>
+# SPDX-FileCopyrightText: © 2025 Melg Eight <public.melg8@gmail.com>
 #
-# This program is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 2 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program; if not, write to the Free Software
-# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+# SPDX-License-Identifier: GPL-2.0-or-later
 
-set(framework_SRCS
+set(framework_SRCS 
   Dynamic/FactoryHolder.h
   Dynamic/ObjectRegistry.h
   GameSystem/Grid.h
@@ -24,8 +18,6 @@ set(framework_SRCS
   GameSystem/GridRefManager.h
   GameSystem/NGrid.h
   GameSystem/TypeContainer.h
-  GameSystem/TypeContainerFunctions.h
-  GameSystem/TypeContainerFunctionsPtr.h
   GameSystem/TypeContainerVisitor.h
   Platform/CompilerDefs.h
   Platform/Define.h
@@ -42,15 +34,38 @@ set(framework_SRCS
   Utilities/TypeList.h
   Utilities/LinkedReference/Reference.h
   Utilities/LinkedReference/RefManager.h
+  Dynamic/FactoryHolder.cpp
+  Dynamic/ObjectRegistry.cpp
+  GameSystem/Grid.cpp
+  GameSystem/GridLoader.cpp
+  GameSystem/GridReference.cpp
+  GameSystem/GridRefManager.cpp
+  GameSystem/NGrid.cpp
+  GameSystem/TypeContainer.cpp
+  GameSystem/TypeContainerVisitor.cpp
+  Platform/Define.cpp
+  Platform/CompilerDefs.cpp
+  Policies/CreationPolicy.cpp
+  Policies/Singleton.cpp
+  Policies/SingletonImp.cpp
+  Policies/ThreadingModel.cpp
   Policies/ObjectLifeTime.cpp
+  Utilities/ByteConverter.cpp
+  Utilities/LinkedList.cpp
+  Utilities/TypeList.cpp
+  Utilities/LinkedReference/Reference.cpp
+  Utilities/LinkedReference/RefManager.cpp
   Utilities/EventProcessor.cpp
   Utilities/EventMap.cpp
-
 )
 
 
 source_group("Other"
   REGULAR_EXPRESSION .*
+)
+
+source_group("Network"
+  REGULAR_EXPRESSION Network
 )
 
 source_group("GameSystem"
@@ -89,3 +104,6 @@ mangos_target_flags(framework)
 
 SET_TARGET_PROPERTIES (framework PROPERTIES FOLDER "Game Libs")
 
+target_link_libraries(framework
+  shared
+)

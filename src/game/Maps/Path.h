@@ -19,10 +19,10 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_PATH_H
-#define MANGOSSERVER_PATH_H
+#pragma once
 
-#include "Common.h"
+#include "Platform/Define.h"
+
 #include <deque>
 
 struct PathNode
@@ -99,5 +99,3 @@ class Path
 };
 
 typedef Path<PathNode> PointPath;
-
-#endif

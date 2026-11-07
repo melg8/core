@@ -19,11 +19,11 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _PLAYER_DUMP_H
-#define _PLAYER_DUMP_H
+#pragma once
+
+#include "Platform/Define.h"
 
 #include <string>
-#include <map>
 #include <set>
 
 enum DumpTableType
@@ -97,5 +97,3 @@ class PlayerDumpReader : public PlayerDump
 
         DumpReturn LoadDump(std::string const& file, uint32 account, std::string name, uint32 guid);
 };
-
-#endif

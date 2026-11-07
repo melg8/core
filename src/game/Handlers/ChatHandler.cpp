@@ -27,7 +27,6 @@
 #include "Opcodes.h"
 #include "ObjectMgr.h"
 #include "Chat.h"
-#include "Database/DatabaseEnv.h"
 #include "ChannelMgr.h"
 #include "Group.h"
 #include "Guild.h"
@@ -36,10 +35,9 @@
 #include "SpellAuras.h"
 #include "Language.h"
 #include "Util.h"
-#include "GridNotifiersImpl.h"
-#include "CellImpl.h"
 #include "Anticheat.h"
 #include "AccountMgr.h"
+#include "GridNotifiers.h"
 
 bool WorldSession::SanitizeChatMessage(std::string& msg, uint32 lang, uint32 msgType)
 {

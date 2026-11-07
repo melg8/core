@@ -20,19 +20,21 @@
  */
 
 #include "AccountMgr.h"
-#include "Database/DatabaseEnv.h"
-#include "Database/DatabaseImpl.h"
+#include "Anticheat.h"
+#include "MasterPlayer.h"
 #include "ObjectAccessor.h"
 #include "ObjectGuid.h"
 #include "Player.h"
-#include "Policies/SingletonImp.h"
+#include "ProgressBar.h"
 #include "Util.h"
 #include "World.h"
 #include "WorldSession.h"
-#include "MasterPlayer.h"
-#include "Anticheat.h"
+
 #include "Crypto/Authentication/SRP6.h"
 #include "Crypto/Hash/SHA1.h"
+#include "Database/DatabaseEnv.h"
+#include "Database/DatabaseImpl.h"
+#include "Policies/SingletonImp.h"
 
 INSTANTIATE_SINGLETON_1(AccountMgr);
 

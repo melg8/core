@@ -25,13 +25,20 @@ EndScriptData */
 npc_henze_faulk
 EndContentData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "ScriptMgr.h"
+#include "SpellEntry.h"
+#include "UpdateFields.h"
+
+#include "Platform/Define.h"
 
 /*######
 ## npc_henze_faulk
 ######*/
 
-#define SAY_HEAL    2283
+#define SAY_HEAL 2283
 
 struct npc_henze_faulkAI : public ScriptedAI
 {

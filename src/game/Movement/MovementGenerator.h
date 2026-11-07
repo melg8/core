@@ -19,13 +19,9 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_MOVEMENTGENERATOR_H
-#define MANGOS_MOVEMENTGENERATOR_H
+#pragma once
 
-#include "Common.h"
 #include "Platform/Define.h"
-#include "Policies/Singleton.h"
-#include "Dynamic/ObjectRegistry.h"
 #include "Dynamic/FactoryHolder.h"
 #include "MotionMaster.h"
 
@@ -136,5 +132,3 @@ struct MovementGeneratorFactory : SelectableMovement
 typedef FactoryHolder<MovementGenerator,MovementGeneratorType> MovementGeneratorCreator;
 typedef FactoryHolder<MovementGenerator,MovementGeneratorType>::FactoryHolderRegistry MovementGeneratorRegistry;
 typedef FactoryHolder<MovementGenerator,MovementGeneratorType>::FactoryHolderRepository MovementGeneratorRepository;
-
-#endif

@@ -35,7 +35,6 @@
 
 #include <string>
 #include <algorithm>
-#include <functional>
 
 #if SUPPORTED_CLIENT_BUILD > CLIENT_BUILD_1_5_1
 

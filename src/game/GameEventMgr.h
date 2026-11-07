@@ -19,13 +19,17 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_GAMEEVENT_MGR_H
-#define MANGOS_GAMEEVENT_MGR_H
+#pragma once
 
-#include "Common.h"
 #include "SharedDefines.h"
+
 #include "Platform/Define.h"
 #include "Policies/Singleton.h"
+
+#include <set>
+#include <vector>
+#include <map>
+#include <utility>
 
 #define max_ge_check_delay 86400                            // 1 day in seconds
 #define default_year_length 525600                          // 365 days in minutes
@@ -167,6 +171,6 @@ class GameEventMgr
         bool m_IsGameEventsInit;
 };
 
-#define sGameEventMgr MaNGOS::Singleton<GameEventMgr>::Instance()
+using GameEventMgrSingleton = MaNGOS::Singleton<GameEventMgr>;
 
-#endif
+#define sGameEventMgr GameEventMgrSingleton::Instance()

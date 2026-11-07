@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_WAYPOINTMOVEMENTGENERATOR_H
-#define MANGOS_WAYPOINTMOVEMENTGENERATOR_H
+#pragma once
 
 /** @page PathMovementGenerator is used to generate movements
  * of waypoints and flight paths.  Each serves the purpose
@@ -29,9 +28,6 @@
 #include "WaypointManager.h"
 #include "CreatureGroups.h"
 #include "Player.h"
-
-#include <vector>
-#include <set>
 
 #define FLIGHT_TRAVEL_UPDATE  100
 #define STOP_TIME_FOR_PLAYER  (30 * IN_MILLISECONDS)
@@ -173,5 +169,3 @@ class PatrolMovementGenerator
         ObjectGuid m_leaderGuid;
         CreatureGroupMember m_groupMember;
 };
-
-#endif

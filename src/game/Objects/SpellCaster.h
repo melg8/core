@@ -14,14 +14,28 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _SPELL_CASTER_OBJECT_H
-#define _SPELL_CASTER_OBJECT_H
+#pragma once
 
 #include "Object.h"
+
+#include "Common.h"
+#include "DBCEnums.h"
+#include "ObjectGuid.h"
+#include "SharedDefines.h"
 #include "SpellDefines.h"
 #include "DamageStructs.h"
+
+#include "Platform/Define.h"
 #include "Utilities/EventProcessor.h"
+
 #include "nonstd/optional.hpp"
+
+#include <ctime>
+#include <list>
+#include <map>
+#include <utility>
+#include <utility>
+#include <vector>
 #include <array>
 #include <memory>
 
@@ -36,6 +50,7 @@ class Item;
 class Spell;
 class SpellCaster;
 class SpellEntry;
+class Unit;
 struct ItemPrototype;
 
 enum CurrentSpellTypes
@@ -435,5 +450,3 @@ inline SpellCaster const* ToSpellCaster(Object const* object)
 {
     return object && object->IsSpellCaster() ? static_cast<SpellCaster const*>(object) : nullptr;
 }
-
-#endif

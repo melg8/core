@@ -19,14 +19,13 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_LOOTMGR_H
-#define MANGOS_LOOTMGR_H
+#pragma once
 
-#include "ItemEnchantmentMgr.h"
 #include "ByteBuffer.h"
 #include "ObjectGuid.h"
-#include "Utilities/LinkedReference/RefManager.h"
 #include "SharedDefines.h"
+
+#include "Utilities/LinkedReference/RefManager.h"
 
 #include <map>
 #include <vector>
@@ -443,5 +442,3 @@ inline void LoadLootTables(LootIdSet& ids_set)
 }
 
 bool ExistsRefLootTemplate(uint32 refLootId);
-
-#endif

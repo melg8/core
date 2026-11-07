@@ -19,23 +19,20 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __InstanceSaveMgr_H
-#define __InstanceSaveMgr_H
+#pragma once
 
-#include "Common.h"
+#include "PoolManager.h"
+#include "SQLStorages.h"
+#include "Map.h"
+
 #include "Platform/Define.h"
 #include "Policies/Singleton.h"
+#include "Database/DatabaseEnv.h"
+
 #include <list>
 #include <map>
 #include <unordered_map>
 #include <shared_mutex>
-#include "Database/DatabaseEnv.h"
-#include "DBCEnums.h"
-#include "DBCStores.h"
-#include "ObjectGuid.h"
-#include "PoolManager.h"
-#include "SQLStorages.h"
-#include "Map.h"
 
 struct MapEntry;
 struct GameObjectData;
@@ -415,4 +412,3 @@ void MapPersistentStateManager::DoForAllStatesWithMapId(uint32 mapId, uint32 ins
 }
 
 #define sMapPersistentStateMgr MapPersistentStateManager::Instance()
-#endif

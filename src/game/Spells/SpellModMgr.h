@@ -19,12 +19,9 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _SPELL_MOD_MGR_H
-#define _SPELL_MOD_MGR_H
+#pragma once
 
-#include "Common.h"
 #include "Policies/Singleton.h"
-
 
 class SpellModMgr
 {
@@ -35,6 +32,6 @@ class SpellModMgr
         void LoadSpellMods();
 };
 
-#define sSpellModMgr MaNGOS::Singleton<SpellModMgr>::Instance()
+using SpellModMgrSingleton = MaNGOS::Singleton<SpellModMgr>;
 
-#endif
+#define sSpellModMgr SpellModMgrSingleton::Instance()

@@ -14,8 +14,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_CLIENTDEFINES_H
-#define MANGOSSERVER_CLIENTDEFINES_H
+#pragma once
 
 enum ClientOSType
 {
@@ -30,5 +29,3 @@ enum ClientPlatformType
     CLIENT_PLATFORM_X86,
     CLIENT_PLATFORM_PPC
 };
-
-#endif

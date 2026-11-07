@@ -19,15 +19,14 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_OBJECTGRIDLOADER_H
-#define MANGOS_OBJECTGRIDLOADER_H
+#pragma once
 
-#include "Common.h"
-#include "Utilities/TypeList.h"
-#include "Platform/Define.h"
-#include "GameSystem/GridLoader.h"
 #include "GridDefines.h"
 #include "Cell.h"
+#include "Map.h"
+
+#include "Platform/Define.h"
+#include "GameSystem/GridLoader.h"
 
 class ObjectWorldLoader;
 
@@ -110,4 +109,3 @@ class ObjectGridStoper
 };
 
 typedef GridLoader<Player, AllWorldObjectTypes, AllGridObjectTypes> GridLoaderType;
-#endif

@@ -14,14 +14,14 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MONSTER_CHAT_BUILDER_H
-#define MONSTER_CHAT_BUILDER_H
+#pragma once
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "ObjectGuid.h"
 #include "Chat.h"
 #include "ObjectMgr.h"
+
+#include "Platform/Define.h"
 
 namespace MaNGOS
 {
@@ -116,5 +116,3 @@ namespace MaNGOS
         Unit const* i_target;
     };
 }                                                           // namespace MaNGOS
-
-#endif

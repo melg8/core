@@ -19,11 +19,9 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_CREATIONPOLICY_H
-#define MANGOS_CREATIONPOLICY_H
+#pragma once
 
 #include <cstdlib>
-#include "Platform/Define.h"
 
 namespace MaNGOS
 {
@@ -124,5 +122,3 @@ namespace MaNGOS
             }
     };
 }
-
-#endif

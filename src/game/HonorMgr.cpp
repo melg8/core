@@ -4,7 +4,6 @@
 
 #include "Formulas.h"
 #include "HonorMgr.h"
-#include "Language.h"
 #include "World.h"
 #include "Creature.h"
 #include "Player.h"

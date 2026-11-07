@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_GRIDLOADER_H
-#define MANGOS_GRIDLOADER_H
+#pragma once
 
 /**
   @class GridLoader
@@ -33,9 +32,7 @@
   GridLoader manages the grid (both local and remote).
  */
 
-#include "Platform/Define.h"
 #include "Grid.h"
-#include "TypeContainerVisitor.h"
 
 template
 <
@@ -71,5 +68,3 @@ class GridLoader
             unloader.Unload(grid);
         }
 };
-
-#endif

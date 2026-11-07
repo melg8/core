@@ -1,13 +1,11 @@
-#ifndef _PLAYERBOTMGR_H
-#define _PLAYERBOTMGR_H
+#pragma once
 
-#include "Common.h"
-#include "Policies/Singleton.h"
-#include "Database/DatabaseEnv.h"
 #include "PlayerBotAI.h"
 #include "BattleGroundDefines.h"
 
-#include <vector>
+#include "Platform/Define.h"
+#include "Policies/Singleton.h"
+
 #include <memory>
 
 class PlayerBotAI;
@@ -130,5 +128,6 @@ class PlayerBotMgr
         bool m_confBattleBotAutoJoin;
 };
 
-#define sPlayerBotMgr MaNGOS::Singleton<PlayerBotMgr>::Instance()
-#endif
+using PlayerBotMgrSingleton = MaNGOS::Singleton<PlayerBotMgr>;
+
+#define sPlayerBotMgr PlayerBotMgrSingleton::Instance()

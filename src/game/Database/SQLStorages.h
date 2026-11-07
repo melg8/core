@@ -19,10 +19,8 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_SQLSTORAGES_H
-#define MANGOS_SQLSTORAGES_H
+#pragma once
 
-#include "Common.h"
 #include "Database/SQLStorage.h"
 
 extern SQLStorage sCreatureDataAddonStorage;
@@ -34,5 +32,3 @@ extern SQLStorage sConditionStorage;
 extern SQLStorage sAreaStorage;
 extern SQLStorage sMailTemplateStorage;
 extern SQLStorage sCreatureSpellDataStorage;
-
-#endif

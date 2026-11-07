@@ -24,17 +24,14 @@
 #include "Player.h"
 #include "GridNotifiers.h"
 #include "Log.h"
-#include "GridStates.h"
-#include "CellImpl.h"
 #include "MapManager.h"
-#include "Timer.h"
-#include "GridNotifiersImpl.h"
 #include "ObjectMgr.h"
 #include "GameEventMgr.h"
 #include "World.h"
 #include "Group.h"
 #include "InstanceData.h"
 #include "ProgressBar.h"
+#include "Policies/SingletonImp.h"
 
 typedef MaNGOS::ClassLevelLockable<MapPersistentStateManager, std::mutex> MapPersistanceStateManagerLock;
 INSTANTIATE_SINGLETON_2(MapPersistentStateManager, MapPersistanceStateManagerLock);

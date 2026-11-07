@@ -19,14 +19,9 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-// \addtogroup u2w
-// @{
-// \file
+#pragma once
 
-#ifndef _OPCODES_H
-#define _OPCODES_H
-
-#include "Common.h"
+#include "Platform/Define.h"
 
 // Note: this include need for be sure have full definition of class WorldSession
 //       if this class definition not complite then VS for x64 release use different size for
@@ -166,5 +161,4 @@ OpcodeHandler const& LookupOpcodeHandler(uint16 id);
 // Will work for any opcode, might return `<unknown opcode>`
 char const* LookupOpcodeName(uint16 id);
 
-#endif
 // @}

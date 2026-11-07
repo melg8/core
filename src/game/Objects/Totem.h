@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_TOTEM_H
-#define MANGOSSERVER_TOTEM_H
+#pragma once
 
 #include "Creature.h"
 
@@ -61,4 +60,3 @@ class Totem : public Creature
         TotemType m_type;
         uint32 m_duration;
 };
-#endif

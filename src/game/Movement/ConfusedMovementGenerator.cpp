@@ -17,7 +17,6 @@
  */
 
 #include "ConfusedMovementGenerator.h"
-#include "MapManager.h"
 #include "Creature.h"
 #include "Player.h"
 #include "MoveSplineInit.h"

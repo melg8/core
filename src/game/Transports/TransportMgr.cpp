@@ -20,7 +20,6 @@
 #include "TransportMgr.h"
 #include "Transport.h"
 #include "Geometry.h"
-#include "MoveMap.h"
 #include "SQLStorages.h"
 #include "MoveSplineInitArgs.h"
 #include "Map.h"

@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_DEFINE_H
-#define MANGOS_DEFINE_H
+#pragma once
 
 #include "Platform/CompilerDefs.h"
 #include <cstdint>
@@ -88,4 +87,3 @@ typedef uint32      DWORD;
 
 typedef uint64 OBJECT_HANDLE;
 
-#endif //MANGOS_DEFINE_H

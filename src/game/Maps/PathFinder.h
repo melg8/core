@@ -16,15 +16,13 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_PATH_FINDER_H
-#define MANGOS_PATH_FINDER_H
+#pragma once
 
-#include "Path.h"
 #include "MoveMapSharedDefines.h"
-#include "../recastnavigation/Detour/Include/DetourNavMesh.h"
-#include "../recastnavigation/Detour/Include/DetourNavMeshQuery.h"
 #include "MoveSplineInitArgs.h"
 
+#include "Detour/Include/DetourNavMesh.h"
+#include "Detour/Include/DetourNavMeshQuery.h"
 
 using Movement::Vector3;
 using Movement::PointsArray;
@@ -150,5 +148,3 @@ class PathInfo
 };
 
 typedef PathInfo PathFinder;
-
-#endif

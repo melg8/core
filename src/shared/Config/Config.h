@@ -54,6 +54,10 @@ class Config
     mutable LockType m_configLock;
 };
 
-#define sConfig (MaNGOS::Singleton<Config, Config::Lock>::Instance())
+// Nostalrius : multithreading lock
+
+using ConfigSingleton = MaNGOS::Singleton<Config, Config::Lock>;
+
+#define sConfig ConfigSingleton::Instance()
 
 #endif

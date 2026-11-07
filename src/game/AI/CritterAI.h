@@ -14,8 +14,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_CRITTERAI_H
-#define MANGOS_CRITTERAI_H
+#pragma once
 
 #include "CreatureAI.h"
 
@@ -34,5 +33,3 @@ class CritterAI : public CreatureAI
     private:
         uint32 m_uiCombatTimer = 0;
 };
-
-#endif

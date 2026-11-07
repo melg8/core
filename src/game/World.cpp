@@ -57,8 +57,6 @@
 #include "GameEventMgr.h"
 #include "PoolManager.h"
 #include "Database/DatabaseImpl.h"
-#include "GridNotifiersImpl.h"
-#include "CellImpl.h"
 #include "MapPersistentStateMgr.h"
 #include "WaypointManager.h"
 #include "GMTicketMgr.h"
@@ -75,6 +73,7 @@
 #include "MoveMap.h"
 #include "SpellModMgr.h"
 #include "Anticheat.h"
+#include "Anticheat/MovementAnticheat/MovementAnticheat.h"
 #include "MovementBroadcaster.h"
 #include "HonorMgr.h"
 #include "Anticheat/Anticheat.h"
@@ -85,6 +84,8 @@
 #include "TransportMgr.h"
 #include "RealmZone.h"
 #include "IO/Multithreading/CreateThread.h"
+#include "GridNotifiers.h"
+#include "WardenAnticheat/WardenActions.h"
 
 #include <chrono>
 
@@ -3113,7 +3114,7 @@ void World::SetSessionDisconnected(WorldSession* sess)
 
 void World::AddAsyncTask(std::function<void()> task) {
     std::lock_guard<std::mutex> lock(m_asyncTaskQueueMutex);
-    _asyncTasks.push_back(std::move(task));
+    _asyncTasks.emplace_back(std::move(task));
 }
 
 void World::LogMoneyTrade(ObjectGuid sender, ObjectGuid receiver, uint32 amount, char const* type, uint32 dataInt)

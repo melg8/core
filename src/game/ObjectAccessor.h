@@ -19,10 +19,8 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_OBJECTACCESSOR_H
-#define MANGOS_OBJECTACCESSOR_H
+#pragma once
 
-#include "Common.h"
 #include "Platform/Define.h"
 #include "Policies/Singleton.h"
 #include "Policies/ThreadingModel.h"
@@ -34,8 +32,9 @@
 #include "Chat/MasterPlayer.h"
 #include "Chat/AbstractPlayer.h"
 
-#include <set>
-#include <list>
+#include <unordered_map>
+#include <shared_mutex>
+#include <mutex>
 
 class Unit;
 class WorldObject;
@@ -167,5 +166,3 @@ class ObjectAccessor : public MaNGOS::Singleton<ObjectAccessor, MaNGOS::ClassLev
 };
 
 #define sObjectAccessor ObjectAccessor::Instance()
-
-#endif

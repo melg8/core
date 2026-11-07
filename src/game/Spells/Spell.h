@@ -19,10 +19,8 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __SPELL_H
-#define __SPELL_H
+#pragma once
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "DBCEnums.h"
 #include "ObjectGuid.h"
@@ -34,6 +32,9 @@
 #include <vector>
 #include <memory>
 
+#include "Platform/Define.h"
+
+
 struct SpellScript;
 class WorldSession;
 class WorldPacket;
@@ -42,6 +43,7 @@ class Item;
 class GameObject;
 class Group;
 class Aura;
+class SpellEntry;
 
 enum SpellCastFlags
 {
@@ -631,4 +633,3 @@ class ChannelResetEvent : public BasicEvent
     protected:
         Unit* m_caster;
 };
-#endif

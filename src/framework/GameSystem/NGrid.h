@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_NGRID_H
-#define MANGOS_NGRID_H
+#pragma once
 
 /** NGrid is nothing more than a wrapper of the Grid with an NxN cells
  */
@@ -199,5 +198,3 @@ class NGrid
         GridType i_cells[N][N];
         bool i_GridObjectDataLoaded;
 };
-
-#endif

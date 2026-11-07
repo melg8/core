@@ -19,10 +19,8 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __ADDONHANDLER_H
-#define __ADDONHANDLER_H
+#pragma once
 
-#include "Common.h"
 #include "Policies/Singleton.h"
 
 class WorldPacket;
@@ -36,5 +34,7 @@ class AddonHandler
                                                             //built addon packet
         bool BuildAddonPacket(WorldPacket* Source, WorldPacket* Target);
 };
-#define sAddOnHandler MaNGOS::Singleton<AddonHandler>::Instance()
-#endif
+
+using AddonHandlerSingleton = MaNGOS::Singleton<AddonHandler>;
+
+#define sAddOnHandler AddonHandlerSingleton::Instance()

@@ -16,8 +16,7 @@
 * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef EVENT_GUARDAI_H
-#define EVENT_GUARDAI_H
+#pragma once
 
 #include "CreatureEventAI.h"
 
@@ -32,5 +31,3 @@ public:
 private:
     bool IsAttackingPlayerOrFriendly(Unit const*) const;
 };
-
-#endif

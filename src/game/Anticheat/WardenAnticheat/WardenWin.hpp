@@ -21,8 +21,7 @@
   *
   */
 
-#ifndef __WARDENWIN_HPP_
-#define __WARDENWIN_HPP_
+#pragma once
 
 #include "Warden.hpp"
 #include "WardenScan.hpp"
@@ -162,5 +161,3 @@ class WardenWin final : public Warden
         virtual void GetPlayerInfo(std::string& clock, std::string& fingerprint, std::string& hypervisors,
             std::string& renderer, std::string& proxifier) const;
 };
-
-#endif /*!__WARDENWIN_HPP_*/

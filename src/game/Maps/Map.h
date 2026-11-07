@@ -19,26 +19,24 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_MAP_H
-#define MANGOS_MAP_H
+#pragma once
 
 #include "Common.h"
-#include "Policies/ThreadingModel.h"
 #include "SharedDefines.h"
 #include "GridDefines.h"
 #include "Cell.h"
 #include "Object.h"
 #include "GridMap.h"
-#include "GameSystem/GridRefManager.h"
 #include "MapRefManager.h"
-#include "Utilities/TypeList.h"
-#include "vmap/DynamicTree.h"
 #include "MoveSplineInitArgs.h"
 #include "PacketProcessing.h"
 #include "SQLStorages.h"
 #include "ScriptCommands.h"
 #include "CreatureLinkingMgr.h"
 #include "CreatureGroups.h"
+
+#include "GameSystem/GridRefManager.h"
+#include "vmap/DynamicTree.h"
 
 #include <bitset>
 #include <list>
@@ -1054,4 +1052,3 @@ void Map::Visit(Cell const& cell, TypeContainerVisitor<T, CONTAINER>& visitor)
     if (grid && grid->isGridObjectDataLoaded())
         grid->Visit(cell_x, cell_y, visitor);
 }
-#endif

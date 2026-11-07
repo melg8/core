@@ -19,10 +19,9 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_BYTECONVERTER_H
-#define MANGOS_BYTECONVERTER_H
+#pragma once
 
-/** ByteConverter reverse your byte order.  This is use
+/** ByteConverter reverse byte order. This is use
     for cross platform where they have different endians.
  */
 
@@ -63,5 +62,3 @@ inline void EndianConvert(uint8&) { }
 inline void EndianConvert(int8&)  { }
 inline void EndianConvertReverse(uint8&) { }
 inline void EndianConvertReverse( int8&) { }
-
-#endif

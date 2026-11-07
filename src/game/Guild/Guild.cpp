@@ -29,7 +29,6 @@
 #include "GuildMgr.h"
 #include "Chat.h"
 #include "SocialMgr.h"
-#include "Util.h"
 #include "Language.h"
 #include "World.h"
 #include "Anticheat.h"

@@ -2,8 +2,7 @@
  *
  */
 
-#ifndef MANGOS_FEARMOVEMENTGENERATOR_H
-#define MANGOS_FEARMOVEMENTGENERATOR_H
+#pragma once
 
 #include "MovementGenerator.h"
 #include "ObjectGuid.h"
@@ -70,5 +69,3 @@ public:
 private:
     TimeTracker i_totalFleeTime;
 };
-
-#endif

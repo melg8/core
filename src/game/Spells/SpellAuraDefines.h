@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_SPELLAURADEFINES_H
-#define MANGOS_SPELLAURADEFINES_H
+#pragma once
 
 #define MAX_AURAS 48                                        // 12*4 (byte per aura) slots in UNIT_FIELD_AURA*
 #define MAX_POSITIVE_AURAS 32
@@ -342,5 +341,3 @@ enum AreaAuraType
     AREA_AURA_OWNER,
     AREA_AURA_CREATURE_GROUP,
 };
-
-#endif

@@ -21,7 +21,12 @@ SDComment: TODO: Timers and sounds need confirmation
 SDCategory: Naxxramas
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+#include "Utilities/Random.h"
+
+#include "GridSearchers.h"
+#include "Creature.h"
+#include "TemporarySummon.h"
 #include "naxxramas.h"
 
 enum RazuviousData

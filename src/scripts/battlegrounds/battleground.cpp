@@ -21,7 +21,7 @@ SDComment: Spirit guides in battlegrounds will revive all players every 30 sec
 SDCategory: Battlegrounds
 EndScriptData */
 
-#include "scriptPCH.h"
+
 
 // **** Script Info ****
 // Spiritguides in battlegrounds resurrecting many players at once
@@ -34,6 +34,18 @@ EndScriptData */
 // **** Quick Info ****
 // battleground spiritguides - this script handles gossipHello
 // and JustDied also it let autocast the channel-spell
+
+#include "Creature.h"
+#include "BattleGround.h"
+#include "World.h"
+#include "Spell.h"
+#include "Map.h"
+#include "Player.h"
+#include "ScriptMgr.h"
+#include "ScriptedAI.h"
+
+#include "AI/NullCreatureAI.h"
+#include "Platform/Define.h"
 
 enum
 {

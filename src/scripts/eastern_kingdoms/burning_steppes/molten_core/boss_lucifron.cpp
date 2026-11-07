@@ -9,9 +9,13 @@
  *  
  */
 
-#include "scriptPCH.h"
-#include "Utilities/EventMap.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "ScriptedInstance.h"
 #include "molten_core.h"
+
+#include "Utilities/EventMap.h"
 
 enum eSpells
 {

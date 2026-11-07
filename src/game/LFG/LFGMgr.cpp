@@ -18,7 +18,6 @@
 
 #include "Policies/SingletonImp.h"
 #include "Common.h"
-#include "ProgressBar.h"
 #include "SharedDefines.h"
 #include "Player.h"
 #include "Map.h"
@@ -26,7 +25,6 @@
 #include "World.h"
 #include "WorldPacket.h"
 #include "WorldSession.h"
-#include "Language.h"
 #include "Group.h"
 #include "LFGMgr.h"
 #include "LFGQueue.h"

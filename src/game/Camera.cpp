@@ -20,10 +20,10 @@
  */
 
 #include "Camera.h"
-#include "GridNotifiersImpl.h"
-#include "CellImpl.h"
 #include "Log.h"
+#include "Map.h"
 #include "Player.h"
+#include "GridNotifiers.h"
 
 Camera::Camera(Player* pl) : m_owner(*pl), m_source(pl)
 {

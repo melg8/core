@@ -17,8 +17,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_PACKET_BUILDER_H
-#define MANGOSSERVER_PACKET_BUILDER_H
+#pragma once
 
 class ByteBuffer;
 class WorldPacket;
@@ -35,4 +34,3 @@ namespace Movement
             static void WriteCreate(MoveSpline const& mov, ByteBuffer& data);
     };
 }
-#endif // MANGOSSERVER_PACKET_BUILDER_H

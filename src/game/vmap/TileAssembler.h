@@ -16,16 +16,16 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _TILEASSEMBLER_H_
-#define _TILEASSEMBLER_H_
-
-#include <G3D/Vector3.h>
-#include <G3D/Matrix3.h>
-#include <map>
-#include <set>
+#pragma once
 
 #include "ModelInstance.h"
 #include "WorldModel.h"
+
+#include <G3D/Vector3.h>
+#include <G3D/Matrix3.h>
+
+#include <map>
+#include <set>
 
 namespace VMAP
 {
@@ -33,7 +33,6 @@ namespace VMAP
     This Class is used to convert raw vector data into balanced BSP-Trees.
     To start the conversion call convertWorld().
     */
-    //===============================================
 
     class ModelPosition
     {
@@ -108,4 +107,3 @@ namespace VMAP
             bool convertRawFile(std::string const& pModelFilename);
     };
 }                                                           // VMAP
-#endif                                                      /*_TILEASSEMBLER_H_*/

@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _VMAPTOOLS_H
-#define _VMAPTOOLS_H
+#pragma once
 
 #include <G3D/CollisionDetection.h>
 #include <G3D/AABox.h>
@@ -146,4 +145,3 @@ namespace VMAP
             }
     };
 }
-#endif

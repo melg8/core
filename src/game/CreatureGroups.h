@@ -16,10 +16,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef _CREATURE_GROUPS_H
-#define _CREATURE_GROUPS_H
+#pragma once
 
-#include "Common.h"
 #include "ObjectGuid.h"
 #include <map>
 
@@ -144,5 +142,3 @@ class CreatureGroupsLoadingManager
 };
 
 #define sCreatureGroupsManager (CreatureGroupsLoadingManager::instance())
-
-#endif

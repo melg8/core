@@ -2,11 +2,11 @@
  * This program is free software licensed under GPL version 2
  * Please see the included DOCS/LICENSE.TXT for more information */
 
-#ifndef SC_ESCORTAI_H
-#define SC_ESCORTAI_H
+#pragma once
 
 #include "ScriptedAI.h"
-#include <memory>
+
+#include "Platform/Define.h"
 
 class Quest;
 
@@ -131,4 +131,3 @@ struct npc_escortAI : ScriptedAI
         float m_MaxAssistDistance;
         float m_combatStartX, m_combatStartY, m_combatStartZ, m_combatStartO;
 };
-#endif

@@ -14,13 +14,13 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_GUARD_MGR_H
-#define MANGOS_GUARD_MGR_H
+#pragma once
 
-#include "Common.h"
 #include "SharedDefines.h"
+
 #include "Platform/Define.h"
 #include "Policies/Singleton.h"
+
 #include <unordered_map>
 
 #define GUARD_POST_MAX_CHARGES 10
@@ -44,6 +44,9 @@ struct AreaGuardInfo
                 return creatureIdHorde;
             case ALLIANCE:
                 return creatureIdAlliance;
+            case TEAM_NONE:
+            case TEAM_CROSSFACTION:
+                break;
         }
         return 0;
     }
@@ -63,6 +66,6 @@ class GuardMgr
         uint32 m_uiRechargeTimer;
 };
 
-#define sGuardMgr MaNGOS::Singleton<GuardMgr>::Instance()
+using GuardMgrSingleton = MaNGOS::Singleton<GuardMgr>;
 
-#endif
+#define sGuardMgr GuardMgrSingleton::Instance()

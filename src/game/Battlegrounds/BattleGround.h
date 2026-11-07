@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __BATTLEGROUND_H
-#define __BATTLEGROUND_H
+#pragma once
 
 #include "Common.h"
 #include "Packet.h"
@@ -31,6 +30,14 @@
 #include "WorldStates.h"
 #include "SpellDefines.h"
 #include "BattleGroundDefines.h"
+#include "ByteBuffer.h"
+#include "Map.h"
+#include "ObjectGuid.h"
+#include "SharedDefines.h"
+#include "SpellDefines.h"
+#include "SpellEntry.h"
+#include "WorldPacket.h"
+#include "WorldStates.h"
 
 #include <memory>
 
@@ -41,7 +48,6 @@ class Player;
 class WorldPacket;
 class BattleGroundMap;
 class ChatHandler;
-class SpellInfo;
 
 struct WorldSafeLocsEntry;
 
@@ -415,5 +421,3 @@ class BattleGround
 
         uint32 m_playerSkinReflootId;
 };
-
-#endif

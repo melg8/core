@@ -28,7 +28,7 @@
 #include "WorldSession.h"
 #include "ObjectMgr.h"
 #include "SpellMgr.h"
-#include "Formulas.h"
+#include "World.h"
 #include "SpellAuras.h"
 #include "CreatureAI.h"
 #include "Util.h"

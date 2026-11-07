@@ -21,7 +21,12 @@ SDComment: TODO: confirm how hateful strike work
 SDCategory: Naxxramas
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+#include "Utilities/Random.h"
+
+#include "Creature.h"
+#include "Player.h"
+#include "SpellMgr.h"
 #include "naxxramas.h"
 
 enum PatchwerkData

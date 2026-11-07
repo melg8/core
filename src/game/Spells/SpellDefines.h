@@ -14,8 +14,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __SPELL_DEFINES_H
-#define __SPELL_DEFINES_H
+#pragma once
 
 #include "Common.h"
 
@@ -1344,5 +1343,3 @@ enum SpellCastResultStatus : uint8
     SPELL_RESULT_STATUS_OKAY = 0,
     SPELL_RESULT_STATUS_FAIL = 2
 };
-
-#endif

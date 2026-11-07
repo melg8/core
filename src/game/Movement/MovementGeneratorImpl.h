@@ -19,10 +19,11 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_MOVEMENTGENERATOR_IMPL_H
-#define MANGOS_MOVEMENTGENERATOR_IMPL_H
+#pragma once
 
 #include "MovementGenerator.h"
+
+#include "Creature.h"
 
 template<class MOVEMENT_GEN>
 inline MovementGenerator*
@@ -31,4 +32,3 @@ MovementGeneratorFactory<MOVEMENT_GEN>::Create(void *data) const
     Creature* creature = reinterpret_cast<Creature* >(data);
     return (new MOVEMENT_GEN(*creature));
 }
-#endif

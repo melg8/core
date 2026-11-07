@@ -16,11 +16,12 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef AURA_REMOVAL_MGR
-#define AURA_REMOVAL_MGR
+#pragma once
 
-#include "Common.h"
 #include "Policies/Singleton.h"
+
+#include <map>
+#include <vector>
 
 enum AuraRemovalFlags
 {
@@ -54,6 +55,6 @@ private:
     std::map<uint32, std::vector<AuraRemovalEntry>> m_data;
 };
 
-#define sAuraRemovalMgr MaNGOS::Singleton<AuraRemovalManager>::Instance()
+using AuraRemovalManagerSingleton = MaNGOS::Singleton<AuraRemovalManager>;
 
-#endif
+#define sAuraRemovalMgr AuraRemovalManagerSingleton::Instance()

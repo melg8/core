@@ -13,8 +13,13 @@ EndScriptData */
 npc_lord_ello_ebonlocke
 EndContentData */
 
-#include "scriptPCH.h"
 #include "CreatureGroups.h"
+#include "Utilities/Random.h"
+#include "ObjectMgr.h"
+#include "Player.h"
+#include "ScriptMgr.h"
+#include "ScriptedAI.h"
+#include "ScriptedEscortAI.h"
 
 enum NightmareCorruptionData
 {

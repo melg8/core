@@ -16,11 +16,10 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _MOVE_MAP_SHARED_DEFINES_H
-#define _MOVE_MAP_SHARED_DEFINES_H
+#pragma once
 
 #include "Platform/Define.h"
-#include "../recastnavigation/Detour/Include/DetourNavMesh.h"
+#include "Detour/Include/DetourNavMesh.h"
 
 #define MMAP_MAGIC 0x4d4d4150   // 'MMAP'
 #define MMAP_VERSION 6
@@ -50,5 +49,3 @@ enum NavTerrain
     NAV_UNUSED4      = 0x80
     // we only have 8 bits
 };
-
-#endif  // _MOVE_MAP_SHARED_DEFINES_H

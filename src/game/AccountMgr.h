@@ -19,11 +19,11 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _ACCMGR_H
-#define _ACCMGR_H
+#pragma once
 
 #include "Common.h"
 #include "Policies/Singleton.h"
+
 #include <string>
 #include <memory>
 #include <shared_mutex>
@@ -147,6 +147,6 @@ class AccountMgr
         std::shared_timed_mutex m_accountPersistentDataMutex;
 };
 
-#define sAccountMgr MaNGOS::Singleton<AccountMgr>::Instance()
+using AccountMgrSingleton = MaNGOS::Singleton<AccountMgr>;
 
-#endif
+#define sAccountMgr AccountMgrSingleton::Instance()

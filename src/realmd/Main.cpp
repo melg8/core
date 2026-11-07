@@ -34,7 +34,6 @@
 #include "AuthSocket.h"
 #include "LoginThrottle.h"
 #include "SystemConfig.h"
-#include "revision.h"
 #include "Util.h"
 #include "migrations_list.h"
 #include "ArgparserForServer.h"
@@ -45,6 +44,9 @@
 #include "IO/Networking/AsyncSocketAcceptor.h"
 #include "IO/Timer/AsyncSystemTimer.h"
 #include "IO/Multithreading/CreateThread.h"
+
+#include <openssl/opensslv.h>
+#include <openssl/crypto.h>
 
 #ifdef ENABLE_MAILSENDER
 #include "MailerService.h"

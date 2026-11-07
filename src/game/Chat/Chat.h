@@ -19,12 +19,12 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_CHAT_H
-#define MANGOSSERVER_CHAT_H
+#pragma once
 
 #include "Common.h"
 #include "SharedDefines.h"
 #include "ObjectGuid.h"
+
 #include <memory>
 
 struct AreaTriggerTeleport;
@@ -1193,6 +1193,3 @@ class NullChatHandler : public ChatHandler
         LocaleConstant GetSessionDbcLocale() const override;
         int GetSessionDbLocaleIndex() const override;
 };
-
-
-#endif

@@ -14,10 +14,8 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __CREATURE_DEFINES_H
-#define __CREATURE_DEFINES_H
+#pragma once
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "UnitDefines.h"
 #include "ObjectGuid.h"
@@ -653,5 +651,3 @@ enum TemporaryFactionFlags                                  // Used at real fact
 };
 
 #define MAX_LEVEL_DIFF_FOR_AGGRO_RANGE 25
-
-#endif

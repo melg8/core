@@ -19,10 +19,8 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_CAMERA_H
-#define MANGOSSERVER_CAMERA_H
+#pragma once
 
-#include "Common.h"
 #include "GridDefines.h"
 
 class ViewPoint;
@@ -140,5 +138,3 @@ public:
         CameraCall(&Camera::UpdateVisibilityForOwner);
     }
 };
-
-#endif

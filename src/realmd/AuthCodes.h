@@ -23,8 +23,7 @@
     \ingroup realmd
 */
 
-#ifndef _AUTHCODES_H
-#define _AUTHCODES_H
+#pragma once
 
 enum eAuthCmd : uint8
 {
@@ -124,5 +123,3 @@ enum AccountFlags
     ACCOUNT_FLAG_DEMOS                = 0x10000000,
     ACCOUNT_FLAG_DEATH_KNIGHT_OK      = 0x20000000,
 };
-
-#endif

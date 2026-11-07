@@ -20,32 +20,58 @@
  */
 
 #include "Object.h"
-#include "SharedDefines.h"
-#include "WorldPacket.h"
-#include "Opcodes.h"
-#include "Log.h"
-#include "World.h"
+
+#include "ByteBuffer.h"
+#include "Chat.h"
+#include "Corpse.h"
 #include "Creature.h"
-#include "Player.h"
+#include "CreatureAI.h"
+#include "CreatureDefines.h"
+#include "CreatureLinkingMgr.h"
+#include "DBCEnums.h"
+#include "DBCStructure.h"
+#include "DynamicObject.h"
+#include "GameObject.h"
 #include "GameObjectAI.h"
-#include "ObjectMgr.h"
+#include "GameObjectDefines.h"
+#include "Geometry.h"
+#include "GridMap.h"
+#include "GridMapDefines.h"
+#include "GridNotifiers.h"
+#include "IVMapManager.h"
+#include "InstanceData.h"
+#include "Item.h"
+#include "Language.h"
+#include "Log.h"
+#include "LootMgr.h"
+#include "Map.h"
+#include "MapReference.h"
+#include "MonsterChatBuilder.h"
+#include "MotionMaster.h"
+#include "MoveMapSharedDefines.h"
+#include "MovementBroadcaster.h"
 #include "ObjectGuid.h"
+#include "ObjectMgr.h"
+#include "ObjectPosSelector.h"
+#include "PathFinder.h"
+#include "Pet.h"
+#include "Player.h"
+#include "PlayerBroadcaster.h"
+#include "Progression.h"
+#include "ReputationMgr.h"
+#include "SharedDefines.h"
+#include "SpellAuraDefines.h"
+#include "TemporarySummon.h"
+#include "Transport.h"
+#include "Unit.h"
+#include "UnitDefines.h"
 #include "UpdateData.h"
+#include "UpdateFields.h"
 #include "UpdateMask.h"
 #include "Util.h"
-#include "Geometry.h"
-#include "Transport.h"
-#include "MotionMaster.h"
-#include "VMapFactory.h"
-#include "CellImpl.h"
-#include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
-#include "Language.h"
-#include "Geometry.h"
-#include "ObjectPosSelector.h"
-#include "MoveMapSharedDefines.h"
-#include "PathFinder.h"
-#include "TemporarySummon.h"
+#include "World.h"
+#include "WorldPacket.h"
+#include "WorldSession.h"
 #include "ZoneScriptMgr.h"
 #include "InstanceData.h"
 #include "Chat.h"
@@ -56,8 +82,24 @@
 #include "PlayerBroadcaster.h"
 #include "Utilities/Random.h"
 
-////////////////////////////////////////////////////////////
-// Methods of class MovementInfo
+#include "GameSystem/GridReference.h"
+#include "GameSystem/TypeContainerVisitor.h"
+#include "MovementAnticheat/MovementAnticheat.h"
+#include "PlayerSubsystems/PlayerCheatOptions.h"
+
+#include <G3D/Vector3.h>
+
+#include <cmath>
+#include <cstdlib>
+#include <map>
+#include <memory>
+#include <mutex>
+#include <sstream>
+#include <cstdarg>
+#include <utility>
+#include <cstring>
+
+class Quest;
 
 void MovementInfo::Read(ByteBuffer& data)
 {

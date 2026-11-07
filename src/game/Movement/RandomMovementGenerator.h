@@ -16,10 +16,11 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_RANDOMMOTIONGENERATOR_H
-#define MANGOS_RANDOMMOTIONGENERATOR_H
+#pragma once
 
+#include "Creature.h"
 #include "MovementGenerator.h"
+
 #include "G3D/Vector3.h"
 
 class RandomMovementGenerator
@@ -61,5 +62,3 @@ class RandomMovementGenerator
         uint32 i_expireTime;
         uint8 i_wanderSteps;
 };
-
-#endif

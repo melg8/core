@@ -19,8 +19,9 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef CHARACTERDATABASECLEANER_H
-#define CHARACTERDATABASECLEANER_H
+#pragma once
+
+#include "Platform/Define.h"
 
 namespace CharacterDatabaseCleaner
 {
@@ -47,5 +48,3 @@ namespace CharacterDatabaseCleaner
     void CleanCharacterSkills();
     void CleanCharacterSpell();
 }
-
-#endif

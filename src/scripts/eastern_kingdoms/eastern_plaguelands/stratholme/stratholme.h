@@ -1,5 +1,4 @@
-#ifndef DEF_STRATHOLME_H
-#define DEF_STRATHOLME_H
+#pragma once
 
 enum
 {
@@ -36,4 +35,3 @@ enum
 #define SPELL_SUMMON_POSTMASTER           24627
 
 #define NPC_UNDEAD_POSTMAN                11142
-#endif

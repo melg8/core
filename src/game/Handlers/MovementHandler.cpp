@@ -19,7 +19,6 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "Common.h"
 #include "WorldPacket.h"
 #include "WorldSession.h"
 #include "Opcodes.h"
@@ -36,7 +35,7 @@
 #include "packet_builder.h"
 #include "MovementPacketSender.h"
 #include "MoveSpline.h"
-#include "Geometry.h"
+#include "MovementAnticheat/MovementAnticheat.h"
 
 void WorldSession::HandleMoveWorldportAckOpcode(NullClientPacket const& /*packet*/)
 {

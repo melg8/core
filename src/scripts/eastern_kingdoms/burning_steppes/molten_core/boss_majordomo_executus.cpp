@@ -1,5 +1,12 @@
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+#include "Utilities/Random.h"
+
+#include "Creature.h"
+#include "ScriptedInstance.h"
+#include "World.h"
 #include "molten_core.h"
+
+#include "Platform/Define.h"
 
 #define POINT_RESPAWN               1
 #define POINT_SUMMON1               2

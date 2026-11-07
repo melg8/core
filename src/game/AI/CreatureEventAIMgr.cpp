@@ -19,7 +19,6 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "Common.h"
 #include "Database/DatabaseEnv.h"
 #include "SQLStorages.h"
 #include "CreatureEventAI.h"
@@ -27,8 +26,6 @@
 #include "ObjectMgr.h"
 #include "ProgressBar.h"
 #include "Policies/SingletonImp.h"
-#include "ObjectGuid.h"
-#include "GridDefines.h"
 #include "Conditions.h"
 #include "ScriptMgr.h"
 

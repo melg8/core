@@ -25,8 +25,17 @@ EndScriptData */
 mobs_ghoul_flayer
 EndContentData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+#include "Utilities/Random.h"
+
 #include "CreatureGroups.h"
+#include "GameObjectAI.h"
+#include "GridNotifiers.h"
+#include "GridSearchers.h"
+#include "Map.h"
+#include "Player.h"
+#include "ScriptMgr.h"
+#include "ScriptedGossip.h"
 
 // Eris Havenfire event
 

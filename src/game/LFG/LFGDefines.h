@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _LFG_DEFINES_H
-#define _LFG_DEFINES_H
+#pragma once
 
 enum LfgRoles
 {
@@ -65,5 +64,3 @@ enum MeetingstoneFailedStatus
     MEETINGSTONE_FAIL_RAID_GROUP                            = 3,
     //MEETINGSTONE_FAIL_NONE_UNK                              = 4 [-ZERO]
 };
-
-#endif

@@ -1,9 +1,8 @@
-#ifndef MASTERPLAYER_H
-#define MASTERPLAYER_H
+#pragma once
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "ObjectGuid.h"
+
 #include "Chat/AbstractPlayer.h"
 
 class PlayerSocial;
@@ -155,5 +154,3 @@ protected:
     PlayerMails m_mail;
     ItemMap mMitems;
 };
-
-#endif // MASTERPLAYER_H

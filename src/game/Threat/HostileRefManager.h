@@ -19,18 +19,15 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _HOSTILEREFMANAGER
-#define _HOSTILEREFMANAGER
+#pragma once
 
-#include "Common.h"
+#include "Platform/Define.h"
 #include "Utilities/LinkedReference/RefManager.h"
 
 class Unit;
 class ThreatManager;
 class HostileReference;
 class SpellEntry;
-
-//=================================================
 
 class HostileRefManager : public RefManager<Unit, ThreatManager>
 {
@@ -72,5 +69,3 @@ class HostileRefManager : public RefManager<Unit, ThreatManager>
     private:
         Unit* iOwner;                                       // owner of manager variable, back ref. to it, always exist
 };
-//=================================================
-#endif

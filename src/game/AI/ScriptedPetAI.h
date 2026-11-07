@@ -3,10 +3,9 @@
 * Copyright (C) 2005-2012 MaNGOS <http://getmangos.com/>
 */
 
-#ifndef SCRIPTED_PETAI_H
-#define SCRIPTED_PETAI_H
+#pragma once
 
-#include "ScriptedAI.h"
+#include "CreatureAI.h"
 
 // Using CreatureAI for now. Might change later and use PetAI (need to export for dll first)
 class ScriptedPetAI : public CreatureAI
@@ -40,5 +39,3 @@ public:
 protected:
     void ResetPetCombat();
 };
-
-#endif

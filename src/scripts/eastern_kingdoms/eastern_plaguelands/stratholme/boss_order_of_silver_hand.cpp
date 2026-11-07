@@ -21,7 +21,11 @@ SDComment: Basic script to have support for Horde paladin epic mount (quest 9737
 SDCategory: Stratholme
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "Player.h"
+#include "ScriptedInstance.h"
 #include "stratholme.h"
 
 /*#####

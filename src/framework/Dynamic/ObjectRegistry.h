@@ -19,16 +19,13 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_OBJECTREGISTRY_H
-#define MANGOS_OBJECTREGISTRY_H
+#pragma once
 
-#include "Platform/Define.h"
-#include "Policies/Singleton.h"
+#include "Policies/CreationPolicy.h"
 
 #include <string>
 #include <vector>
 #include <map>
-#include <unordered_map>
 
 /** ObjectRegistry holds all registry item of the same type
  */
@@ -108,4 +105,3 @@ class ObjectRegistry
             i_registeredObjects.clear();
         }
 };
-#endif

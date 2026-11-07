@@ -19,10 +19,9 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _UPDATEFIELDS_AUTO_H
-#define _UPDATEFIELDS_AUTO_H
+#pragma once
 
-#include "Common.h"
+#include "Platform/Define.h"
 
 #if SUPPORTED_CLIENT_BUILD >= CLIENT_BUILD_1_12_1
 #include "UpdateFields_1_12_1.h"
@@ -154,5 +153,3 @@ namespace UpdateFields
     UpdateFieldData const* GetUpdateFieldDataByName(char const* name);
     UpdateFieldData const* GetUpdateFieldDataByTypeMaskAndOffset(uint8 objectTypeMask, uint16 offset);
 };
-
-#endif

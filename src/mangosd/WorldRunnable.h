@@ -23,10 +23,7 @@
 // @{
 // \file
 
-#ifndef __WORLDRUNNABLE_H
-#define __WORLDRUNNABLE_H
-
-#include "Common.h"
+#pragma once
 
 // Heartbeat thread for the World
 class WorldRunnable
@@ -34,5 +31,3 @@ class WorldRunnable
     public:
         void operator()();
 };
-#endif
-// @}

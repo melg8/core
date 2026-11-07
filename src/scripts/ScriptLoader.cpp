@@ -3,6 +3,8 @@
 * Please see the included DOCS/LICENSE.TXT for more information */
 
 #include "scriptPCH.h"
+// AI system
+void AddSC_npc_escort();
 
 //battlegrounds
 void AddSC_battleground();

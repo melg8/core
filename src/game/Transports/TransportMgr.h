@@ -16,12 +16,14 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef TRANSPORTMGR_H
-#define TRANSPORTMGR_H
+#pragma once
+
+#include "DBCStructure.h"
+#include "spline.h"
+#include "Policies/Singleton.h"
 
 #include <G3D/Quat.h>
-#include "spline.h"
-#include "DBCStores.h"
+
 #include <map>
 
 class Map;
@@ -29,19 +31,16 @@ class ShipTransport;
 struct GameObjectInfo;
 
 typedef std::map<uint32, TransportAnimationEntry const*> TransportPathContainer;
-// typedef std::map<uint32, TransportRotationEntry const*> TransportPathRotationContainer;
 
 struct TransportAnimation
 {
     TransportAnimation() : TotalTime(0) { }
 
     TransportPathContainer Path;
-    // TransportPathRotationContainer Rotations;
     uint32 TotalTime;
 
     TransportAnimationEntry const* GetPrevAnimNode(uint32 time) const;
     TransportAnimationEntry const* GetNextAnimNode(uint32 time) const;
-    // TransportRotationEntry const* GetAnimRotation(uint32 time) const; - wotlk onwards
 };
 
 typedef std::map<uint32, TransportAnimation> TransportAnimationContainer;
@@ -144,6 +143,6 @@ private:
     ElevatorTransportMap m_elevatorTransportsByMap;
 };
 
-#define sTransportMgr MaNGOS::Singleton<TransportMgr>::Instance()
+using TransportMgrSingleton = MaNGOS::Singleton<TransportMgr>;
 
-#endif // TRANSPORTMGR_H
+#define sTransportMgr TransportMgrSingleton::Instance()

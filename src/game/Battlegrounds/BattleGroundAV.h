@@ -19,10 +19,8 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __BATTLEGROUNDAV_H
-#define __BATTLEGROUNDAV_H
+#pragma once
 
-#include "Common.h"
 #include "BattleGround.h"
 
 #define BG_AV_MAX_NODE_DISTANCE             25              // distance in which players are still counted in range of a banner (for alliance towers this is calculated from the center of the tower)
@@ -590,5 +588,3 @@ class BattleGroundAV : public BattleGround
         uint32 m_repSurviveTower;
         ObjectGuid m_shredderOwners[BG_TEAMS_COUNT];
 };
-
-#endif

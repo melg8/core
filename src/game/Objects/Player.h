@@ -19,52 +19,90 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _PLAYER_H
-#define _PLAYER_H
+#pragma once
 
-#include "Common.h"
-#include "Unit.h"
-#include "Database/DatabaseEnv.h"
-#include "GroupReference.h"
-#include "MapReference.h"
-#include "WorldSession.h"
-#include "Pet.h"
-#include "Item.h"
-#include "Util.h"                                           // for Tokens typedef
-#include "ReputationMgr.h"
+#include "AbstractPlayer.h"
 #include "BattleGroundDefines.h"
-#include "SharedDefines.h"
+#include "Camera.h"
+#include "Common.h"
+#include "DBCEnums.h"
 #include "GameObjectDefines.h"
-#include "SpellMgr.h"
+#include "GroupReference.h"
 #include "HonorMgr.h"
-#include "PlayerTaxi.h"
+#include "Item.h"
+#include "ItemDefines.h"
+#include "ItemPrototype.h"
+#include "Log.h"
+#include "LootMgr.h"
+#include "MapReference.h"
 #include "MirrorTimer.h"
+#include "MovementInfo.h"
+#include "Object.h"
+#include "ObjectGuid.h"
+#include "Pet.h"
+#include "PlayerTaxi.h"
+#include "Progression.h"
+#include "QuestDef.h"
+#include "ReputationMgr.h"
+#include "SharedDefines.h"
+#include "SpellAuraDefines.h"
+#include "SpellCaster.h"
+#include "SpellDefines.h"
+#include "SpellMgr.h"
+#include "Unit.h"
+#include "UnitDefines.h"
+#include "WorldSession.h"
 
-#include <string>
+#include "GameSystem/GridReference.h"
+#include "Platform/Define.h"
+
+#include <ctime>
+#include <functional>
+#include <list>
+#include <map>
+#include <memory>
+#include <mutex>
+#include <set>
+#include <shared_mutex>
+#include <unordered_map>
 #include <utility>
 #include <vector>
-#include <functional>
-#include <shared_mutex>
 
-struct Mail;
-struct ItemPrototype;
-struct AuraSaveStruct;
-struct SpellModifier;
-class Group;
+class Aura;
+class BattleGround;
 class Channel;
+class Corpse;
 class Creature;
-class PlayerMenu;
-class UpdateMask;
-class SpellCastTargets;
-class PlayerSocial;
-class TradeData;
 class DungeonPersistentState;
-class Spell;
-class Item;
-class ZoneScript;
+class GameObject;
+class Group;
+class MovementAnticheat;
+class Player;
 class PlayerAI;
 class PlayerBroadcaster;
-class BattleGround;
+class PlayerMenu;
+class PlayerSocial;
+class QueryResult;
+class Spell;
+class SpellAuraHolder;
+class SpellCastTargets;
+class SpellEntry;
+class SqlQueryHolder;
+class TradeData;
+class UpdateData;
+class UpdateMask;
+class WorldPacket;
+
+enum PlayerCheatOptions : uint16;
+
+struct AuraSaveStruct;
+struct CreatureInfo;
+struct FactionEntry;
+struct LiquidTypeEntry;
+struct PlayerGmSubsystem;
+struct SpellModifier;
+struct TrainerSpell;
+
 
 #define PLAYER_MAX_SKILLS           127
 #define PLAYER_EXPLORED_ZONES_SIZE  64
@@ -416,22 +454,6 @@ enum ActivateTaxiReplies : uint32
     ERR_TAXINOTSTANDING             = 12
 };
 
-enum PlayerCheatOptions : uint16
-{
-    PLAYER_CHEAT_FLY               = 0x001,
-    PLAYER_CHEAT_NO_COOLDOWN       = 0x002,
-    PLAYER_CHEAT_NO_CAST_TIME      = 0x004,
-    PLAYER_CHEAT_NO_POWER          = 0x008,
-    PLAYER_CHEAT_DEBUFF_IMMUNITY   = 0x010,
-    PLAYER_CHEAT_ALWAYS_CRIT       = 0x020,
-    PLAYER_CHEAT_NO_CHECK_CAST     = 0x040,
-    PLAYER_CHEAT_ALWAYS_PROC       = 0x080,
-    PLAYER_CHEAT_TRIGGER_PASS      = 0x100,
-    PLAYER_CHEAT_IGNORE_TRIGGERS   = 0x200,
-    PLAYER_CHEAT_DEBUG_TARGET_INFO = 0x400,
-    PLAYER_CHEAT_FIXED_Z           = 0x800,
-};
-
 typedef std::map<uint32, QuestStatusData> QuestStatusMap;
 
 enum QuestSlotOffsets
@@ -717,8 +739,6 @@ struct RacialSpells
     uint32 spells[MAX_RACIAL_SPELLS] = { 0 };
 };
 
-class MovementAnticheat;
-
 struct ScheduledTeleportData
 {
     ScheduledTeleportData() = default;
@@ -792,23 +812,34 @@ class Player final: public Unit
         /***                 GAMEMASTER SYSTEM                 ***/
         /*********************************************************/
 
-    private:
-        uint32 m_gmInvisibilityLevel;
-        uint32 m_currentTicketCounter;
-        uint16 m_cheatOptions;
     public:
-        bool IsAcceptTickets() const { return GetSession()->GetSecurity() >= SEC_GAMEMASTER && (m_ExtraFlags & PLAYER_EXTRA_GM_ACCEPT_TICKETS); }
-        void SetAcceptTicket(bool on) { if (on) m_ExtraFlags |= PLAYER_EXTRA_GM_ACCEPT_TICKETS; else m_ExtraFlags &= ~PLAYER_EXTRA_GM_ACCEPT_TICKETS; }
-        bool IsGameMaster() const { return m_ExtraFlags & PLAYER_EXTRA_GM_ON; }
+        std::unique_ptr<PlayerGmSubsystem> m_gmSubsystem;
+    public:
+        [[nodiscard]] uint16 GetCheatOptions() const;
+        [[nodiscard]] bool HasCheatOption(PlayerCheatOptions o) const;
+        [[nodiscard]] uint32 GetGMTicketCounter() const;
+        [[nodiscard]] uint32 GetGMInvisibilityLevel() const;
+
+        void EnableCheatOption(PlayerCheatOptions o);
+        void RemoveCheatOption(PlayerCheatOptions o);
+        void SetCheatOption(PlayerCheatOptions o, bool on);
+        void SetGMTicketCounter(uint32 counter);
+        void SetGMInvisibilityLevel(uint32 level);
+
+    public:
+        bool IsAcceptTickets() const;
+        bool IsGameMaster() const;
+        bool IsGMChat() const;
+        bool IsTaxiCheater() const;
+        bool IsGMVisible() const;
+
+        void SetAcceptTicket(bool on);
         void SetGameMaster(bool on, bool notify = false);
-        bool IsGMChat() const { return GetSession()->GetSecurity() >= SEC_MODERATOR && (m_ExtraFlags & PLAYER_EXTRA_GM_CHAT); }
         void SetGMChat(bool on, bool notify = false);
-        bool IsTaxiCheater() const { return m_ExtraFlags & PLAYER_EXTRA_TAXICHEAT; }
-        void SetTaxiCheater(bool on) { if (on) m_ExtraFlags |= PLAYER_EXTRA_TAXICHEAT; else m_ExtraFlags &= ~PLAYER_EXTRA_TAXICHEAT; }
-        void SetPvPDeath(bool on) { if (on) m_ExtraFlags |= PLAYER_EXTRA_PVP_DEATH; else m_ExtraFlags &= ~PLAYER_EXTRA_PVP_DEATH; }
-        bool IsGMVisible() const { return !(m_ExtraFlags & PLAYER_EXTRA_GM_INVISIBLE); }
+        void SetTaxiCheater(bool on);
         void SetGMVisible(bool on, bool notify = false);
 
+        void SetPvPDeath(bool on);
         void SetCheatFly(bool on, bool notify = false);
         void SetCheatFixedZ(bool on, bool notify = false);
         void SetCheatBeastmaster(bool on, bool notify = false);
@@ -823,22 +854,6 @@ class Player final: public Unit
         void SetCheatTriggerPass(bool on, bool notify = false);
         void SetCheatIgnoreTriggers(bool on, bool notify = false);
         void SetCheatDebugTargetInfo(bool on, bool notify = false);
-        uint16 GetCheatOptions() const { return m_cheatOptions; }
-        bool HasCheatOption(PlayerCheatOptions o) const { return (m_cheatOptions & o); }
-        void EnableCheatOption(PlayerCheatOptions o)    { m_cheatOptions |= o; }
-        void RemoveCheatOption(PlayerCheatOptions o)    { m_cheatOptions &= (~o); }
-        void SetCheatOption(PlayerCheatOptions o, bool on)
-        {
-            if (on)
-                EnableCheatOption(o);
-            else
-                RemoveCheatOption(o);
-        }
-
-        uint32 GetGMInvisibilityLevel() const { return m_gmInvisibilityLevel; }
-        void SetGMInvisibilityLevel(uint32 level) { m_gmInvisibilityLevel = level; }
-        uint32 GetGMTicketCounter() const { return m_currentTicketCounter; }
-        void SetGMTicketCounter(uint32 counter) { m_currentTicketCounter = counter; }
 
         /*********************************************************/
         /***                    STORAGE SYSTEM                 ***/
@@ -846,7 +861,7 @@ class Player final: public Unit
 
     private:
         ObjectGuid m_lootGuid;
-        Item* m_items[PLAYER_SLOTS_COUNT];
+        std::vector<Item*> m_items = std::vector<Item*>(PLAYER_SLOTS_COUNT, nullptr);
         uint32 m_currentBuybackSlot;
 
         std::vector<Item*> m_itemUpdateQueue;
@@ -1439,10 +1454,12 @@ class Player final: public Unit
         bool m_canDualWield;
         float m_ammoDPS;
         float m_personalXpRate;
+        uint32 m_foodEmoteTimer;
 
         void RegenerateAll();
         void Regenerate(Powers power);
         void RegenerateHealth();
+        void HandleFoodEmotes(uint32 diff);
 
         static float GetHealthBonusFromStamina(float stamina);
         static float GetManaBonusFromIntellect(float intellect);
@@ -2513,5 +2530,3 @@ inline Player const* ToPlayer(Object const* object)
 
 void AddItemsSetItem(Player*player,Item* item);
 void RemoveItemsSetItem(Player*player,ItemPrototype const* proto);
-
-#endif

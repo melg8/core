@@ -19,29 +19,24 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-// \addtogroup world The World
-// @{
-// \file
-
-#ifndef __WORLD_H
-#define __WORLD_H
+#pragma once
 
 #include "Common.h"
 #include "Timer.h"
-#include "Policies/Singleton.h"
 #include "SharedDefines.h"
 #include "ObjectGuid.h"
-#include "Chat/AbstractPlayer.h"
 #include "WorldPacket.h"
-#include "Multithreading/Messager.h"
 #include "LFGQueue.h"
 #include "LockedQueue.h"
 
 #include <atomic>
+#include "Policies/Singleton.h"
+#include "Chat/AbstractPlayer.h"
+#include "Multithreading/Messager.h"
+
 #include <map>
 #include <set>
 #include <list>
-#include <chrono>
 #include <memory>
 #include <unordered_map>
 #include <thread>
@@ -1010,6 +1005,6 @@ class World
 extern uint32 realmID;
 extern std::string realmName;
 
-#define sWorld MaNGOS::Singleton<World>::Instance()
-#endif
-// @}
+using WorldSingleton = MaNGOS::Singleton<World>;
+
+#define sWorld WorldSingleton::Instance()

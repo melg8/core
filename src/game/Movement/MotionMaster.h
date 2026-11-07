@@ -19,10 +19,11 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_MOTIONMASTER_H
-#define MANGOS_MOTIONMASTER_H
+#pragma once
 
-#include "Common.h"
+#include "Platform/Define.h"
+
+#include <sstream>
 #include <stack>
 #include <vector>
 
@@ -177,4 +178,3 @@ class MotionMaster : std::stack<MovementGenerator *>
         ExpireList *m_expList;
         uint8       m_cleanFlag;
 };
-#endif

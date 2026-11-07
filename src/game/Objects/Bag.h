@@ -19,10 +19,8 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_BAG_H
-#define MANGOS_BAG_H
+#pragma once
 
-#include "Common.h"
 #include "ItemPrototype.h"
 #include "Item.h"
 
@@ -77,5 +75,3 @@ inline Item* NewItemOrBag(ItemPrototype const* proto)
 
     return new Item;
 }
-
-#endif

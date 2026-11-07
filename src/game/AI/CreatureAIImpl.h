@@ -19,11 +19,11 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef CREATUREAIIMPL_H
-#define CREATUREAIIMPL_H
+#pragma once
 
 #include "CreatureAI.h"
 #include "Utilities/Random.h"
+#include "Util.h"
 
 template<class REAL_AI>
 inline CreatureAI*
@@ -323,5 +323,3 @@ T const& RAND(T const& v1, T const& v2, T const& v3, T const& v4, T const& v5, T
         case 15: return v16;
     }
 }
-
-#endif

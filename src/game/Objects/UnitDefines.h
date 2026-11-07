@@ -14,10 +14,9 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __UNIT_DEFINES_H
-#define __UNIT_DEFINES_H
+#pragma once
 
-#include "Common.h"
+#include "Platform/Define.h"
 
 enum UnitMoveType
 {
@@ -844,6 +843,3 @@ enum SpellAuraProcResult
     SPELL_AURA_PROC_FAILED          = 1,                    // proc failed - if at least one aura failed the proc, charges won't be taken
     SPELL_AURA_PROC_CANT_TRIGGER    = 2                     // aura can't trigger - skip charges taking, move to next aura if exists
 };
-
-
-#endif

@@ -22,12 +22,11 @@
  * and lore are copyrighted by Blizzard Entertainment, Inc.
  */
 
-#ifndef MANGOS_H_WEATHER
-#define MANGOS_H_WEATHER
+#pragma once
 
-#include "Common.h"
 #include "SharedDefines.h"
 #include "Timer.h"
+#include "Policies/Singleton.h"
 
 class Player;
 class Map;
@@ -161,6 +160,6 @@ class WeatherMgr
         WeatherZoneMap      mWeatherZoneMap;
 };
 
-#define sWeatherMgr MaNGOS::Singleton<WeatherMgr>::Instance()
+using WeatherMgrSingleton = MaNGOS::Singleton<WeatherMgr>;
 
-#endif
+#define sWeatherMgr WeatherMgrSingleton::Instance()

@@ -16,11 +16,14 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_MOVESPLINEINIT_ARGS_H
-#define MANGOSSERVER_MOVESPLINEINIT_ARGS_H
+#pragma once
 
-#include "MoveSplineFlag.h"
+#include "typedefs.h"
+
+#include <vector>
+
 #include <G3D/Vector3.h>
+#include "MoveSplineFlag.h"
 
 class Unit;
 
@@ -65,5 +68,3 @@ namespace Movement
             bool _checkPathBounds() const;
     };
 }
-
-#endif // MANGOSSERVER_MOVESPLINEINIT_ARGS_H

@@ -17,7 +17,6 @@
 */
 
 #include "InstanceStatistics.h"
-#include "Policies/Singleton.h"
 #include "Database/DatabaseEnv.h"
 #include "Policies/SingletonImp.h"
 #include "Map.h"

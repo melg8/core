@@ -27,6 +27,9 @@
 #include "Policies/ThreadingModel.h"
 #include "SqlPreparedStatement.h"
 #include "ThreadSpecificPtr.h"
+
+#include "Database/QueryResult.h"
+
 #include <memory>
 #include <thread>
 #include <atomic>

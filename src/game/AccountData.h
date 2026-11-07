@@ -19,11 +19,10 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _ACCDATA_H
-#define _ACCDATA_H
+#pragma once
 
-#include "Common.h"
-#include "Policies/Singleton.h"
+#include "Platform/Define.h"
+
 #include <string>
 
 namespace OldAccountData // 1.8 and earlier
@@ -38,7 +37,7 @@ namespace OldAccountData // 1.8 and earlier
         NUM_ACCOUNT_DATA_TYPES          = 5
     };
 
-    constexpr uint32 GLOBAL_CACHE_MASK = 0xD;
+    constexpr uint32_t GLOBAL_CACHE_MASK = 0xD;
     constexpr uint32 PER_CHARACTER_CACHE_MASK = 0x30;
 }
 
@@ -104,5 +103,3 @@ struct AccountData
     time_t timestamp;
     std::string data;
 };
-
-#endif

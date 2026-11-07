@@ -14,11 +14,11 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _TRADE_DATA_H
-#define _TRADE_DATA_H
+#pragma once
 
-#include "Common.h"
 #include "ObjectGuid.h"
+
+#include "Platform/Define.h"
 
 class Player;
 class Item;
@@ -99,5 +99,3 @@ private:                                                // fields
     time_t     m_lastModificationTime;                  // to prevent scam (change gold before the other validates)
     time_t     m_scamPreventionDelay;                    // to prevent scam, set a delay in milliseconds (CANNOT be less than or equal to 10ms) before accepting trade.
 };
-
-#endif

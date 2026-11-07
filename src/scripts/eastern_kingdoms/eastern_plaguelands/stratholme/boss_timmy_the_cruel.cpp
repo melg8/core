@@ -21,14 +21,19 @@ SDComment:
 SDCategory: Stratholme
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "ScriptMgr.h"
+
+#include "Platform/Define.h"
 
 enum : uint32
 {
-    SAY_SPAWN          = 6150,
+    SAY_SPAWN = 6150,
     SPELL_RAVENOUSCLAW = 17470,
-    SPELL_ENRAGE       = 8599,
-    TIMMY_ENTRY        = 10808
+    SPELL_ENRAGE = 8599,
+    TIMMY_ENTRY = 10808
 };
 
 struct boss_timmy_the_cruelAI : public ScriptedAI

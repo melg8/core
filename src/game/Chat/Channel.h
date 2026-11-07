@@ -19,16 +19,14 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _CHANNEL_H
-#define _CHANNEL_H
+#pragma once
 
-#include "Common.h"
 #include "ObjectGuid.h"
 #include "WorldPacket.h"
 #include "Opcodes.h"
+
 #include "Chat/AbstractPlayer.h"
 
-#include <list>
 #include <map>
 #include <string>
 
@@ -299,4 +297,3 @@ class Channel
         typedef     std::set<ObjectGuid> BannedList;
         BannedList  m_banned;
 };
-#endif

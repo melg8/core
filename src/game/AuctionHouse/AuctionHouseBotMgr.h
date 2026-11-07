@@ -1,8 +1,8 @@
-#ifndef _AUCTION_HOUSE_BOT_MGR_H
-#define _AUCTION_HOUSE_BOT_MGR_H
+#pragma once
+
+#include "AuctionHouseMgr.h"
 
 #include "Policies/Singleton.h"
-#include "SharedDefines.h"
 
 #include <vector>
 #include <memory>
@@ -45,5 +45,6 @@ class AuctionHouseBotMgr
         bool m_loaded = false;
 };
 
-#define sAuctionHouseBotMgr MaNGOS::Singleton< AuctionHouseBotMgr >::Instance()
-#endif
+using AuctionHouseBotMgrSingleton = MaNGOS::Singleton<AuctionHouseBotMgr>;
+
+#define sAuctionHouseBotMgr AuctionHouseBotMgrSingleton::Instance()

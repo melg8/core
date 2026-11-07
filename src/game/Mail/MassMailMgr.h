@@ -34,11 +34,10 @@
  *
  */
 
-#ifndef MANGOS_MASS_MAIL_MGR_H
-#define MANGOS_MASS_MAIL_MGR_H
+#pragma once
 
-#include "Common.h"
 #include "Mail.h"
+
 #include "Policies/Singleton.h"
 
 #include <memory>
@@ -123,7 +122,6 @@ class MassMailMgr
         MassMailList m_massMails;
 };
 
-#define sMassMailMgr MaNGOS::Singleton<MassMailMgr>::Instance()
+using MassMailMgrSingleton = MaNGOS::Singleton<MassMailMgr>;
 
-#endif
-/*! @} */
+#define sMassMailMgr MassMailMgrSingleton::Instance()

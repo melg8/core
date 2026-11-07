@@ -21,8 +21,13 @@ SDComment:
 SDCategory: Stratholme
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+
+#include "Creature.h"
+#include "ScriptedInstance.h"
 #include "stratholme.h"
+
+#include "Platform/Define.h"
 
 enum
 {
@@ -94,6 +99,7 @@ struct boss_ramstein_the_gorgerAI : public ScriptedAI
         DoMeleeAttackIfReady();
     }
 };
+
 CreatureAI* GetAI_boss_ramstein_the_gorger(Creature* pCreature)
 {
     return new boss_ramstein_the_gorgerAI(pCreature);

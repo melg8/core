@@ -14,8 +14,7 @@
 * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef MANGOS_PLAYERBOTAI_H
-#define MANGOS_PLAYERBOTAI_H
+#pragma once
 
 #include "PlayerAI.h"
 #include "WorldSession.h"
@@ -96,4 +95,3 @@ class PopulateAreaBotAI: public PlayerBotAI
         float _radius;
         uint32 _team;
 };
-#endif

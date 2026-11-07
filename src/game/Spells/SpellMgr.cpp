@@ -25,7 +25,6 @@
 #include "ProgressBar.h"
 #include "DBCStores.h"
 #include "World.h"
-#include "Spell.h"
 #include "ScriptMgr.h"
 #include "Unit.h"
 #include "BattleGround.h"

@@ -24,8 +24,6 @@ EndScriptData */
 /* ContentData
 EndContentData */
 
-#include "scriptPCH.h"
-
 void AddSC_alterac_mountains()
 {
 

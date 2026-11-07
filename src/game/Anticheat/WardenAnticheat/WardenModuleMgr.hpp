@@ -21,13 +21,11 @@
   *
   */
 
-#ifndef __WARDENMODULEMGR_HPP_
-#define __WARDENMODULEMGR_HPP_
+#pragma once
 
 #include "WardenModule.hpp"
 
 #include "Policies/Singleton.h"
-#include "Platform/Define.h"
 
 #include <vector>
 
@@ -44,6 +42,6 @@ public:
     WardenModule const* GetMacModule() const;
 };
 
-#define sWardenModuleMgr MaNGOS::Singleton<WardenModuleMgr>::Instance()
+using WardenModuleMgrSingleton = MaNGOS::Singleton<WardenModuleMgr>;
 
-#endif /* !__WARDENMODULEMGR_HPP_ */
+#define sWardenModuleMgr WardenModuleMgrSingleton::Instance()

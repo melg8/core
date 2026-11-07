@@ -1,19 +1,13 @@
-# Copyright (C) 2005-2011 MaNGOS <http://getmangos.com/>
-# Copyright (C) 2009-2011 MaNGOSZero <https://github.com/mangos/zero>
+# SPDX-FileCopyrightText: © 2004 WoWD Team
+# SPDX-FileCopyrightText: © 2004 Team Python
+# SPDX-FileCopyrightText: © 2005-2011 MaNGOS <http://getmangos.com/>
+# SPDX-FileCopyrightText: © 2009-2011 MaNGOSZero <https://github.com/mangos/zero>
+# SPDX-FileCopyrightText: © 2011-2016 Nostalrius <https://nostalrius.org>
+# SPDX-FileCopyrightText: © 2016-2017 Elysium Project <https://github.com/elysium-project>
+# SPDX-FileCopyrightText: © 2017-2025 Vanilla MaNGOS <https://github.com/vmangos/core>
+# SPDX-FileCopyrightText: © 2025 Melg Eight <public.melg8@gmail.com>
 #
-# This program is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 2 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program; if not, write to the Free Software
-# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+# SPDX-License-Identifier: GPL-2.0-or-later
 
 set (game_SRCS
     AccountMgr.cpp
@@ -175,6 +169,8 @@ set (game_SRCS
     Objects/Object.cpp
     Objects/Pet.cpp
     Objects/Player.cpp
+    Objects/PlayerSubsystems/PlayerGmSubsystem.cpp
+    Objects/PlayerSubsystems/PlayerCheatOptions.cpp
     Objects/PlayerTaxi.cpp
     Objects/SpellCaster.cpp
     Objects/TemporarySummon.cpp
@@ -314,6 +310,9 @@ set (game_SRCS
     Anticheat/MovementAnticheat/MovementAnticheat.h
     Anticheat/WardenAnticheat/Warden.cpp
     Anticheat/WardenAnticheat/Warden.hpp
+    Anticheat/WardenAnticheat/WardenActions.cpp
+    Anticheat/WardenAnticheat/WardenActions.h
+    Anticheat/WardenAnticheat/WardenKeyGenerator.cpp
     Anticheat/WardenAnticheat/WardenKeyGenerator.h
     Anticheat/WardenAnticheat/WardenMac.cpp
     Anticheat/WardenAnticheat/WardenMac.hpp
@@ -363,12 +362,10 @@ set (game_SRCS
     Mail/Mail.h
     Mail/MassMailMgr.h
     Maps/Cell.h
-    Maps/CellImpl.h
     Maps/GridDefines.h
     Maps/GridMap.h
     Maps/GridMapDefines.h
     Maps/GridNotifiers.h
-    Maps/GridNotifiersImpl.h
     Maps/GridSearchers.h
     Maps/GridStates.h
     Maps/InstanceData.h
@@ -408,7 +405,6 @@ set (game_SRCS
     Movement/spline/MoveSplineInitArgs.h
     Movement/spline/packet_builder.h
     Movement/spline/spline.h
-    Movement/spline/spline.impl.h
     Movement/spline/typedefs.h
     Objects/Bag.h
     Objects/Corpse.h
@@ -427,6 +423,8 @@ set (game_SRCS
     Objects/ObjectDefines.h
     Objects/Pet.h
     Objects/Player.h
+    Objects/PlayerSubsystems/PlayerGmSubsystem.h
+    Objects/PlayerSubsystems/PlayerCheatOptions.h
     Objects/PlayerTaxi.h
     Objects/SpellCaster.h
     Objects/TemporarySummon.h
@@ -514,14 +512,6 @@ set (game_SRCS
 
 )
 
-if((${CMAKE_VERSION} VERSION_LESS "3.16") OR USE_PCH_OLD)
-  list(APPEND game_SRCS
-      pchdef.cpp
-      pchdef.h
-  )
-  include_directories(${CMAKE_CURRENT_BINARY_DIR})
-endif()
-
 if(WIN32)
   #allow exceptions in destructors
   if(MSVC)
@@ -579,9 +569,13 @@ include_directories(
   ${CMAKE_SOURCE_DIR}/src/shared
   ${CMAKE_BINARY_DIR}
   ${CMAKE_BINARY_DIR}/src/shared
-  ${MYSQL_INCLUDE_DIR}
-  ${OPENSSL_INCLUDE_DIR}
-  ${ZLIB_INCLUDE_DIRS}
+)
+
+include_directories(
+    SYSTEM
+    ${MYSQL_INCLUDE_DIR}
+    ${OPENSSL_INCLUDE_DIR}
+    ${ZLIB_INCLUDE_DIRS}
 )
 
 if(WIN32)
@@ -639,19 +633,7 @@ target_link_libraries(game
 #add_dependencies(game revision.h)
 
 # Generate precompiled header
-if((${CMAKE_VERSION} VERSION_LESS "3.16") OR USE_PCH_OLD)
-  if(USE_PCH)
-    if(MSVC OR XCODE)
-      if(MSVC)
-        set(game_pch "${CMAKE_CURRENT_SOURCE_DIR}/pchdef.cpp")
-      endif()
-      add_native_precompiled_header(game ${CMAKE_CURRENT_SOURCE_DIR}/pchdef.h)
-    elseif(CMAKE_COMPILER_IS_GNUCXX)
-      add_precompiled_header(game ${CMAKE_CURRENT_SOURCE_DIR}/pchdef.h)
-    endif()
-  endif()
-else()
-  if(USE_PCH)
+if(USE_PCH)
       target_precompile_headers(game PRIVATE
       Server/WorldSocket.h
       ../shared/Common.h
@@ -666,5 +648,5 @@ else()
       ObjectMgr.h
       ScriptMgr.h
       )
-  endif()
 endif()
+

@@ -32,11 +32,10 @@
 *
 */
 
-#ifndef CREATURE_LINKING_MGR_H
-#define CREATURE_LINKING_MGR_H
+#pragma once
 
-#include "Common.h"
 #include "ObjectGuid.h"
+#include "Policies/Singleton.h"
 
 class Unit;
 class Creature;
@@ -196,7 +195,6 @@ private:
     BossGuidMap m_masterGuid;
 };
 
-#define sCreatureLinkingMgr MaNGOS::Singleton<CreatureLinkingMgr>::Instance()
+using CreatureLinkingMgrSingleton = MaNGOS::Singleton<CreatureLinkingMgr>;
 
-#endif
-/*! @} */
+#define sCreatureLinkingMgr CreatureLinkingMgrSingleton::Instance()

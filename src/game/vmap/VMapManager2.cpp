@@ -23,7 +23,7 @@
 #include "MapTree.h"
 #include "ModelInstance.h"
 #include "WorldModel.h"
-#include "VMapDefinitions.h"
+#include "Log.h"
 #include "Maps/GridMapDefines.h"
 
 using G3D::Vector3;

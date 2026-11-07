@@ -21,9 +21,12 @@ SDComment:
 SDCategory: Blackrock Depths
 EndScriptData */
 
-#include "scriptPCH.h"
 
-#define SPELL_SHADOWBOLT            15472
+#include "Creature.h"
+#include "ScriptMgr.h"
+#include "ScriptedAI.h"
+
+#define SPELL_SHADOWBOLT 15472
 #define SPELL_CURSEOFTONGUES        15470
 #define SPELL_CURSEOFWEAKNESS       12493
 #define SPELL_DEMONARMOR            13787

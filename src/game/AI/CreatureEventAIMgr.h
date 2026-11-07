@@ -19,11 +19,10 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_CREATURE_EAI_MGR_H
-#define MANGOS_CREATURE_EAI_MGR_H
+#pragma once
 
-#include "Common.h"
 #include "CreatureEventAI.h"
+#include "Policies/Singleton.h"
 
 class CreatureEventAIMgr
 {
@@ -40,5 +39,6 @@ class CreatureEventAIMgr
         CreatureEventAI_Event_Map  m_CreatureEventAI_Event_Map;
 };
 
-#define sEventAIMgr MaNGOS::Singleton<CreatureEventAIMgr>::Instance()
-#endif
+using CreatureEventAIMgrSingleton = MaNGOS::Singleton<CreatureEventAIMgr>;
+
+#define sEventAIMgr CreatureEventAIMgrSingleton::Instance()

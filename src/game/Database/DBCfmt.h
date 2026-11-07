@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_DBCSFRM_H
-#define MANGOS_DBCSFRM_H
+#pragma once
 
 char const AreaTableEntryfmt[]="niiiixxxxxissssssssxixxxi";
 char const AreaTriggerEntryfmt[]="niffffffff";
@@ -88,5 +87,3 @@ char const WorldMapAreaEntryfmt[]="xinxffff";
 char const TransportAnimationfmt[]="diifffx";
 //char const WorldMapOverlayEntryfmt[]="nxiiiixxxxxxxxxxx";
 char const WorldSafeLocsEntryfmt[]="nifffxxxxxxxxx";
-
-#endif

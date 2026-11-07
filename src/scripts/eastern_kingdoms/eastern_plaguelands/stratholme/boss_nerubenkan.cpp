@@ -21,7 +21,12 @@ SDComment:
 SDCategory: Stratholme
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+#include "Utilities/Random.h"
+
+#include "Creature.h"
+#include "Player.h"
+#include "ScriptedInstance.h"
 #include "stratholme.h"
 
 #define SPELL_ENCASINGWEBS          4962

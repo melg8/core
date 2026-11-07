@@ -1,4 +1,15 @@
-#include "scriptPCH.h"
+#include "GameObjectAI.h"
+#include "Utilities/Random.h"
+
+#include "CreatureAI.h"
+#include "Creature.h"
+#include "GameObject.h"
+#include "Map.h"
+#include "Player.h"
+#include "ScriptMgr.h"
+#include "ScriptedAI.h"
+
+#include "Platform/Define.h"
 
 enum
 {

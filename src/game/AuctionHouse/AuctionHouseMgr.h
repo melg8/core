@@ -19,16 +19,14 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _AUCTION_HOUSE_MGR_H
-#define _AUCTION_HOUSE_MGR_H
+#pragma once
+
+#include "DBCStructure.h"
+
+#include "Policies/Singleton.h"
 
 #include <vector>
 #include <memory>
-
-#include "Common.h"
-#include "SharedDefines.h"
-#include "Policies/Singleton.h"
-#include "DBCStructure.h"
 
 class Item;
 class Player;
@@ -198,6 +196,6 @@ class AuctionHouseMgr
         ItemMap             mAitems;
 };
 
-#define sAuctionMgr MaNGOS::Singleton<AuctionHouseMgr>::Instance()
+using AuctionHouseMgrSingleton = MaNGOS::Singleton<AuctionHouseMgr>;
 
-#endif
+#define sAuctionMgr AuctionHouseMgrSingleton::Instance()

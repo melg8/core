@@ -16,17 +16,15 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_LFGMGR_H
-#define MANGOSSERVER_LFGMGR_H
+#pragma once
 
-#include <list>
-#include <map>
-
-#include "Policies/Singleton.h"
-#include "Common.h"
 #include "SharedDefines.h"
 #include "LFGDefines.h"
 #include "ObjectGuid.h"
+
+#include "Policies/Singleton.h"
+
+#include <map>
 
 class Group;
 class Player;
@@ -50,6 +48,6 @@ class LFGMgr
         static uint32 GetMaximumDPSSlots() { return 3u; }
 };
 
-#define sLFGMgr MaNGOS::Singleton<LFGMgr>::Instance()
+using LFGMgrSingleton = MaNGOS::Singleton<LFGMgr>;
 
-#endif
+#define sLFGMgr LFGMgrSingleton::Instance()

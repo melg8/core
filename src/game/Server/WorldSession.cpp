@@ -43,6 +43,8 @@
 #include "MasterPlayer.h"
 #include "PlayerBroadcaster.h"
 #include "Crypto/Hash/MD5.h"
+#include "MovementAnticheat/MovementAnticheat.h"
+#include "WardenAnticheat/Warden.hpp"
 
 #include <limits>
 

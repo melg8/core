@@ -2,10 +2,11 @@
  * This program is free software licensed under GPL version 2
  * Please see the included DOCS/LICENSE.TXT for more information */
 
-#ifndef DEF_NAXXRAMAS_H
-#define DEF_NAXXRAMAS_H
+#pragma once
 
-#include "scriptPCH.h"
+#include "ScriptedInstance.h"
+
+#include "SharedDefines.h"
 #include "Utilities/EventMap.h"
 
 enum NAXX_ENCOUNTERS_TYPES
@@ -389,5 +390,3 @@ private:
     EventMap m_events;
     void Update(uint32 diff) override;
 };
-
-#endif

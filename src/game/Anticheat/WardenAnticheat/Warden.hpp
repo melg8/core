@@ -21,16 +21,16 @@
   *
   */
 
-#ifndef __WARDEN_HPP_
-#define __WARDEN_HPP_
+#pragma once
 
-#include "../Anticheat.h"
 #include "WardenScan.hpp"
 
-#include "Common.h"
 #include "ByteBuffer.h"
 #include "ClientDefines.h"
+#include "WardenActions.h"
 #include "Crypto/Encryption/RC4.h"
+
+class WorldPacket;
 
 #include <vector>
 #include <memory>
@@ -190,5 +190,3 @@ class Warden
         // used by maiev string hash check
         mutable std::string m_hashString;
 };
-
-#endif /*!__WARDEN_HPP_*/

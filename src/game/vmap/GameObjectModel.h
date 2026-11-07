@@ -16,16 +16,14 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_GAMEOBJECTMODEL_H
-#define MANGOSSERVER_GAMEOBJECTMODEL_H
+#pragma once
+
+#include "DBCStructure.h"
 
 #include <G3D/Matrix3.h>
 #include <G3D/Vector3.h>
 #include <G3D/AABox.h>
 #include <G3D/Ray.h>
-#include "DBCStructure.h"
-
-#include "Platform/Define.h"
 
 namespace VMAP
 {
@@ -67,4 +65,3 @@ class GameObjectModel
 
         bool Relocate(GameObject const& go);
 };
-#endif

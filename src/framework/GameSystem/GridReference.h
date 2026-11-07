@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _GRIDREFERENCE_H
-#define _GRIDREFERENCE_H
+#pragma once
 
 #include "Utilities/LinkedReference/Reference.h"
 
@@ -68,5 +67,3 @@ class GridReference : public Reference<GridRefManager<OBJECT>, OBJECT>
             return (GridReference*)Reference<GridRefManager<OBJECT>, OBJECT>::next();
         }
 };
-
-#endif

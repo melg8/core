@@ -14,8 +14,19 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "scriptPCH.h"
+#include "NullCreatureAI.h"
+#include "Utilities/Random.h"
+
+#include "Common.h"
+#include "Creature.h"
+#include "GameObject.h"
+#include "Player.h"
+#include "QuestDef.h"
+#include "ScriptedAI.h"
+#include "ScriptedInstance.h"
 #include "blackwing_lair.h"
+
+#include "Platform/Define.h"
 
 enum VictorNefarius : uint32
 {

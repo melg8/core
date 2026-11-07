@@ -19,14 +19,10 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_DBCSTORES_H
-#define MANGOS_DBCSTORES_H
+#pragma once
 
-#include "Common.h"
 #include "Database/DBCStore.h"
 #include "DBCStructure.h"
-
-#include <list>
 
 bool IsAcceptableClientBuild(uint32 build);
 std::string AcceptableClientBuildsListStr();
@@ -110,5 +106,3 @@ void LoadDBCStores(std::string const& dataPath);
 
 char const* GetUnitRaceName(uint8 race, uint8 locale);
 char const* GetUnitClassName(uint8 class_, uint8 locale);
-
-#endif

@@ -14,8 +14,7 @@
 * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-#ifndef MANGOS_PARTYBOTAI_H
-#define MANGOS_PARTYBOTAI_H
+#pragma once
 
 #include "CombatBotBaseAI.h"
 #include "Group.h"
@@ -106,5 +105,3 @@ public:
     float m_o = 0.0f;
     bool m_resetSpellData = false;
 };
-
-#endif

@@ -19,10 +19,8 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_CREATURE_EAI_H
-#define MANGOS_CREATURE_EAI_H
+#pragma once
 
-#include "Common.h"
 #include "BasicAI.h"
 #include "ScriptMgr.h"
 
@@ -344,5 +342,3 @@ class CreatureEventAI : public BasicAI
         void UpdateEventsOn_UpdateAI(uint32 const diff, bool Combat);
         void UpdateEventsOn_MoveInLineOfSight(Unit* pWho);
 };
-
-#endif

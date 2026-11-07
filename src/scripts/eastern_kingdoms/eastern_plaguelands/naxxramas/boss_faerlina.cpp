@@ -14,7 +14,11 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+#include "Utilities/Random.h"
+
+#include "Creature.h"
+#include "SpellEntry.h"
 #include "naxxramas.h"
 
 enum FaerlinaData

@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _GRIDREFMANAGER
-#define _GRIDREFMANAGER
+#pragma once
 
 #include "Utilities/LinkedReference/RefManager.h"
 
@@ -48,4 +47,3 @@ class GridRefManager : public RefManager<GridRefManager<OBJECT>, OBJECT>
         iterator rbegin() { return iterator(getLast()); }
         iterator rend() { return iterator(nullptr); }
 };
-#endif

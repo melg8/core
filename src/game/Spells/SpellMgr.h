@@ -19,19 +19,17 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _SPELLMGR_H
-#define _SPELLMGR_H
+#pragma once
 
 // For static or at-server-startup loaded spell data
 
-#include "Common.h"
 #include "SharedDefines.h"
-#include "SpellAuraDefines.h"
 #include "DBCStructure.h"
 #include "DBCStores.h"
-#include "SQLStorages.h"
 #include "SpellEntry.h"
 #include "Errors.h"
+
+#include "Platform/Define.h"
 
 #include <map>
 #include <memory>
@@ -39,6 +37,7 @@
 class Player;
 class Spell;
 class Unit;
+class Field;
 
 struct SpellProcEventEntry
 {
@@ -766,4 +765,3 @@ class SpellMgr
 };
 
 #define sSpellMgr SpellMgr::Instance()
-#endif

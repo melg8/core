@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_QUEST_H
-#define MANGOSSERVER_QUEST_H
+#pragma once
 
 #include "Platform/Define.h"
 
@@ -399,4 +398,3 @@ struct QuestStatusData
     uint32 m_itemcount[ QUEST_OBJECTIVES_COUNT ];
     uint32 m_creatureOrGOcount[ QUEST_OBJECTIVES_COUNT ];
 };
-#endif

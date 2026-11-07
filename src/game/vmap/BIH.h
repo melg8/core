@@ -16,16 +16,14 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _BIH_H
-#define _BIH_H
+#pragma once
+
+#include <Platform/Define.h>
 
 #include <G3D/Vector3.h>
 #include <G3D/Ray.h>
 #include <G3D/AABox.h>
 
-#include <Platform/Define.h>
-
-#include <stdexcept>
 #include <vector>
 #include <algorithm>
 
@@ -407,5 +405,3 @@ class BIH
 
         void subdivide(int left, int right, std::vector<uint32>& tempTree, buildData& dat, AABound& gridBox, AABound& nodeBox, int nodeIndex, int depth, BuildStats& stats);
 };
-
-#endif // _BIH_H

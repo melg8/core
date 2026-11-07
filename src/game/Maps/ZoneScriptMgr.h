@@ -15,12 +15,12 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef ZONE_SCRIPT_MGR_H_
-#define ZONE_SCRIPT_MGR_H_
+#pragma once
 
 #define OUTDOORPVP_OBJECTIVE_UPDATE_INTERVAL 1000
 
 #include "ZoneScript.h"
+#include "Policies/Singleton.h"
 
 class Player;
 class GameObject;
@@ -102,5 +102,6 @@ class ZoneScriptMgr
         uint32 m_UpdateTimer;
 };
 
-#define sZoneScriptMgr MaNGOS::Singleton<ZoneScriptMgr>::Instance()
-#endif /*OUTDOOR_PVP_MGR_H_*/
+using ZoneScriptMgrSingleton = MaNGOS::Singleton<ZoneScriptMgr>;
+
+#define sZoneScriptMgr ZoneScriptMgrSingleton::Instance()

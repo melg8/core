@@ -19,10 +19,11 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _BATTLEGROUND_DEFINES_H
-#define _BATTLEGROUND_DEFINES_H
+#pragma once
 
 #include "Common.h"
+#include "SharedDefines.h"
+
 #include "SharedDefines.h"
 
 // magic event-numbers
@@ -253,5 +254,3 @@ enum BattleGroundJoinError
     BG_JOIN_ERR_ALL_QUEUES_USED = 8,
     BG_JOIN_ERR_GROUP_NOT_ENOUGH = 9
 };
-
-#endif

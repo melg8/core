@@ -19,8 +19,11 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_BATTLEGROUNDMGR_H
-#define MANGOS_BATTLEGROUNDMGR_H
+#pragma once
+
+#include "Policies/Singleton.h"
+#include "Utilities/EventProcessor.h"
+#include "BattleGround.h"
 
 #include <memory>
 #include <vector>
@@ -323,7 +326,6 @@ class BattleGroundMgr
         std::set<uint32> m_usedRefloot;
 };
 
-#define sBattleGroundMgr MaNGOS::Singleton<BattleGroundMgr>::Instance()
+using BattleGroundMgrSingleton = MaNGOS::Singleton<BattleGroundMgr>;
 
-#endif // MANGOS_BATTLEGROUNDMGR_H
-
+#define sBattleGroundMgr BattleGroundMgrSingleton::Instance()

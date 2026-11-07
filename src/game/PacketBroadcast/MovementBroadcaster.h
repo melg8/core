@@ -1,13 +1,15 @@
-#ifndef MANGOS_MOVEMENT_BROADCASTER_H
-#define MANGOS_MOVEMENT_BROADCASTER_H
+#pragma once
+
+#include "Platform/Define.h"
 
 #include <atomic>
 #include <chrono>
+#include <cstddef>
+#include <memory>
+#include <set>
 #include <shared_mutex>
 #include <thread>
 #include <vector>
-#include <cstddef>
-#include <memory>
 
 class PlayerBroadcaster;
 
@@ -54,5 +56,3 @@ public:
 protected:
     std::vector<ThreadUpdateStats> m_thread_update_stats;
 };
-
-#endif

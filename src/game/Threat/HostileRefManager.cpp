@@ -22,7 +22,6 @@
 #include "HostileRefManager.h"
 #include "ThreatManager.h"
 #include "Unit.h"
-#include "DBCStructure.h"
 #include "SpellEntry.h"
 
 HostileRefManager::HostileRefManager(Unit* pOwner) : iOwner(pOwner)

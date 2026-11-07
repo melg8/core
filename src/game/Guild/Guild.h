@@ -19,10 +19,8 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_GUILD_H
-#define MANGOSSERVER_GUILD_H
+#pragma once
 
-#include "Common.h"
 #include "ObjectAccessor.h"
 
 class Petition;
@@ -377,4 +375,3 @@ class Guild
     private:
         void UpdateAccountsNumber() { m_accountsNumber = 0;}// mark for lazy calculation at request in GetAccountsNumber
 };
-#endif

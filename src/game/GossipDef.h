@@ -19,10 +19,8 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_GOSSIP_H
-#define MANGOSSERVER_GOSSIP_H
+#pragma once
 
-#include "Common.h"
 #include "QuestDef.h"
 #include "NPCHandler.h"
 #include "ObjectGuid.h"
@@ -313,4 +311,3 @@ class PlayerMenu
         void SendQuestGiverOfferReward(Quest const* pQuest, ObjectGuid npcGuid, bool EnbleNext) const;
         void SendQuestGiverRequestItems(Quest const* pQuest, ObjectGuid npcGuid, bool isComplete, bool closeOnCancel) const;
 };
-#endif

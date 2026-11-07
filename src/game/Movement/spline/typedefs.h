@@ -16,10 +16,9 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_TYPEDEFS_H
-#define MANGOSSERVER_TYPEDEFS_H
+#pragma once
 
-#include "Common.h"
+#include "Platform/Define.h"
 
 namespace G3D
 {
@@ -73,5 +72,3 @@ namespace Movement
 
     typedef counter<uint32, 0xFFFFFFFF> UInt32Counter;
 }
-
-#endif // MANGOSSERVER_TYPEDEFS_H

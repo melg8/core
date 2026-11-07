@@ -16,11 +16,14 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef INSTANCE_STATISTICS_H
-#define INSTANCE_STATISTICS_H
+#pragma once
 
 #include <mutex>
 #include "Common.h"
+#include "Platform/Define.h"
+#include "Policies/Singleton.h"
+
+#include <map>
 
 enum eInstanceCustomCounter : int
 {
@@ -70,8 +73,6 @@ private:
     std::mutex m_customCountersMutex;
 };
 
+using InstanceStatisticsMgrSingleton = MaNGOS::Singleton<InstanceStatisticsMgr>;
 
-
-#define sInstanceStatistics MaNGOS::Singleton<InstanceStatisticsMgr>::Instance()
-
-#endif
+#define sInstanceStatistics InstanceStatisticsMgrSingleton::Instance()

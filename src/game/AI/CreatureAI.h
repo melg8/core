@@ -19,13 +19,9 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_CREATUREAI_H
-#define MANGOS_CREATUREAI_H
+#pragma once
 
-#include "Common.h"
-#include "Dynamic/ObjectRegistry.h"
 #include "Dynamic/FactoryHolder.h"
-#include "ObjectGuid.h"
 #include "CreatureDefines.h"
 #include "SpellDefines.h"
 
@@ -246,4 +242,3 @@ enum Permitions
 typedef FactoryHolder<CreatureAI> CreatureAICreator;
 typedef FactoryHolder<CreatureAI>::FactoryHolderRegistry CreatureAIRegistry;
 typedef FactoryHolder<CreatureAI>::FactoryHolderRepository CreatureAIRepository;
-#endif

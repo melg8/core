@@ -19,14 +19,16 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _SPELLENTRY_H
-#define _SPELLENTRY_H
+#pragma once
+
+#include "DBCStructure.h"
+#include "ItemPrototype.h"
+#include "SharedDefines.h"
+#include "SpellAuraDefines.h"
+#include "SpellClassMask.h"
+#include "SpellDefines.h"
 
 #include <array>
-#include "DBCStructure.h"
-#include "SharedDefines.h"
-#include "SpellDefines.h"
-#include "SpellAuraDefines.h"
 
 class Spell;
 class Unit;
@@ -1262,5 +1264,3 @@ class SpellEntry
             static T const value = 0;
         };
 };
-
-#endif

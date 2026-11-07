@@ -14,12 +14,12 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _PLAYER_TAXI_H
-#define _PLAYER_TAXI_H
+#pragma once
 
-#include "Common.h"
 #include "DBCStructure.h"
 #include "SharedDefines.h"
+
+#include "Platform/Define.h"
 
 #include <deque>
 #include <sstream>
@@ -94,5 +94,3 @@ private:
 };
 
 std::ostringstream& operator<< (std::ostringstream& ss, PlayerTaxi const& taxi);
-
-#endif

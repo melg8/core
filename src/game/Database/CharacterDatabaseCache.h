@@ -1,7 +1,6 @@
-#ifndef _CHARACTER_DATABASE_CACHE_H
-#define _CHARACTER_DATABASE_CACHE_H
 
-#include "Common.h"
+#pragma once
+
 #include "ObjectGuid.h"
 #include "SpellDefines.h"
 
@@ -113,6 +112,3 @@ class CharacterDatabaseCache
 };
 
 #define sCharacterDatabaseCache (*(CharacterDatabaseCache::instance()))
-
-
-#endif

@@ -16,8 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_HOMEMOVEMENTGENERATOR_H
-#define MANGOS_HOMEMOVEMENTGENERATOR_H
+#pragma once
 
 #include "MovementGenerator.h"
 
@@ -46,4 +45,3 @@ class HomeMovementGenerator<Creature>
         void _setTargetLocation(Creature &);
         bool arrived;
 };
-#endif

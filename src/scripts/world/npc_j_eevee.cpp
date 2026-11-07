@@ -1,5 +1,11 @@
-#include "scriptPCH.h"
 #include "npc_j_eevee.h"
+
+#include "Creature.h"
+#include "Map.h"
+#include "Player.h"
+#include "ScriptMgr.h"
+#include "TemporarySummon.h"
+
 
 struct EventLocations
 {

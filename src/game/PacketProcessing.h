@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __PACKETPROCESSING_H
-#define __PACKETPROCESSING_H
+#pragma once
 
 enum PacketProcessing
 {
@@ -120,5 +119,3 @@ enum PacketProcessing
      */
     PACKET_PROCESS_GUILD = PACKET_PROCESS_WORLD,
 };
-
-#endif

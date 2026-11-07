@@ -19,14 +19,13 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOSSERVER_CORPSE_H
-#define MANGOSSERVER_CORPSE_H
+#pragma once
 
-#include "Common.h"
-#include "Object.h"
-#include "Database/DatabaseEnv.h"
 #include "GridDefines.h"
 #include "LootMgr.h"
+#include "Object.h"
+
+class Field;
 
 enum CorpseType
 {
@@ -113,5 +112,3 @@ inline Corpse const* Object::ToCorpse() const
 {
     return IsCorpse() ? static_cast<Corpse const*>(this) : nullptr;
 }
-
-#endif

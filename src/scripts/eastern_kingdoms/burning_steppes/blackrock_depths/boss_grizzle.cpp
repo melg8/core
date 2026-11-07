@@ -21,9 +21,13 @@ SDComment:
 SDCategory: Blackrock Depths
 EndScriptData */
 
-#include "scriptPCH.h"
 
-#define EMOTE_GENERIC_FRENZY_KILL   7797
+#include "ScriptedAI.h"
+
+#include "ScriptMgr.h"
+#include "Creature.h"
+
+#define EMOTE_GENERIC_FRENZY_KILL 7797
 
 #define SPELL_GROUNDTREMOR          6524
 #define SPELL_FRENZY                8269

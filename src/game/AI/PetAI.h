@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_PETAI_H
-#define MANGOS_PETAI_H
+#pragma once
 
 #include "CreatureAI.h"
 
@@ -74,4 +73,3 @@ class PetAI : public CreatureAI
         bool CanAttack(Unit* target);
         void ClearCharmInfoFlags();
 };
-#endif

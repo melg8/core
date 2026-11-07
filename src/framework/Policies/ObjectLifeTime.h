@@ -19,11 +19,11 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_OBJECTLIFETIME_H
-#define MANGOS_OBJECTLIFETIME_H
+#pragma once
+
+#include "Platform/Define.h"
 
 #include <stdexcept>
-#include "Platform/Define.h"
 
 typedef void (* Destroyer)(void);
 
@@ -50,5 +50,3 @@ namespace MaNGOS
         throw std::runtime_error("Dead Reference");
     }
 }
-
-#endif

@@ -19,71 +19,115 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include <unordered_map>
-#include <cmath>
-#include <sstream>
-
 #include "Player.h"
+
+#include "AccountMgr.h"
+#include "Anticheat.h"
+#include "AuctionHouseMgr.h"
 #include "Bag.h"
-#include "Language.h"
-#include "Database/DatabaseEnv.h"
-#include "Log.h"
-#include "Opcodes.h"
-#include "SpellMgr.h"
-#include "World.h"
-#include "WorldPacket.h"
-#include "WorldSession.h"
-#include "UpdateMask.h"
-#include "QuestDef.h"
-#include "GossipDef.h"
-#include "UpdateData.h"
-#include "Channel.h"
-#include "ChannelMgr.h"
-#include "MapManager.h"
-#include "MapPersistentStateMgr.h"
-#include "GridNotifiers.h"
-#include "GridNotifiersImpl.h"
-#include "Geometry.h"
-#include "CellImpl.h"
-#include "ObjectMgr.h"
-#include "ObjectAccessor.h"
-#include "Formulas.h"
-#include "Group.h"
-#include "Guild.h"
-#include "GuildMgr.h"
-#include "Pet.h"
-#include "Util.h"
-#include "Transport.h"
-#include "Weather.h"
 #include "BattleGround.h"
 #include "BattleGroundAV.h"
 #include "BattleGroundMgr.h"
+#include "ByteBuffer.h"
+#include "Cell.h"
+#include "Channel.h"
+#include "ChannelMgr.h"
+#include "CharacterDatabaseCache.h"
 #include "Chat.h"
-#include "Database/DatabaseImpl.h"
-#include "Spell.h"
-#include "SpellModifier.h"
+#include "Conditions.h"
+#include "Corpse.h"
+#include "Creature.h"
+#include "CreatureAI.h"
+#include "Utilities/Random.h"
+#include "CreatureDefines.h"
+#include "DBCStores.h"
+#include "DBCStructure.h"
+#include "DynamicObject.h"
+#include "Formulas.h"
+#include "GMTicketMgr.h"
+#include "GameEventMgr.h"
+#include "GameObject.h"
+#include "Geometry.h"
+#include "GossipDef.h"
+#include "GridDefines.h"
+#include "GridMap.h"
+#include "GridMapDefines.h"
+#include "GridNotifiers.h"
+#include "Group.h"
+#include "Guild.h"
+#include "GuildMgr.h"
+#include "HostileRefManager.h"
+#include "Language.h"
+#include "Log.h"
+#include "Mail.h"
+#include "Map.h"
+#include "MapManager.h"
+#include "MapPersistentStateMgr.h"
+#include "MasterPlayer.h"
+#include "MotionMaster.h"
+#include "MovementBroadcaster.h"
+#include "MovementPacketSender.h"
+#include "NPCHandler.h"
+#include "ObjectAccessor.h"
+#include "ObjectDefines.h"
+#include "ObjectMgr.h"
+#include "Path.h"
+#include "Pet.h"
+#include "PlayerAI.h"
+#include "PlayerBotAI.h"
+#include "PlayerBotMgr.h"
+#include "PlayerBroadcaster.h"
+#include "QuestDef.h"
+#include "SQLStorages.h"
 #include "ScriptMgr.h"
 #include "SocialMgr.h"
+#include "Spell.h"
+#include "SpellAuras.h"
+#include "SpellEntry.h"
+#include "SpellMgr.h"
+#include "SpellModifier.h"
+#include "TemporarySummon.h"
+#include "ThreatManager.h"
 #include "TradeData.h"
-#include "Mail.h"
+#include "Transport.h"
+#include "UpdateData.h"
+#include "UpdateFields.h"
+#include "UpdateMask.h"
+#include "Util.h"
 #include "WaypointMovementGenerator.h"
-#include "GMTicketMgr.h"
-#include "MasterPlayer.h"
-#include "MovementPacketSender.h"
+#include "Weather.h"
+#include "World.h"
+#include "WorldPacket.h"
+#include "WorldSession.h"
+#include "WorldStates.h"
 #include "ZoneScript.h"
 #include "ZoneScriptMgr.h"
-#include "PlayerBotMgr.h"
-#include "PlayerBotAI.h"
-#include "AccountMgr.h"
-#include "Anticheat.h"
-#include "MovementBroadcaster.h"
-#include "PlayerBroadcaster.h"
-#include "CharacterDatabaseCache.h"
-#include "GameEventMgr.h"
+
+#include "Database/DBCStore.h"
+#include "Database/DatabaseEnv.h"
+#include "Database/Field.h"
+#include "Database/QueryResult.h"
+#include "Database/SQLStorage.h"
+#include "Database/SqlOperations.h"
+#include "Database/SqlPreparedStatement.h"
+#include "MovementAnticheat/MovementAnticheat.h"
+#include "PlayerSubsystems/PlayerCheatOptions.h"
+#include "PlayerSubsystems/PlayerGmSubsystem.h"
 #include "world/scourge_invasion.h"
 #include "world/world_event_wareffort.h"
 
 #include <climits>
+#include <array>
+#include <chrono>
+#include <cmath>
+#include <cstdarg>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <ostream>
+#include <sstream>
+#include <unordered_map>
+#include <unordered_set>
 
 #define ZONE_UPDATE_INTERVAL (1*IN_MILLISECONDS)
 
@@ -109,8 +153,9 @@ static uint32 copseReclaimDelay[MAX_DEATH_COUNT] = { 30, 60, 120 };
 
 Player::Player(WorldSession* session) : Unit(),
     m_mover(this), m_camera(this), m_reputationMgr(this), m_saveDisabled(false), m_enableInstanceSwitch(true),
-    m_currentTicketCounter(0), m_repopAtGraveyardPending(false), m_knownLanguagesMask(0),
-    m_honorMgr(this), m_personalXpRate(-1.0f), m_isStandUpScheduled(false)
+    m_gmSubsystem(std::make_unique<PlayerGmSubsystem>()), m_repopAtGraveyardPending(false),
+    m_knownLanguagesMask(0),
+    m_honorMgr(this), m_personalXpRate(-1.0f), m_isStandUpScheduled(false), m_foodEmoteTimer(0)
 {
     m_objectType |= TYPEMASK_PLAYER;
     m_objectTypeId = TYPEID_PLAYER;
@@ -126,7 +171,7 @@ Player::Player(WorldSession* session) : Unit(),
     m_ExtraFlags = 0;
     if (GetSession()->GetSecurity() > SEC_PLAYER)
     {
-        m_currentTicketCounter = sTicketMgr->GetLastTicketId();
+        m_gmSubsystem->SetGMTicketCounter(sTicketMgr->GetLastTicketId());
         SetAcceptTicket(true);
     }
 
@@ -156,8 +201,6 @@ Player::Player(WorldSession* session) : Unit(),
     m_nextSave = urand(m_nextSave / 2, m_nextSave * 3 / 2);
 
     ClearResurrectRequestData();
-
-    memset(m_items, 0, sizeof(Item*)*PLAYER_SLOTS_COUNT);
 
     // group is initialized in the reference constructor
     SetGroupInvite(nullptr);
@@ -254,7 +297,6 @@ Player::Player(WorldSession* session) : Unit(),
     // Phasing
     m_worldMask = WORLD_DEFAULT_CHAR;
     m_AI = nullptr;
-    m_cheatOptions = 0x0;
 
     m_lastFromClientCastedSpellID = 0;
 
@@ -272,7 +314,7 @@ Player::Player(WorldSession* session) : Unit(),
     m_detectInvisibilityTimer = 1 * IN_MILLISECONDS;
 
     // GM variables
-    m_gmInvisibilityLevel = session->GetSecurity();
+    m_gmSubsystem->SetGMInvisibilityLevel(session->GetSecurity());
 
     if (session->GetSecurity() > SEC_MODERATOR)
         m_smartInstanceRebind = true;
@@ -432,9 +474,6 @@ bool Player::Create(uint32 guidlow, std::string const& name, uint8 race, uint8 c
         SetGuidValue(PLAYER_FIELD_INV_SLOT_HEAD + (slot * 2), ObjectGuid());
         SetVisibleItemSlot(slot, nullptr);
     }
-
-    for (auto& item : m_items)
-        item = nullptr;
 
     SetLocationMapId(info->mapId);
     Relocate(info->positionX, info->positionY, info->positionZ, info->orientation);
@@ -1087,7 +1126,10 @@ SpellAuraHolder const* Player::GetMirrorTimerBuff(MirrorTimer::Type timer) const
     }
 }
 
-bool Player::IsCityProtector() const { return m_ExtraFlags & PLAYER_EXTRA_CITY_PROTECTOR; }
+bool Player::IsCityProtector() const
+{
+    return m_ExtraFlags & PLAYER_EXTRA_CITY_PROTECTOR;
+}
 
 void Player::SetCityTitle()
 {
@@ -1240,6 +1282,7 @@ void Player::Update(uint32 update_diff, uint32 p_time)
     if (IsAlive())
     {
         m_regenTimer -= update_diff;
+        HandleFoodEmotes(update_diff);
         RegenerateAll();
     }
     else
@@ -2266,6 +2309,41 @@ void Player::RewardRage(uint32 damage, bool attacker)
     ModifyPower(POWER_RAGE, uint32(addRage * 10));
 }
 
+void Player::HandleFoodEmotes(uint32 diff)
+{
+    // Handles the emotes for drinking and eating.
+    // According to sniffs there is a background timer going on that repeats independed from the time window where the aura applies.
+    // That's why we dont need to reset the timer on apply. In sniffs I have seen that the first call for the spell visual is totally random, then after
+    // 5 seconds over and over again which confirms my theory that we have a independed timer.
+    if (m_foodEmoteTimer <= diff)
+    {
+        AuraList const& lModRegenAuras = GetAurasByType(SPELL_AURA_MOD_REGEN);
+        AuraList const& lModPowerRegenAuras = GetAurasByType(SPELL_AURA_MOD_POWER_REGEN);
+
+        for (const auto pAura : lModRegenAuras)
+        {
+            if (pAura->GetSpellProto()->HasAura(SPELL_AURA_MOD_REGEN) && pAura->GetSpellProto()->HasAuraInterruptFlag(AURA_INTERRUPT_STANDING_CANCELS))
+            {
+                SendPlaySpellVisualKit(SPELL_VISUAL_KIT_FOOD);
+                break;
+            }
+        }
+
+        for (const auto pAura : lModPowerRegenAuras)
+        {
+            if (pAura->GetSpellProto()->HasAura(SPELL_AURA_MOD_POWER_REGEN) && pAura->GetSpellProto()->HasAuraInterruptFlag(AURA_INTERRUPT_STANDING_CANCELS))
+            {
+                SendPlaySpellVisualKit(SPELL_VISUAL_KIT_DRINK);
+                break;
+            }
+        }
+
+        m_foodEmoteTimer = 5000;
+    }
+    else
+        m_foodEmoteTimer -= diff;
+}
+
 void Player::RegenerateAll()
 {
     if (m_regenTimer > 0)
@@ -2578,6 +2656,24 @@ bool Player::CanSeeSpecialInfoOf(Unit const* pTarget) const
            pTarget->HasAuraTypeByCaster(SPELL_AURA_EMPATHY, GetObjectGuid());
 }
 
+bool Player::IsAcceptTickets() const
+{
+    return GetSession()->GetSecurity() >= SEC_GAMEMASTER && (m_ExtraFlags & PLAYER_EXTRA_GM_ACCEPT_TICKETS);
+}
+
+void Player::SetAcceptTicket(bool on)
+{
+    if (on)
+        m_ExtraFlags |= PLAYER_EXTRA_GM_ACCEPT_TICKETS;
+    else
+        m_ExtraFlags &= ~PLAYER_EXTRA_GM_ACCEPT_TICKETS;
+}
+
+bool Player::IsGameMaster() const
+{
+    return m_ExtraFlags & PLAYER_EXTRA_GM_ON;
+}
+
 struct SetGameMasterOnHelper
 {
     explicit SetGameMasterOnHelper() {}
@@ -2598,28 +2694,6 @@ struct SetGameMasterOffHelper
     }
     uint32 faction;
 };
-
-void Player::SetGMChat(bool on, bool notify)
-{
-    if (on)
-    {
-        m_ExtraFlags |= PLAYER_EXTRA_GM_CHAT;
-        if (notify)
-        {
-            SendSysMessage(LANG_GM_CHAT_ON);
-            GetSession()->SendNotification(LANG_GM_CHAT_ON);
-        }
-    }
-    else
-    {
-        m_ExtraFlags &= ~PLAYER_EXTRA_GM_CHAT;
-        if (notify)
-        {
-            SendSysMessage(LANG_GM_CHAT_OFF);
-            GetSession()->SendNotification(LANG_GM_CHAT_OFF);
-        }
-    }
-}
 
 void Player::SetGameMaster(bool on, bool notify)
 {
@@ -2647,7 +2721,7 @@ void Player::SetGameMaster(bool on, bool notify)
     }
     else
     {
-        m_ExtraFlags &= ~ PLAYER_EXTRA_GM_ON;
+        m_ExtraFlags &= ~PLAYER_EXTRA_GM_ON;
         SetFactionForRace(GetRace());
         RemoveFlag(PLAYER_FLAGS, PLAYER_FLAGS_GM);
 
@@ -2683,6 +2757,59 @@ void Player::SetGameMaster(bool on, bool notify)
     m.SetCount(PLAYER_END);
     m.SetBit(UNIT_FIELD_FLAGS);
     RefreshBitsForVisibleUnits(&m, TYPEMASK_PLAYER);
+}
+
+bool Player::IsGMChat() const
+{
+    return GetSession()->GetSecurity() >= SEC_MODERATOR && (m_ExtraFlags & PLAYER_EXTRA_GM_CHAT);
+}
+
+void Player::SetGMChat(bool on, bool notify)
+{
+    if (on)
+    {
+        m_ExtraFlags |= PLAYER_EXTRA_GM_CHAT;
+        if (notify)
+        {
+            SendSysMessage(LANG_GM_CHAT_ON);
+            GetSession()->SendNotification(LANG_GM_CHAT_ON);
+        }
+    }
+    else
+    {
+        m_ExtraFlags &= ~PLAYER_EXTRA_GM_CHAT;
+        if (notify)
+        {
+            SendSysMessage(LANG_GM_CHAT_OFF);
+            GetSession()->SendNotification(LANG_GM_CHAT_OFF);
+        }
+    }
+}
+
+bool Player::IsTaxiCheater() const
+{
+    return m_ExtraFlags & PLAYER_EXTRA_TAXICHEAT;
+}
+
+void Player::SetTaxiCheater(bool on)
+{
+    if (on)
+        m_ExtraFlags |= PLAYER_EXTRA_TAXICHEAT;
+    else
+        m_ExtraFlags &= ~PLAYER_EXTRA_TAXICHEAT;
+}
+
+void Player::SetPvPDeath(bool on)
+{
+    if (on)
+        m_ExtraFlags |= PLAYER_EXTRA_PVP_DEATH;
+    else
+        m_ExtraFlags &= ~PLAYER_EXTRA_PVP_DEATH;
+}
+
+bool Player::IsGMVisible() const
+{
+    return !(m_ExtraFlags & PLAYER_EXTRA_GM_INVISIBLE);
 }
 
 void Player::SetGMVisible(bool on, bool notify)
@@ -2899,6 +3026,51 @@ void Player::SetCheatDebugTargetInfo(bool on, bool notify)
                 newData.Send(GetSession());
         }
     }
+}
+
+uint16 Player::GetCheatOptions() const
+{
+    return m_gmSubsystem->GetCheatOptions();
+}
+
+bool Player::HasCheatOption(PlayerCheatOptions o) const
+{
+    return m_gmSubsystem->HasCheatOption(o);
+}
+
+void Player::EnableCheatOption(PlayerCheatOptions o)
+{
+    m_gmSubsystem->EnableCheatOption(o);
+}
+
+void Player::RemoveCheatOption(PlayerCheatOptions o)
+{
+    m_gmSubsystem->RemoveCheatOption(o);
+}
+
+void Player::SetCheatOption(PlayerCheatOptions o, bool on)
+{
+    m_gmSubsystem->SetCheatOption(o, on);
+}
+
+uint32 Player::GetGMInvisibilityLevel() const
+{
+    return m_gmSubsystem->GetGMInvisibilityLevel();
+}
+
+void Player::SetGMInvisibilityLevel(uint32 level)
+{
+    m_gmSubsystem->SetGMInvisibilityLevel(level);
+}
+
+uint32 Player::GetGMTicketCounter() const
+{
+    return m_gmSubsystem->GetGMTicketCounter();
+}
+
+void Player::SetGMTicketCounter(uint32 counter)
+{
+    m_gmSubsystem->SetGMTicketCounter(counter);
 }
 
 bool Player::IsAllowedWhisperFrom(ObjectGuid guid) const
@@ -18780,7 +18952,7 @@ bool Player::IsVisibleGloballyFor(Player const* viewer) const
     // GMs are visible for higher gms (or players are visible for gms)
     uint8 security = viewer->GetSession()->GetSecurity();
     if (security > SEC_PLAYER)
-        return m_gmInvisibilityLevel <= security;
+        return m_gmSubsystem->GetGMInvisibilityLevel() <= security;
 
     // non faction visibility non-breakable for non-GMs
     if (GetVisibility() == VISIBILITY_OFF)

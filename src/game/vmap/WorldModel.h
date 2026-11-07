@@ -16,15 +16,15 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _WORLDMODEL_H
-#define _WORLDMODEL_H
+#pragma once
+
+#include "BIH.h"
+
+#include "Platform/Define.h"
 
 #include <G3D/Vector3.h>
 #include <G3D/AABox.h>
 #include <G3D/Ray.h>
-#include "BIH.h"
-
-#include "Platform/Define.h"
 
 namespace VMAP
 {
@@ -138,5 +138,3 @@ namespace VMAP
 #endif
     };
 } // namespace VMAP
-
-#endif // _WORLDMODEL_H

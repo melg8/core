@@ -27,11 +27,7 @@
 #include "GridNotifiers.h"
 #include "MapManager.h"
 #include "Map.h"
-#include "CellImpl.h"
-#include "GridNotifiersImpl.h"
 #include "ObjectGuid.h"
-
-#include <cmath>
 
 typedef MaNGOS::ClassLevelLockable<ObjectAccessor, std::mutex> ObjectAccessorLock;
 INSTANTIATE_SINGLETON_2(ObjectAccessor, ObjectAccessorLock);

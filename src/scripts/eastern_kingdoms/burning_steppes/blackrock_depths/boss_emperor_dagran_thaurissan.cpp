@@ -21,7 +21,11 @@ SDComment: With script for Moria
 SDCategory: Blackrock Depths
 EndScriptData */
 
-#include "scriptPCH.h"
+#include "ScriptedAI.h"
+#include "Utilities/Random.h"
+
+#include "Creature.h"
+#include "ScriptedInstance.h"
 #include "blackrock_depths.h"
 
 enum eEmperor

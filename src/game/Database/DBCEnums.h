@@ -19,8 +19,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef DBCENUMS_H
-#define DBCENUMS_H
+#pragma once
 
 #include "Platform/Define.h"
 
@@ -180,4 +179,3 @@ enum SkillRaceClassInfoFlags
     SKILL_FLAG_MONO_VALUE               = 0x400     // Skill always has value 1 - clientside display flag, real value can be different
 };
 
-#endif

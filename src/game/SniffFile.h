@@ -14,10 +14,8 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _SNIFF_FILE_H
-#define _SNIFF_FILE_H
+#pragma once
 
-#include "Common.h"
 #include "WorldPacket.h"
 #include "Timer.h"
 
@@ -57,5 +55,3 @@ public:
 private:
     FILE* m_file;
 };
-
-#endif

@@ -19,8 +19,11 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef _AUTHSOCKET_H
-#define _AUTHSOCKET_H
+// \addtogroup realmd
+// @{
+// \file
+
+#pragma once
 
 #include "Common.h"
 #include "Crypto/BigNumber.h"
@@ -46,6 +49,7 @@ enum LockFlag
 };
 
 struct sAuthLogonProof_C;
+struct Realm;
 
 /// Handle login commands
 class AuthSocket : public std::enable_shared_from_this<AuthSocket>, MaNGOS::Policies::NoCopyNoMove
@@ -154,5 +158,3 @@ class AuthSocket : public std::enable_shared_from_this<AuthSocket>, MaNGOS::Poli
 
         void RepeatInternalXferLoop(std::shared_ptr<XFER_DATA_CHUNK> const& chunkSharedPtr);
 };
-
-#endif

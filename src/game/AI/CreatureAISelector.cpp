@@ -21,7 +21,6 @@
 
 #include "CreatureAISelector.h"
 #include "Creature.h"
-#include "CreatureAIImpl.h"
 #include "NullCreatureAI.h"
 #include "Policies/SingletonImp.h"
 #include "MovementGenerator.h"

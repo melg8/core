@@ -17,11 +17,10 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef MANGOS_PLAYERAI_H
-#define MANGOS_PLAYERAI_H
-
-#include "Common.h"
+#pragma once
 #include "ObjectGuid.h"
+
+#include "Platform/Define.h"
 
 class WorldObject;
 class Unit;
@@ -69,7 +68,4 @@ class PlayerControlledAI: public PlayerAI
         std::vector<uint32> usableSpells;
         bool bIsMelee;
         bool isHealer;
-        
 };
-
-#endif
